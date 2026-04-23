@@ -1,0 +1,5002 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Map",
+    "approach": "Hash Map: store complement → index",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Google,Amazon,Microsoft,Apple,Adobe"
+  },
+  {
+    "id": 2,
+    "title": "Add Two Numbers",
+    "difficulty": "Medium",
+    "topics": "Linked List, Math",
+    "approach": "Simulate addition with carry",
+    "time": "O(max(m,n))",
+    "space": "O(max(m,n))",
+    "companies": "Amazon,Microsoft,Adobe,Bloomberg"
+  },
+  {
+    "id": 3,
+    "title": "Longest Substring Without Repeating Chars",
+    "difficulty": "Medium",
+    "topics": "String, Sliding Window",
+    "approach": "Sliding window + set",
+    "time": "O(n)",
+    "space": "O(min(m,n))",
+    "companies": "Amazon,Google,Microsoft,Bloomberg,Uber"
+  },
+  {
+    "id": 4,
+    "title": "Median of Two Sorted Arrays",
+    "difficulty": "Hard",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search on smaller array",
+    "time": "O(log(min(m,n)))",
+    "space": "O(1)",
+    "companies": "Google,Microsoft,Adobe,Amazon"
+  },
+  {
+    "id": 5,
+    "title": "Longest Palindromic Substring",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "Expand around center",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Apple,Samsung"
+  },
+  {
+    "id": 7,
+    "title": "Reverse Integer",
+    "difficulty": "Medium",
+    "topics": "Math",
+    "approach": "Reverse digit by digit with overflow check",
+    "time": "O(log x)",
+    "space": "O(1)",
+    "companies": "Google,Amazon,Apple"
+  },
+  {
+    "id": 8,
+    "title": "String to Integer (atoi)",
+    "difficulty": "Medium",
+    "topics": "String",
+    "approach": "Parse character by character",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Bloomberg"
+  },
+  {
+    "id": 9,
+    "title": "Palindrome Number",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Reverse half the number",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Apple,Samsung,Amazon"
+  },
+  {
+    "id": 11,
+    "title": "Container With Most Water",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers shrink inward",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Adobe"
+  },
+  {
+    "id": 13,
+    "title": "Roman to Integer",
+    "difficulty": "Easy",
+    "topics": "String, Math",
+    "approach": "Map + subtract if smaller precedes larger",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google,Bloomberg"
+  },
+  {
+    "id": 14,
+    "title": "Longest Common Prefix",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "Horizontal scan / Binary search",
+    "time": "O(S)",
+    "space": "O(1)",
+    "companies": "Google,Amazon,Microsoft"
+  },
+  {
+    "id": 15,
+    "title": "3Sum",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Sort + two pointers",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Uber,Adobe"
+  },
+  {
+    "id": 16,
+    "title": "3Sum Closest",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Sort + two pointers track min diff",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Bloomberg,Google"
+  },
+  {
+    "id": 17,
+    "title": "Letter Combinations of a Phone Number",
+    "difficulty": "Medium",
+    "topics": "String, Backtracking",
+    "approach": "Backtracking DFS",
+    "time": "O(4^n · n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Uber"
+  },
+  {
+    "id": 18,
+    "title": "4Sum",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Sort + two outer loops + two pointers",
+    "time": "O(n³)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 19,
+    "title": "Remove Nth Node From End of List",
+    "difficulty": "Medium",
+    "topics": "Linked List, Two Pointers",
+    "approach": "Two pointers n apart",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Adobe"
+  },
+  {
+    "id": 20,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "topics": "String, Stack",
+    "approach": "Stack push/pop",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Bloomberg,Meta"
+  },
+  {
+    "id": 21,
+    "title": "Merge Two Sorted Lists",
+    "difficulty": "Easy",
+    "topics": "Linked List",
+    "approach": "Iterative merge",
+    "time": "O(m+n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Apple,Google"
+  },
+  {
+    "id": 22,
+    "title": "Generate Parentheses",
+    "difficulty": "Medium",
+    "topics": "String, Backtracking",
+    "approach": "Backtracking with open/close counts",
+    "time": "O(4^n/√n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 23,
+    "title": "Merge k Sorted Lists",
+    "difficulty": "Hard",
+    "topics": "Linked List, Heap",
+    "approach": "Min-heap of size k",
+    "time": "O(N log k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google,Microsoft,Meta,Uber"
+  },
+  {
+    "id": 24,
+    "title": "Swap Nodes in Pairs",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "Iterative node swap",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Google"
+  },
+  {
+    "id": 25,
+    "title": "Reverse Nodes in k-Group",
+    "difficulty": "Hard",
+    "topics": "Linked List",
+    "approach": "Reverse k nodes iteratively",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Microsoft,Amazon,Google"
+  },
+  {
+    "id": 26,
+    "title": "Remove Duplicates from Sorted Array",
+    "difficulty": "Easy",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers slow/fast",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 27,
+    "title": "Remove Element",
+    "difficulty": "Easy",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 28,
+    "title": "Find the Index of the First Occurrence",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "KMP algorithm",
+    "time": "O(n+m)",
+    "space": "O(m)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 31,
+    "title": "Next Permutation",
+    "difficulty": "Medium",
+    "topics": "Array",
+    "approach": "Find rightmost ascent, swap, reverse",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Google,Amazon,Microsoft"
+  },
+  {
+    "id": 32,
+    "title": "Longest Valid Parentheses",
+    "difficulty": "Hard",
+    "topics": "String, Stack, DP",
+    "approach": "Stack or DP",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 33,
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Modified binary search",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Uber,Meta"
+  },
+  {
+    "id": 34,
+    "title": "Find First and Last Position of Element",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Two binary searches",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Google,Amazon,Microsoft"
+  },
+  {
+    "id": 35,
+    "title": "Search Insert Position",
+    "difficulty": "Easy",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 36,
+    "title": "Valid Sudoku",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Set",
+    "approach": "Check rows/cols/boxes with sets",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 38,
+    "title": "Count and Say",
+    "difficulty": "Medium",
+    "topics": "String",
+    "approach": "Simulate counting",
+    "time": "O(2^n)",
+    "space": "O(2^n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 39,
+    "title": "Combination Sum",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Backtracking with repetition allowed",
+    "time": "O(n^(t/m))",
+    "space": "O(t/m)",
+    "companies": "Amazon,Google,Uber"
+  },
+  {
+    "id": 40,
+    "title": "Combination Sum II",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Backtracking skip duplicates",
+    "time": "O(2^n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 41,
+    "title": "First Missing Positive",
+    "difficulty": "Hard",
+    "topics": "Array, Hash",
+    "approach": "Cyclic sort / index marking",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 42,
+    "title": "Trapping Rain Water",
+    "difficulty": "Hard",
+    "topics": "Array, Two Pointers, Stack",
+    "approach": "Two pointers",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Google,Amazon,Microsoft,Meta,Adobe"
+  },
+  {
+    "id": 43,
+    "title": "Multiply Strings",
+    "difficulty": "Medium",
+    "topics": "Math, String",
+    "approach": "Grade-school multiplication",
+    "time": "O(m·n)",
+    "space": "O(m+n)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 44,
+    "title": "Wildcard Matching",
+    "difficulty": "Hard",
+    "topics": "String, DP",
+    "approach": "DP 2D table",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Google,Amazon,Microsoft"
+  },
+  {
+    "id": 45,
+    "title": "Jump Game II",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Greedy max reach",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 46,
+    "title": "Permutations",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Backtracking swap",
+    "time": "O(n! · n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 47,
+    "title": "Permutations II",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Backtracking with used[] + skip dup",
+    "time": "O(n! · n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 48,
+    "title": "Rotate Image",
+    "difficulty": "Medium",
+    "topics": "Array, Math",
+    "approach": "Transpose then reverse rows",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 49,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "topics": "String, Hash Map",
+    "approach": "Sort each string as key",
+    "time": "O(n·k log k)",
+    "space": "O(n·k)",
+    "companies": "Amazon,Google,Microsoft,Bloomberg"
+  },
+  {
+    "id": 50,
+    "title": "Pow(x, n)",
+    "difficulty": "Medium",
+    "topics": "Math, Recursion",
+    "approach": "Fast power (binary exponentiation)",
+    "time": "O(log n)",
+    "space": "O(log n)",
+    "companies": "Google,Amazon,Microsoft"
+  },
+  {
+    "id": 53,
+    "title": "Maximum Subarray",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "Kadane's algorithm",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple,Bloomberg"
+  },
+  {
+    "id": 54,
+    "title": "Spiral Matrix",
+    "difficulty": "Medium",
+    "topics": "Array, Matrix",
+    "approach": "Layer by layer simulation",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 55,
+    "title": "Jump Game",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Track max reachable index",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 56,
+    "title": "Merge Intervals",
+    "difficulty": "Medium",
+    "topics": "Array, Sorting",
+    "approach": "Sort by start, merge overlaps",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta,Bloomberg"
+  },
+  {
+    "id": 57,
+    "title": "Insert Interval",
+    "difficulty": "Medium",
+    "topics": "Array",
+    "approach": "Find overlap range, merge",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Google,Amazon"
+  },
+  {
+    "id": 58,
+    "title": "Length of Last Word",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "Trim + count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 59,
+    "title": "Spiral Matrix II",
+    "difficulty": "Medium",
+    "topics": "Array, Matrix",
+    "approach": "Simulate spiral fill",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 62,
+    "title": "Unique Paths",
+    "difficulty": "Medium",
+    "topics": "DP, Math",
+    "approach": "DP grid",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 63,
+    "title": "Unique Paths II",
+    "difficulty": "Medium",
+    "topics": "DP",
+    "approach": "DP with obstacle",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 64,
+    "title": "Minimum Path Sum",
+    "difficulty": "Medium",
+    "topics": "DP, Matrix",
+    "approach": "DP in-place",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Uber"
+  },
+  {
+    "id": 66,
+    "title": "Plus One",
+    "difficulty": "Easy",
+    "topics": "Array, Math",
+    "approach": "Carry simulation",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Google,Apple,Amazon"
+  },
+  {
+    "id": 67,
+    "title": "Add Binary",
+    "difficulty": "Easy",
+    "topics": "String, Math",
+    "approach": "Bit-by-bit add with carry",
+    "time": "O(max(m,n))",
+    "space": "O(max(m,n))",
+    "companies": "Google,Apple,Amazon"
+  },
+  {
+    "id": 68,
+    "title": "Text Justification",
+    "difficulty": "Hard",
+    "topics": "String, Greedy",
+    "approach": "Greedy line packing",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Google"
+  },
+  {
+    "id": 70,
+    "title": "Climbing Stairs",
+    "difficulty": "Easy",
+    "topics": "DP",
+    "approach": "Fibonacci DP",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple,Adobe"
+  },
+  {
+    "id": 72,
+    "title": "Edit Distance",
+    "difficulty": "Hard",
+    "topics": "String, DP",
+    "approach": "2D DP",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 73,
+    "title": "Set Matrix Zeroes",
+    "difficulty": "Medium",
+    "topics": "Array, Matrix",
+    "approach": "First row/col as markers",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 74,
+    "title": "Search a 2D Matrix",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Treat as 1D binary search",
+    "time": "O(log(m·n))",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 75,
+    "title": "Sort Colors",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Dutch national flag algorithm",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 76,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "topics": "String, Sliding Window",
+    "approach": "Sliding window with need count",
+    "time": "O(m+n)",
+    "space": "O(m+n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 77,
+    "title": "Combinations",
+    "difficulty": "Medium",
+    "topics": "Backtracking",
+    "approach": "Backtracking",
+    "time": "O(k · C(n,k))",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 78,
+    "title": "Subsets",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Bit mask or backtracking",
+    "time": "O(n · 2^n)",
+    "space": "O(n · 2^n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 79,
+    "title": "Word Search",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "DFS + backtracking on grid",
+    "time": "O(m·n·4^L)",
+    "space": "O(L)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 80,
+    "title": "Remove Duplicates from Sorted Array II",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers allow at most 2",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Google,Microsoft"
+  },
+  {
+    "id": 81,
+    "title": "Search in Rotated Sorted Array II",
+    "difficulty": "Medium",
+    "topics": "Binary Search",
+    "approach": "Modified binary search for duplicates",
+    "time": "O(log n) avg O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 84,
+    "title": "Largest Rectangle in Histogram",
+    "difficulty": "Hard",
+    "topics": "Array, Stack",
+    "approach": "Monotonic stack",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 85,
+    "title": "Maximal Rectangle",
+    "difficulty": "Hard",
+    "topics": "Array, Stack, DP",
+    "approach": "Histogram technique row by row",
+    "time": "O(m·n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 88,
+    "title": "Merge Sorted Array",
+    "difficulty": "Easy",
+    "topics": "Array, Two Pointers",
+    "approach": "Merge from back",
+    "time": "O(m+n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 90,
+    "title": "Subsets II",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Backtracking skip duplicates",
+    "time": "O(n · 2^n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 91,
+    "title": "Decode Ways",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "DP with prev/prevprev",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 92,
+    "title": "Reverse Linked List II",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "One-pass with prev/next pointers",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Adobe"
+  },
+  {
+    "id": 93,
+    "title": "Restore IP Addresses",
+    "difficulty": "Medium",
+    "topics": "String, Backtracking",
+    "approach": "Backtracking with 4 parts",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 94,
+    "title": "Binary Tree Inorder Traversal",
+    "difficulty": "Easy",
+    "topics": "Tree, Stack",
+    "approach": "Morris traversal / iterative",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 96,
+    "title": "Unique Binary Search Trees",
+    "difficulty": "Medium",
+    "topics": "DP, Tree",
+    "approach": "Catalan number DP",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 97,
+    "title": "Interleaving String",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "2D DP",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 98,
+    "title": "Validate Binary Search Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "DFS with min/max bounds",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 99,
+    "title": "Recover Binary Search Tree",
+    "difficulty": "Medium",
+    "topics": "Tree",
+    "approach": "Morris traversal / find swapped",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Microsoft,Amazon"
+  },
+  {
+    "id": 100,
+    "title": "Same Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Recursive DFS compare",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 101,
+    "title": "Symmetric Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, BFS/DFS",
+    "approach": "Mirror check recursively",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 102,
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "BFS queue",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 103,
+    "title": "Binary Tree Zigzag Level Order",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "BFS + alternate direction",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Bloomberg"
+  },
+  {
+    "id": 104,
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Recursive max depth",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 105,
+    "title": "Construct Binary Tree from Preorder and Inorder",
+    "difficulty": "Medium",
+    "topics": "Tree, Hash Map",
+    "approach": "Hash inorder + recursion",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 106,
+    "title": "Construct Binary Tree from Inorder and Postorder",
+    "difficulty": "Medium",
+    "topics": "Tree",
+    "approach": "Hash inorder + recursion",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 107,
+    "title": "Binary Tree Level Order Traversal II",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "BFS then reverse",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 108,
+    "title": "Convert Sorted Array to BST",
+    "difficulty": "Easy",
+    "topics": "Tree, Divide & Conquer",
+    "approach": "Pick mid as root recursively",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 109,
+    "title": "Convert Sorted List to BST",
+    "difficulty": "Medium",
+    "topics": "Tree, Linked List",
+    "approach": "Slow/fast pointer + recursion",
+    "time": "O(n log n)",
+    "space": "O(log n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 110,
+    "title": "Balanced Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Post-order check heights",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 111,
+    "title": "Minimum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, BFS",
+    "approach": "BFS finds first leaf",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 112,
+    "title": "Path Sum",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "DFS subtract target",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 113,
+    "title": "Path Sum II",
+    "difficulty": "Medium",
+    "topics": "Tree, Backtracking",
+    "approach": "DFS + backtracking path",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 114,
+    "title": "Flatten Binary Tree to Linked List",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "Morris traversal in-place",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 116,
+    "title": "Populating Next Right Pointers I",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "Level-order BFS",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 117,
+    "title": "Populating Next Right Pointers II",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "Level-order with prev pointer",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 118,
+    "title": "Pascal's Triangle",
+    "difficulty": "Easy",
+    "topics": "Array, DP",
+    "approach": "Row by row computation",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 119,
+    "title": "Pascal's Triangle II",
+    "difficulty": "Easy",
+    "topics": "Array, DP",
+    "approach": "Single row update in-place",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 120,
+    "title": "Triangle",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "Bottom-up DP",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 121,
+    "title": "Best Time to Buy and Sell Stock",
+    "difficulty": "Easy",
+    "topics": "Array, DP",
+    "approach": "Track min price, max profit",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta,Bloomberg"
+  },
+  {
+    "id": 122,
+    "title": "Best Time to Buy and Sell Stock II",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Accumulate all positive diff",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 123,
+    "title": "Best Time to Buy and Sell Stock III",
+    "difficulty": "Hard",
+    "topics": "Array, DP",
+    "approach": "DP 4 states",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 124,
+    "title": "Binary Tree Maximum Path Sum",
+    "difficulty": "Hard",
+    "topics": "Tree, DFS",
+    "approach": "Post-order DFS track max",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 125,
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Two pointers alphanumeric",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Facebook,Microsoft,Bloomberg"
+  },
+  {
+    "id": 126,
+    "title": "Word Ladder II",
+    "difficulty": "Hard",
+    "topics": "BFS, Backtracking",
+    "approach": "BFS build graph + DFS paths",
+    "time": "O(M² · N)",
+    "space": "O(M² · N)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 127,
+    "title": "Word Ladder",
+    "difficulty": "Hard",
+    "topics": "BFS, Graph",
+    "approach": "BFS with wildcard patterns",
+    "time": "O(M² · N)",
+    "space": "O(M² · N)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 128,
+    "title": "Longest Consecutive Sequence",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Set",
+    "approach": "Hash set O(n) scan",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 129,
+    "title": "Sum Root to Leaf Numbers",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "DFS accumulate number",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 130,
+    "title": "Surrounded Regions",
+    "difficulty": "Medium",
+    "topics": "Array, DFS/BFS",
+    "approach": "DFS from border O's",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 131,
+    "title": "Palindrome Partitioning",
+    "difficulty": "Medium",
+    "topics": "String, Backtracking",
+    "approach": "Backtracking + DP palindrome check",
+    "time": "O(n · 2^n)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 133,
+    "title": "Clone Graph",
+    "difficulty": "Medium",
+    "topics": "Graph, BFS/DFS",
+    "approach": "BFS + hash map node clone",
+    "time": "O(V+E)",
+    "space": "O(V)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 134,
+    "title": "Gas Station",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Total gas check + greedy start",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 135,
+    "title": "Candy",
+    "difficulty": "Hard",
+    "topics": "Array, Greedy",
+    "approach": "Two-pass greedy L→R, R→L",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon"
+  },
+  {
+    "id": 136,
+    "title": "Single Number",
+    "difficulty": "Easy",
+    "topics": "Array, Bit Manipulation",
+    "approach": "XOR all elements",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 138,
+    "title": "Copy List with Random Pointer",
+    "difficulty": "Medium",
+    "topics": "Linked List, Hash Map",
+    "approach": "Hash map orig→copy",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 139,
+    "title": "Word Break",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "DP dp[i] = any dp[j] + word",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 140,
+    "title": "Word Break II",
+    "difficulty": "Hard",
+    "topics": "String, DP, Backtracking",
+    "approach": "Memoised backtracking",
+    "time": "O(2^n)",
+    "space": "O(2^n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 141,
+    "title": "Linked List Cycle",
+    "difficulty": "Easy",
+    "topics": "Linked List, Two Pointers",
+    "approach": "Floyd's slow/fast",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 142,
+    "title": "Linked List Cycle II",
+    "difficulty": "Medium",
+    "topics": "Linked List, Two Pointers",
+    "approach": "Floyd's detect then find entry",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 143,
+    "title": "Reorder List",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "Find mid, reverse 2nd half, merge",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 144,
+    "title": "Binary Tree Preorder Traversal",
+    "difficulty": "Easy",
+    "topics": "Tree",
+    "approach": "Iterative with stack",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 145,
+    "title": "Binary Tree Postorder Traversal",
+    "difficulty": "Easy",
+    "topics": "Tree",
+    "approach": "Two-stack trick",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 146,
+    "title": "LRU Cache",
+    "difficulty": "Medium",
+    "topics": "Hash Map, Doubly Linked List",
+    "approach": "Hash map + DLL",
+    "time": "O(1)",
+    "space": "O(capacity)",
+    "companies": "Amazon,Google,Microsoft,Meta,Bloomberg"
+  },
+  {
+    "id": 148,
+    "title": "Sort List",
+    "difficulty": "Medium",
+    "topics": "Linked List, Merge Sort",
+    "approach": "Merge sort on linked list",
+    "time": "O(n log n)",
+    "space": "O(log n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 149,
+    "title": "Max Points on a Line",
+    "difficulty": "Hard",
+    "topics": "Math, Hash Map",
+    "approach": "Slope hash map per point",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 150,
+    "title": "Evaluate Reverse Polish Notation",
+    "difficulty": "Medium",
+    "topics": "Stack, Math",
+    "approach": "Stack-based evaluation",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Bloomberg"
+  },
+  {
+    "id": 151,
+    "title": "Reverse Words in a String",
+    "difficulty": "Medium",
+    "topics": "String",
+    "approach": "Split + reverse join",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft,Bloomberg"
+  },
+  {
+    "id": 152,
+    "title": "Maximum Product Subarray",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "Track max and min",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Uber"
+  },
+  {
+    "id": 153,
+    "title": "Find Minimum in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search rotation point",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 154,
+    "title": "Find Minimum in Rotated Sorted Array II",
+    "difficulty": "Hard",
+    "topics": "Array, Binary Search",
+    "approach": "Modified binary search with dups",
+    "time": "O(log n) avg O(n)",
+    "space": "O(1)",
+    "companies": "Google,Amazon"
+  },
+  {
+    "id": 155,
+    "title": "Min Stack",
+    "difficulty": "Medium",
+    "topics": "Stack, Design",
+    "approach": "Parallel min stack",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Bloomberg"
+  },
+  {
+    "id": 160,
+    "title": "Intersection of Two Linked Lists",
+    "difficulty": "Easy",
+    "topics": "Linked List, Two Pointers",
+    "approach": "Two pointers meet at intersection",
+    "time": "O(m+n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 162,
+    "title": "Find Peak Element",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search local peak",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Google,Amazon,Microsoft"
+  },
+  {
+    "id": 163,
+    "title": "Missing Ranges",
+    "difficulty": "Easy",
+    "topics": "Array",
+    "approach": "Linear scan check gaps",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Google"
+  },
+  {
+    "id": 165,
+    "title": "Compare Version Numbers",
+    "difficulty": "Medium",
+    "topics": "String",
+    "approach": "Split + compare segments",
+    "time": "O(n+m)",
+    "space": "O(n+m)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 166,
+    "title": "Fraction to Recurring Decimal",
+    "difficulty": "Medium",
+    "topics": "Math, Hash Map",
+    "approach": "Long division track remainders",
+    "time": "O(d)",
+    "space": "O(d)",
+    "companies": "Google,Amazon"
+  },
+  {
+    "id": 167,
+    "title": "Two Sum II — Input Array Is Sorted",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 168,
+    "title": "Excel Sheet Column Title",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Base-26 encoding",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 169,
+    "title": "Majority Element",
+    "difficulty": "Easy",
+    "topics": "Array, Voting",
+    "approach": "Boyer-Moore voting",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google,Bloomberg"
+  },
+  {
+    "id": 171,
+    "title": "Excel Sheet Column Number",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Base-26 decode",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 172,
+    "title": "Factorial Trailing Zeroes",
+    "difficulty": "Medium",
+    "topics": "Math",
+    "approach": "Count factors of 5",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Google"
+  },
+  {
+    "id": 173,
+    "title": "Binary Search Tree Iterator",
+    "difficulty": "Medium",
+    "topics": "Tree, Stack, Design",
+    "approach": "Inorder stack iterator",
+    "time": "O(1) amortized",
+    "space": "O(h)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 174,
+    "title": "Dungeon Game",
+    "difficulty": "Hard",
+    "topics": "Array, DP",
+    "approach": "DP from bottom-right",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 179,
+    "title": "Largest Number",
+    "difficulty": "Medium",
+    "topics": "Array, Sorting",
+    "approach": "Custom sort comparator",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Bloomberg"
+  },
+  {
+    "id": 187,
+    "title": "Repeated DNA Sequences",
+    "difficulty": "Medium",
+    "topics": "String, Hash Map",
+    "approach": "Sliding window + hash",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 189,
+    "title": "Rotate Array",
+    "difficulty": "Medium",
+    "topics": "Array, Math",
+    "approach": "Reverse three times",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 190,
+    "title": "Reverse Bits",
+    "difficulty": "Easy",
+    "topics": "Bit Manipulation",
+    "approach": "Bit shift loop",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Apple,Amazon"
+  },
+  {
+    "id": 191,
+    "title": "Number of 1 Bits",
+    "difficulty": "Easy",
+    "topics": "Bit Manipulation",
+    "approach": "n & (n-1) trick",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Apple,Amazon,Microsoft"
+  },
+  {
+    "id": 198,
+    "title": "House Robber",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP prev/prev-prev",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Airbnb"
+  },
+  {
+    "id": 199,
+    "title": "Binary Tree Right Side View",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "BFS take last of each level",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta,Bloomberg"
+  },
+  {
+    "id": 200,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "topics": "Array, DFS/BFS, Union Find",
+    "approach": "DFS sink visited",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft,Meta,Bloomberg"
+  },
+  {
+    "id": 201,
+    "title": "Bitwise AND of Numbers Range",
+    "difficulty": "Medium",
+    "topics": "Bit Manipulation",
+    "approach": "Shift until equal",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 202,
+    "title": "Happy Number",
+    "difficulty": "Easy",
+    "topics": "Math, Hash Set",
+    "approach": "Slow/fast cycle detect",
+    "time": "O(log n)",
+    "space": "O(log n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 203,
+    "title": "Remove Linked List Elements",
+    "difficulty": "Easy",
+    "topics": "Linked List",
+    "approach": "Dummy node iterate",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 204,
+    "title": "Count Primes",
+    "difficulty": "Medium",
+    "topics": "Math, Sieve",
+    "approach": "Sieve of Eratosthenes",
+    "time": "O(n log log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 205,
+    "title": "Isomorphic Strings",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Bidirectional char mapping",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 206,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "topics": "Linked List",
+    "approach": "Iterative prev/curr",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple,Meta"
+  },
+  {
+    "id": 207,
+    "title": "Course Schedule",
+    "difficulty": "Medium",
+    "topics": "Graph, Topological Sort",
+    "approach": "DFS cycle detection",
+    "time": "O(V+E)",
+    "space": "O(V+E)",
+    "companies": "Amazon,Google,Microsoft,Uber"
+  },
+  {
+    "id": 208,
+    "title": "Implement Trie (Prefix Tree)",
+    "difficulty": "Medium",
+    "topics": "Trie, Design",
+    "approach": "Trie node array",
+    "time": "O(m)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 209,
+    "title": "Minimum Size Subarray Sum",
+    "difficulty": "Medium",
+    "topics": "Array, Sliding Window",
+    "approach": "Sliding window shrink",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 210,
+    "title": "Course Schedule II",
+    "difficulty": "Medium",
+    "topics": "Graph, Topological Sort",
+    "approach": "Kahn's BFS topological sort",
+    "time": "O(V+E)",
+    "space": "O(V+E)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 211,
+    "title": "Design Add and Search Words",
+    "difficulty": "Medium",
+    "topics": "Trie, DFS",
+    "approach": "Trie + DFS for '.'",
+    "time": "O(m)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 212,
+    "title": "Word Search II",
+    "difficulty": "Hard",
+    "topics": "Trie, Backtracking",
+    "approach": "Trie + DFS grid",
+    "time": "O(m·n·4^L)",
+    "space": "O(L)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 213,
+    "title": "House Robber II",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "Solve 0..n-2 and 1..n-1",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 215,
+    "title": "Kth Largest Element in an Array",
+    "difficulty": "Medium",
+    "topics": "Array, Heap, QuickSelect",
+    "approach": "QuickSelect O(n) avg",
+    "time": "O(n) avg",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta,Bloomberg"
+  },
+  {
+    "id": 216,
+    "title": "Combination Sum III",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking",
+    "approach": "Backtracking 1-9 exactly k",
+    "time": "O(k · C(9,k))",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 217,
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Set",
+    "approach": "Hash set check",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 218,
+    "title": "The Skyline Problem",
+    "difficulty": "Hard",
+    "topics": "Array, Heap, Divide & Conquer",
+    "approach": "Sweep line + max-heap",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 219,
+    "title": "Contains Duplicate II",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Map",
+    "approach": "Sliding window hash map",
+    "time": "O(n)",
+    "space": "O(min(n,k))",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 220,
+    "title": "Contains Duplicate III",
+    "difficulty": "Hard",
+    "topics": "Array, Sorted Set",
+    "approach": "Bucket sort O(n)",
+    "time": "O(n)",
+    "space": "O(min(n,k))",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 221,
+    "title": "Maximal Square",
+    "difficulty": "Medium",
+    "topics": "Array, DP, Matrix",
+    "approach": "DP dp[i][j] = min(left,top,diag)+1",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 222,
+    "title": "Count Complete Tree Nodes",
+    "difficulty": "Medium",
+    "topics": "Tree, Binary Search",
+    "approach": "Binary search on last level",
+    "time": "O(log²n)",
+    "space": "O(log n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 223,
+    "title": "Rectangle Area",
+    "difficulty": "Medium",
+    "topics": "Math, Geometry",
+    "approach": "Inclusion-exclusion",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 224,
+    "title": "Basic Calculator",
+    "difficulty": "Hard",
+    "topics": "Math, Stack",
+    "approach": "Stack with sign tracking",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Bloomberg"
+  },
+  {
+    "id": 225,
+    "title": "Implement Stack using Queues",
+    "difficulty": "Easy",
+    "topics": "Stack, Queue, Design",
+    "approach": "Single queue rotate",
+    "time": "O(n) push",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 226,
+    "title": "Invert Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Recursive swap children",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Apple,Microsoft"
+  },
+  {
+    "id": 227,
+    "title": "Basic Calculator II",
+    "difficulty": "Medium",
+    "topics": "Math, Stack",
+    "approach": "Stack for +–×÷ precedence",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Bloomberg"
+  },
+  {
+    "id": 228,
+    "title": "Summary Ranges",
+    "difficulty": "Easy",
+    "topics": "Array",
+    "approach": "Linear scan build ranges",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 229,
+    "title": "Majority Element II",
+    "difficulty": "Medium",
+    "topics": "Array, Voting",
+    "approach": "Boyer-Moore 2 candidates",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 230,
+    "title": "Kth Smallest Element in a BST",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "Inorder DFS count k",
+    "time": "O(H+k)",
+    "space": "O(H)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 231,
+    "title": "Power of Two",
+    "difficulty": "Easy",
+    "topics": "Math, Bit Manipulation",
+    "approach": "n & (n-1) == 0",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 232,
+    "title": "Implement Queue using Stacks",
+    "difficulty": "Easy",
+    "topics": "Queue, Stack, Design",
+    "approach": "Two stacks amortized",
+    "time": "O(1) amortized",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft,Google"
+  },
+  {
+    "id": 233,
+    "title": "Number of Digit One",
+    "difficulty": "Hard",
+    "topics": "Math",
+    "approach": "Count per digit position",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 234,
+    "title": "Palindrome Linked List",
+    "difficulty": "Easy",
+    "topics": "Linked List, Two Pointers",
+    "approach": "Find mid, reverse 2nd, compare",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 235,
+    "title": "Lowest Common Ancestor of BST",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "BST property left/right",
+    "time": "O(H)",
+    "space": "O(H)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 236,
+    "title": "Lowest Common Ancestor of Binary Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "Post-order find LCA",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 237,
+    "title": "Delete Node in a Linked List",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "Copy next node value",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 238,
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "topics": "Array, Prefix Sum",
+    "approach": "Left product × right product",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 239,
+    "title": "Sliding Window Maximum",
+    "difficulty": "Hard",
+    "topics": "Array, Deque",
+    "approach": "Monotonic deque",
+    "time": "O(n)",
+    "space": "O(k)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 240,
+    "title": "Search a 2D Matrix II",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Start top-right, shrink",
+    "time": "O(m+n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Apple"
+  },
+  {
+    "id": 241,
+    "title": "Different Ways to Add Parentheses",
+    "difficulty": "Medium",
+    "topics": "Math, DP, D&C",
+    "approach": "Divide & conquer memoised",
+    "time": "O(n · Catalan(n))",
+    "space": "O(n · Catalan(n))",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 242,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Char freq count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google,Microsoft"
+  },
+  {
+    "id": 257,
+    "title": "Binary Tree Paths",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "DFS build path string",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 258,
+    "title": "Add Digits",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Digital root formula",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 260,
+    "title": "Single Number III",
+    "difficulty": "Medium",
+    "topics": "Bit Manipulation",
+    "approach": "XOR all + split by bit",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 263,
+    "title": "Ugly Number",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Divide by 2,3,5",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 264,
+    "title": "Ugly Number II",
+    "difficulty": "Medium",
+    "topics": "DP, Heap",
+    "approach": "Three-pointer DP",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 268,
+    "title": "Missing Number",
+    "difficulty": "Easy",
+    "topics": "Array, Bit Manipulation",
+    "approach": "XOR or Gauss sum",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 269,
+    "title": "Alien Dictionary",
+    "difficulty": "Hard",
+    "topics": "Graph, Topological Sort",
+    "approach": "BFS topological sort of chars",
+    "time": "O(C)",
+    "space": "O(1) or O(U+min(U²,N))",
+    "companies": "Google,Uber,Airbnb,Meta"
+  },
+  {
+    "id": 270,
+    "title": "Closest Binary Search Tree Value",
+    "difficulty": "Easy",
+    "topics": "Tree, Binary Search",
+    "approach": "Walk BST compare diff",
+    "time": "O(H)",
+    "space": "O(1)",
+    "companies": "Google,Microsoft,Uber"
+  },
+  {
+    "id": 271,
+    "title": "Encode and Decode Strings",
+    "difficulty": "Medium",
+    "topics": "String, Design",
+    "approach": "Length-prefix encoding",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Google,Uber,Meta"
+  },
+  {
+    "id": 273,
+    "title": "Integer to English Words",
+    "difficulty": "Hard",
+    "topics": "Math, String",
+    "approach": "Recursive groups of 3",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 274,
+    "title": "H-Index",
+    "difficulty": "Medium",
+    "topics": "Array, Sorting",
+    "approach": "Sort desc find first i+1>h[i]",
+    "time": "O(n log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 278,
+    "title": "First Bad Version",
+    "difficulty": "Easy",
+    "topics": "Binary Search",
+    "approach": "Binary search",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 279,
+    "title": "Perfect Squares",
+    "difficulty": "Medium",
+    "topics": "Math, DP, BFS",
+    "approach": "DP or Lagrange 4-square",
+    "time": "O(n√n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 280,
+    "title": "Wiggle Sort",
+    "difficulty": "Medium",
+    "topics": "Array",
+    "approach": "Swap odd positions",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 283,
+    "title": "Move Zeroes",
+    "difficulty": "Easy",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers partition",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 284,
+    "title": "Peeking Iterator",
+    "difficulty": "Medium",
+    "topics": "Design, Iterator",
+    "approach": "Cache next value",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Apple,Google"
+  },
+  {
+    "id": 285,
+    "title": "Inorder Successor in BST",
+    "difficulty": "Medium",
+    "topics": "Tree",
+    "approach": "Walk BST track successor",
+    "time": "O(H)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 286,
+    "title": "Walls and Gates",
+    "difficulty": "Medium",
+    "topics": "Array, BFS",
+    "approach": "Multi-source BFS from gates",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Facebook"
+  },
+  {
+    "id": 287,
+    "title": "Find the Duplicate Number",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Floyd's cycle on value indices",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 289,
+    "title": "Game of Life",
+    "difficulty": "Medium",
+    "topics": "Array, Matrix",
+    "approach": "Encode state in-place",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 290,
+    "title": "Word Pattern",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Bijective word→char map",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Dropbox"
+  },
+  {
+    "id": 292,
+    "title": "Nim Game",
+    "difficulty": "Easy",
+    "topics": "Math, Game Theory",
+    "approach": "Win iff n % 4 != 0",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 295,
+    "title": "Find Median from Data Stream",
+    "difficulty": "Hard",
+    "topics": "Heap, Design",
+    "approach": "Two heaps (max+min)",
+    "time": "O(log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 297,
+    "title": "Serialize and Deserialize Binary Tree",
+    "difficulty": "Hard",
+    "topics": "Tree, BFS/DFS, Design",
+    "approach": "BFS with null markers",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 299,
+    "title": "Bulls and Cows",
+    "difficulty": "Medium",
+    "topics": "String, Hash Map",
+    "approach": "Count bulls, then cows",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 300,
+    "title": "Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "topics": "Array, DP, Binary Search",
+    "approach": "Binary search patience sort",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Uber"
+  },
+  {
+    "id": 301,
+    "title": "Remove Invalid Parentheses",
+    "difficulty": "Hard",
+    "topics": "String, BFS, Backtracking",
+    "approach": "BFS level-by-level removal",
+    "time": "O(2^n)",
+    "space": "O(n)",
+    "companies": "Meta,Amazon,Google"
+  },
+  {
+    "id": 303,
+    "title": "Range Sum Query — Immutable",
+    "difficulty": "Easy",
+    "topics": "Array, Prefix Sum",
+    "approach": "Prefix sum array",
+    "time": "O(1) query",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 304,
+    "title": "Range Sum Query 2D — Immutable",
+    "difficulty": "Medium",
+    "topics": "Array, Prefix Sum",
+    "approach": "2D prefix sum",
+    "time": "O(1) query",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 305,
+    "title": "Number of Islands II",
+    "difficulty": "Hard",
+    "topics": "Union Find",
+    "approach": "Union-Find with rank",
+    "time": "O(k log(m·n))",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 307,
+    "title": "Range Sum Query — Mutable",
+    "difficulty": "Medium",
+    "topics": "Segment Tree / BIT",
+    "approach": "Fenwick Tree (BIT)",
+    "time": "O(log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 309,
+    "title": "Best Time to Buy and Sell Stock with Cooldown",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP 3 states",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 310,
+    "title": "Minimum Height Trees",
+    "difficulty": "Medium",
+    "topics": "Graph, BFS",
+    "approach": "Prune leaves BFS",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 312,
+    "title": "Burst Balloons",
+    "difficulty": "Hard",
+    "topics": "Array, DP",
+    "approach": "Interval DP",
+    "time": "O(n³)",
+    "space": "O(n²)",
+    "companies": "Google,Amazon"
+  },
+  {
+    "id": 313,
+    "title": "Super Ugly Number",
+    "difficulty": "Medium",
+    "topics": "Math, DP",
+    "approach": "k-pointer DP",
+    "time": "O(n·k)",
+    "space": "O(n+k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 315,
+    "title": "Count of Smaller Numbers After Self",
+    "difficulty": "Hard",
+    "topics": "Array, Merge Sort, BIT",
+    "approach": "Merge sort with index",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 316,
+    "title": "Remove Duplicate Letters",
+    "difficulty": "Medium",
+    "topics": "String, Greedy, Stack",
+    "approach": "Monotonic stack + seen/count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 318,
+    "title": "Maximum Product of Word Lengths",
+    "difficulty": "Medium",
+    "topics": "Array, Bit Manipulation",
+    "approach": "Bit mask 26 letters",
+    "time": "O(n² + Σ|w|)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 319,
+    "title": "Bulb Switcher",
+    "difficulty": "Medium",
+    "topics": "Math",
+    "approach": "Count perfect squares √n",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 322,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP bottom-up",
+    "time": "O(amount·n)",
+    "space": "O(amount)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 323,
+    "title": "Number of Connected Components",
+    "difficulty": "Medium",
+    "topics": "Graph, Union Find",
+    "approach": "Union-Find",
+    "time": "O(n + e)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,LinkedIn"
+  },
+  {
+    "id": 324,
+    "title": "Wiggle Sort II",
+    "difficulty": "Medium",
+    "topics": "Array, QuickSelect",
+    "approach": "QuickSelect median + 3-way",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Google,Amazon"
+  },
+  {
+    "id": 325,
+    "title": "Maximum Size Subarray Sum Equals k",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Prefix sum hash map",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Meta,Uber"
+  },
+  {
+    "id": 326,
+    "title": "Power of Three",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Divide by 3 loop",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 328,
+    "title": "Odd Even Linked List",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "Collect odd then even",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 329,
+    "title": "Longest Increasing Path in a Matrix",
+    "difficulty": "Hard",
+    "topics": "Matrix, DFS, DP",
+    "approach": "DFS + memoisation",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 332,
+    "title": "Reconstruct Itinerary",
+    "difficulty": "Hard",
+    "topics": "Graph, DFS, Euler Path",
+    "approach": "Hierholzer's algorithm",
+    "time": "O(E log E)",
+    "space": "O(E)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 334,
+    "title": "Increasing Triplet Subsequence",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Track first and second min",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 336,
+    "title": "Palindrome Pairs",
+    "difficulty": "Hard",
+    "topics": "String, Hash Map, Trie",
+    "approach": "Hash map check reverse halves",
+    "time": "O(n · k²)",
+    "space": "O(n · k)",
+    "companies": "Google,Airbnb"
+  },
+  {
+    "id": 337,
+    "title": "House Robber III",
+    "difficulty": "Medium",
+    "topics": "Tree, DP",
+    "approach": "Post-order DP rob/no-rob",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Airbnb"
+  },
+  {
+    "id": 338,
+    "title": "Counting Bits",
+    "difficulty": "Easy",
+    "topics": "DP, Bit Manipulation",
+    "approach": "dp[i] = dp[i>>1] + (i&1)",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 339,
+    "title": "Nested List Weight Sum",
+    "difficulty": "Medium",
+    "topics": "DFS, BFS",
+    "approach": "DFS recursive",
+    "time": "O(n)",
+    "space": "O(d)",
+    "companies": "Google,Uber,LinkedIn"
+  },
+  {
+    "id": 340,
+    "title": "Longest Substring with At Most K Distinct",
+    "difficulty": "Medium",
+    "topics": "String, Sliding Window",
+    "approach": "Sliding window + ordered map",
+    "time": "O(n)",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 341,
+    "title": "Flatten Nested List Iterator",
+    "difficulty": "Medium",
+    "topics": "Stack, Design",
+    "approach": "Stack-based lazy flatten",
+    "time": "O(1) amortized",
+    "space": "O(n)",
+    "companies": "Google,Uber,LinkedIn"
+  },
+  {
+    "id": 342,
+    "title": "Power of Four",
+    "difficulty": "Easy",
+    "topics": "Math, Bit Manipulation",
+    "approach": "Mask check for power-of-4 pattern",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 344,
+    "title": "Reverse String",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Two pointers in-place",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 345,
+    "title": "Reverse Vowels of a String",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Two pointer swap vowels",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 347,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "topics": "Array, Heap, Bucket Sort",
+    "approach": "Bucket sort O(n)",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 348,
+    "title": "Design Tic-Tac-Toe",
+    "difficulty": "Medium",
+    "topics": "Array, Design",
+    "approach": "Row/col/diag counters",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 349,
+    "title": "Intersection of Two Arrays",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Set",
+    "approach": "Two hash sets",
+    "time": "O(m+n)",
+    "space": "O(m+n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 350,
+    "title": "Intersection of Two Arrays II",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Map",
+    "approach": "Freq map intersection",
+    "time": "O(m+n)",
+    "space": "O(min(m,n))",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 352,
+    "title": "Data Stream as Disjoint Intervals",
+    "difficulty": "Hard",
+    "topics": "Sorted Set, Design",
+    "approach": "TreeMap merge",
+    "time": "O(log n) add",
+    "space": "O(n)",
+    "companies": "Google"
+  },
+  {
+    "id": 354,
+    "title": "Russian Doll Envelopes",
+    "difficulty": "Hard",
+    "topics": "Array, DP, Binary Search",
+    "approach": "Sort by w asc h desc + LIS on h",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 355,
+    "title": "Design Twitter",
+    "difficulty": "Medium",
+    "topics": "Heap, Design, Hash Map",
+    "approach": "Priority queue per user feeds",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Twitter/X"
+  },
+  {
+    "id": 357,
+    "title": "Count Numbers with Unique Digits",
+    "difficulty": "Medium",
+    "topics": "Math, DP",
+    "approach": "Product rule counting",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 360,
+    "title": "Sort Transformed Array",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Two pointers from ends",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 362,
+    "title": "Design Hit Counter",
+    "difficulty": "Medium",
+    "topics": "Queue, Design",
+    "approach": "Circular buffer or deque",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Dropbox"
+  },
+  {
+    "id": 366,
+    "title": "Find Leaves of Binary Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "DFS by height",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,LinkedIn"
+  },
+  {
+    "id": 367,
+    "title": "Valid Perfect Square",
+    "difficulty": "Easy",
+    "topics": "Math, Binary Search",
+    "approach": "Binary search or Newton",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 368,
+    "title": "Largest Divisible Subset",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP sort then pick pairs",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 371,
+    "title": "Sum of Two Integers",
+    "difficulty": "Medium",
+    "topics": "Bit Manipulation",
+    "approach": "XOR + AND carry",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 373,
+    "title": "Find K Pairs with Smallest Sums",
+    "difficulty": "Medium",
+    "topics": "Array, Heap",
+    "approach": "Min-heap of (u0+v0, i, 0)",
+    "time": "O(k log k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 374,
+    "title": "Guess Number Higher or Lower",
+    "difficulty": "Easy",
+    "topics": "Binary Search",
+    "approach": "Binary search on range",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 375,
+    "title": "Guess Number Higher or Lower II",
+    "difficulty": "Medium",
+    "topics": "DP, Game Theory",
+    "approach": "Interval DP minimax",
+    "time": "O(n³)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 376,
+    "title": "Wiggle Subsequence",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy, DP",
+    "approach": "Greedy count direction changes",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 377,
+    "title": "Combination Sum IV",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP order matters",
+    "time": "O(n · target)",
+    "space": "O(target)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 378,
+    "title": "Kth Smallest Element in a Sorted Matrix",
+    "difficulty": "Medium",
+    "topics": "Matrix, Heap, Binary Search",
+    "approach": "Binary search on value range",
+    "time": "O(n log(max-min))",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 380,
+    "title": "Insert Delete GetRandom O(1)",
+    "difficulty": "Medium",
+    "topics": "Hash Map, Array, Design",
+    "approach": "Hash map + array swap",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 381,
+    "title": "Insert Delete GetRandom O(1) — Duplicates",
+    "difficulty": "Hard",
+    "topics": "Hash Map, Array, Design",
+    "approach": "Hash map to index set",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 382,
+    "title": "Linked List Random Node",
+    "difficulty": "Medium",
+    "topics": "Reservoir Sampling",
+    "approach": "Reservoir sampling",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 383,
+    "title": "Ransom Note",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Char frequency count",
+    "time": "O(m+n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 384,
+    "title": "Shuffle an Array",
+    "difficulty": "Medium",
+    "topics": "Array, Randomness, Design",
+    "approach": "Fisher-Yates shuffle",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 385,
+    "title": "Mini Parser",
+    "difficulty": "Medium",
+    "topics": "String, Stack, Design",
+    "approach": "Stack nested list parse",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 386,
+    "title": "Lexicographical Numbers",
+    "difficulty": "Medium",
+    "topics": "DFS, Trie",
+    "approach": "DFS 1..9 digit-by-digit",
+    "time": "O(n)",
+    "space": "O(log n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 387,
+    "title": "First Unique Character in a String",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Freq array + scan",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 388,
+    "title": "Longest Absolute File Path",
+    "difficulty": "Medium",
+    "topics": "String, Stack",
+    "approach": "Stack track depth lengths",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 389,
+    "title": "Find the Difference",
+    "difficulty": "Easy",
+    "topics": "String, Bit Manipulation",
+    "approach": "XOR all chars",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 390,
+    "title": "Elimination Game",
+    "difficulty": "Medium",
+    "topics": "Math",
+    "approach": "Track left end update",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 392,
+    "title": "Is Subsequence",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Two pointer match",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 394,
+    "title": "Decode String",
+    "difficulty": "Medium",
+    "topics": "String, Stack",
+    "approach": "Stack for repeat/build",
+    "time": "O(max_k^depth · n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 395,
+    "title": "Longest Substring with At Least K Repeating",
+    "difficulty": "Medium",
+    "topics": "String, Divide & Conquer",
+    "approach": "Divide at chars < k",
+    "time": "O(n log n) or O(26n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 398,
+    "title": "Random Pick Index",
+    "difficulty": "Medium",
+    "topics": "Reservoir Sampling",
+    "approach": "Reservoir sampling",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 399,
+    "title": "Evaluate Division",
+    "difficulty": "Medium",
+    "topics": "Graph, BFS/DFS, Union Find",
+    "approach": "BFS on weighted graph",
+    "time": "O((V+E)·Q)",
+    "space": "O(V+E)",
+    "companies": "Amazon,Google,Uber"
+  },
+  {
+    "id": 400,
+    "title": "Nth Digit",
+    "difficulty": "Medium",
+    "topics": "Math",
+    "approach": "Binary search digit length",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 402,
+    "title": "Remove K Digits",
+    "difficulty": "Medium",
+    "topics": "String, Greedy, Stack",
+    "approach": "Monotonic stack",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 403,
+    "title": "Frog Jump",
+    "difficulty": "Hard",
+    "topics": "Array, DP",
+    "approach": "DP hash map at stone",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 404,
+    "title": "Sum of Left Leaves",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "DFS track isLeft flag",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 406,
+    "title": "Queue Reconstruction by Height",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Sort desc h, insert by k",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 408,
+    "title": "Valid Word Abbreviation",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "Two pointers match",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 409,
+    "title": "Longest Palindrome",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Count odd freq chars",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 410,
+    "title": "Split Array Largest Sum",
+    "difficulty": "Hard",
+    "topics": "Array, Binary Search, DP",
+    "approach": "Binary search on answer",
+    "time": "O(n log(sum))",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 412,
+    "title": "Fizz Buzz",
+    "difficulty": "Easy",
+    "topics": "Math, String",
+    "approach": "Simple mod check",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft,Apple"
+  },
+  {
+    "id": 413,
+    "title": "Arithmetic Slices",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP count consecutive diff",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 415,
+    "title": "Add Strings",
+    "difficulty": "Easy",
+    "topics": "Math, String",
+    "approach": "Character-by-character add",
+    "time": "O(max(m,n))",
+    "space": "O(max(m,n))",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 416,
+    "title": "Partition Equal Subset Sum",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "0/1 Knapsack DP",
+    "time": "O(n · sum)",
+    "space": "O(sum)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 417,
+    "title": "Pacific Atlantic Water Flow",
+    "difficulty": "Medium",
+    "topics": "Array, BFS/DFS",
+    "approach": "DFS from both oceans",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 418,
+    "title": "Sentence Screen Fitting",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "Simulate or DP on sentence",
+    "time": "O(m·n)",
+    "space": "O(m)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 419,
+    "title": "Battleships in a Board",
+    "difficulty": "Medium",
+    "topics": "Array, DFS",
+    "approach": "Count heads of ships",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 421,
+    "title": "Maximum XOR of Two Numbers in an Array",
+    "difficulty": "Medium",
+    "topics": "Bit Manipulation, Trie",
+    "approach": "Trie or greedy bit-by-bit",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 423,
+    "title": "Reconstruct Original Digits from English",
+    "difficulty": "Medium",
+    "topics": "String, Math",
+    "approach": "Count unique letters per digit",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 424,
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "Medium",
+    "topics": "String, Sliding Window",
+    "approach": "Sliding window track max freq",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 426,
+    "title": "Convert Binary Search Tree to Sorted Doubly Linked List",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "Inorder link nodes",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 428,
+    "title": "Serialize and Deserialize N-ary Tree",
+    "difficulty": "Hard",
+    "topics": "Tree, BFS/DFS",
+    "approach": "Level-order with child counts",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 430,
+    "title": "Flatten a Multilevel Doubly Linked List",
+    "difficulty": "Medium",
+    "topics": "Linked List, DFS",
+    "approach": "DFS / iterative stack",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 432,
+    "title": "All O(1) Data Structure",
+    "difficulty": "Hard",
+    "topics": "Hash Map, Doubly Linked List, Design",
+    "approach": "DLL of counts + hash maps",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 437,
+    "title": "Path Sum III",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS, Prefix Sum",
+    "approach": "DFS + prefix sum hash",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 438,
+    "title": "Find All Anagrams in a String",
+    "difficulty": "Medium",
+    "topics": "String, Sliding Window",
+    "approach": "Fixed-size sliding window char count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 440,
+    "title": "K-th Smallest in Lexicographical Order",
+    "difficulty": "Hard",
+    "topics": "Trie, Math",
+    "approach": "Count nodes in trie subtree",
+    "time": "O(log²n)",
+    "space": "O(log n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 441,
+    "title": "Arranging Coins",
+    "difficulty": "Easy",
+    "topics": "Math, Binary Search",
+    "approach": "Quadratic formula or binary search",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 442,
+    "title": "Find All Duplicates in an Array",
+    "difficulty": "Medium",
+    "topics": "Array, Hash",
+    "approach": "Negate at index trick",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 443,
+    "title": "String Compression",
+    "difficulty": "Medium",
+    "topics": "String, Two Pointers",
+    "approach": "Two-pointer write",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 445,
+    "title": "Add Two Numbers II",
+    "difficulty": "Medium",
+    "topics": "Linked List, Stack",
+    "approach": "Two stacks",
+    "time": "O(max(m,n))",
+    "space": "O(m+n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 448,
+    "title": "Find All Numbers Disappeared in an Array",
+    "difficulty": "Easy",
+    "topics": "Array, Hash",
+    "approach": "Negate at index trick",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 449,
+    "title": "Serialize and Deserialize BST",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS/DFS",
+    "approach": "Preorder + BST reconstruct",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 450,
+    "title": "Delete Node in a BST",
+    "difficulty": "Medium",
+    "topics": "Tree, BST",
+    "approach": "Find inorder successor/predecessor",
+    "time": "O(H)",
+    "space": "O(H)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 451,
+    "title": "Sort Characters By Frequency",
+    "difficulty": "Medium",
+    "topics": "String, Heap, Bucket Sort",
+    "approach": "Bucket sort by freq",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 452,
+    "title": "Minimum Number of Arrows to Burst Balloons",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Sort by end, greedy shoot",
+    "time": "O(n log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 453,
+    "title": "Minimum Moves to Equal Array Elements",
+    "difficulty": "Medium",
+    "topics": "Array, Math",
+    "approach": "Find min, subtract",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 454,
+    "title": "4Sum II",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Hash sums of pairs AB",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 455,
+    "title": "Assign Cookies",
+    "difficulty": "Easy",
+    "topics": "Array, Greedy",
+    "approach": "Sort both, greedy match",
+    "time": "O(n log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 456,
+    "title": "132 Pattern",
+    "difficulty": "Medium",
+    "topics": "Array, Stack",
+    "approach": "Monotonic stack track 3rd",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 457,
+    "title": "Circular Array Loop",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Slow/fast cycle detect",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 459,
+    "title": "Repeated Substring Pattern",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "KMP failure function",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 460,
+    "title": "LFU Cache",
+    "difficulty": "Hard",
+    "topics": "Hash Map, Doubly Linked List, Design",
+    "approach": "Freq→DLL + node map",
+    "time": "O(1)",
+    "space": "O(capacity)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 461,
+    "title": "Hamming Distance",
+    "difficulty": "Easy",
+    "topics": "Bit Manipulation",
+    "approach": "XOR then popcount",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 463,
+    "title": "Island Perimeter",
+    "difficulty": "Easy",
+    "topics": "Array, DFS",
+    "approach": "Count edges adjacent to water",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 473,
+    "title": "Matchsticks to Square",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking, DP",
+    "approach": "Backtracking 4 buckets",
+    "time": "O(4^n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 474,
+    "title": "Ones and Zeroes",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "3D knapsack DP",
+    "time": "O(l·m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 476,
+    "title": "Number Complement",
+    "difficulty": "Easy",
+    "topics": "Bit Manipulation",
+    "approach": "Flip bits up to MSB",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 477,
+    "title": "Total Hamming Distance",
+    "difficulty": "Medium",
+    "topics": "Bit Manipulation",
+    "approach": "Count 0s & 1s per bit",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 480,
+    "title": "Sliding Window Median",
+    "difficulty": "Hard",
+    "topics": "Array, Heap, Sorted Set",
+    "approach": "Two heaps rebalance",
+    "time": "O(n log k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 482,
+    "title": "License Key Formatting",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "Reverse group insert dashes",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 485,
+    "title": "Max Consecutive Ones",
+    "difficulty": "Easy",
+    "topics": "Array",
+    "approach": "Linear scan track count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 486,
+    "title": "Predict the Winner",
+    "difficulty": "Medium",
+    "topics": "Array, DP, Game Theory",
+    "approach": "DP minimax interval",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 490,
+    "title": "The Maze",
+    "difficulty": "Medium",
+    "topics": "Array, BFS/DFS",
+    "approach": "BFS roll until wall",
+    "time": "O(m·n·max(m,n))",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 494,
+    "title": "Target Sum",
+    "difficulty": "Medium",
+    "topics": "Array, DP, DFS",
+    "approach": "DP or subset sum trick",
+    "time": "O(n · sum)",
+    "space": "O(sum)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 496,
+    "title": "Next Greater Element I",
+    "difficulty": "Easy",
+    "topics": "Array, Stack, Hash Map",
+    "approach": "Monotonic stack hash",
+    "time": "O(m+n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 498,
+    "title": "Diagonal Traverse",
+    "difficulty": "Medium",
+    "topics": "Array, Matrix",
+    "approach": "Direction flip logic",
+    "time": "O(m·n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 499,
+    "title": "The Maze III",
+    "difficulty": "Hard",
+    "topics": "Graph, Dijkstra",
+    "approach": "Dijkstra with lexicographic path",
+    "time": "O(m·n·log(m·n))",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 500,
+    "title": "Keyboard Row",
+    "difficulty": "Easy",
+    "topics": "String, Hash Set",
+    "approach": "Set per row check",
+    "time": "O(n · L)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 501,
+    "title": "Find Mode in Binary Search Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Morris inorder track modes",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 502,
+    "title": "IPO",
+    "difficulty": "Hard",
+    "topics": "Array, Heap, Greedy",
+    "approach": "Max-heap profits greedy",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 503,
+    "title": "Next Greater Element II",
+    "difficulty": "Medium",
+    "topics": "Array, Stack",
+    "approach": "Monotonic stack circular",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 505,
+    "title": "The Maze II",
+    "difficulty": "Medium",
+    "topics": "Graph, Dijkstra",
+    "approach": "Dijkstra min steps",
+    "time": "O(m·n·log(m·n))",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 508,
+    "title": "Most Frequent Subtree Sum",
+    "difficulty": "Medium",
+    "topics": "Tree, Hash Map",
+    "approach": "Post-order DFS count sums",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 509,
+    "title": "Fibonacci Number",
+    "difficulty": "Easy",
+    "topics": "DP, Recursion",
+    "approach": "Bottom-up DP",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 515,
+    "title": "Find Largest Value in Each Tree Row",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "BFS take max each level",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 516,
+    "title": "Longest Palindromic Subsequence",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "2D DP",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 518,
+    "title": "Coin Change II",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP unbounded knapsack",
+    "time": "O(amount·n)",
+    "space": "O(amount)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 523,
+    "title": "Continuous Subarray Sum",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Prefix sum mod k hash",
+    "time": "O(n)",
+    "space": "O(min(n,k))",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 525,
+    "title": "Contiguous Array",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Prefix sum 0→-1 hash",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 528,
+    "title": "Random Pick with Weight",
+    "difficulty": "Medium",
+    "topics": "Array, Prefix Sum, Binary Search",
+    "approach": "Prefix sum + binary search",
+    "time": "O(log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 529,
+    "title": "Minesweeper",
+    "difficulty": "Medium",
+    "topics": "Array, DFS/BFS",
+    "approach": "DFS reveal squares",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 530,
+    "title": "Minimum Absolute Difference in BST",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Inorder track prev",
+    "time": "O(n)",
+    "space": "O(H)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 532,
+    "title": "K-diff Pairs in an Array",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map, Two Pointers",
+    "approach": "Hash map count diffs",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 535,
+    "title": "Encode and Decode TinyURL",
+    "difficulty": "Medium",
+    "topics": "Hash Map, Design",
+    "approach": "Random hash + map",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 536,
+    "title": "Construct Binary Tree from String",
+    "difficulty": "Medium",
+    "topics": "Tree, Stack, String",
+    "approach": "Stack-based parse",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 538,
+    "title": "Convert BST to Greater Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "Reverse inorder running sum",
+    "time": "O(n)",
+    "space": "O(H)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 539,
+    "title": "Minimum Time Difference",
+    "difficulty": "Medium",
+    "topics": "Array, Math",
+    "approach": "Sort minutes, check gaps",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 540,
+    "title": "Single Element in a Sorted Array",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search even/odd index",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 543,
+    "title": "Diameter of Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "Post-order track max path",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 547,
+    "title": "Number of Provinces",
+    "difficulty": "Medium",
+    "topics": "Graph, Union Find, DFS",
+    "approach": "Union-Find or DFS",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 554,
+    "title": "Brick Wall",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Hash gap positions",
+    "time": "O(n·w)",
+    "space": "O(w)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 556,
+    "title": "Next Greater Element III",
+    "difficulty": "Medium",
+    "topics": "String, Two Pointers",
+    "approach": "Next permutation technique",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 560,
+    "title": "Subarray Sum Equals K",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Prefix sum hash map",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft,Meta"
+  },
+  {
+    "id": 562,
+    "title": "Longest Line of Consecutive Ones in Matrix",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP 4 directions",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 567,
+    "title": "Permutation in String",
+    "difficulty": "Medium",
+    "topics": "String, Sliding Window",
+    "approach": "Fixed-window char count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 572,
+    "title": "Subtree of Another Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "DFS isSameTree check",
+    "time": "O(m·n)",
+    "space": "O(m)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 581,
+    "title": "Shortest Unsorted Continuous Subarray",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Find min/max out of order",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 583,
+    "title": "Delete Operation for Two Strings",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "LCS then deletions",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 588,
+    "title": "Design In-Memory File System",
+    "difficulty": "Hard",
+    "topics": "Trie, Design",
+    "approach": "Trie with files/dirs",
+    "time": "O(L log k)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 589,
+    "title": "N-ary Tree Preorder Traversal",
+    "difficulty": "Easy",
+    "topics": "Tree",
+    "approach": "Iterative stack",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 590,
+    "title": "N-ary Tree Postorder Traversal",
+    "difficulty": "Easy",
+    "topics": "Tree",
+    "approach": "Reverse preorder",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 593,
+    "title": "Valid Square",
+    "difficulty": "Medium",
+    "topics": "Math, Geometry",
+    "approach": "Compute 6 distances check",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 599,
+    "title": "Minimum Index Sum of Two Lists",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Map",
+    "approach": "Hash common with min index sum",
+    "time": "O(m+n)",
+    "space": "O(m)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 604,
+    "title": "Design Compressed String Iterator",
+    "difficulty": "Easy",
+    "topics": "Design, String",
+    "approach": "Parse count on demand",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 605,
+    "title": "Can Place Flowers",
+    "difficulty": "Easy",
+    "topics": "Array, Greedy",
+    "approach": "Greedy skip pairs",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 606,
+    "title": "Construct String from Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "DFS with parentheses",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 609,
+    "title": "Find Duplicate File in System",
+    "difficulty": "Medium",
+    "topics": "Array, Hash Map",
+    "approach": "Hash content→paths",
+    "time": "O(n · L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google,Dropbox"
+  },
+  {
+    "id": 611,
+    "title": "Valid Triangle Number",
+    "difficulty": "Medium",
+    "topics": "Array, Two Pointers",
+    "approach": "Sort + two pointers",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 616,
+    "title": "Add Bold Tag in String",
+    "difficulty": "Medium",
+    "topics": "String, Trie",
+    "approach": "Merge intervals of matches",
+    "time": "O(n · m · L)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 621,
+    "title": "Task Scheduler",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy, Heap",
+    "approach": "Count max freq task",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 622,
+    "title": "Design Circular Queue",
+    "difficulty": "Medium",
+    "topics": "Array, Queue, Design",
+    "approach": "Ring buffer with head/tail",
+    "time": "O(1)",
+    "space": "O(k)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 623,
+    "title": "Add One Row to Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS/BFS",
+    "approach": "BFS level d-1 insert",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 624,
+    "title": "Maximum Distance in Arrays",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Track running min/max",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 628,
+    "title": "Maximum Product of Three Numbers",
+    "difficulty": "Easy",
+    "topics": "Array, Math",
+    "approach": "Sort pick max3 or 2min+max",
+    "time": "O(n log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 632,
+    "title": "Smallest Range Covering Elements from K Lists",
+    "difficulty": "Hard",
+    "topics": "Array, Heap",
+    "approach": "Min-heap + track max",
+    "time": "O(n log k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 633,
+    "title": "Sum of Square Numbers",
+    "difficulty": "Medium",
+    "topics": "Math, Two Pointers",
+    "approach": "Two pointers 0..√c",
+    "time": "O(√c)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 636,
+    "title": "Exclusive Time of Functions",
+    "difficulty": "Medium",
+    "topics": "Stack",
+    "approach": "Stack-based simulation",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 637,
+    "title": "Average of Levels in Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, BFS",
+    "approach": "BFS sum each level",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 638,
+    "title": "Shopping Offers",
+    "difficulty": "Medium",
+    "topics": "Array, DP, DFS",
+    "approach": "DFS with memoisation",
+    "time": "O(k^n · offers)",
+    "space": "O(k^n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 640,
+    "title": "Solve the Equation",
+    "difficulty": "Medium",
+    "topics": "Math, String",
+    "approach": "Parse LHS RHS collect x+const",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 641,
+    "title": "Design Circular Deque",
+    "difficulty": "Medium",
+    "topics": "Array, Design",
+    "approach": "Ring buffer expand both ends",
+    "time": "O(1)",
+    "space": "O(k)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 643,
+    "title": "Maximum Average Subarray I",
+    "difficulty": "Easy",
+    "topics": "Array, Sliding Window",
+    "approach": "Fixed window sliding sum",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 645,
+    "title": "Set Mismatch",
+    "difficulty": "Easy",
+    "topics": "Array, Hash",
+    "approach": "Negate trick find dup+missing",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 647,
+    "title": "Palindromic Substrings",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "Expand around center",
+    "time": "O(n²)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 648,
+    "title": "Replace Words",
+    "difficulty": "Medium",
+    "topics": "String, Trie",
+    "approach": "Trie prefix replacement",
+    "time": "O(n · L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 649,
+    "title": "Dota2 Senate",
+    "difficulty": "Medium",
+    "topics": "Queue, Greedy",
+    "approach": "Two queues greedy ban",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 652,
+    "title": "Find Duplicate Subtrees",
+    "difficulty": "Medium",
+    "topics": "Tree, Hash Map",
+    "approach": "Post-order serialise subtrees",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 653,
+    "title": "Two Sum IV — Input is a BST",
+    "difficulty": "Easy",
+    "topics": "Tree, Hash Set",
+    "approach": "Inorder + hash set",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 658,
+    "title": "Find K Closest Elements",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search, Two Pointers",
+    "approach": "Binary search left bound",
+    "time": "O(log(n-k)+k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 659,
+    "title": "Split Array into Consecutive Subsequences",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy, Heap",
+    "approach": "Greedy end count maps",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 662,
+    "title": "Maximum Width of Binary Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS",
+    "approach": "BFS track index with overflow fix",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 665,
+    "title": "Non-decreasing Array",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "At most one fix check cases",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 670,
+    "title": "Maximum Swap",
+    "difficulty": "Medium",
+    "topics": "Array, Greedy",
+    "approach": "Greedy pick last largest",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 671,
+    "title": "Second Minimum Node in a Binary Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, DFS",
+    "approach": "DFS track 2 distinct vals",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 673,
+    "title": "Number of Longest Increasing Subsequence",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "DP with count array",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 674,
+    "title": "Longest Continuous Increasing Subsequence",
+    "difficulty": "Easy",
+    "topics": "Array",
+    "approach": "Linear scan reset",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 677,
+    "title": "Map Sum Pairs",
+    "difficulty": "Medium",
+    "topics": "Trie, Design",
+    "approach": "Trie store value at end",
+    "time": "O(L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 678,
+    "title": "Valid Parenthesis String",
+    "difficulty": "Medium",
+    "topics": "String, Greedy, DP",
+    "approach": "Track lo/hi open count",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 680,
+    "title": "Valid Palindrome II",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Try skip left or right once",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 681,
+    "title": "Next Closest Time",
+    "difficulty": "Medium",
+    "topics": "String, Backtracking",
+    "approach": "DFS 4 digits using existing",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 684,
+    "title": "Redundant Connection",
+    "difficulty": "Medium",
+    "topics": "Graph, Union Find",
+    "approach": "Union-Find detect cycle",
+    "time": "O(n α(n))",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 685,
+    "title": "Redundant Connection II",
+    "difficulty": "Hard",
+    "topics": "Graph, Union Find",
+    "approach": "Union-Find handle in-degree 2",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 686,
+    "title": "Repeated String Match",
+    "difficulty": "Medium",
+    "topics": "String",
+    "approach": "Repeat until length",
+    "time": "O(n · m)",
+    "space": "O(n · m)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 687,
+    "title": "Longest Univalue Path",
+    "difficulty": "Medium",
+    "topics": "Tree, DFS",
+    "approach": "Post-order track max path",
+    "time": "O(n)",
+    "space": "O(H)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 688,
+    "title": "Knight Probability in Chessboard",
+    "difficulty": "Medium",
+    "topics": "DP",
+    "approach": "DP over k moves",
+    "time": "O(k · n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 692,
+    "title": "Top K Frequent Words",
+    "difficulty": "Medium",
+    "topics": "String, Heap",
+    "approach": "Freq map + min-heap size k",
+    "time": "O(n log k)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 695,
+    "title": "Max Area of Island",
+    "difficulty": "Medium",
+    "topics": "Array, DFS/BFS, Union Find",
+    "approach": "DFS count cells",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 696,
+    "title": "Count Binary Substrings",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Track prev/curr group sizes",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 697,
+    "title": "Degree of an Array",
+    "difficulty": "Easy",
+    "topics": "Array, Hash Map",
+    "approach": "Track first/last/count per val",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 698,
+    "title": "Partition to K Equal Sum Subsets",
+    "difficulty": "Medium",
+    "topics": "Array, Backtracking, DP",
+    "approach": "Backtracking k buckets",
+    "time": "O(k · 2^n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 700,
+    "title": "Search in a Binary Search Tree",
+    "difficulty": "Easy",
+    "topics": "Tree, BST",
+    "approach": "Recursive left/right",
+    "time": "O(H)",
+    "space": "O(H)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 701,
+    "title": "Insert into a Binary Search Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, BST",
+    "approach": "BST insert iterative",
+    "time": "O(H)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 703,
+    "title": "Kth Largest Element in a Stream",
+    "difficulty": "Easy",
+    "topics": "Heap, Design",
+    "approach": "Min-heap of size k",
+    "time": "O(log k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 704,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "topics": "Array, Binary Search",
+    "approach": "Classic binary search",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Google"
+  },
+  {
+    "id": 705,
+    "title": "Design HashSet",
+    "difficulty": "Easy",
+    "topics": "Hash Map, Design",
+    "approach": "Array of buckets",
+    "time": "O(1) avg",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 706,
+    "title": "Design HashMap",
+    "difficulty": "Easy",
+    "topics": "Hash Map, Design",
+    "approach": "Array of buckets",
+    "time": "O(1) avg",
+    "space": "O(n)",
+    "companies": "Amazon,Microsoft"
+  },
+  {
+    "id": 708,
+    "title": "Insert into a Sorted Circular Linked List",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "Find insert point edge cases",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 710,
+    "title": "Random Pick with Blacklist",
+    "difficulty": "Hard",
+    "topics": "Array, Hash Map, Binary Search",
+    "approach": "Remap blacklist to end",
+    "time": "O(b)",
+    "space": "O(b)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 712,
+    "title": "Minimum ASCII Delete Sum for Two Strings",
+    "difficulty": "Medium",
+    "topics": "String, DP",
+    "approach": "LCS variant with ASCII weights",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 713,
+    "title": "Subarray Product Less Than K",
+    "difficulty": "Medium",
+    "topics": "Array, Sliding Window",
+    "approach": "Sliding window product",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 714,
+    "title": "Best Time to Buy and Sell Stock with Transaction Fee",
+    "difficulty": "Medium",
+    "topics": "Array, DP, Greedy",
+    "approach": "DP hold/free states",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 716,
+    "title": "Max Stack",
+    "difficulty": "Hard",
+    "topics": "Stack, Design, Sorted Set",
+    "approach": "Two stacks or DLL + TreeMap",
+    "time": "O(log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 718,
+    "title": "Maximum Length of Repeated Subarray",
+    "difficulty": "Medium",
+    "topics": "Array, DP, Binary Search",
+    "approach": "2D DP suffix",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 720,
+    "title": "Longest Word in Dictionary",
+    "difficulty": "Medium",
+    "topics": "String, Trie",
+    "approach": "Trie BFS valid word path",
+    "time": "O(n · L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 721,
+    "title": "Accounts Merge",
+    "difficulty": "Medium",
+    "topics": "String, Union Find, DFS",
+    "approach": "Union-Find by email",
+    "time": "O(n · L log(n · L))",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 724,
+    "title": "Find Pivot Index",
+    "difficulty": "Easy",
+    "topics": "Array, Prefix Sum",
+    "approach": "Total sum - left prefix",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 725,
+    "title": "Split Linked List in Parts",
+    "difficulty": "Medium",
+    "topics": "Linked List",
+    "approach": "Compute size distribute evenly",
+    "time": "O(n+k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 726,
+    "title": "Number of Atoms",
+    "difficulty": "Hard",
+    "topics": "String, Hash Map, Stack",
+    "approach": "Stack hash parse formula",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 728,
+    "title": "Self Dividing Numbers",
+    "difficulty": "Easy",
+    "topics": "Math",
+    "approach": "Check each digit divides",
+    "time": "O(n · d)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 729,
+    "title": "My Calendar I",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search, Design",
+    "approach": "Sorted list binary search",
+    "time": "O(log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 730,
+    "title": "Count Different Palindromic Subsequences",
+    "difficulty": "Hard",
+    "topics": "String, DP",
+    "approach": "Interval DP with char anchor",
+    "time": "O(n³)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 731,
+    "title": "My Calendar II",
+    "difficulty": "Medium",
+    "topics": "Array, Segment Tree, Design",
+    "approach": "Two sorted lists",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 733,
+    "title": "Flood Fill",
+    "difficulty": "Easy",
+    "topics": "Array, BFS/DFS",
+    "approach": "DFS change connected color",
+    "time": "O(m·n)",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 735,
+    "title": "Asteroid Collision",
+    "difficulty": "Medium",
+    "topics": "Array, Stack",
+    "approach": "Stack simulate collisions",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Bloomberg"
+  },
+  {
+    "id": 739,
+    "title": "Daily Temperatures",
+    "difficulty": "Medium",
+    "topics": "Array, Stack",
+    "approach": "Monotonic stack",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 740,
+    "title": "Delete and Earn",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "Map to house robber",
+    "time": "O(n + max_val)",
+    "space": "O(max_val)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 743,
+    "title": "Network Delay Time",
+    "difficulty": "Medium",
+    "topics": "Graph, Dijkstra, BFS",
+    "approach": "Dijkstra single source",
+    "time": "O((V+E) log V)",
+    "space": "O(V+E)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 744,
+    "title": "Find Smallest Letter Greater Than Target",
+    "difficulty": "Easy",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search wrap-around",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 745,
+    "title": "Prefix and Suffix Search",
+    "difficulty": "Hard",
+    "topics": "String, Trie, Design",
+    "approach": "Combined prefix#suffix trie",
+    "time": "O(n · L²)",
+    "space": "O(n · L²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 746,
+    "title": "Min Cost Climbing Stairs",
+    "difficulty": "Easy",
+    "topics": "Array, DP",
+    "approach": "DP take min of 2 options",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 747,
+    "title": "Largest Number At Least Twice of Others",
+    "difficulty": "Easy",
+    "topics": "Array",
+    "approach": "Find max1 and max2",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 748,
+    "title": "Shortest Completing Word",
+    "difficulty": "Easy",
+    "topics": "String, Hash Map",
+    "approach": "Char freq match license",
+    "time": "O(n · L)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 749,
+    "title": "Contain Virus",
+    "difficulty": "Hard",
+    "topics": "Array, DFS, Simulation",
+    "approach": "Simulate quarantine rounds",
+    "time": "O(m·n)² per round",
+    "space": "O(m·n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 750,
+    "title": "Number of Corner Rectangles",
+    "difficulty": "Medium",
+    "topics": "Array, DP, Hash Map",
+    "approach": "Count column pairs",
+    "time": "O(m² · n / 2)",
+    "space": "O(m²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 752,
+    "title": "Open the Lock",
+    "difficulty": "Medium",
+    "topics": "BFS, String",
+    "approach": "BFS all 10000 combos",
+    "time": "O(10000)",
+    "space": "O(10000)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 753,
+    "title": "Cracking the Safe",
+    "difficulty": "Hard",
+    "topics": "Graph, DFS, Euler Path",
+    "approach": "De Bruijn sequence DFS",
+    "time": "O(k^n)",
+    "space": "O(k^n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 763,
+    "title": "Partition Labels",
+    "difficulty": "Medium",
+    "topics": "String, Greedy",
+    "approach": "Track last occurrence",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 767,
+    "title": "Reorganize String",
+    "difficulty": "Medium",
+    "topics": "String, Heap, Greedy",
+    "approach": "Max-heap interleave",
+    "time": "O(n log k)",
+    "space": "O(k)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 771,
+    "title": "Jewels and Stones",
+    "difficulty": "Easy",
+    "topics": "String, Hash Set",
+    "approach": "Count chars in set",
+    "time": "O(J+S)",
+    "space": "O(J)",
+    "companies": "Amazon,Google,Apple"
+  },
+  {
+    "id": 772,
+    "title": "Basic Calculator III",
+    "difficulty": "Hard",
+    "topics": "Math, Stack, Recursion",
+    "approach": "Stack + recursive paren parse",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 773,
+    "title": "Sliding Puzzle",
+    "difficulty": "Hard",
+    "topics": "BFS, Graph",
+    "approach": "BFS on board string states",
+    "time": "O((m·n)! · m·n)",
+    "space": "O((m·n)!)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 778,
+    "title": "Swim in Rising Water",
+    "difficulty": "Hard",
+    "topics": "Graph, Dijkstra, Union Find",
+    "approach": "Dijkstra min-max path",
+    "time": "O(n² log n)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 785,
+    "title": "Is Graph Bipartite",
+    "difficulty": "Medium",
+    "topics": "Graph, BFS, DFS",
+    "approach": "BFS 2-colour",
+    "time": "O(V+E)",
+    "space": "O(V)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 787,
+    "title": "Cheapest Flights Within K Stops",
+    "difficulty": "Medium",
+    "topics": "Graph, DP, Bellman-Ford",
+    "approach": "Bellman-Ford k iterations",
+    "time": "O(k · E)",
+    "space": "O(V)",
+    "companies": "Amazon,Google,Uber"
+  },
+  {
+    "id": 791,
+    "title": "Custom Sort String",
+    "difficulty": "Medium",
+    "topics": "String, Greedy",
+    "approach": "Count chars sort by order",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 796,
+    "title": "Rotate String",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "Concatenate and search",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 797,
+    "title": "All Paths From Source to Target",
+    "difficulty": "Medium",
+    "topics": "Graph, DFS",
+    "approach": "DFS all paths",
+    "time": "O(2^V · V)",
+    "space": "O(V)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 799,
+    "title": "Champagne Tower",
+    "difficulty": "Medium",
+    "topics": "Array, DP",
+    "approach": "Simulate pour per row",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 804,
+    "title": "Unique Morse Code Words",
+    "difficulty": "Easy",
+    "topics": "String, Hash Set",
+    "approach": "Map chars concatenate",
+    "time": "O(n · L)",
+    "space": "O(n)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 807,
+    "title": "Max Increase to Keep City Skyline",
+    "difficulty": "Medium",
+    "topics": "Array, Matrix",
+    "approach": "Row/col max constraint",
+    "time": "O(n²)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 811,
+    "title": "Subdomain Visit Count",
+    "difficulty": "Medium",
+    "topics": "String, Hash Map",
+    "approach": "Parse and accumulate domains",
+    "time": "O(n · L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 815,
+    "title": "Bus Routes",
+    "difficulty": "Hard",
+    "topics": "BFS, Graph",
+    "approach": "BFS on routes not stops",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 820,
+    "title": "Short Encoding of Words",
+    "difficulty": "Medium",
+    "topics": "String, Trie",
+    "approach": "Trie of reversed words",
+    "time": "O(n · L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 824,
+    "title": "Goat Latin",
+    "difficulty": "Easy",
+    "topics": "String",
+    "approach": "Simulate rules",
+    "time": "O(n · L)",
+    "space": "O(n · L)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 825,
+    "title": "Friends Of Appropriate Ages",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Sort + binary search counts",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 827,
+    "title": "Making A Large Island",
+    "difficulty": "Hard",
+    "topics": "Array, DFS, Union Find",
+    "approach": "DFS label + try each 0",
+    "time": "O(n²)",
+    "space": "O(n²)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 833,
+    "title": "Find and Replace in String",
+    "difficulty": "Medium",
+    "topics": "String, Sorting",
+    "approach": "Sort by index apply right-to-left",
+    "time": "O(n + k log k)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 836,
+    "title": "Rectangle Overlap",
+    "difficulty": "Easy",
+    "topics": "Math, Geometry",
+    "approach": "Axis-separation check",
+    "time": "O(1)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 841,
+    "title": "Keys and Rooms",
+    "difficulty": "Medium",
+    "topics": "Graph, DFS/BFS",
+    "approach": "DFS collect keys",
+    "time": "O(V+E)",
+    "space": "O(V)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 844,
+    "title": "Backspace String Compare",
+    "difficulty": "Easy",
+    "topics": "String, Two Pointers",
+    "approach": "Two pointers from back",
+    "time": "O(m+n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple,Microsoft"
+  },
+  {
+    "id": 849,
+    "title": "Maximize Distance to Closest Person",
+    "difficulty": "Medium",
+    "topics": "Array",
+    "approach": "Track gaps between people",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 852,
+    "title": "Peak Index in a Mountain Array",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search for peak",
+    "time": "O(log n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 856,
+    "title": "Score of Parentheses",
+    "difficulty": "Medium",
+    "topics": "String, Stack",
+    "approach": "Stack depth-based scoring",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 859,
+    "title": "Buddy Strings",
+    "difficulty": "Easy",
+    "topics": "String, Hash Set",
+    "approach": "Find one or two diff positions",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 863,
+    "title": "All Nodes Distance K in Binary Tree",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS, DFS",
+    "approach": "Build parent map then BFS",
+    "time": "O(n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 875,
+    "title": "Koko Eating Bananas",
+    "difficulty": "Medium",
+    "topics": "Array, Binary Search",
+    "approach": "Binary search on eating speed",
+    "time": "O(n log max)",
+    "space": "O(1)",
+    "companies": "Amazon,Google,Meta"
+  },
+  {
+    "id": 876,
+    "title": "Middle of the Linked List",
+    "difficulty": "Easy",
+    "topics": "Linked List, Two Pointers",
+    "approach": "Slow/fast pointer",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Apple"
+  },
+  {
+    "id": 886,
+    "title": "Possible Bipartition",
+    "difficulty": "Medium",
+    "topics": "Graph, BFS/DFS, Union Find",
+    "approach": "BFS 2-coloring",
+    "time": "O(V+E)",
+    "space": "O(V+E)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 895,
+    "title": "Maximum Frequency Stack",
+    "difficulty": "Hard",
+    "topics": "Hash Map, Stack, Design",
+    "approach": "Freq map + group stack",
+    "time": "O(1)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 901,
+    "title": "Online Stock Span",
+    "difficulty": "Medium",
+    "topics": "Stack, Design",
+    "approach": "Monotonic stack accumulate span",
+    "time": "O(1) amortized",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 904,
+    "title": "Fruit Into Baskets",
+    "difficulty": "Medium",
+    "topics": "Array, Sliding Window",
+    "approach": "Sliding window 2 distinct",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 912,
+    "title": "Sort an Array",
+    "difficulty": "Medium",
+    "topics": "Array, Sorting",
+    "approach": "Merge sort or heap sort",
+    "time": "O(n log n)",
+    "space": "O(n)",
+    "companies": "Amazon,Google,Microsoft"
+  },
+  {
+    "id": 919,
+    "title": "Complete Binary Tree Inserter",
+    "difficulty": "Medium",
+    "topics": "Tree, BFS, Design",
+    "approach": "BFS track last incomplete level",
+    "time": "O(1) insert",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 921,
+    "title": "Minimum Add to Make Parentheses Valid",
+    "difficulty": "Medium",
+    "topics": "String, Greedy, Stack",
+    "approach": "Count unmatched ( and )",
+    "time": "O(n)",
+    "space": "O(1)",
+    "companies": "Amazon,Google"
+  },
+  {
+    "id": 929,
+    "title": "Unique Email Addresses",
+    "difficulty": "Easy",
+    "topics": "String, Hash Set",
+    "approach": "Parse local + domain rules",
+    "time": "O(n · L)",
+    "space": "O(n)",
+    "companies": "Amazon,Google"
+  }
+]
