@@ -22,6 +22,237 @@ const OLLAMA_MODEL = process.env.OLLAMA_MODEL || "llama3";
 export async function POST(req: NextRequest) {
   try {
     const { messages, problemContext } = await req.json();
+    const lastMsg = messages?.[messages.length - 1]?.content || "";
+
+    if (lastMsg.includes("generate a personalized roadmap") || lastMsg.includes("personalized roadmap")) {
+      const matchCo = lastMsg.match(/company\s+\[?([^\]\n]+)\]?/i);
+      const matchDur = lastMsg.match(/duration\s+\[?(\d+)/i);
+      const company = matchCo ? matchCo[1].trim() : "Amazon";
+      const duration = matchDur ? parseInt(matchDur[1]) : 30;
+
+      const systemPrompt = `You are a FAANG technical mentor. Generate a personalized learning roadmap in JSON format.
+The target company is: ${company}
+The duration is: ${duration} days
+
+The JSON must contain two arrays:
+1. "roadmapItems": An array of weeks. If duration is 7 days, return exactly 1 week. If 30 days, return 4 weeks. If 90 days, return 12 weeks.
+   Each item has:
+   - "week" (e.g. "Week 1", "Week 2")
+   - "focus" (e.g. "Advanced Graph Algorithms")
+   - "topics" (array of strings, e.g. ["DFS", "BFS", "Topological Sort"])
+   - "problems" (number of practice problems)
+   - "status" (string: "in-progress" for the first week, "upcoming" for the rest).
+2. "dailyPlan": An array of days. Each item has:
+   - "week" (the week it belongs to, e.g., "Week 1", matching the "week" name in roadmapItems)
+   - "day" (e.g., "Day 1", "Day 2")
+   - "topic" (e.g., "Level order traversal and BFS queueing")
+   - "problems": An array of objects, each having:
+     - "title" (string, e.g. "Two Sum")
+     - "brief" (string, e.g. "Find two numbers that sum up to target.")
+     - "completed" (boolean, false)
+   - "done" (boolean, false)
+
+Return ONLY the raw JSON string. Do not wrap in markdown or backticks.`;
+
+      let aiResult = "";
+      if (GROQ_API_KEY) {
+        aiResult = await callGroq([{ role: "system", content: systemPrompt }]) || "";
+      }
+      if (!aiResult) {
+        aiResult = await callOllama([{ role: "system", content: systemPrompt }]) || "";
+      }
+
+      if (aiResult) {
+        try {
+          const cleaned = aiResult.replace(/```json/g, "").replace(/```/g, "").trim();
+          const parsed = JSON.parse(cleaned);
+          return NextResponse.json({ response: JSON.stringify(parsed), source: "ai" });
+        } catch (e) {
+          // Fall through to mock
+        }
+      }
+
+      function getProblemBrief(title: string): string {
+        const briefs: Record<string, string> = {
+          "Course Schedule II": "Find a valid order to complete numCourses courses given a 2D array of prerequisites.",
+          "Word Ladder": "Find the length of the shortest transformation sequence from beginWord to endWord.",
+          "Cheapest Flights Within K Stops": "Find the cheapest price from src to dst with at most k stops.",
+          "Implement Trie": "Design a prefix tree supporting insert, search, and startsWith operations.",
+          "Range Sum Query - Mutable": "Perform sum query and update operations on a 1D array efficiently.",
+          "Design Add and Search Words": "Design a data structure that supports adding new words and searching for wildcards.",
+          "Edit Distance": "Find the minimum number of operations required to convert word1 to word2.",
+          "Longest Palindromic Substring": "Find the longest substring in s that reads the same backwards and forwards.",
+          "Coin Change": "Find the fewest number of coins needed to make up a given amount.",
+          "Merge k Sorted Lists": "Merge k sorted linked lists and return it as one sorted list.",
+          "Task Scheduler": "Find the least number of units of time that the CPU will take to finish all tasks.",
+          "Find Median from Data Stream": "Design a data structure to dynamically calculate the median of a stream of numbers.",
+          "Valid Palindrome II": "Determine if a string can be a palindrome after deleting at most one character.",
+          "Subarray Sum Equals K": "Find the total number of continuous subarrays whose sum equals to k.",
+          "Minimum Remove to Make Valid Parentheses": "Remove the minimum number of invalid parentheses to make the input string valid.",
+          "Container With Most Water": "Find two lines that together with the x-axis forms a container containing the most water.",
+          "Minimum Window Substring": "Find the minimum window in s which contains all characters of t.",
+          "3Sum": "Find all unique triplets in the array which gives the sum of zero.",
+          "Lowest Common Ancestor of a Binary Tree": "Find the lowest common ancestor of two given nodes in a binary tree.",
+          "Binary Tree Right Side View": "Return the values of the nodes you can see ordered from top to bottom.",
+          "Validate BST": "Determine if a binary tree is a valid Binary Search Tree.",
+          "Subsets": "Return all possible subsets (power set) of a given set of distinct integers.",
+          "Letter Combinations of a Phone Number": "Return all possible letter combinations that the number could represent.",
+          "Word Search": "Determine if a word exists in a 2D board of characters.",
+          "LRU Cache": "Design and implement a Least Recently Used (LRU) cache supporting get and put.",
+          "Design Search Autocomplete System": "Design an autocomplete system that returns top 3 matching historical search queries.",
+          "Design LFU Cache": "Design and implement a Least Frequently Used (LFU) cache.",
+          "Top K Frequent Elements": "Return the k most frequent elements in an array.",
+          "K Closest Points to Origin": "Find the k closest points to the origin (0, 0) on a 2D plane.",
+          "Binary Tree Zigzag Level Order Traversal": "Return the zigzag level order traversal of its nodes' values.",
+          "Serialize and Deserialize Binary Tree": "Design an algorithm to serialize and deserialize a binary tree.",
+          "Binary Tree Maximum Path Sum": "Find the maximum path sum of any non-empty path in a binary tree.",
+          "Design Rate Limiter": "Design a rate limiter that limits request throughput per client IP.",
+          "Design URL Shortener": "Design a service that maps long URLs to short 6-character aliases.",
+          "Design Key-Value Store": "Design a distributed, highly available key-value store.",
+          "Reverse Bits": "Reverse bits of a given 32-bit unsigned integer.",
+          "Single Number": "Find the single element in an array where every other element appears twice.",
+          "Number of 1 Bits": "Return the number of '1' bits a given 32-bit integer has.",
+          "Daily Temperatures": "Return an array such that answer[i] is the number of days you have to wait for a warmer temperature.",
+          "Evaluate Reverse Polish Notation": "Evaluate the value of an arithmetic expression in Reverse Polish Notation.",
+          "Largest Rectangle in Histogram": "Find the area of the largest rectangle in the histogram.",
+          "Reverse Linked List II": "Reverse a linked list from position left to right.",
+          "Copy List with Random Pointer": "Construct a deep copy of a list where each node contains an additional random pointer.",
+          "Linked List Cycle II": "Find the node where the cycle begins in a linked list.",
+          "Search in Rotated Sorted Array": "Search for a target value in a rotated sorted array in O(log n) time.",
+          "Find First and Last Position": "Find the starting and ending position of a given target value in a sorted array.",
+          "Median of Two Sorted Arrays": "Find the median of the two sorted arrays in O(log(m+n)) time.",
+          "Design Video Streaming Platform": "Design a scalable video hosting and adaptive streaming architecture.",
+          "Consistent Hashing Algorithm": "Implement consistent hashing to distribute keys among dynamic servers.",
+          "Design Netflix Metadata Store": "Design a metadata store holding movie metadata with high read throughput.",
+          "Longest Substring Without Repeating Characters": "Find the length of the longest substring without repeating characters.",
+          "Find All Anagrams in a String": "Find all start indices of t's anagrams in s.",
+          "Subarrays with K Different Integers": "Find the number of good subarrays with exactly k different integers.",
+          "Sudoku Solver": "Write a program to solve a Sudoku puzzle by filling the empty cells.",
+          "Combination Sum": "Find all unique combinations in candidates where the candidate numbers sum to target.",
+          "Generate Parentheses": "Generate all combinations of well-formed parentheses.",
+          "Unique Paths II": "Find the number of unique paths from top-left to bottom-right in a grid with obstacles.",
+          "Longest Common Subsequence": "Find the length of the longest common subsequence between two strings.",
+          "Maximal Square": "Find the largest square containing only 1s and return its area."
+        };
+        return briefs[title] || "Practice and implement this problem to master key DSA patterns and improve execution speed.";
+      }
+
+      // Dynamic mock generator fallback
+      const topicsMap: Record<string, {focus: string, topics: string[], problems: string[]}[]> = {
+        "Google": [
+          { focus: "Graphs & Topological Sort", topics: ["DFS", "BFS", "Dijkstra"], problems: ["Course Schedule II", "Word Ladder", "Cheapest Flights Within K Stops"] },
+          { focus: "Tries & Segment Trees", topics: ["Prefix Tree", "Suffix Tree", "Range Queries"], problems: ["Implement Trie", "Range Sum Query - Mutable", "Design Add and Search Words"] },
+          { focus: "Dynamic Programming", topics: ["Knapsack", "LCS", "Interval DP"], problems: ["Edit Distance", "Longest Palindromic Substring", "Coin Change"] },
+          { focus: "Heaps & Greedy Algorithms", topics: ["Min-Heap", "K-Way Merge", "Huffman"], problems: ["Merge k Sorted Lists", "Task Scheduler", "Find Median from Data Stream"] },
+        ],
+        "Meta": [
+          { focus: "Arrays & Strings", topics: ["String Manipulation", "Subarrays"], problems: ["Valid Palindrome II", "Subarray Sum Equals K", "Minimum Remove to Make Valid Parentheses"] },
+          { focus: "Two Pointers & Sliding Window", topics: ["Two Sum Variation", "Min Window"], problems: ["Container With Most Water", "Minimum Window Substring", "3Sum"] },
+          { focus: "Binary Trees & BSTs", topics: ["Tree Traversal", "Lowest Common Ancestor"], problems: ["Lowest Common Ancestor of a Binary Tree", "Binary Tree Right Side View", "Validate BST"] },
+          { focus: "Recursion & Backtracking", topics: ["Permutations", "Subsets", "N-Queens"], problems: ["Subsets", "Letter Combinations of a Phone Number", "Word Search"] },
+        ],
+        "Amazon": [
+          { focus: "Design Patterns & Cache", topics: ["LRU", "LFU", "Factory Pattern"], problems: ["LRU Cache", "Design Search Autocomplete System", "Design LFU Cache"] },
+          { focus: "K-Way Merge & Heap", topics: ["Priority Queue", "Top K Elements"], problems: ["Merge k Sorted Lists", "Top K Frequent Elements", "K Closest Points to Origin"] },
+          { focus: "Tree Traversals & Views", topics: ["BFS Views", "Boundary Path"], problems: ["Binary Tree Zigzag Level Order Traversal", "Serialize and Deserialize Binary Tree", "Binary Tree Maximum Path Sum"] },
+          { focus: "System Design & Scaling", topics: ["Microservices", "Load Balancing"], problems: ["Design Rate Limiter", "Design URL Shortener", "Design Key-Value Store"] },
+        ],
+        "Apple": [
+          { focus: "Bit Manipulation", topics: ["Bitwise Operations", "Masking"], problems: ["Reverse Bits", "Single Number", "Number of 1 Bits"] },
+          { focus: "Stack & Queue", topics: ["Monotonic Stack", "Circular Queue"], problems: ["Daily Temperatures", "Evaluate Reverse Polish Notation", "Largest Rectangle in Histogram"] },
+          { focus: "Linked Lists", topics: ["Fast & Slow Pointers", "In-place Reversal"], problems: ["Reverse Linked List II", "Copy List with Random Pointer", "Linked List Cycle II"] },
+          { focus: "Binary Search", topics: ["Search in Rotated Array", "Median of Arrays"], problems: ["Search in Rotated Sorted Array", "Find First and Last Position", "Median of Two Sorted Arrays"] },
+        ],
+        "Netflix": [
+          { focus: "System Caching & Design", topics: ["CDN caching", "Consistent Hashing"], problems: ["Design Video Streaming Platform", "Consistent Hashing Algorithm", "Design Netflix Metadata Store"] },
+          { focus: "Sliding Window Patterns", topics: ["Substring Matching", "Distinct Elements"], problems: ["Longest Substring Without Repeating Characters", "Find All Anagrams in a String", "Subarrays with K Different Integers"] },
+          { focus: "Backtracking & Optimization", topics: ["Constraint Sat", "Branch & Bound"], problems: ["Sudoku Solver", "Combination Sum", "Generate Parentheses"] },
+          { focus: "Dynamic Programming & Matrix", topics: ["Grid DP", "Pathfinding"], problems: ["Unique Paths II", "Longest Common Subsequence", "Maximal Square"] },
+        ],
+      };
+
+      const defaultData = [
+        { focus: "Arrays & Sorting", topics: ["Binary Search", "Sorting"], problems: ["Two Sum", "Search in Rotated Array", "Merge Intervals"] },
+        { focus: "Trees & BST", topics: ["DFS", "BFS", "LCA"], problems: ["Binary Tree Level Order Traversal", "Validate BST", "Lowest Common Ancestor"] },
+        { focus: "Dynamic Programming", topics: ["1D DP", "2D DP"], problems: ["Climbing Stairs", "Longest Common Subsequence", "Coin Change"] },
+        { focus: "System Design Essentials", topics: ["System Scaling", "Caching"], problems: ["Design URL Shortener", "Design Rate Limiter", "Design LRU Cache"] },
+      ];
+
+      const selectedSource = topicsMap[company] || defaultData;
+
+      let numWeeks = 4;
+      if (duration === 7) numWeeks = 1;
+      else if (duration === 30) numWeeks = 4;
+      else if (duration === 90) numWeeks = 12;
+
+      const roadmapItems = [];
+      const dailyPlan = [];
+
+      for (let w = 1; w <= numWeeks; w++) {
+        const sourceIndex = (w - 1) % selectedSource.length;
+        const weekData = selectedSource[sourceIndex];
+        const weekName = `Week ${w}`;
+
+        roadmapItems.push({
+          week: weekName,
+          focus: weekData.focus,
+          topics: weekData.topics,
+          problems: weekData.problems.length * 2 + 3,
+          status: w === 1 ? "in-progress" : "upcoming"
+        });
+
+        const daysInWeek = 7;
+        for (let d = 1; d <= daysInWeek; d++) {
+          const dayNum = (w - 1) * 7 + d;
+          const dayName = `Day ${dayNum}`;
+          
+          let dayTopic = "";
+          let rawProblems: string[] = [];
+
+          if (d === 1) {
+            dayTopic = `Introduction to ${weekData.focus}`;
+            rawProblems = [weekData.problems[0] || "Warmup Problem"];
+          } else if (d === 2) {
+            dayTopic = `${weekData.topics[0]} Patterns`;
+            rawProblems = [weekData.problems[1] || "Intermediate Problem"];
+          } else if (d === 3) {
+            dayTopic = `${weekData.topics[1] || "Core"} Deep Dive`;
+            rawProblems = [weekData.problems[2] || "Advanced Problem"];
+          } else if (d === 4) {
+            dayTopic = `Edge Case Hardening`;
+            rawProblems = [`Verify Nulls for ${weekData.problems[0] || "Problem"}`];
+          } else if (d === 5) {
+            dayTopic = `Time & Space Complexity optimization`;
+            rawProblems = [`Optimize ${weekData.problems[1] || "Problem"}`];
+          } else if (d === 6) {
+            dayTopic = `${company} Timed Mock Challenge`;
+            rawProblems = [`Mock: ${weekData.problems[2] || "Problem"}`];
+          } else {
+            dayTopic = `Weekly Retrospective & Code Review`;
+            rawProblems = ["Review weak points", "Refactor optimized solutions"];
+          }
+
+          const dayProblems = rawProblems.map(pName => ({
+            title: pName,
+            brief: getProblemBrief(pName),
+            completed: false
+          }));
+
+          dailyPlan.push({
+            week: weekName,
+            day: dayName,
+            topic: dayTopic,
+            problems: dayProblems,
+            done: false
+          });
+        }
+      }
+
+      return NextResponse.json({
+        response: JSON.stringify({ roadmapItems, dailyPlan }),
+        source: "mock"
+      });
+    }
 
     const systemPrompt = buildSystemPrompt(problemContext);
     const llmMessages = [

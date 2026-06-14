@@ -4,28 +4,188 @@ import "./roadmap.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Map, Sparkles, CheckCircle2, Circle } from "lucide-react";
-import { featuredCompanies } from "@/lib/data";
+import { featuredCompanies, problems } from "@/lib/data";
+import Link from "next/link";
+
+interface ProblemItem {
+  title: string;
+  brief: string;
+  completed: boolean;
+}
+
+interface DailyPlanItem {
+  week: string;
+  day: string;
+  topic: string;
+  problems: ProblemItem[];
+  done: boolean;
+}
 
 export default function RoadmapPage() {
   const [duration, setDuration] = useState<7 | 30 | 90>(30);
   const [targetCompany, setTargetCompany] = useState("Amazon");
+  const [loading, setLoading] = useState(false);
+  const [activeWeek, setActiveWeek] = useState("Week 1");
+  const [expandedProblem, setExpandedProblem] = useState<string | null>(null);
 
-  const roadmapItems = [
+  const getProblemLink = (title: string): string | null => {
+    const normalized = title.trim().toLowerCase();
+    const match = problems.find(p => 
+      p.title.toLowerCase() === normalized || 
+      normalized.includes(p.title.toLowerCase()) || 
+      p.title.toLowerCase().includes(normalized)
+    );
+    return match ? `/problems/${match.id}` : null;
+  };
+
+  const [items, setItems] = useState([
     { week: "Week 1", focus: "Fundamentals",       topics: ["Array", "String", "Hash Map", "Two Pointers"], problems: 12, status: "in-progress" },
     { week: "Week 2", focus: "Search & Sort",       topics: ["Binary Search", "Sorting", "Sliding Window"],  problems: 10, status: "upcoming" },
     { week: "Week 3", focus: "Data Structures",     topics: ["Stack", "Queue", "Heap", "Linked List"],       problems: 12, status: "upcoming" },
     { week: "Week 4", focus: "Trees & Graphs",      topics: ["Tree", "BST", "Graph", "BFS", "DFS"],          problems: 15, status: "upcoming" },
-  ];
+  ]);
 
-  const dailyPlan = [
-    { day: "Day 1", topic: "Array Basics",         problems: ["Two Sum", "Best Time to Buy Stock"],                    done: true },
-    { day: "Day 2", topic: "Hash Map Patterns",    problems: ["Group Anagrams", "Valid Anagram"],                       done: true },
-    { day: "Day 3", topic: "Two Pointers",         problems: ["Container With Most Water", "3Sum"],                     done: false },
-    { day: "Day 4", topic: "Sliding Window",       problems: ["Longest Substring Without Repeating", "Min Window Sub"], done: false },
-    { day: "Day 5", topic: "Binary Search",        problems: ["Search in Rotated Array", "Find Peak Element"],          done: false },
-    { day: "Day 6", topic: "Stack",                problems: ["Valid Parentheses", "Min Stack"],                        done: false },
-    { day: "Day 7", topic: "Review & Mock",        problems: ["Review weak topics", "Time 2 problems"],                 done: false },
-  ];
+  const [daily, setDaily] = useState<DailyPlanItem[]>([
+    {
+      week: "Week 1",
+      day: "Day 1",
+      topic: "Array Basics",
+      problems: [
+        { title: "Two Sum", brief: "Find two numbers in an array that add up to a specific target.", completed: true },
+        { title: "Best Time to Buy Stock", brief: "Find max profit buying and selling a stock once.", completed: true }
+      ],
+      done: true
+    },
+    {
+      week: "Week 1",
+      day: "Day 2",
+      topic: "Hash Map Patterns",
+      problems: [
+        { title: "Group Anagrams", brief: "Group strings that are anagrams of each other.", completed: true },
+        { title: "Valid Anagram", brief: "Check if two strings contain the same characters.", completed: true }
+      ],
+      done: true
+    },
+    {
+      week: "Week 1",
+      day: "Day 3",
+      topic: "Two Pointers",
+      problems: [
+        { title: "Container With Most Water", brief: "Find two lines forming a container with most water.", completed: false },
+        { title: "3Sum", brief: "Find unique triplets that sum to zero.", completed: false }
+      ],
+      done: false
+    },
+    {
+      week: "Week 1",
+      day: "Day 4",
+      topic: "Sliding Window",
+      problems: [
+        { title: "Longest Substring Without Repeating", brief: "Find longest substring without duplicate chars.", completed: false },
+        { title: "Min Window Sub", brief: "Find minimum window containing all characters of target.", completed: false }
+      ],
+      done: false
+    },
+    {
+      week: "Week 1",
+      day: "Day 5",
+      topic: "Binary Search",
+      problems: [
+        { title: "Search in Rotated Array", brief: "Search target in rotated sorted array.", completed: false },
+        { title: "Find Peak Element", brief: "Find an element greater than its neighbors.", completed: false }
+      ],
+      done: false
+    },
+    {
+      week: "Week 1",
+      day: "Day 6",
+      topic: "Stack",
+      problems: [
+        { title: "Valid Parentheses", brief: "Validate matching brackets order.", completed: false },
+        { title: "Min Stack", brief: "Design a stack supporting minimum value in O(1).", completed: false }
+      ],
+      done: false
+    },
+    {
+      week: "Week 1",
+      day: "Day 7",
+      topic: "Review & Mock",
+      problems: [
+        { title: "Review weak topics", brief: "Recap mistakes made during the week.", completed: false },
+        { title: "Time 2 problems", brief: "Do 2 medium problems under 40 minutes.", completed: false }
+      ],
+      done: false
+    },
+  ]);
+
+  const handleGenerateRoadmap = async () => {
+    setLoading(true);
+    setActiveWeek("Week 1");
+    try {
+      const res = await fetch("/api/ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          messages: [{
+            role: "user",
+            content: `Please generate a personalized roadmap for target company [${targetCompany}] and duration [${duration} days].`
+          }]
+        })
+      });
+      const data = await res.json();
+      if (data.response) {
+        const parsed = JSON.parse(data.response);
+        if (parsed.roadmapItems) setItems(parsed.roadmapItems);
+        if (parsed.dailyPlan) setDaily(parsed.dailyPlan);
+      }
+    } catch (err) {
+      console.error("Failed to generate roadmap:", err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const toggleProblemCompletion = (dayName: string, problemTitle: string) => {
+    setDaily(prevDaily => {
+      const updated = prevDaily.map(day => {
+        if (day.day !== dayName) return day;
+
+        const updatedProblems = day.problems.map(prob => {
+          if (prob.title !== problemTitle) return prob;
+          return { ...prob, completed: !prob.completed };
+        });
+
+        const allCompleted = updatedProblems.every(p => p.completed);
+
+        return {
+          ...day,
+          problems: updatedProblems,
+          done: allCompleted
+        };
+      });
+
+      const modifiedDayIndex = updated.findIndex(day => day.day === dayName);
+      if (modifiedDayIndex !== -1) {
+        const modifiedDay = updated[modifiedDayIndex];
+        const previouslyDone = prevDaily[modifiedDayIndex].done;
+
+        if (modifiedDay.done && !previouslyDone) {
+          const nextTodoDay = updated.find((day, idx) => idx > modifiedDayIndex && !day.done);
+          if (nextTodoDay) {
+            if (nextTodoDay.week && nextTodoDay.week !== activeWeek) {
+              setActiveWeek(nextTodoDay.week);
+            }
+          }
+        }
+      }
+
+      return updated;
+    });
+  };
+
+  const toggleProblemBrief = (uniqueId: string) => {
+    setExpandedProblem(prev => (prev === uniqueId ? null : uniqueId));
+  };
 
   return (
     <div className="rm-page">
@@ -73,9 +233,14 @@ export default function RoadmapPage() {
               </div>
             </div>
           </div>
-          <button className="rm-gen-btn" data-testid="generate-roadmap-btn">
-            <Sparkles width={15} height={15} aria-hidden />
-            Generate Roadmap with AI
+          <button
+            onClick={handleGenerateRoadmap}
+            disabled={loading}
+            className="rm-gen-btn disabled:opacity-50 disabled:cursor-not-allowed"
+            data-testid="generate-roadmap-btn"
+          >
+            <Sparkles className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} aria-hidden />
+            {loading ? "Generating Roadmap..." : "Generate Roadmap with AI"}
           </button>
         </div>
 
@@ -85,17 +250,18 @@ export default function RoadmapPage() {
           <div>
             <div className="rm-sec-title">📅 Weekly Plan for {targetCompany}</div>
             <div className="rm-weeks">
-              {roadmapItems.map((item, i) => (
+              {items.map((item, i) => (
                 <motion.div
                   key={item.week}
                   initial={{ opacity: 0, x: -16 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.08 }}
-                  className={`rm-week-card ${item.status === "in-progress" ? "active" : ""}`}
+                  onClick={() => setActiveWeek(item.week)}
+                  className={`rm-week-card cursor-pointer transition-all duration-200 hover:border-indigo-500/30 ${item.week === activeWeek ? "active" : ""}`}
                 >
                   <div className="rm-week-top">
                     <div className="rm-week-left">
-                      <div className={`rm-week-num ${item.status === "in-progress" ? "rm-week-num-active" : "rm-week-num-todo"}`}>
+                      <div className={`rm-week-num ${item.week === activeWeek ? "rm-week-num-active" : "rm-week-num-todo"}`}>
                         {item.week.split(" ")[1]}
                       </div>
                       <div>
@@ -103,7 +269,7 @@ export default function RoadmapPage() {
                         <div className="rm-week-cnt">{item.problems} problems</div>
                       </div>
                     </div>
-                    {item.status === "in-progress" && <span className="rm-week-badge">In Progress</span>}
+                    {item.week === activeWeek && <span className="rm-week-badge">Selected</span>}
                   </div>
                   <div className="rm-week-chips">
                     {item.topics.map(t => <span key={t} className="rm-week-chip">{t}</span>)}
@@ -115,10 +281,10 @@ export default function RoadmapPage() {
 
           {/* Daily plan */}
           <div>
-            <div className="rm-sec-title">📋 This Week</div>
+            <div className="rm-sec-title">📋 Schedule for {activeWeek}</div>
             <div className="rm-daily-card">
               <div className="rm-tl">
-                {dailyPlan.map((day, i) => (
+                {daily.filter(d => d.week === activeWeek || (!d.week && activeWeek === "Week 1")).map((day, i, arr) => (
                   <div key={day.day} className="rm-tl-item">
                     <div className="rm-tl-rail">
                       <div className={`rm-tl-dot ${day.done ? "rm-tl-dot-done" : "rm-tl-dot-todo"}`}>
@@ -126,17 +292,59 @@ export default function RoadmapPage() {
                           ? <CheckCircle2 width={14} height={14} color="#fff" aria-hidden />
                           : <Circle width={12} height={12} color="#d1d5db" aria-hidden />}
                       </div>
-                      {i < dailyPlan.length - 1 && (
+                      {i < arr.length - 1 && (
                         <div className={`rm-tl-line ${day.done ? "rm-tl-line-done" : "rm-tl-line-todo"}`} />
                       )}
                     </div>
                     <div className="rm-tl-body">
                       <div className="rm-tl-day">{day.day}</div>
                       <div className="rm-tl-topic">{day.topic}</div>
-                      <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
-                        {day.problems.map(p => (
-                          <div key={p} className={`rm-tl-p ${day.done ? "rm-tl-p-done" : ""}`}>• {p}</div>
-                        ))}
+                      <div className="rm-problems-list">
+                        {day.problems.map(p => {
+                          const uniqueId = `${day.day}-${p.title}`;
+                          const isExpanded = expandedProblem === uniqueId;
+                          return (
+                            <div key={p.title} className="rm-prob-item">
+                              <div className="rm-prob-row">
+                                <label className="rm-prob-label">
+                                  <input
+                                    type="checkbox"
+                                    checked={p.completed}
+                                    onChange={() => toggleProblemCompletion(day.day, p.title)}
+                                    className="rm-prob-checkbox"
+                                  />
+                                  {(() => {
+                                    const linkUrl = getProblemLink(p.title);
+                                    return linkUrl ? (
+                                      <Link
+                                        href={linkUrl}
+                                        className={p.completed ? "rm-prob-title-completed hover:text-indigo-400 hover:underline" : "rm-prob-title hover:text-indigo-400 hover:underline"}
+                                        style={{ textDecoration: p.completed ? "line-through" : "none" }}
+                                      >
+                                        {p.title} <span style={{ fontSize: "10px", opacity: 0.8 }}>↗</span>
+                                      </Link>
+                                    ) : (
+                                      <span className={p.completed ? "rm-prob-title-completed" : "rm-prob-title"}>
+                                        {p.title}
+                                      </span>
+                                    );
+                                  })()}
+                                </label>
+                                <button
+                                  onClick={() => toggleProblemBrief(uniqueId)}
+                                  className="rm-prob-toggle-btn"
+                                >
+                                  {isExpanded ? "Hide Details" : "Details"}
+                                </button>
+                              </div>
+                              {isExpanded && (
+                                <div className="rm-prob-brief">
+                                  {p.brief}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
                   </div>
