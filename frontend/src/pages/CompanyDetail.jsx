@@ -17,6 +17,7 @@ export default function CompanyDetail() {
     const [solved, setSolved] = useState(() => {
         try { return JSON.parse(localStorage.getItem('solved') || '{}'); } catch { return {}; }
     });
+    const [activeTab, setActiveTab] = useState('problems');
 
     useEffect(() => {
         setLoading(true);
@@ -94,119 +95,323 @@ export default function CompanyDetail() {
                     </div>
                 </div>
 
-                {/* Filters */}
-                <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
-                    <input
-                        className="input"
-                        placeholder="Search problems..."
-                        value={search}
-                        onChange={e => setSearch(e.target.value)}
-                        style={{ flex: '0 0 240px' }}
-                    />
-                    <div style={{ display: 'flex', gap: 6 }}>
-                        {['All', 'Easy', 'Medium', 'Hard'].map(d => (
-                            <button
-                                key={d}
-                                onClick={() => setDiff(d)}
-                                className={`btn btn-sm ${diffFilter === d ? 'btn-primary' : 'btn-ghost'}`}
-                                style={diffFilter === d ? {} : { opacity: 0.7 }}
-                            >{d}</button>
-                        ))}
-                    </div>
-                    <select
-                        className="input"
-                        value={topicFilter}
-                        onChange={e => setTopic(e.target.value)}
-                        style={{ flex: '0 0 200px' }}
+                {/* Tabs */}
+                <div style={{ display: 'flex', gap: 4, borderBottom: '1px solid var(--border)', marginBottom: 28 }}>
+                    <button
+                        onClick={() => setActiveTab('problems')}
+                        style={{
+                            padding: '12px 24px',
+                            background: 'none',
+                            border: 'none',
+                            borderBottom: activeTab === 'problems' ? '2px solid var(--accent)' : '2px solid transparent',
+                            color: activeTab === 'problems' ? 'var(--text)' : 'var(--muted)',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            fontSize: 15,
+                            transition: 'all 0.2s',
+                        }}
                     >
-                        {allTopics.map(t => <option key={t} value={t}>{t}</option>)}
-                    </select>
-                    <span style={{ color: 'var(--muted)', fontSize: 13, alignSelf: 'center' }}>
-                        {filtered.length} problems
-                    </span>
+                        📂 Coding Problems
+                    </button>
+                    <button
+                        onClick={() => setActiveTab('rounds')}
+                        style={{
+                            padding: '12px 24px',
+                            background: 'none',
+                            border: 'none',
+                            borderBottom: activeTab === 'rounds' ? '2px solid var(--accent)' : '2px solid transparent',
+                            color: activeTab === 'rounds' ? 'var(--text)' : 'var(--muted)',
+                            fontWeight: 600,
+                            cursor: 'pointer',
+                            fontSize: 15,
+                            transition: 'all 0.2s',
+                        }}
+                    >
+                        🔄 Interview Rounds & Process
+                    </button>
                 </div>
 
-                {/* Problems Table */}
-                <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 14, overflow: 'hidden' }}>
-                    {/* Table Header */}
-                    <div style={{
-                        display: 'grid', gridTemplateColumns: '40px 60px 1fr 120px 140px 80px',
-                        padding: '12px 20px', borderBottom: '1px solid var(--border)',
-                        fontSize: 11, color: 'var(--faint)', fontWeight: 600, letterSpacing: 1,
-                        textTransform: 'uppercase',
-                    }}>
-                        <div>✓</div><div>#</div><div>Problem</div><div>Difficulty</div><div>Topics</div><div>Solution</div>
-                    </div>
+                {activeTab === 'problems' ? (
+                    <>
+                        {/* Filters */}
+                        <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 24 }}>
+                            <input
+                                className="input"
+                                placeholder="Search problems..."
+                                value={search}
+                                onChange={e => setSearch(e.target.value)}
+                                style={{ flex: '0 0 240px' }}
+                            />
+                            <div style={{ display: 'flex', gap: 6 }}>
+                                {['All', 'Easy', 'Medium', 'Hard'].map(d => (
+                                    <button
+                                        key={d}
+                                        onClick={() => setDiff(d)}
+                                        className={`btn btn-sm ${diffFilter === d ? 'btn-primary' : 'btn-ghost'}`}
+                                        style={diffFilter === d ? {} : { opacity: 0.7 }}
+                                    >{d}</button>
+                                ))}
+                            </div>
+                            <select
+                                className="input"
+                                value={topicFilter}
+                                onChange={e => setTopic(e.target.value)}
+                                style={{ flex: '0 0 200px' }}
+                            >
+                                {allTopics.map(t => <option key={t} value={t}>{t}</option>)}
+                            </select>
+                            <span style={{ color: 'var(--muted)', fontSize: 13, alignSelf: 'center' }}>
+                                {filtered.length} problems
+                            </span>
+                        </div>
 
-                    {filtered.map((p, i) => (
-                        <div
-                            key={p.id}
-                            style={{
+                        {/* Problems Table */}
+                        <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 14, overflow: 'hidden' }}>
+                            {/* Table Header */}
+                            <div style={{
                                 display: 'grid', gridTemplateColumns: '40px 60px 1fr 120px 140px 80px',
-                                padding: '13px 20px',
-                                borderBottom: i < filtered.length - 1 ? '1px solid rgba(36,48,96,0.5)' : 'none',
-                                alignItems: 'center',
-                                background: solved[p.id] ? 'rgba(34,197,94,0.04)' : 'transparent',
-                                transition: 'background 0.2s',
-                            }}
-                            onMouseEnter={e => e.currentTarget.style.background = solved[p.id] ? 'rgba(34,197,94,0.08)' : 'var(--bg3)'}
-                            onMouseLeave={e => e.currentTarget.style.background = solved[p.id] ? 'rgba(34,197,94,0.04)' : 'transparent'}
-                        >
-                            <div>
+                                padding: '12px 20px', borderBottom: '1px solid var(--border)',
+                                fontSize: 11, color: 'var(--faint)', fontWeight: 600, letterSpacing: 1,
+                                textTransform: 'uppercase',
+                            }}>
+                                <div>✓</div><div>#</div><div>Problem</div><div>Difficulty</div><div>Topics</div><div>Solution</div>
+                            </div>
+
+                            {filtered.map((p, i) => (
                                 <div
+                                    key={p.id}
                                     style={{
-                                        width: 20, height: 20, borderRadius: 5,
-                                        background: solved[p.id] ? 'var(--easy)' : 'var(--surface)',
-                                        border: solved[p.id] ? '2px solid var(--easy)' : '2px solid var(--border)',
-                                        display: 'flex', alignItems: 'center', justifyContent: 'center',
-                                        fontSize: 11, transition: 'all 0.2s',
+                                        display: 'grid', gridTemplateColumns: '40px 60px 1fr 120px 140px 80px',
+                                        padding: '13px 20px',
+                                        borderBottom: i < filtered.length - 1 ? '1px solid rgba(36,48,96,0.5)' : 'none',
+                                        alignItems: 'center',
+                                        background: solved[p.id] ? 'rgba(34,197,94,0.04)' : 'transparent',
+                                        transition: 'background 0.2s',
                                     }}
-                                >{solved[p.id] ? '✓' : ''}</div>
-                            </div>
+                                    onMouseEnter={e => e.currentTarget.style.background = solved[p.id] ? 'rgba(34,197,94,0.08)' : 'var(--bg3)'}
+                                    onMouseLeave={e => e.currentTarget.style.background = solved[p.id] ? 'rgba(34,197,94,0.04)' : 'transparent'}
+                                >
+                                    <div>
+                                        <div
+                                            style={{
+                                                width: 20, height: 20, borderRadius: 5,
+                                                background: solved[p.id] ? 'var(--easy)' : 'var(--surface)',
+                                                border: solved[p.id] ? '2px solid var(--easy)' : '2px solid var(--border)',
+                                                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                                                fontSize: 11, transition: 'all 0.2s',
+                                            }}
+                                        >{solved[p.id] ? '✓' : ''}</div>
+                                    </div>
 
-                            {/* ID */}
-                            <div style={{ fontSize: 12, color: 'var(--faint)', fontFamily: 'JetBrains Mono,monospace' }}>
-                                #{p.id}
-                            </div>
+                                    {/* ID */}
+                                    <div style={{ fontSize: 12, color: 'var(--faint)', fontFamily: 'JetBrains Mono,monospace' }}>
+                                        #{p.id}
+                                    </div>
 
-                            {/* Title */}
-                            <div>
-                                <Link
-                                    to={`/problems/${p.id}`}
-                                    style={{ color: solved[p.id] ? 'var(--muted)' : 'var(--text)', textDecoration: 'none', fontSize: 14, fontWeight: 500, display: 'block' }}
-                                    onMouseEnter={e => e.target.style.color = 'var(--accent)'}
-                                    onMouseLeave={e => e.target.style.color = solved[p.id] ? 'var(--muted)' : 'var(--text)'}
-                                >{p.title}</Link>
-                                <div style={{ fontSize: 11, color: 'var(--faint)', marginTop: 4, fontFamily: 'JetBrains Mono,monospace', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                    // {p.approach}
+                                    {/* Title */}
+                                    <div>
+                                        <Link
+                                            to={`/problems/${p.id}`}
+                                            style={{ color: solved[p.id] ? 'var(--muted)' : 'var(--text)', textDecoration: 'none', fontSize: 14, fontWeight: 500, display: 'block' }}
+                                            onMouseEnter={e => e.target.style.color = 'var(--accent)'}
+                                            onMouseLeave={e => e.target.style.color = solved[p.id] ? 'var(--muted)' : 'var(--text)'}
+                                        >{p.title}</Link>
+                                        <div style={{ fontSize: 11, color: 'var(--faint)', marginTop: 4, fontFamily: 'JetBrains Mono,monospace', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                            // {p.approach}
+                                        </div>
+                                    </div>
+
+                                    {/* Difficulty */}
+                                    <div><span className={`badge ${DIFF_CLASS[p.difficulty]}`}>{p.difficulty}</span></div>
+
+                                    {/* Topics */}
+                                    <div style={{ fontSize: 11, color: 'var(--faint)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+                                        {p.topics}
+                                    </div>
+
+                                    {/* Solution link */}
+                                    <div>
+                                        <Link
+                                            to={`/problems/${p.id}`}
+                                            className="btn btn-ghost btn-sm"
+                                            style={{ textDecoration: 'none', padding: '4px 10px', fontSize: 11 }}
+                                        >View →</Link>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
 
-                            {/* Difficulty */}
-                            <div><span className={`badge ${DIFF_CLASS[p.difficulty]}`}>{p.difficulty}</span></div>
-
-                            {/* Topics */}
-                            <div style={{ fontSize: 11, color: 'var(--faint)', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-                                {p.topics}
-                            </div>
-
-                            {/* Solution link */}
-                            <div>
-                                <Link
-                                    to={`/problems/${p.id}`}
-                                    className="btn btn-ghost btn-sm"
-                                    style={{ textDecoration: 'none', padding: '4px 10px', fontSize: 11 }}
-                                >View →</Link>
-                            </div>
+                            {filtered.length === 0 && (
+                                <div style={{ padding: '60px 20px', textAlign: 'center', color: 'var(--muted)', fontSize: 14 }}>
+                                    No problems match your filters.
+                                </div>
+                            )}
                         </div>
-                    ))}
-
-                    {filtered.length === 0 && (
-                        <div style={{ padding: '60px 20px', textAlign: 'center', color: 'var(--muted)', fontSize: 14 }}>
-                            No problems match your filters.
+                    </>
+                ) : (
+                    <div className="fade-up" style={{ display: 'flex', flexDirection: 'column', gap: 24 }}>
+                        <div style={{
+                            background: 'var(--bg2)',
+                            border: '1px solid var(--border)',
+                            borderRadius: 12,
+                            padding: '20px 24px',
+                            lineHeight: 1.5,
+                            fontSize: 14,
+                            color: 'var(--muted)',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 16
+                        }}>
+                            <span style={{ fontSize: 24 }}>💡</span>
+                            <span>
+                                Below is the typical software engineering interview structure for <strong>{data.name}</strong>. 
+                                Click on any recommended topic tag to immediately filter the question bank and start preparing.
+                            </span>
                         </div>
-                    )}
-                </div>
+
+                        <div style={{
+                            position: 'relative',
+                            display: 'flex',
+                            flexDirection: 'column',
+                            gap: 20
+                        }}>
+                            {/* Timeline Vertical Line */}
+                            <div style={{
+                                position: 'absolute',
+                                left: 31,
+                                top: 24,
+                                bottom: 24,
+                                width: 2,
+                                background: 'linear-gradient(180deg, var(--accent) 0%, var(--border) 100%)',
+                                zIndex: 0
+                            }} />
+
+                            {data.rounds && data.rounds.map((r, index) => (
+                                <div key={index} style={{
+                                    display: 'flex',
+                                    gap: 24,
+                                    position: 'relative',
+                                    zIndex: 1
+                                }}>
+                                    {/* Timeline Node */}
+                                    <div style={{
+                                        width: 64,
+                                        height: 64,
+                                        borderRadius: 16,
+                                        background: 'var(--bg2)',
+                                        border: '2px solid var(--border)',
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        fontSize: 24,
+                                        boxShadow: '0 4px 12px rgba(0,0,0,0.2)',
+                                        flexShrink: 0
+                                    }}>
+                                        {r.icon || '📝'}
+                                    </div>
+
+                                    {/* Content Card */}
+                                    <div className="card" style={{
+                                        flex: 1,
+                                        padding: '24px',
+                                        background: 'var(--bg2)',
+                                        border: '1px solid var(--border)',
+                                        borderRadius: 14,
+                                        display: 'flex',
+                                        flexDirection: 'column',
+                                        gap: 14
+                                    }}>
+                                        <div style={{
+                                            display: 'flex',
+                                            justifyContent: 'space-between',
+                                            alignItems: 'center',
+                                            flexWrap: 'wrap',
+                                            gap: 12
+                                        }}>
+                                            <div>
+                                                <span style={{
+                                                    fontSize: 12,
+                                                    fontWeight: 700,
+                                                    color: 'var(--accent)',
+                                                    textTransform: 'uppercase',
+                                                    letterSpacing: 1,
+                                                    display: 'block',
+                                                    marginBottom: 4
+                                                }}>
+                                                    Round {index + 1}
+                                                </span>
+                                                <h3 style={{ fontSize: 18, fontWeight: 700, color: 'var(--text)' }}>
+                                                    {r.name}
+                                                </h3>
+                                            </div>
+                                            <div style={{ display: 'flex', gap: 8 }}>
+                                                <span style={{
+                                                    fontSize: 11,
+                                                    fontWeight: 600,
+                                                    background: 'var(--surface)',
+                                                    color: 'var(--text)',
+                                                    padding: '4px 10px',
+                                                    borderRadius: 20,
+                                                    border: '1px solid var(--border)'
+                                                }}>
+                                                    ⏱️ {r.duration}
+                                                </span>
+                                                <span style={{
+                                                    fontSize: 11,
+                                                    fontWeight: 600,
+                                                    background: 'rgba(99, 102, 241, 0.15)',
+                                                    color: 'var(--accent)',
+                                                    padding: '4px 10px',
+                                                    borderRadius: 20,
+                                                    border: '1px solid rgba(99, 102, 241, 0.3)'
+                                                }}>
+                                                    🛡️ {r.type}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <p style={{ color: 'var(--muted)', fontSize: 14, lineHeight: 1.6 }}>
+                                            {r.desc}
+                                        </p>
+
+                                        {r.topics && r.topics.length > 0 && (
+                                            <div style={{
+                                                display: 'flex',
+                                                flexWrap: 'wrap',
+                                                gap: 8,
+                                                borderTop: '1px solid var(--border)',
+                                                paddingTop: 14,
+                                                marginTop: 6,
+                                                alignItems: 'center'
+                                            }}>
+                                                <span style={{ fontSize: 12, fontWeight: 600, color: 'var(--faint)', marginRight: 4 }}>
+                                                    Recommended Topics:
+                                                </span>
+                                                {r.topics.map((topic, tIdx) => (
+                                                    <button
+                                                        key={tIdx}
+                                                        onClick={() => {
+                                                            setTopic(topic);
+                                                            setActiveTab('problems');
+                                                        }}
+                                                        className="tag"
+                                                        style={{
+                                                            cursor: 'pointer',
+                                                            transition: 'all 0.2s',
+                                                            border: '1px solid var(--border)',
+                                                            background: 'var(--surface)'
+                                                        }}
+                                                    >
+                                                        🔍 {topic}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </div>
     );

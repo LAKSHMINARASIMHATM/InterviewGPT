@@ -37,7 +37,7 @@ export default function Problems() {
 
     useEffect(() => {
         setLoading(true);
-        const params = { page, limit: PER_PAGE };
+        const params = { page, limit: PER_PAGE, type: 'coding' };
         if (diffFilter !== 'All') params.difficulty = diffFilter;
         if (topicFilter !== 'All') params.topic = topicFilter;
         if (compFilter !== 'All') params.company = compFilter;

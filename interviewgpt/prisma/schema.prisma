@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String   @unique
+  password  String
+  level     Int      @default(1)
+  xp        Int      @default(0)
+  streak    Int      @default(0)
+  solved    Int      @default(0)
+  avatar    String   @default("U")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  progress  Progress[]
+  badges    UserBadge[]
+}
+
+model Problem {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  problemId   Int      @unique
+  title       String
+  difficulty  String
+  topics      String
+  companies   String
+  approach    String
+  
+  userProgress Progress[]
+}
+
+model Progress {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  problemId String   @db.ObjectId
+  status    String   @default("To Do") // To Do, Attempted, Solved
+  
+  user      User     @relation(fields: [userId], references: [id])
+  problem   Problem  @relation(fields: [problemId], references: [id])
+
+  @@unique([userId, problemId])
+}
+
+model Badge {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  icon      String
+  
+  users     UserBadge[]
+}
+
+model UserBadge {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId    String   @db.ObjectId
+  badgeId   String   @db.ObjectId
+  
+  user      User     @relation(fields: [userId], references: [id])
+  badge     Badge    @relation(fields: [badgeId], references: [id])
+
+  @@unique([userId, badgeId])
+}

@@ -17,7 +17,7 @@ export default function Home() {
     }, []);
 
     const filtered = companies.filter(c =>
-        c.name.toLowerCase().includes(search.toLowerCase())
+        c && c.name && c.name.toLowerCase().includes(search.toLowerCase())
     );
 
     return (
@@ -41,7 +41,7 @@ export default function Home() {
                         fontSize: 13, color: 'var(--accent)', fontWeight: 500,
                     }}>
                         <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--accent)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
-                        500 Problems · 10 Companies · 3 Languages
+                        1750+ Problems · 470+ Companies · 4 Languages
                     </div>
 
                     <h1 style={{ fontSize: 'clamp(38px,6vw,72px)', fontWeight: 800, lineHeight: 1.1, marginBottom: 24 }}>
@@ -55,7 +55,7 @@ export default function Home() {
 
                     <p style={{ fontSize: 18, color: 'var(--muted)', marginBottom: 40, maxWidth: 560, margin: '0 auto 40px', lineHeight: 1.8 }}>
                         Curated LeetCode problems grouped by company — Google, Amazon, Meta and more.
-                        Study smart, not hard. Full solutions in Python, Java & C++.
+                        Study smart, not hard. Full solutions in Python, Java, C++, and JavaScript.
                     </p>
 
                     <div style={{ display: 'flex', gap: 12, justifyContent: 'center', flexWrap: 'wrap' }}>
@@ -63,7 +63,7 @@ export default function Home() {
                             Browse by Company
                         </Link>
                         <Link to="/problems" className="btn btn-ghost" style={{ fontSize: 15, padding: '12px 28px' }}>
-                            All 500 Problems
+                            All Problems
                         </Link>
                     </div>
                 </div>
@@ -162,9 +162,9 @@ export default function Home() {
                     <h2 style={{ fontSize: 36, fontWeight: 800, marginBottom: 48 }}>How It Works</h2>
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: 32 }}>
                         {[
-                            { icon: '🏢', step: '01', title: 'Pick a Company', desc: 'Choose from 10 top tech companies. See their most-asked problems.' },
+                            { icon: '🏢', step: '01', title: 'Pick a Company', desc: 'Choose from 470+ top tech companies. See their most-asked problems.' },
                             { icon: '🎯', step: '02', title: 'Filter by Difficulty', desc: 'Tackle Easy, Medium, or Hard problems at your own pace.' },
-                            { icon: '💡', step: '03', title: 'Study Solutions', desc: 'Read detailed explanations and production-quality code in 3 languages.' },
+                            { icon: '💡', step: '03', title: 'Study Solutions', desc: 'Read detailed explanations and production-quality code in 4 languages.' },
                             { icon: '✅', step: '04', title: 'Track Progress', desc: 'Mark problems solved and watch your readiness grow.' },
                         ].map(item => (
                             <div key={item.step} style={{
@@ -183,7 +183,7 @@ export default function Home() {
 
             {/* ── Footer ── */}
             <footer style={{ padding: '32px 24px', textAlign: 'center', color: 'var(--faint)', fontSize: 13 }}>
-                <p>Built for interview prep · 500 curated problems · Python · Java · C++</p>
+                <p>Built for interview prep · 1750+ curated problems · Python · Java · C++ · JS</p>
             </footer>
         </div>
     );

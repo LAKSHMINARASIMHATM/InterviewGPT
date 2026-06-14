@@ -16,7 +16,7 @@ export default function Companies() {
     }, []);
 
     const filtered = companies.filter(c =>
-        c.name.toLowerCase().includes(search.toLowerCase())
+        c && c.name && c.name.toLowerCase().includes(search.toLowerCase())
     );
 
     return (

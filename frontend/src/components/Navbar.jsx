@@ -1,19 +1,23 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const NAV_LINKS = [
     { to: '/', label: 'Home' },
     { to: '/companies', label: 'Companies' },
     { to: '/problems', label: 'Problems' },
+    { to: '/aptitude', label: 'Aptitude' },
 ];
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
+    const [total, setTotal] = useState(1750);
     const location = useLocation();
 
     useEffect(() => {
         const fn = () => setScrolled(window.scrollY > 10);
         window.addEventListener('scroll', fn);
+        axios.get('/api/stats').then(r => setTotal(r.data.total)).catch(() => {});
         return () => window.removeEventListener('scroll', fn);
     }, []);
 
@@ -65,7 +69,7 @@ export default function Navbar() {
                     padding: '4px 12px', borderRadius: 20,
                     background: 'rgba(99,102,241,0.15)', border: '1px solid rgba(99,102,241,0.3)',
                     fontSize: 12, color: 'var(--accent)', fontWeight: 500,
-                }}>500 Problems</div>
+                }}>{total}+ Problems</div>
                 <Link to="/problems" className="btn btn-primary btn-sm" style={{ textDecoration: 'none', padding: '7px 16px' }}>
                     Start Solving →
                 </Link>

@@ -1,0 +1,125 @@
+/* ══════════════════════════════════════════════════════════════
+   Search — search.css
+   ══════════════════════════════════════════════════════════════ */
+
+.sr-page {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.sr-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 48px 24px 56px;
+}
+
+.sr-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sr-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--text-primary);
+}
+
+.sr-search-box {
+  position: relative;
+  width: 100%;
+  margin-bottom: 32px;
+}
+
+.sr-search-icon {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.sr-input {
+  width: 100%;
+  padding: 20px 20px 20px 56px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-lg);
+  font-size: 18px;
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.sr-input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.05);
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.sr-results-count {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.sr-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  margin-bottom: 16px;
+  transition: transform 0.2s ease;
+}
+
+.sr-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sr-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #a78bfa;
+}
+
+.sr-snippet {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.sr-snippet mark {
+  background: rgba(139, 92, 246, 0.3);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0 4px;
+}
+
+.sr-citation-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sr-citation {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}

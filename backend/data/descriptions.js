@@ -19,6 +19,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given a string <code>s</code>, return <em>the longest</em> <span data-keyword=\"palindromic-string\"><em>palindromic</em></span> <span data-keyword=\"substring-nonempty\"><em>substring</em></span> in <code>s</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;babad&quot;\n<strong>Output:</strong> &quot;bab&quot;\n<strong>Explanation:</strong> &quot;aba&quot; is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbbd&quot;\n<strong>Output:</strong> &quot;bb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consist of only digits and English letters.</li>\n</ul>\n",
     "testcase": "\"babad\"\n\"cbbd\""
   },
+  "6": {
+    "content": "<h2>Zigzag Conversion</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "7": {
     "content": "<p>Given a signed 32-bit integer <code>x</code>, return <code>x</code><em> with its digits reversed</em>. If reversing <code>x</code> causes the value to go outside the signed 32-bit integer range <code>[-2<sup>31</sup>, 2<sup>31</sup> - 1]</code>, then return <code>0</code>.</p>\n\n<p><strong>Assume the environment does not allow you to store 64-bit integers (signed or unsigned).</strong></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 123\n<strong>Output:</strong> 321\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -123\n<strong>Output:</strong> -321\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 120\n<strong>Output:</strong> 21\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= x &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "123\n-123\n120"
@@ -31,9 +35,17 @@ const DESCRIPTIONS = {
     "content": "<p>Given an integer <code>x</code>, return <code>true</code><em> if </em><code>x</code><em> is a </em><span data-keyword=\"palindrome-integer\"><em><strong>palindrome</strong></em></span><em>, and </em><code>false</code><em> otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 121\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 121 reads as 121 from left to right and from right to left.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = -121\n<strong>Output:</strong> false\n<strong>Explanation:</strong> From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 10\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Reads 01 from right to left. Therefore it is not a palindrome.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup>&nbsp;&lt;= x &lt;= 2<sup>31</sup>&nbsp;- 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without converting the integer to a string?",
     "testcase": "121\n-121\n10"
   },
+  "10": {
+    "content": "<h2>Regular Expression Matching</h2>\n<p>This problem is frequently asked by Airbnb, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "11": {
     "content": "<p>You are given an integer array <code>height</code> of length <code>n</code>. There are <code>n</code> vertical lines drawn such that the two endpoints of the <code>i<sup>th</sup></code> line are <code>(i, 0)</code> and <code>(i, height[i])</code>.</p>\n\n<p>Find two lines that together with the x-axis form a container, such that the container contains the most water.</p>\n\n<p>Return <em>the maximum amount of water a container can store</em>.</p>\n\n<p><strong>Notice</strong> that you may not slant the container.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/07/17/question_11.jpg\" style=\"width: 600px; height: 287px;\" />\n<pre>\n<strong>Input:</strong> height = [1,8,6,2,5,4,8,3,7]\n<strong>Output:</strong> 49\n<strong>Explanation:</strong> The above vertical lines are represented by array [1,8,6,2,5,4,8,3,7]. In this case, the max area of water (blue section) the container can contain is 49.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> height = [1,1]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == height.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[1,8,6,2,5,4,8,3,7]\n[1,1]"
+  },
+  "12": {
+    "content": "<h2>Integer to Roman</h2>\n<p>This problem is frequently asked by Accenture, Adobe, Agoda.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "13": {
     "content": "<p>Roman numerals are represented by seven different symbols:&nbsp;<code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code> and <code>M</code>.</p>\n\n<pre>\n<strong>Symbol</strong>       <strong>Value</strong>\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000</pre>\n\n<p>For example,&nbsp;<code>2</code> is written as <code>II</code>&nbsp;in Roman numeral, just two ones added together. <code>12</code> is written as&nbsp;<code>XII</code>, which is simply <code>X + II</code>. The number <code>27</code> is written as <code>XXVII</code>, which is <code>XX + V + II</code>.</p>\n\n<p>Roman numerals are usually written largest to smallest from left to right. However, the numeral for four is not <code>IIII</code>. Instead, the number four is written as <code>IV</code>. Because the one is before the five we subtract it making four. The same principle applies to the number nine, which is written as <code>IX</code>. There are six instances where subtraction is used:</p>\n\n<ul>\n\t<li><code>I</code> can be placed before <code>V</code> (5) and <code>X</code> (10) to make 4 and 9.&nbsp;</li>\n\t<li><code>X</code> can be placed before <code>L</code> (50) and <code>C</code> (100) to make 40 and 90.&nbsp;</li>\n\t<li><code>C</code> can be placed before <code>D</code> (500) and <code>M</code> (1000) to make 400 and 900.</li>\n</ul>\n\n<p>Given a roman numeral, convert it to an integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;III&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> III = 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;LVIII&quot;\n<strong>Output:</strong> 58\n<strong>Explanation:</strong> L = 50, V= 5, III = 3.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;MCMXCIV&quot;\n<strong>Output:</strong> 1994\n<strong>Explanation:</strong> M = 1000, CM = 900, XC = 90 and IV = 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 15</code></li>\n\t<li><code>s</code> contains only&nbsp;the characters <code>(&#39;I&#39;, &#39;V&#39;, &#39;X&#39;, &#39;L&#39;, &#39;C&#39;, &#39;D&#39;, &#39;M&#39;)</code>.</li>\n\t<li>It is <strong>guaranteed</strong>&nbsp;that <code>s</code> is a valid roman numeral in the range <code>[1, 3999]</code>.</li>\n</ul>\n",
@@ -87,10 +99,6 @@ const DESCRIPTIONS = {
     "content": "<p>Given the <code>head</code> of a linked list, reverse the nodes of the list <code>k</code> at a time, and return <em>the modified list</em>.</p>\n\n<p><code>k</code> is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of <code>k</code> then left-out nodes, in the end, should remain as it is.</p>\n\n<p>You may not alter the values in the list&#39;s nodes, only nodes themselves may be changed.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/reverse_ex1.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5], k = 2\n<strong>Output:</strong> [2,1,4,3,5]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/03/reverse_ex2.jpg\" style=\"width: 542px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5], k = 3\n<strong>Output:</strong> [3,2,1,4,5]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is <code>n</code>.</li>\n\t<li><code>1 &lt;= k &lt;= n &lt;= 5000</code></li>\n\t<li><code>0 &lt;= Node.val &lt;= 1000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow-up:</strong> Can you solve the problem in <code>O(1)</code> extra memory space?</p>\n",
     "testcase": "[1,2,3,4,5]\n2\n[1,2,3,4,5]\n3"
   },
-  "26": {
-    "content": "<p>Given an integer array <code>nums</code> sorted in <strong>non-decreasing order</strong>, remove the duplicates <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a> such that each unique element appears only <strong>once</strong>. The <strong>relative order</strong> of the elements should be kept the <strong>same</strong>.</p>\n\n<p>Consider the number of <em>unique elements</em> in&nbsp;<code>nums</code> to be <code>k<strong>​​​​​​​</strong></code>​​​​​​​. <meta charset=\"UTF-8\" />After removing duplicates, return the number of unique elements&nbsp;<code>k</code>.</p>\n\n<p><meta charset=\"UTF-8\" />The first&nbsp;<code>k</code>&nbsp;elements of&nbsp;<code>nums</code>&nbsp;should contain the unique numbers in <strong>sorted order</strong>. The remaining elements beyond index&nbsp;<code>k - 1</code>&nbsp;can be ignored.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i &lt; k; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,2]\n<strong>Output:</strong> 2, nums = [1,2,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 1 and 2 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,0,1,1,1,2,2,3,3,4]\n<strong>Output:</strong> 5, nums = [0,1,2,3,4,_,_,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums being 0, 1, 2, 3, and 4 respectively.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
-    "testcase": "[1,1,2]\n[0,0,1,1,1,2,2,3,3,4]"
-  },
   "27": {
     "content": "<p>Given an integer array <code>nums</code> and an integer <code>val</code>, remove all occurrences of <code>val</code> in <code>nums</code> <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\"><strong>in-place</strong></a>. The order of the elements may be changed. Then return <em>the number of elements in </em><code>nums</code><em> which are not equal to </em><code>val</code>.</p>\n\n<p>Consider the number of elements in <code>nums</code> which are not equal to <code>val</code> be <code>k</code>, to get accepted, you need to do the following things:</p>\n\n<ul>\n\t<li>Change the array <code>nums</code> such that the first <code>k</code> elements of <code>nums</code> contain the elements which are not equal to <code>val</code>. The remaining elements of <code>nums</code> are not important as well as the size of <code>nums</code>.</li>\n\t<li>Return <code>k</code>.</li>\n</ul>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The judge will test your solution with the following code:</p>\n\n<pre>\nint[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i &lt; actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}\n</pre>\n\n<p>If all assertions pass, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,2,3], val = 3\n<strong>Output:</strong> 2, nums = [2,2,_,_]\n<strong>Explanation:</strong> Your function should return k = 2, with the first two elements of nums being 2.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,2,2,3,0,4,2], val = 2\n<strong>Output:</strong> 5, nums = [0,1,4,0,3,_,_,_]\n<strong>Explanation:</strong> Your function should return k = 5, with the first five elements of nums containing 0, 0, 1, 3, and 4.\nNote that the five elements can be returned in any order.\nIt does not matter what you leave beyond the returned k (hence they are underscores).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 50</code></li>\n\t<li><code>0 &lt;= val &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[3,2,2,3]\n3\n[0,1,2,2,3,0,4,2]\n2"
@@ -98,6 +106,14 @@ const DESCRIPTIONS = {
   "28": {
     "content": "<p>Given two strings <code>needle</code> and <code>haystack</code>, return the index of the first occurrence of <code>needle</code> in <code>haystack</code>, or <code>-1</code> if <code>needle</code> is not part of <code>haystack</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;sadbutsad&quot;, needle = &quot;sad&quot;\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> &quot;sad&quot; occurs at index 0 and 6.\nThe first occurrence is at index 0, so we return 0.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> haystack = &quot;leetcode&quot;, needle = &quot;leeto&quot;\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> &quot;leeto&quot; did not occur in &quot;leetcode&quot;, so we return -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= haystack.length, needle.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>haystack</code> and <code>needle</code> consist of only lowercase English characters.</li>\n</ul>\n",
     "testcase": "\"sadbutsad\"\n\"sad\"\n\"leetcode\"\n\"leeto\""
+  },
+  "29": {
+    "content": "<h2>Divide Two Integers</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "30": {
+    "content": "<h2>Substring with Concatenation of All Words</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "31": {
     "content": "<p>A <strong>permutation</strong> of an array of integers is an arrangement of its members into a sequence or linear order.</p>\n\n<ul>\n\t<li>For example, for <code>arr = [1,2,3]</code>, the following are all the permutations of <code>arr</code>: <code>[1,2,3], [1,3,2], [2, 1, 3], [2, 3, 1], [3,1,2], [3,2,1]</code>.</li>\n</ul>\n\n<p>The <strong>next permutation</strong> of an array of integers is the next lexicographically greater permutation of its integer. More formally, if all the permutations of the array are sorted in one container according to their lexicographical order, then the <strong>next permutation</strong> of that array is the permutation that follows it in the sorted container. If such arrangement is not possible, the array must be rearranged as the lowest possible order (i.e., sorted in ascending order).</p>\n\n<ul>\n\t<li>For example, the next permutation of <code>arr = [1,2,3]</code> is <code>[1,3,2]</code>.</li>\n\t<li>Similarly, the next permutation of <code>arr = [2,3,1]</code> is <code>[3,1,2]</code>.</li>\n\t<li>While the next permutation of <code>arr = [3,2,1]</code> is <code>[1,2,3]</code> because <code>[3,2,1]</code> does not have a lexicographical larger rearrangement.</li>\n</ul>\n\n<p>Given an array of integers <code>nums</code>, <em>find the next permutation of</em> <code>nums</code>.</p>\n\n<p>The replacement must be <strong><a href=\"http://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in place</a></strong> and use only constant extra memory.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> [1,3,2]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,2,1]\n<strong>Output:</strong> [1,2,3]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,5]\n<strong>Output:</strong> [1,5,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n",
@@ -122,6 +138,10 @@ const DESCRIPTIONS = {
   "36": {
     "content": "<p>Determine if a&nbsp;<code>9 x 9</code> Sudoku board&nbsp;is valid.&nbsp;Only the filled cells need to be validated&nbsp;<strong>according to the following rules</strong>:</p>\n\n<ol>\n\t<li>Each row&nbsp;must contain the&nbsp;digits&nbsp;<code>1-9</code> without repetition.</li>\n\t<li>Each column must contain the digits&nbsp;<code>1-9</code>&nbsp;without repetition.</li>\n\t<li>Each of the nine&nbsp;<code>3 x 3</code> sub-boxes of the grid must contain the digits&nbsp;<code>1-9</code>&nbsp;without repetition.</li>\n</ol>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>A Sudoku board (partially filled) could be valid but is not necessarily solvable.</li>\n\t<li>Only the filled cells need to be validated according to the mentioned&nbsp;rules.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Sudoku-by-L2G-20050714.svg/250px-Sudoku-by-L2G-20050714.svg.png\" style=\"height:250px; width:250px\" />\n<pre>\n<strong>Input:</strong> board = \n[[&quot;5&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;]\n,[&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;]\n,[&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;]\n,[&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;]\n,[&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;]\n,[&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;]\n,[&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;]\n,[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;]\n,[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]]\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> board = \n[[&quot;8&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;]\n,[&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;,&quot;9&quot;,&quot;5&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;]\n,[&quot;.&quot;,&quot;9&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;]\n,[&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;3&quot;]\n,[&quot;4&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;3&quot;,&quot;.&quot;,&quot;.&quot;,&quot;1&quot;]\n,[&quot;7&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;6&quot;]\n,[&quot;.&quot;,&quot;6&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;2&quot;,&quot;8&quot;,&quot;.&quot;]\n,[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;4&quot;,&quot;1&quot;,&quot;9&quot;,&quot;.&quot;,&quot;.&quot;,&quot;5&quot;]\n,[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;8&quot;,&quot;.&quot;,&quot;.&quot;,&quot;7&quot;,&quot;9&quot;]]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Same as Example 1, except with the <strong>5</strong> in the top left corner being modified to <strong>8</strong>. Since there are two 8&#39;s in the top left 3x3 sub-box, it is invalid.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>board.length == 9</code></li>\n\t<li><code>board[i].length == 9</code></li>\n\t<li><code>board[i][j]</code> is a digit <code>1-9</code> or <code>&#39;.&#39;</code>.</li>\n</ul>\n",
     "testcase": "[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"],[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"],[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"],[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"],[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"],[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"],[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"],[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"],[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\n[[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"],[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"],[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"],[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"],[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"],[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"],[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"],[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"],[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]"
+  },
+  "37": {
+    "content": "<h2>Sudoku Solver</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "38": {
     "content": "<p>The <strong>count-and-say</strong> sequence is a sequence of digit strings defined by the recursive formula:</p>\n\n<ul>\n\t<li><code>countAndSay(1) = &quot;1&quot;</code></li>\n\t<li><code>countAndSay(n)</code> is the run-length encoding of <code>countAndSay(n - 1)</code>.</li>\n</ul>\n\n<p><a href=\"http://en.wikipedia.org/wiki/Run-length_encoding\" target=\"_blank\">Run-length encoding</a> (RLE) is a string compression method that works by replacing consecutive identical characters (repeated 2 or more times) with the concatenation of the character and the number marking the count of the characters (length of the run). For example, to compress the string <code>&quot;3322251&quot;</code> we replace <code>&quot;33&quot;</code> with <code>&quot;23&quot;</code>, replace <code>&quot;222&quot;</code> with <code>&quot;32&quot;</code>, replace <code>&quot;5&quot;</code> with <code>&quot;15&quot;</code> and replace <code>&quot;1&quot;</code> with <code>&quot;11&quot;</code>. Thus the compressed string becomes <code>&quot;23321511&quot;</code>.</p>\n\n<p>Given a positive integer <code>n</code>, return <em>the </em><code>n<sup>th</sup></code><em> element of the <strong>count-and-say</strong> sequence</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 4</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;1211&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<pre>\ncountAndSay(1) = &quot;1&quot;\ncountAndSay(2) = RLE of &quot;1&quot; = &quot;11&quot;\ncountAndSay(3) = RLE of &quot;11&quot; = &quot;21&quot;\ncountAndSay(4) = RLE of &quot;21&quot; = &quot;1211&quot;\n</pre>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">n = 1</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;1&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>This is the base case.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 30</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it iteratively?",
@@ -175,6 +195,14 @@ const DESCRIPTIONS = {
     "content": "<p>Implement <a href=\"http://www.cplusplus.com/reference/valarray/pow/\" target=\"_blank\">pow(x, n)</a>, which calculates <code>x</code> raised to the power <code>n</code> (i.e., <code>x<sup>n</sup></code>).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 2.00000, n = 10\n<strong>Output:</strong> 1024.00000\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 2.10000, n = 3\n<strong>Output:</strong> 9.26100\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 2.00000, n = -2\n<strong>Output:</strong> 0.25000\n<strong>Explanation:</strong> 2<sup>-2</sup> = 1/2<sup>2</sup> = 1/4 = 0.25\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-100.0 &lt; x &lt; 100.0</code></li>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup>-1</code></li>\n\t<li><code>n</code> is an integer.</li>\n\t<li>Either <code>x</code> is not zero or <code>n &gt; 0</code>.</li>\n\t<li><code>-10<sup>4</sup> &lt;= x<sup>n</sup> &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "2.00000\n10\n2.10000\n3\n2.00000\n-2"
   },
+  "51": {
+    "content": "<h2>N-Queens</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "52": {
+    "content": "<h2>N-Queens II</h2>\n<p>This problem is frequently asked by Amazon, Bloomberg, Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "53": {
     "content": "<p>Given an integer array <code>nums</code>, find the <span data-keyword=\"subarray-nonempty\">subarray</span> with the largest sum, and return <em>its sum</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-2,1,-3,4,-1,2,1,-5,4]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The subarray [4,-1,2,1] has the largest sum 6.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The subarray [1] has the largest sum 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,-1,7,8]\n<strong>Output:</strong> 23\n<strong>Explanation:</strong> The subarray [5,4,-1,7,8] has the largest sum 23.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> If you have figured out the <code>O(n)</code> solution, try coding another solution using the <strong>divide and conquer</strong> approach, which is more subtle.</p>\n",
     "testcase": "[-2,1,-3,4,-1,2,1,-5,4]\n[1]\n[5,4,-1,7,8]"
@@ -203,6 +231,14 @@ const DESCRIPTIONS = {
     "content": "<p>Given a positive integer <code>n</code>, generate an <code>n x n</code> <code>matrix</code> filled with elements from <code>1</code> to <code>n<sup>2</sup></code> in spiral order.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/13/spiraln.jpg\" style=\"width: 242px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> [[1,2,3],[8,9,4],[7,6,5]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> [[1]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 20</code></li>\n</ul>\n",
     "testcase": "3\n1"
   },
+  "60": {
+    "content": "<h2>Permutation Sequence</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Jump Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "61": {
+    "content": "<h2>Rotate List</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "62": {
     "content": "<p>There is a robot on an <code>m x n</code> grid. The robot is initially located at the <strong>top-left corner</strong> (i.e., <code>grid[0][0]</code>). The robot tries to move to the <strong>bottom-right corner</strong> (i.e., <code>grid[m - 1][n - 1]</code>). The robot can only move either down or right at any point in time.</p>\n\n<p>Given the two integers <code>m</code> and <code>n</code>, return <em>the number of possible unique paths that the robot can take to reach the bottom-right corner</em>.</p>\n\n<p>The test cases are generated so that the answer will be less than or equal to <code>2 * 10<sup>9</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/22/robot_maze.png\" style=\"width: 400px; height: 183px;\" />\n<pre>\n<strong>Input:</strong> m = 3, n = 7\n<strong>Output:</strong> 28\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> m = 3, n = 2\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> From the top-left corner, there are a total of 3 ways to reach the bottom-right corner:\n1. Right -&gt; Down -&gt; Down\n2. Down -&gt; Down -&gt; Right\n3. Down -&gt; Right -&gt; Down\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= m, n &lt;= 100</code></li>\n</ul>\n",
     "testcase": "3\n7\n3\n2"
@@ -214,6 +250,10 @@ const DESCRIPTIONS = {
   "64": {
     "content": "<p>Given a <code>m x n</code> <code>grid</code> filled with non-negative numbers, find a path from top left to bottom right, which minimizes the sum of all numbers along its path.</p>\n\n<p><strong>Note:</strong> You can only move either down or right at any point in time.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/05/minpath.jpg\" style=\"width: 242px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> grid = [[1,3,1],[1,5,1],[4,2,1]]\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> Because the path 1 &rarr; 3 &rarr; 1 &rarr; 1 &rarr; 1 minimizes the sum.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[1,2,3],[4,5,6]]\n<strong>Output:</strong> 12\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == grid.length</code></li>\n\t<li><code>n == grid[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>0 &lt;= grid[i][j] &lt;= 200</code></li>\n</ul>\n",
     "testcase": "[[1,3,1],[1,5,1],[4,2,1]]\n[[1,2,3],[4,5,6]]"
+  },
+  "65": {
+    "content": "<h2>Valid Number</h2>\n<p>This problem is frequently asked by Amazon, Apple, Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "66": {
     "content": "<p>You are given a <strong>large integer</strong> represented as an integer array <code>digits</code>, where each <code>digits[i]</code> is the <code>i<sup>th</sup></code> digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading <code>0</code>&#39;s.</p>\n\n<p>Increment the large integer by one and return <em>the resulting array of digits</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [1,2,3]\n<strong>Output:</strong> [1,2,4]\n<strong>Explanation:</strong> The array represents the integer 123.\nIncrementing by one gives 123 + 1 = 124.\nThus, the result should be [1,2,4].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [4,3,2,1]\n<strong>Output:</strong> [4,3,2,2]\n<strong>Explanation:</strong> The array represents the integer 4321.\nIncrementing by one gives 4321 + 1 = 4322.\nThus, the result should be [4,3,2,2].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> digits = [9]\n<strong>Output:</strong> [1,0]\n<strong>Explanation:</strong> The array represents the integer 9.\nIncrementing by one gives 9 + 1 = 10.\nThus, the result should be [1,0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= digits.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= digits[i] &lt;= 9</code></li>\n\t<li><code>digits</code> does not contain any leading <code>0</code>&#39;s.</li>\n</ul>\n",
@@ -227,9 +267,17 @@ const DESCRIPTIONS = {
     "content": "<p>Given an array of strings <code>words</code> and a width <code>maxWidth</code>, format the text such that each line has exactly <code>maxWidth</code> characters and is fully (left and right) justified.</p>\n\n<p>You should pack your words in a greedy approach; that is, pack as many words as you can in each line. Pad extra spaces <code>&#39; &#39;</code> when necessary so that each line has exactly <code>maxWidth</code> characters.</p>\n\n<p>Extra spaces between words should be distributed as evenly as possible. If the number of spaces on a line does not divide evenly between words, the empty slots on the left will be assigned more spaces than the slots on the right.</p>\n\n<p>For the last line of text, it should be left-justified, and no extra space is inserted between words.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>A word is defined as a character sequence consisting of non-space characters only.</li>\n\t<li>Each word&#39;s length is guaranteed to be greater than <code>0</code> and not exceed <code>maxWidth</code>.</li>\n\t<li>The input array <code>words</code> contains at least one word.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;This&quot;, &quot;is&quot;, &quot;an&quot;, &quot;example&quot;, &quot;of&quot;, &quot;text&quot;, &quot;justification.&quot;], maxWidth = 16\n<strong>Output:</strong>\n[\n&nbsp; &nbsp;&quot;This &nbsp; &nbsp;is &nbsp; &nbsp;an&quot;,\n&nbsp; &nbsp;&quot;example &nbsp;of text&quot;,\n&nbsp; &nbsp;&quot;justification. &nbsp;&quot;\n]</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;What&quot;,&quot;must&quot;,&quot;be&quot;,&quot;acknowledgment&quot;,&quot;shall&quot;,&quot;be&quot;], maxWidth = 16\n<strong>Output:</strong>\n[\n&nbsp; &quot;What &nbsp; must &nbsp; be&quot;,\n&nbsp; &quot;acknowledgment &nbsp;&quot;,\n&nbsp; &quot;shall be &nbsp; &nbsp; &nbsp; &nbsp;&quot;\n]\n<strong>Explanation:</strong> Note that the last line is &quot;shall be    &quot; instead of &quot;shall     be&quot;, because the last line must be left-justified instead of fully-justified.\nNote that the second line is also left-justified because it contains only one word.</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;Science&quot;,&quot;is&quot;,&quot;what&quot;,&quot;we&quot;,&quot;understand&quot;,&quot;well&quot;,&quot;enough&quot;,&quot;to&quot;,&quot;explain&quot;,&quot;to&quot;,&quot;a&quot;,&quot;computer.&quot;,&quot;Art&quot;,&quot;is&quot;,&quot;everything&quot;,&quot;else&quot;,&quot;we&quot;,&quot;do&quot;], maxWidth = 20\n<strong>Output:</strong>\n[\n&nbsp; &quot;Science &nbsp;is &nbsp;what we&quot;,\n  &quot;understand &nbsp; &nbsp; &nbsp;well&quot;,\n&nbsp; &quot;enough to explain to&quot;,\n&nbsp; &quot;a &nbsp;computer. &nbsp;Art is&quot;,\n&nbsp; &quot;everything &nbsp;else &nbsp;we&quot;,\n&nbsp; &quot;do &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&quot;\n]</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 300</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 20</code></li>\n\t<li><code>words[i]</code> consists of only English letters and symbols.</li>\n\t<li><code>1 &lt;= maxWidth &lt;= 100</code></li>\n\t<li><code>words[i].length &lt;= maxWidth</code></li>\n</ul>\n",
     "testcase": "[\"This\", \"is\", \"an\", \"example\", \"of\", \"text\", \"justification.\"]\n16\n[\"What\",\"must\",\"be\",\"acknowledgment\",\"shall\",\"be\"]\n16\n[\"Science\",\"is\",\"what\",\"we\",\"understand\",\"well\",\"enough\",\"to\",\"explain\",\"to\",\"a\",\"computer.\",\"Art\",\"is\",\"everything\",\"else\",\"we\",\"do\"]\n20"
   },
+  "69": {
+    "content": "<h2>Sqrt(x)</h2>\n<p>This problem is frequently asked by Accenture, Adobe, Amazon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "70": {
     "content": "<p>You are climbing a staircase. It takes <code>n</code> steps to reach the top.</p>\n\n<p>Each time you can either climb <code>1</code> or <code>2</code> steps. In how many distinct ways can you climb to the top?</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> There are two ways to climb to the top.\n1. 1 step + 1 step\n2. 2 steps\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> There are three ways to climb to the top.\n1. 1 step + 1 step + 1 step\n2. 1 step + 2 steps\n3. 2 steps + 1 step\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 45</code></li>\n</ul>\n",
     "testcase": "2\n3"
+  },
+  "71": {
+    "content": "<h2>Simplify Path</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "72": {
     "content": "<p>Given two strings <code>word1</code> and <code>word2</code>, return <em>the minimum number of operations required to convert <code>word1</code> to <code>word2</code></em>.</p>\n\n<p>You have the following three operations permitted on a word:</p>\n\n<ul>\n\t<li>Insert a character</li>\n\t<li>Delete a character</li>\n\t<li>Replace a character</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> word1 = &quot;horse&quot;, word2 = &quot;ros&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> \nhorse -&gt; rorse (replace &#39;h&#39; with &#39;r&#39;)\nrorse -&gt; rose (remove &#39;r&#39;)\nrose -&gt; ros (remove &#39;e&#39;)\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> word1 = &quot;intention&quot;, word2 = &quot;execution&quot;\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> \nintention -&gt; inention (remove &#39;t&#39;)\ninention -&gt; enention (replace &#39;i&#39; with &#39;e&#39;)\nenention -&gt; exention (replace &#39;n&#39; with &#39;x&#39;)\nexention -&gt; exection (replace &#39;n&#39; with &#39;c&#39;)\nexection -&gt; execution (insert &#39;u&#39;)\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= word1.length, word2.length &lt;= 500</code></li>\n\t<li><code>word1</code> and <code>word2</code> consist of lowercase English letters.</li>\n</ul>\n",
@@ -271,6 +319,14 @@ const DESCRIPTIONS = {
     "content": "<p>There is an integer array <code>nums</code> sorted in non-decreasing order (not necessarily with <strong>distinct</strong> values).</p>\n\n<p>Before being passed to your function, <code>nums</code> is <strong>rotated</strong> at an unknown pivot index <code>k</code> (<code>0 &lt;= k &lt; nums.length</code>) such that the resulting array is <code>[nums[k], nums[k+1], ..., nums[n-1], nums[0], nums[1], ..., nums[k-1]]</code> (<strong>0-indexed</strong>). For example, <code>[0,1,2,4,4,4,5,6,6,7]</code> might be rotated at pivot index <code>5</code> and become <code>[4,5,6,6,7,0,1,2,4,4]</code>.</p>\n\n<p>Given the array <code>nums</code> <strong>after</strong> the rotation and an integer <code>target</code>, return <code>true</code><em> if </em><code>target</code><em> is in </em><code>nums</code><em>, or </em><code>false</code><em> if it is not in </em><code>nums</code><em>.</em></p>\n\n<p>You must decrease the overall operation steps as much as possible.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [2,5,6,0,0,1,2], target = 0\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [2,5,6,0,0,1,2], target = 3\n<strong>Output:</strong> false\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5000</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>nums</code> is guaranteed to be rotated at some pivot.</li>\n\t<li><code>-10<sup>4</sup> &lt;= target &lt;= 10<sup>4</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> This problem is similar to&nbsp;<a href=\"/problems/search-in-rotated-sorted-array/description/\" target=\"_blank\">Search in Rotated Sorted Array</a>, but&nbsp;<code>nums</code> may contain <strong>duplicates</strong>. Would this affect the runtime complexity? How and why?</p>\n",
     "testcase": "[2,5,6,0,0,1,2]\n0\n[2,5,6,0,0,1,2]\n3"
   },
+  "82": {
+    "content": "<h2>Remove Duplicates from Sorted List II</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "83": {
+    "content": "<h2>Remove Duplicates from Sorted List</h2>\n<p>This problem is frequently asked by Accenture, Adobe, Amazon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "84": {
     "content": "<p>Given an array of integers <code>heights</code> representing the histogram&#39;s bar height where the width of each bar is <code>1</code>, return <em>the area of the largest rectangle in the histogram</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/04/histogram.jpg\" style=\"width: 522px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> heights = [2,1,5,6,2,3]\n<strong>Output:</strong> 10\n<strong>Explanation:</strong> The above is a histogram where width of each bar is 1.\nThe largest rectangle is shown in the red area, which has an area = 10 units.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/04/histogram-1.jpg\" style=\"width: 202px; height: 362px;\" />\n<pre>\n<strong>Input:</strong> heights = [2,4]\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= heights.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= heights[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[2,1,5,6,2,3]\n[2,4]"
@@ -279,9 +335,21 @@ const DESCRIPTIONS = {
     "content": "<p>Given a <code>rows x cols</code>&nbsp;binary <code>matrix</code> filled with <code>0</code>&#39;s and <code>1</code>&#39;s, find the largest rectangle containing only <code>1</code>&#39;s and return <em>its area</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/14/maximal.jpg\" style=\"width: 402px; height: 322px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],[&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],[&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],[&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;]]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The maximal rectangle is shown in the above picture.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> matrix = [[&quot;0&quot;]]\n<strong>Output:</strong> 0\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> matrix = [[&quot;1&quot;]]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>rows == matrix.length</code></li>\n\t<li><code>cols == matrix[i].length</code></li>\n\t<li><code>1 &lt;= rows, cols &lt;= 200</code></li>\n\t<li><code>matrix[i][j]</code> is <code>&#39;0&#39;</code> or <code>&#39;1&#39;</code>.</li>\n</ul>\n",
     "testcase": "[[\"1\",\"0\",\"1\",\"0\",\"0\"],[\"1\",\"0\",\"1\",\"1\",\"1\"],[\"1\",\"1\",\"1\",\"1\",\"1\"],[\"1\",\"0\",\"0\",\"1\",\"0\"]]\n[[\"0\"]]\n[[\"1\"]]"
   },
+  "86": {
+    "content": "<h2>Partition List</h2>\n<p>This problem is frequently asked by Adobe, Amazon, Apple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "87": {
+    "content": "<h2>Scramble String</h2>\n<p>This problem is frequently asked by Amazon, Darwinbox, Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "88": {
     "content": "<p>You are given two integer arrays <code>nums1</code> and <code>nums2</code>, sorted in <strong>non-decreasing order</strong>, and two integers <code>m</code> and <code>n</code>, representing the number of elements in <code>nums1</code> and <code>nums2</code> respectively.</p>\n\n<p><strong>Merge</strong> <code>nums1</code> and <code>nums2</code> into a single array sorted in <strong>non-decreasing order</strong>.</p>\n\n<p>The final sorted array should not be returned by the function, but instead be <em>stored inside the array </em><code>nums1</code>. To accommodate this, <code>nums1</code> has a length of <code>m + n</code>, where the first <code>m</code> elements denote the elements that should be merged, and the last <code>n</code> elements are set to <code>0</code> and should be ignored. <code>nums2</code> has a length of <code>n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3\n<strong>Output:</strong> [1,2,2,3,5,6]\n<strong>Explanation:</strong> The arrays we are merging are [1,2,3] and [2,5,6].\nThe result of the merge is [<u>1</u>,<u>2</u>,2,<u>3</u>,5,6] with the underlined elements coming from nums1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1], m = 1, nums2 = [], n = 0\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> The arrays we are merging are [1] and [].\nThe result of the merge is [1].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [0], m = 0, nums2 = [1], n = 1\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> The arrays we are merging are [] and [1].\nThe result of the merge is [1].\nNote that because m = 0, there are no elements in nums1. The 0 is only there to ensure the merge result can fit in nums1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums1.length == m + n</code></li>\n\t<li><code>nums2.length == n</code></li>\n\t<li><code>0 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>1 &lt;= m + n &lt;= 200</code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums1[i], nums2[j] &lt;= 10<sup>9</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up: </strong>Can you come up with an algorithm that runs in <code>O(m + n)</code> time?</p>\n",
     "testcase": "[1,2,3,0,0,0]\n3\n[2,5,6]\n3\n[1]\n1\n[]\n0\n[0]\n0\n[1]\n1"
+  },
+  "89": {
+    "content": "<h2>Gray Code</h2>\n<p>This problem is frequently asked by Amazon, Bloomberg, Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "90": {
     "content": "<p>Given an integer array <code>nums</code> that may contain duplicates, return <em>all possible</em> <span data-keyword=\"subset\"><em>subsets</em></span><em> (the power set)</em>.</p>\n\n<p>The solution set <strong>must not</strong> contain duplicate subsets. Return the solution in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,2]\n<strong>Output:</strong> [[],[1],[1,2],[1,2,2],[2],[2,2]]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> [[],[0]]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10</code></li>\n\t<li><code>-10 &lt;= nums[i] &lt;= 10</code></li>\n</ul>\n",
@@ -302,6 +370,10 @@ const DESCRIPTIONS = {
   "94": {
     "content": "<p>Given the <code>root</code> of a binary tree, return <em>the inorder traversal of its nodes&#39; values</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1,null,2,3]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,3,2]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2024/08/29/screenshot-2024-08-29-202743.png\" style=\"width: 200px; height: 264px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1,2,3,4,5,null,8,null,null,6,7,9]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[4,2,6,5,7,1,3,9,8]</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2024/08/29/tree_2.png\" style=\"width: 350px; height: 286px;\" /></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = []</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">root = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?",
     "testcase": "[1,null,2,3]\n[1,2,3,4,5,null,8,null,null,6,7,9]\n[]\n[1]"
+  },
+  "95": {
+    "content": "<h2>Unique Binary Search Trees II</h2>\n<p>This problem is frequently asked by Amazon, Apple, Bloomberg.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "96": {
     "content": "<p>Given an integer <code>n</code>, return <em>the number of structurally unique <strong>BST&#39;</strong>s (binary search trees) which has exactly </em><code>n</code><em> nodes of unique values from</em> <code>1</code> <em>to</em> <code>n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/18/uniquebstn3.jpg\" style=\"width: 600px; height: 148px;\" />\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 5\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 19</code></li>\n</ul>\n",
@@ -378,6 +450,10 @@ const DESCRIPTIONS = {
   "114": {
     "content": "<p>Given the <code>root</code> of a binary tree, flatten the tree into a &quot;linked list&quot;:</p>\n\n<ul>\n\t<li>The &quot;linked list&quot; should use the same <code>TreeNode</code> class where the <code>right</code> child pointer points to the next node in the list and the <code>left</code> child pointer is always <code>null</code>.</li>\n\t<li>The &quot;linked list&quot; should be in the same order as a <a href=\"https://en.wikipedia.org/wiki/Tree_traversal#Pre-order,_NLR\" target=\"_blank\"><strong>pre-order</strong><strong> traversal</strong></a> of the binary tree.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/14/flaten.jpg\" style=\"width: 500px; height: 226px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,5,3,4,null,6]\n<strong>Output:</strong> [1,null,2,null,3,null,4,null,5,null,6]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [0]\n<strong>Output:</strong> [0]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 2000]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Can you flatten the tree in-place (with <code>O(1)</code> extra space)?",
     "testcase": "[1,2,5,3,4,null,6]\n[]\n[0]"
+  },
+  "115": {
+    "content": "<h2>Distinct Subsequences</h2>\n<p>This problem is frequently asked by Coupang, MathWorks, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "116": {
     "content": "<p>You are given a <strong>perfect binary tree</strong> where all leaves are on the same level, and every parent has two children. The binary tree has the following definition:</p>\n\n<pre>\nstruct Node {\n  int val;\n  Node *left;\n  Node *right;\n  Node *next;\n}\n</pre>\n\n<p>Populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to <code>NULL</code>.</p>\n\n<p>Initially, all next pointers are set to <code>NULL</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/02/14/116_sample.png\" style=\"width: 500px; height: 171px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,3,4,5,6,7]\n<strong>Output:</strong> [1,#,2,3,#,4,5,6,7,#]\n<strong>Explanation: </strong>Given the above perfect binary tree (Figure A), your function should populate each next pointer to point to its next right node, just like in Figure B. The serialized output is in level order as connected by the next pointers, with &#39;#&#39; signifying the end of each level.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 2<sup>12</sup> - 1]</code>.</li>\n\t<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow-up:</strong></p>\n\n<ul>\n\t<li>You may only use constant extra space.</li>\n\t<li>The recursive approach is fine. You may assume implicit stack space does not count as extra space for this problem.</li>\n</ul>\n",
@@ -459,6 +535,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given a <strong>non-empty</strong>&nbsp;array of integers <code>nums</code>, every element appears <em>twice</em> except for one. Find that single one.</p>\n\n<p>You must&nbsp;implement a solution with a linear runtime complexity and use&nbsp;only constant&nbsp;extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [2,2,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [4,1,2,1,2]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">4</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-3 * 10<sup>4</sup> &lt;= nums[i] &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li>Each element in the array appears twice except for one element which appears only once.</li>\n</ul>\n",
     "testcase": "[2,2,1]\n[4,1,2,1,2]\n[1]"
   },
+  "137": {
+    "content": "<h2>Single Number II</h2>\n<p>This problem is frequently asked by Accenture, Yahoo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "138": {
     "content": "<p>A linked list of length <code>n</code> is given such that each node contains an additional random pointer, which could point to any node in the list, or <code>null</code>.</p>\n\n<p>Construct a <a href=\"https://en.wikipedia.org/wiki/Object_copying#Deep_copy\" target=\"_blank\"><strong>deep copy</strong></a> of the list. The deep copy should consist of exactly <code>n</code> <strong>brand new</strong> nodes, where each new node has its value set to the value of its corresponding original node. Both the <code>next</code> and <code>random</code> pointer of the new nodes should point to new nodes in the copied list such that the pointers in the original list and copied list represent the same list state. <strong>None of the pointers in the new list should point to nodes in the original list</strong>.</p>\n\n<p>For example, if there are two nodes <code>X</code> and <code>Y</code> in the original list, where <code>X.random --&gt; Y</code>, then for the corresponding two nodes <code>x</code> and <code>y</code> in the copied list, <code>x.random --&gt; y</code>.</p>\n\n<p>Return <em>the head of the copied linked list</em>.</p>\n\n<p>The linked list is represented in the input/output as a list of <code>n</code> nodes. Each node is represented as a pair of <code>[val, random_index]</code> where:</p>\n\n<ul>\n\t<li><code>val</code>: an integer representing <code>Node.val</code></li>\n\t<li><code>random_index</code>: the index of the node (range from <code>0</code> to <code>n-1</code>) that the <code>random</code> pointer points to, or <code>null</code> if it does not point to any node.</li>\n</ul>\n\n<p>Your code will <strong>only</strong> be given the <code>head</code> of the original linked list.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/12/18/e1.png\" style=\"width: 700px; height: 142px;\" />\n<pre>\n<strong>Input:</strong> head = [[7,null],[13,0],[11,4],[10,2],[1,0]]\n<strong>Output:</strong> [[7,null],[13,0],[11,4],[10,2],[1,0]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/12/18/e2.png\" style=\"width: 700px; height: 114px;\" />\n<pre>\n<strong>Input:</strong> head = [[1,1],[2,1]]\n<strong>Output:</strong> [[1,1],[2,1]]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<p><strong><img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/12/18/e3.png\" style=\"width: 700px; height: 122px;\" /></strong></p>\n\n<pre>\n<strong>Input:</strong> head = [[3,null],[3,0],[3,null]]\n<strong>Output:</strong> [[3,null],[3,0],[3,null]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= n &lt;= 1000</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>\n\t<li><code>Node.random</code> is <code>null</code> or is pointing to some node in the linked list.</li>\n</ul>\n",
     "testcase": "[[7,null],[13,0],[11,4],[10,2],[1,0]]\n[[1,1],[2,1]]\n[[3,null],[3,0],[3,null]]"
@@ -495,6 +575,10 @@ const DESCRIPTIONS = {
     "content": "<p>Design a data structure that follows the constraints of a <strong><a href=\"https://en.wikipedia.org/wiki/Cache_replacement_policies#LRU\" target=\"_blank\">Least Recently Used (LRU) cache</a></strong>.</p>\n\n<p>Implement the <code>LRUCache</code> class:</p>\n\n<ul>\n\t<li><code>LRUCache(int capacity)</code> Initialize the LRU cache with <strong>positive</strong> size <code>capacity</code>.</li>\n\t<li><code>int get(int key)</code> Return the value of the <code>key</code> if the key exists, otherwise return <code>-1</code>.</li>\n\t<li><code>void put(int key, int value)</code> Update the value of the <code>key</code> if the <code>key</code> exists. Otherwise, add the <code>key-value</code> pair to the cache. If the number of keys exceeds the <code>capacity</code> from this operation, <strong>evict</strong> the least recently used key.</li>\n</ul>\n\n<p>The functions <code>get</code> and <code>put</code> must each run in <code>O(1)</code> average time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;LRUCache&quot;, &quot;put&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;put&quot;, &quot;get&quot;, &quot;get&quot;, &quot;get&quot;]\n[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]\n<strong>Output</strong>\n[null, null, null, 1, null, -1, null, -1, 3, 4]\n\n<strong>Explanation</strong>\nLRUCache lRUCache = new LRUCache(2);\nlRUCache.put(1, 1); // cache is {1=1}\nlRUCache.put(2, 2); // cache is {1=1, 2=2}\nlRUCache.get(1);    // return 1\nlRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}\nlRUCache.get(2);    // returns -1 (not found)\nlRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}\nlRUCache.get(1);    // return -1 (not found)\nlRUCache.get(3);    // return 3\nlRUCache.get(4);    // return 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= capacity &lt;= 3000</code></li>\n\t<li><code>0 &lt;= key &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= value &lt;= 10<sup>5</sup></code></li>\n\t<li>At most <code>2 * 10<sup>5</sup></code> calls will be made to <code>get</code> and <code>put</code>.</li>\n</ul>\n",
     "testcase": "[\"LRUCache\",\"put\",\"put\",\"get\",\"put\",\"get\",\"put\",\"get\",\"get\",\"get\"]\n[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]"
   },
+  "147": {
+    "content": "<h2>Insertion Sort List</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "148": {
     "content": "<p>Given the <code>head</code> of a linked list, return <em>the list after sorting it in <strong>ascending order</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/14/sort_list_1.jpg\" style=\"width: 450px; height: 194px;\" />\n<pre>\n<strong>Input:</strong> head = [4,2,1,3]\n<strong>Output:</strong> [1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/14/sort_list_2.jpg\" style=\"width: 550px; height: 184px;\" />\n<pre>\n<strong>Input:</strong> head = [-1,5,3,4,0]\n<strong>Output:</strong> [-1,0,3,4,5]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> head = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[0, 5 * 10<sup>4</sup>]</code>.</li>\n\t<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Can you sort the linked list in <code>O(n logn)</code> time and <code>O(1)</code> memory (i.e. constant space)?</p>\n",
     "testcase": "[4,2,1,3]\n[-1,5,3,4,0]\n[]"
@@ -527,9 +611,29 @@ const DESCRIPTIONS = {
     "content": "<p>Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.</p>\n\n<p>Implement the <code>MinStack</code> class:</p>\n\n<ul>\n\t<li><code>MinStack()</code> initializes the stack object.</li>\n\t<li><code>void push(int val)</code> pushes the element <code>val</code> onto the stack.</li>\n\t<li><code>void pop()</code> removes the element on the top of the stack.</li>\n\t<li><code>int top()</code> gets the top element of the stack.</li>\n\t<li><code>int getMin()</code> retrieves the minimum element in the stack.</li>\n</ul>\n\n<p>You must implement a solution with <code>O(1)</code> time complexity for each function.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;MinStack&quot;,&quot;push&quot;,&quot;push&quot;,&quot;push&quot;,&quot;getMin&quot;,&quot;pop&quot;,&quot;top&quot;,&quot;getMin&quot;]\n[[],[-2],[0],[-3],[],[],[],[]]\n\n<strong>Output</strong>\n[null,null,null,null,-3,null,0,-2]\n\n<strong>Explanation</strong>\nMinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin(); // return -3\nminStack.pop();\nminStack.top();    // return 0\nminStack.getMin(); // return -2\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= val &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li>Methods <code>pop</code>, <code>top</code> and <code>getMin</code> operations will always be called on <strong>non-empty</strong> stacks.</li>\n\t<li>At most <code>3 * 10<sup>4</sup></code> calls will be made to <code>push</code>, <code>pop</code>, <code>top</code>, and <code>getMin</code>.</li>\n</ul>\n",
     "testcase": "[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]\n[[],[-2],[0],[-3],[],[],[],[]]"
   },
+  "156": {
+    "content": "<h2>Binary Tree Upside Down</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "157": {
+    "content": "<h2>Read N Characters Given Read4</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "158": {
+    "content": "<h2>Read N Characters Given read4 II - Call Multiple Times</h2>\n<p>This problem is frequently asked by Google, Lyft.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "159": {
+    "content": "<h2>Longest Substring with At Most Two Distinct Characters</h2>\n<p>This problem is frequently asked by eBay, Google, TikTok.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "160": {
     "content": "<p>Given the heads of two singly linked-lists <code>headA</code> and <code>headB</code>, return <em>the node at which the two lists intersect</em>. If the two linked lists have no intersection at all, return <code>null</code>.</p>\n\n<p>For example, the following two linked lists begin to intersect at node <code>c1</code>:</p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/05/160_statement.png\" style=\"width: 500px; height: 162px;\" />\n<p>The test cases are generated such that there are no cycles anywhere in the entire linked structure.</p>\n\n<p><strong>Note</strong> that the linked lists must <strong>retain their original structure</strong> after the function returns.</p>\n\n<p><strong>Custom Judge:</strong></p>\n\n<p>The inputs to the <strong>judge</strong> are given as follows (your program is <strong>not</strong> given these inputs):</p>\n\n<ul>\n\t<li><code>intersectVal</code> - The value of the node where the intersection occurs. This is <code>0</code> if there is no intersected node.</li>\n\t<li><code>listA</code> - The first linked list.</li>\n\t<li><code>listB</code> - The second linked list.</li>\n\t<li><code>skipA</code> - The number of nodes to skip ahead in <code>listA</code> (starting from the head) to get to the intersected node.</li>\n\t<li><code>skipB</code> - The number of nodes to skip ahead in <code>listB</code> (starting from the head) to get to the intersected node.</li>\n</ul>\n\n<p>The judge will then create the linked structure based on these inputs and pass the two heads, <code>headA</code> and <code>headB</code> to your program. If you correctly return the intersected node, then your solution will be <strong>accepted</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/05/160_example_1_1.png\" style=\"width: 500px; height: 162px;\" />\n<pre>\n<strong>Input:</strong> intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3\n<strong>Output:</strong> Intersected at &#39;8&#39;\n<strong>Explanation:</strong> The intersected node&#39;s value is 8 (note that this must not be 0 if the two lists intersect).\nFrom the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.\n- Note that the intersected node&#39;s value is not 1 because the nodes with value 1 in A and B (2<sup>nd</sup> node in A and 3<sup>rd</sup> node in B) are different node references. In other words, they point to two different locations in memory, while the nodes with value 8 in A and B (3<sup>rd</sup> node in A and 4<sup>th</sup> node in B) point to the same location in memory.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/05/160_example_2.png\" style=\"width: 500px; height: 194px;\" />\n<pre>\n<strong>Input:</strong> intersectVal = 2, listA = [1,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1\n<strong>Output:</strong> Intersected at &#39;2&#39;\n<strong>Explanation:</strong> The intersected node&#39;s value is 2 (note that this must not be 0 if the two lists intersect).\nFrom the head of A, it reads as [1,9,1,2,4]. From the head of B, it reads as [3,2,4]. There are 3 nodes before the intersected node in A; There are 1 node before the intersected node in B.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/05/160_example_3.png\" style=\"width: 300px; height: 189px;\" />\n<pre>\n<strong>Input:</strong> intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2\n<strong>Output:</strong> No intersection\n<strong>Explanation:</strong> From the head of A, it reads as [2,6,4]. From the head of B, it reads as [1,5]. Since the two lists do not intersect, intersectVal must be 0, while skipA and skipB can be arbitrary values.\nExplanation: The two lists do not intersect, so return null.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes of <code>listA</code> is in the <code>m</code>.</li>\n\t<li>The number of nodes of <code>listB</code> is in the <code>n</code>.</li>\n\t<li><code>1 &lt;= m, n &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= Node.val &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= skipA &lt;= m</code></li>\n\t<li><code>0 &lt;= skipB &lt;= n</code></li>\n\t<li><code>intersectVal</code> is <code>0</code> if <code>listA</code> and <code>listB</code> do not intersect.</li>\n\t<li><code>intersectVal == listA[skipA] == listB[skipB]</code> if <code>listA</code> and <code>listB</code> intersect.</li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you write a solution that runs in <code>O(m + n)</code> time and use only <code>O(1)</code> memory?",
     "testcase": "8\n[4,1,8,4,5]\n[5,6,1,8,4,5]\n2\n3\n2\n[1,9,1,2,4]\n[3,2,4]\n3\n1\n0\n[2,6,4]\n[1,5]\n3\n2"
+  },
+  "161": {
+    "content": "<h2>One Edit Distance</h2>\n<p>This problem is frequently asked by Snap, X, Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "162": {
     "content": "<p>A peak element is an element that is strictly greater than its neighbors.</p>\n\n<p>Given a <strong>0-indexed</strong> integer array <code>nums</code>, find a peak element, and return its index. If the array contains multiple peaks, return the index to <strong>any of the peaks</strong>.</p>\n\n<p>You may imagine that <code>nums[-1] = nums[n] = -&infin;</code>. In other words, an element is always considered to be strictly greater than a neighbor that is outside the array.</p>\n\n<p>You must write an algorithm that runs in <code>O(log n)</code> time.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> 3 is a peak element and your function should return the index number 2.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,1,3,5,6,4]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> Your function can return either index number 1 where the peak element is 2, or index number 5 where the peak element is 6.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>nums[i] != nums[i + 1]</code> for all valid <code>i</code>.</li>\n</ul>\n",
@@ -538,6 +642,10 @@ const DESCRIPTIONS = {
   "163": {
     "content": "<p><b>Missing Ranges</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
+  },
+  "164": {
+    "content": "<h2>Maximum Gap</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "165": {
     "content": "<p>Given two <strong>version strings</strong>, <code>version1</code> and <code>version2</code>, compare them. A version string consists of <strong>revisions</strong> separated by dots <code>&#39;.&#39;</code>. The <strong>value of the revision</strong> is its <strong>integer conversion</strong> ignoring leading zeros.</p>\n\n<p>To compare version strings, compare their revision values in <strong>left-to-right order</strong>. If one of the version strings has fewer revisions, treat the missing revision values as <code>0</code>.</p>\n\n<p>Return the following:</p>\n\n<ul>\n\t<li>If <code>version1 &lt; version2</code>, return -1.</li>\n\t<li>If <code>version1 &gt; version2</code>, return 1.</li>\n\t<li>Otherwise, return 0.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">version1 = &quot;1.2&quot;, version2 = &quot;1.10&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">-1</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>version1&#39;s second revision is &quot;2&quot; and version2&#39;s second revision is &quot;10&quot;: 2 &lt; 10, so version1 &lt; version2.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">version1 = &quot;1.01&quot;, version2 = &quot;1.001&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">0</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>Ignoring leading zeroes, both &quot;01&quot; and &quot;001&quot; represent the same integer &quot;1&quot;.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">version1 = &quot;1.0&quot;, version2 = &quot;1.0.0.0&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">0</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>version1 has less revisions, which means every missing revision are treated as &quot;0&quot;.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= version1.length, version2.length &lt;= 500</code></li>\n\t<li><code>version1</code> and <code>version2</code>&nbsp;only contain digits and <code>&#39;.&#39;</code>.</li>\n\t<li><code>version1</code> and <code>version2</code>&nbsp;<strong>are valid version numbers</strong>.</li>\n\t<li>All the given revisions in&nbsp;<code>version1</code> and <code>version2</code>&nbsp;can be stored in&nbsp;a&nbsp;<strong>32-bit integer</strong>.</li>\n</ul>\n",
@@ -559,6 +667,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an array <code>nums</code> of size <code>n</code>, return <em>the majority element</em>.</p>\n\n<p>The majority element is the element that appears more than <code>&lfloor;n / 2&rfloor;</code> times. You may assume that the majority element always exists in the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [3,2,3]\n<strong>Output:</strong> 3\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [2,2,1,1,1,2,2]\n<strong>Output:</strong> 2\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n\t<li>The input is generated such that a majority element will exist in the array.</li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow-up:</strong> Could you solve the problem in linear time and in <code>O(1)</code> space?",
     "testcase": "[3,2,3]\n[2,2,1,1,1,2,2]"
   },
+  "170": {
+    "content": "<h2>Two Sum III - Data structure design</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "171": {
     "content": "<p>Given a string <code>columnTitle</code> that represents the column title as appears in an Excel sheet, return <em>its corresponding column number</em>.</p>\n\n<p>For example:</p>\n\n<pre>\nA -&gt; 1\nB -&gt; 2\nC -&gt; 3\n...\nZ -&gt; 26\nAA -&gt; 27\nAB -&gt; 28 \n...\n</pre>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnTitle = &quot;A&quot;\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnTitle = &quot;AB&quot;\n<strong>Output:</strong> 28\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> columnTitle = &quot;ZY&quot;\n<strong>Output:</strong> 701\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= columnTitle.length &lt;= 7</code></li>\n\t<li><code>columnTitle</code> consists only of uppercase English letters.</li>\n\t<li><code>columnTitle</code> is in the range <code>[&quot;A&quot;, &quot;FXSHRXW&quot;]</code>.</li>\n</ul>\n",
     "testcase": "\"A\"\n\"AB\"\n\"ZY\""
@@ -579,9 +691,17 @@ const DESCRIPTIONS = {
     "content": "<p>Given a list of non-negative integers <code>nums</code>, arrange them such that they form the largest number and return it.</p>\n\n<p>Since the result may be very large, so you need to return a string instead of an integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [10,2]\n<strong>Output:</strong> &quot;210&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,30,34,5,9]\n<strong>Output:</strong> &quot;9534330&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
     "testcase": "[10,2]\n[3,30,34,5,9]"
   },
+  "186": {
+    "content": "<h2>Reverse Words in a String II</h2>\n<p>This problem is frequently asked by ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "187": {
     "content": "<p>The <strong>DNA sequence</strong> is composed of a series of nucleotides abbreviated as <code>&#39;A&#39;</code>, <code>&#39;C&#39;</code>, <code>&#39;G&#39;</code>, and <code>&#39;T&#39;</code>.</p>\n\n<ul>\n\t<li>For example, <code>&quot;ACGAATTCCG&quot;</code> is a <strong>DNA sequence</strong>.</li>\n</ul>\n\n<p>When studying <strong>DNA</strong>, it is useful to identify repeated sequences within the DNA.</p>\n\n<p>Given a string <code>s</code> that represents a <strong>DNA sequence</strong>, return all the <strong><code>10</code>-letter-long</strong> sequences (substrings) that occur more than once in a DNA molecule. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\n<strong>Output:</strong> [\"AAAAACCCCC\",\"CCCCCAAAAA\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"AAAAAAAAAAAAA\"\n<strong>Output:</strong> [\"AAAAAAAAAA\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is either <code>&#39;A&#39;</code>, <code>&#39;C&#39;</code>, <code>&#39;G&#39;</code>, or <code>&#39;T&#39;</code>.</li>\n</ul>\n",
     "testcase": "\"AAAAACCCCCAAAAACCCCCCAAAAAGGGTTT\"\n\"AAAAAAAAAAAAA\""
+  },
+  "188": {
+    "content": "<h2>Best Time to Buy and Sell Stock IV</h2>\n<p>This problem is frequently asked by Arcesium, Citadel, Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "189": {
     "content": "<p>Given an integer array <code>nums</code>, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5,6,7], k = 3\n<strong>Output:</strong> [5,6,7,1,2,3,4]\n<strong>Explanation:</strong>\nrotate 1 steps to the right: [7,1,2,3,4,5,6]\nrotate 2 steps to the right: [6,7,1,2,3,4,5]\nrotate 3 steps to the right: [5,6,7,1,2,3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-100,3,99], k = 2\n<strong>Output:</strong> [3,99,-1,-100]\n<strong>Explanation:</strong> \nrotate 1 steps to the right: [99,-1,-100,3]\nrotate 2 steps to the right: [3,99,-1,-100]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Try to come up with as many solutions as you can. There are at least <strong>three</strong> different ways to solve this problem.</li>\n\t<li>Could you do it in-place with <code>O(1)</code> extra space?</li>\n</ul>\n",
@@ -658,6 +778,10 @@ const DESCRIPTIONS = {
   "213": {
     "content": "<p>You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are <strong>arranged in a circle.</strong> That means the first house is the neighbor of the last one. Meanwhile, adjacent houses have a security system connected, and&nbsp;<b>it will automatically contact the police if two adjacent houses were broken into on the same night</b>.</p>\n\n<p>Given an integer array <code>nums</code> representing the amount of money of each house, return <em>the maximum amount of money you can rob tonight <strong>without alerting the police</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,3,2]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,1]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Rob house 1 (money = 1) and then rob house 3 (money = 3).\nTotal amount you can rob = 1 + 3 = 4.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 100</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[2,3,2]\n[1,2,3,1]\n[1,2,3]"
+  },
+  "214": {
+    "content": "<h2>Shortest Palindrome</h2>\n<p>This problem is frequently asked by Accenture, eBay, Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "215": {
     "content": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the</em> <code>k<sup>th</sup></code> <em>largest element in the array</em>.</p>\n\n<p>Note that it is the <code>k<sup>th</sup></code> largest element in the sorted order, not the <code>k<sup>th</sup></code> distinct element.</p>\n\n<p>Can you solve it without sorting?</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [3,2,1,5,6,4], k = 2\n<strong>Output:</strong> 5\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [3,2,3,1,2,4,5,5,6], k = 4\n<strong>Output:</strong> 4\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
@@ -771,6 +895,54 @@ const DESCRIPTIONS = {
     "content": "<p>Given two strings <code>s</code> and <code>t</code>, return <code>true</code> if <code>t</code> is an <span data-keyword=\"anagram\">anagram</span> of <code>s</code>, and <code>false</code> otherwise.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;anagram&quot;, t = &quot;nagaram&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;rat&quot;, t = &quot;car&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, t.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>t</code> consist of lowercase English letters.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> What if the inputs contain Unicode characters? How would you adapt your solution to such a case?</p>\n",
     "testcase": "\"anagram\"\n\"nagaram\"\n\"rat\"\n\"car\""
   },
+  "243": {
+    "content": "<h2>Shortest Word Distance</h2>\n<p>This problem is frequently asked by Anduril, LinkedIn, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "244": {
+    "content": "<h2>Shortest Word Distance II</h2>\n<p>This problem is frequently asked by Anduril, LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "245": {
+    "content": "<h2>Shortest Word Distance III</h2>\n<p>This problem is frequently asked by LinkedIn, Palantir Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "246": {
+    "content": "<h2>Strobogrammatic Number</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "249": {
+    "content": "<h2>Group Shifted Strings</h2>\n<p>This problem is frequently asked by Google, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "250": {
+    "content": "<h2>Count Univalue Subtrees</h2>\n<p>This problem is frequently asked by Zeta.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "251": {
+    "content": "<h2>Flatten 2D Vector</h2>\n<p>This problem is frequently asked by Airbnb, Google, X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "252": {
+    "content": "<h2>Meeting Rooms</h2>\n<p>This problem is frequently asked by eBay, Palo Alto Networks, Turo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "253": {
+    "content": "<h2>Meeting Rooms II</h2>\n<p>This problem is frequently asked by Atlassian, Capital One, Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "254": {
+    "content": "<h2>Factor Combinations</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "255": {
+    "content": "<h2>Verify Preorder Sequence in Binary Search Tree</h2>\n<p>This problem is frequently asked by Nvidia, Zenefits.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "256": {
+    "content": "<h2>Paint House</h2>\n<p>This problem is frequently asked by Citadel, Google, LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "257": {
     "content": "<p>Given the <code>root</code> of a binary tree, return <em>all root-to-leaf paths in <strong>any order</strong></em>.</p>\n\n<p>A <strong>leaf</strong> is a node with no children.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/12/paths-tree.jpg\" style=\"width: 207px; height: 293px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,3,null,5]\n<strong>Output:</strong> [&quot;1-&gt;2-&gt;5&quot;,&quot;1-&gt;3&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1]\n<strong>Output:</strong> [&quot;1&quot;]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 100]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[1,2,3,null,5]\n[1]"
@@ -779,9 +951,17 @@ const DESCRIPTIONS = {
     "content": "<p>Given an integer <code>num</code>, repeatedly add all its digits until the result has only one digit, and return it.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 38\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The process is\n38 --&gt; 3 + 8 --&gt; 11\n11 --&gt; 1 + 1 --&gt; 2 \nSince 2 has only one digit, return it.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do it without any loop/recursion in <code>O(1)</code> runtime?</p>\n",
     "testcase": "38\n0"
   },
+  "259": {
+    "content": "<h2>3Sum Smaller</h2>\n<p>This problem is frequently asked by Google, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "260": {
     "content": "<p>Given an integer array <code>nums</code>, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in <strong>any order</strong>.</p>\n\n<p>You must write an&nbsp;algorithm that runs in linear runtime complexity and uses&nbsp;only constant extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,1,3,2,5]\n<strong>Output:</strong> [3,5]\n<strong>Explanation: </strong> [5, 3] is also a valid answer.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,0]\n<strong>Output:</strong> [-1,0]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1]\n<strong>Output:</strong> [1,0]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li>Each integer in <code>nums</code> will appear twice, only two integers will appear once.</li>\n</ul>\n",
     "testcase": "[1,2,1,3,2,5]\n[-1,0]\n[0,1]"
+  },
+  "261": {
+    "content": "<h2>Graph Valid Tree</h2>\n<p>This problem is frequently asked by Google, LinkedIn, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "263": {
     "content": "<p>An <strong>ugly number</strong> is a <em>positive</em> integer which does not have a prime factor other than 2, 3, and 5.</p>\n\n<p>Given an integer <code>n</code>, return <code>true</code> <em>if</em> <code>n</code> <em>is an <strong>ugly number</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 6\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 6 = 2 &times; 3\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 1 has no prime factors.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 14\n<strong>Output:</strong> false\n<strong>Explanation:</strong> 14 is not ugly since it includes the prime factor 7.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
@@ -790,6 +970,10 @@ const DESCRIPTIONS = {
   "264": {
     "content": "<p>An <strong>ugly number</strong> is a positive integer whose prime factors are limited to <code>2</code>, <code>3</code>, and <code>5</code>.</p>\n\n<p>Given an integer <code>n</code>, return <em>the</em> <code>n<sup>th</sup></code> <em><strong>ugly number</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 10\n<strong>Output:</strong> 12\n<strong>Explanation:</strong> [1, 2, 3, 4, 5, 6, 8, 9, 10, 12] is the sequence of the first 10 ugly numbers.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 1 has no prime factors, therefore all of its prime factors are limited to 2, 3, and 5.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 1690</code></li>\n</ul>\n",
     "testcase": "10\n1"
+  },
+  "266": {
+    "content": "<h2>Palindrome Permutation</h2>\n<p>This problem is frequently asked by Docusign, Google, Nordstrom.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "268": {
     "content": "<p>Given an array <code>nums</code> containing <code>n</code> distinct numbers in the range <code>[0, n]</code>, return <em>the only number in the range that is missing from the array.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [3,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 3</code> since there are 3 numbers, so all numbers are in the range <code>[0,3]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">2</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 2</code> since there are 2 numbers, so all numbers are in the range <code>[0,2]</code>. 2 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [9,6,4,2,3,5,7,0,1]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">8</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p><code>n = 9</code> since there are 9 numbers, so all numbers are in the range <code>[0,9]</code>. 8 is the missing number in the range since it does not appear in <code>nums</code>.</p>\n</div>\n\n<div class=\"simple-translate-system-theme\" id=\"simple-translate\">\n<div>\n<div class=\"simple-translate-button isShow\" style=\"background-image: url(&quot;moz-extension://8a9ffb6b-7e69-4e93-aae1-436a1448eff6/icons/512.png&quot;); height: 22px; width: 22px; top: 318px; left: 36px;\">&nbsp;</div>\n\n<div class=\"simple-translate-panel \" style=\"width: 300px; height: 200px; top: 0px; left: 0px; font-size: 13px;\">\n<div class=\"simple-translate-result-wrapper\" style=\"overflow: hidden;\">\n<div class=\"simple-translate-move\" draggable=\"true\">&nbsp;</div>\n\n<div class=\"simple-translate-result-contents\">\n<p class=\"simple-translate-result\" dir=\"auto\">&nbsp;</p>\n\n<p class=\"simple-translate-candidate\" dir=\"auto\">&nbsp;</p>\n</div>\n</div>\n</div>\n</div>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= n</code></li>\n\t<li>All the numbers of <code>nums</code> are <strong>unique</strong>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you implement a solution using only <code>O(1)</code> extra space complexity and <code>O(n)</code> runtime complexity?</p>\n",
@@ -807,6 +991,10 @@ const DESCRIPTIONS = {
     "content": "<p><b>Encode and Decode Strings</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
   },
+  "272": {
+    "content": "<h2>Closest Binary Search Tree Value II</h2>\n<p>This problem is frequently asked by Google, LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "273": {
     "content": "<p>Convert a non-negative integer <code>num</code> to its English words representation.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 123\n<strong>Output:</strong> &quot;One Hundred Twenty Three&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 12345\n<strong>Output:</strong> &quot;Twelve Thousand Three Hundred Forty Five&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 1234567\n<strong>Output:</strong> &quot;One Million Two Hundred Thirty Four Thousand Five Hundred Sixty Seven&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= num &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "123\n12345\n1234567"
@@ -814,6 +1002,14 @@ const DESCRIPTIONS = {
   "274": {
     "content": "<p>Given an array of integers <code>citations</code> where <code>citations[i]</code> is the number of citations a researcher received for their <code>i<sup>th</sup></code> paper, return <em>the researcher&#39;s h-index</em>.</p>\n\n<p>According to the <a href=\"https://en.wikipedia.org/wiki/H-index\" target=\"_blank\">definition of h-index on Wikipedia</a>: The h-index is defined as the maximum value of <code>h</code> such that the given researcher has published at least <code>h</code> papers that have each been cited at least <code>h</code> times.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> citations = [3,0,6,1,5]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> [3,0,6,1,5] means the researcher has 5 papers in total and each of them had received 3, 0, 6, 1, 5 citations respectively.\nSince the researcher has 3 papers with at least 3 citations each and the remaining two with no more than 3 citations each, their h-index is 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> citations = [1,3,1]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == citations.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 5000</code></li>\n\t<li><code>0 &lt;= citations[i] &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[3,0,6,1,5]\n[1,3,1]"
+  },
+  "276": {
+    "content": "<h2>Paint Fence</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "277": {
+    "content": "<h2>Find the Celebrity</h2>\n<p>This problem is frequently asked by DoorDash, Google, Hubspot.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "278": {
     "content": "<p>You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.</p>\n\n<p>Suppose you have <code>n</code> versions <code>[1, 2, ..., n]</code> and you want to find out the first bad one, which causes all the following ones to be bad.</p>\n\n<p>You are given an API <code>bool isBadVersion(version)</code> which returns whether <code>version</code> is bad. Implement a function to find the first bad version. You should minimize the number of calls to the API.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 5, bad = 4\n<strong>Output:</strong> 4\n<strong>Explanation:</strong>\ncall isBadVersion(3) -&gt; false\ncall isBadVersion(5)&nbsp;-&gt; true\ncall isBadVersion(4)&nbsp;-&gt; true\nThen 4 is the first bad version.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, bad = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= bad &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
@@ -826,6 +1022,14 @@ const DESCRIPTIONS = {
   "280": {
     "content": "<p><b>Wiggle Sort</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
+  },
+  "281": {
+    "content": "<h2>Zigzag Iterator</h2>\n<p>This problem is frequently asked by Coinbase, Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "282": {
+    "content": "<h2>Expression Add Operators</h2>\n<p>This problem is frequently asked by Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "283": {
     "content": "<p>Given an integer array <code>nums</code>, move all <code>0</code>&#39;s to the end of it while maintaining the relative order of the non-zero elements.</p>\n\n<p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [0,1,0,3,12]\n<strong>Output:</strong> [1,3,12,0,0]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [0]\n<strong>Output:</strong> [0]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you minimize the total number of operations done?",
@@ -847,6 +1051,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an array of integers <code>nums</code> containing&nbsp;<code>n + 1</code> integers where each integer is in the range <code>[1, n]</code> inclusive.</p>\n\n<p>There is only <strong>one repeated number</strong> in <code>nums</code>, return <em>this&nbsp;repeated&nbsp;number</em>.</p>\n\n<p>You must solve the problem <strong>without</strong> modifying the array <code>nums</code>&nbsp;and using only constant extra space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,4,2,2]\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,3,4,2]\n<strong>Output:</strong> 3\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,3,3,3,3]\n<strong>Output:</strong> 3</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums.length == n + 1</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= n</code></li>\n\t<li>All the integers in <code>nums</code> appear only <strong>once</strong> except for <strong>precisely one integer</strong> which appears <strong>two or more</strong> times.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><b>Follow up:</b></p>\n\n<ul>\n\t<li>How can we prove that at least one duplicate number must exist in <code>nums</code>?</li>\n\t<li>Can you solve the problem in linear runtime complexity?</li>\n</ul>\n",
     "testcase": "[1,3,4,2,2]\n[3,1,3,4,2]\n[3,3,3,3,3]"
   },
+  "288": {
+    "content": "<h2>Unique Word Abbreviation</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "289": {
     "content": "<p>According to <a href=\"https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life\" target=\"_blank\">Wikipedia&#39;s article</a>: &quot;The <b>Game of Life</b>, also known simply as <b>Life</b>, is a cellular automaton devised by the British mathematician John Horton Conway in 1970.&quot;</p>\n\n<p>The board is made up of an <code>m x n</code> grid of cells, where each cell has an initial state: <b>live</b> (represented by a <code>1</code>) or <b>dead</b> (represented by a <code>0</code>). Each cell interacts with its <a href=\"https://en.wikipedia.org/wiki/Moore_neighborhood\" target=\"_blank\">eight neighbors</a> (horizontal, vertical, diagonal) using the following four rules (taken from the above Wikipedia article):</p>\n\n<ol>\n\t<li>Any live cell with fewer than two live neighbors dies as if caused by under-population.</li>\n\t<li>Any live cell with two or three live neighbors lives on to the next generation.</li>\n\t<li>Any live cell with more than three live neighbors dies, as if by over-population.</li>\n\t<li>Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.</li>\n</ol>\n\n<p><span>The next state of the board is determined by applying the above rules simultaneously to every cell in the current state of the <code>m x n</code> grid <code>board</code>. In this process, births and deaths occur <strong>simultaneously</strong>.</span></p>\n\n<p><span>Given the current state of the <code>board</code>, <strong>update</strong> the <code>board</code> to reflect its next state.</span></p>\n\n<p><strong>Note</strong> that you do not need to return anything.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/12/26/grid1.jpg\" style=\"width: 562px; height: 322px;\" />\n<pre>\n<strong>Input:</strong> board = [[0,1,0],[0,0,1],[1,1,1],[0,0,0]]\n<strong>Output:</strong> [[0,0,0],[1,0,1],[0,1,1],[0,1,0]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/12/26/grid2.jpg\" style=\"width: 402px; height: 162px;\" />\n<pre>\n<strong>Input:</strong> board = [[1,1],[1,0]]\n<strong>Output:</strong> [[1,1],[1,1]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == board.length</code></li>\n\t<li><code>n == board[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 25</code></li>\n\t<li><code>board[i][j]</code> is <code>0</code> or <code>1</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>Could you solve it in-place? Remember that the board needs to be updated simultaneously: You cannot update some cells first and then use their updated values to update other cells.</li>\n\t<li>In this question, we represent the board using a 2D array. In principle, the board is infinite, which would cause problems when the active area encroaches upon the border of the array (i.e., live cells reach the border). How would you address these problems?</li>\n</ul>\n",
     "testcase": "[[0,1,0],[0,0,1],[1,1,1],[0,0,0]]\n[[1,1],[1,0]]"
@@ -855,17 +1063,37 @@ const DESCRIPTIONS = {
     "content": "<p>Given a <code>pattern</code> and a string <code>s</code>, find if <code>s</code>&nbsp;follows the same pattern.</p>\n\n<p>Here <b>follow</b> means a full match, such that there is a bijection between a letter in <code>pattern</code> and a <b>non-empty</b> word in <code>s</code>. Specifically:</p>\n\n<ul>\n\t<li>Each letter in <code>pattern</code> maps to <strong>exactly</strong> one unique word in <code>s</code>.</li>\n\t<li>Each unique word in <code>s</code> maps to <strong>exactly</strong> one letter in <code>pattern</code>.</li>\n\t<li>No two letters map to the same word, and no two words map to the same letter.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;abba&quot;, s = &quot;dog cat cat dog&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">true</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The bijection can be established as:</p>\n\n<ul>\n\t<li><code>&#39;a&#39;</code> maps to <code>&quot;dog&quot;</code>.</li>\n\t<li><code>&#39;b&#39;</code> maps to <code>&quot;cat&quot;</code>.</li>\n</ul>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;abba&quot;, s = &quot;dog cat cat fish&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">pattern = &quot;aaaa&quot;, s = &quot;dog cat cat dog&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">false</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= pattern.length &lt;= 300</code></li>\n\t<li><code>pattern</code> contains only lower-case English letters.</li>\n\t<li><code>1 &lt;= s.length &lt;= 3000</code></li>\n\t<li><code>s</code> contains only lowercase English letters and spaces <code>&#39; &#39;</code>.</li>\n\t<li><code>s</code> <strong>does not contain</strong> any leading or trailing spaces.</li>\n\t<li>All the words in <code>s</code> are separated by a <strong>single space</strong>.</li>\n</ul>\n",
     "testcase": "\"abba\"\n\"dog cat cat dog\"\n\"abba\"\n\"dog cat cat fish\"\n\"aaaa\"\n\"dog cat cat dog\""
   },
+  "291": {
+    "content": "<h2>Word Pattern II</h2>\n<p>This problem is frequently asked by Dropbox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "292": {
     "content": "<p>You are playing the following Nim Game with your friend:</p>\n\n<ul>\n\t<li>Initially, there is a heap of stones on the table.</li>\n\t<li>You and your friend will alternate taking turns, and <strong>you go first</strong>.</li>\n\t<li>On each turn, the person whose turn it is will remove 1 to 3 stones from the heap.</li>\n\t<li>The one who removes the last stone is the winner.</li>\n</ul>\n\n<p>Given <code>n</code>, the number of stones in the heap, return <code>true</code><em> if you can win the game assuming both you and your friend play optimally, otherwise return </em><code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 4\n<strong>Output:</strong> false\n<strong>Explanation:</strong> These are the possible outcomes:\n1. You remove 1 stone. Your friend removes 3 stones, including the last stone. Your friend wins.\n2. You remove 2 stones. Your friend removes 2 stones, including the last stone. Your friend wins.\n3. You remove 3 stones. Your friend removes the last stone. Your friend wins.\nIn all outcomes, your friend wins.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> true\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "4\n1\n2"
+  },
+  "293": {
+    "content": "<h2>Flip Game</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "294": {
+    "content": "<h2>Flip Game II</h2>\n<p>This problem is frequently asked by Google.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "295": {
     "content": "<p>The <strong>median</strong> is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.</p>\n\n<ul>\n\t<li>For example, for <code>arr = [2,3,4]</code>, the median is <code>3</code>.</li>\n\t<li>For example, for <code>arr = [2,3]</code>, the median is <code>(2 + 3) / 2 = 2.5</code>.</li>\n</ul>\n\n<p>Implement the MedianFinder class:</p>\n\n<ul>\n\t<li><code>MedianFinder()</code> initializes the <code>MedianFinder</code> object.</li>\n\t<li><code>void addNum(int num)</code> adds the integer <code>num</code> from the data stream to the data structure.</li>\n\t<li><code>double findMedian()</code> returns the median of all elements so far. Answers within <code>10<sup>-5</sup></code> of the actual answer will be accepted.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;MedianFinder&quot;, &quot;addNum&quot;, &quot;addNum&quot;, &quot;findMedian&quot;, &quot;addNum&quot;, &quot;findMedian&quot;]\n[[], [1], [2], [], [3], []]\n<strong>Output</strong>\n[null, null, null, 1.5, null, 2.0]\n\n<strong>Explanation</strong>\nMedianFinder medianFinder = new MedianFinder();\nmedianFinder.addNum(1);    // arr = [1]\nmedianFinder.addNum(2);    // arr = [1, 2]\nmedianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)\nmedianFinder.addNum(3);    // arr[1, 2, 3]\nmedianFinder.findMedian(); // return 2.0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-10<sup>5</sup> &lt;= num &lt;= 10<sup>5</sup></code></li>\n\t<li>There will be at least one element in the data structure before calling <code>findMedian</code>.</li>\n\t<li>At most <code>5 * 10<sup>4</sup></code> calls will be made to <code>addNum</code> and <code>findMedian</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong></p>\n\n<ul>\n\t<li>If all integer numbers from the stream are in the range <code>[0, 100]</code>, how would you optimize your solution?</li>\n\t<li>If <code>99%</code> of all integer numbers from the stream are in the range <code>[0, 100]</code>, how would you optimize your solution?</li>\n</ul>\n",
     "testcase": "[\"MedianFinder\",\"addNum\",\"addNum\",\"findMedian\",\"addNum\",\"findMedian\"]\n[[],[1],[2],[],[3],[]]"
   },
+  "296": {
+    "content": "<h2>Best Meeting Point</h2>\n<p>This problem is frequently asked by Applied Intuition, DoorDash, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "297": {
     "content": "<p>Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.</p>\n\n<p>Design an algorithm to serialize and deserialize a binary tree. There is no restriction on how your serialization/deserialization algorithm should work. You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.</p>\n\n<p><strong>Clarification:</strong> The input/output format is the same as <a href=\"https://support.leetcode.com/hc/en-us/articles/32442719377939-How-to-create-test-cases-on-LeetCode#h_01J5EGREAW3NAEJ14XC07GRW1A\" target=\"_blank\">how LeetCode serializes a binary tree</a>. You do not necessarily need to follow this format, so please be creative and come up with different approaches yourself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/15/serdeser.jpg\" style=\"width: 442px; height: 324px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,3,null,null,4,5]\n<strong>Output:</strong> [1,2,3,null,null,4,5]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = []\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 10<sup>4</sup>]</code>.</li>\n\t<li><code>-1000 &lt;= Node.val &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[1,2,3,null,null,4,5]\n[]"
+  },
+  "298": {
+    "content": "<h2>Binary Tree Longest Consecutive Sequence</h2>\n<p>This problem is frequently asked by Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "299": {
     "content": "<p>You are playing the <strong><a href=\"https://en.wikipedia.org/wiki/Bulls_and_Cows\" target=\"_blank\">Bulls and Cows</a></strong> game with your friend.</p>\n\n<p>You write down a secret number and ask your friend to guess what the number is. When your friend makes a guess, you provide a hint with the following info:</p>\n\n<ul>\n\t<li>The number of &quot;bulls&quot;, which are digits in the guess that are in the correct position.</li>\n\t<li>The number of &quot;cows&quot;, which are digits in the guess that are in your secret number but are located in the wrong position. Specifically, the non-bull digits in the guess that could be rearranged such that they become bulls.</li>\n</ul>\n\n<p>Given the secret number <code>secret</code> and your friend&#39;s guess <code>guess</code>, return <em>the hint for your friend&#39;s guess</em>.</p>\n\n<p>The hint should be formatted as <code>&quot;xAyB&quot;</code>, where <code>x</code> is the number of bulls and <code>y</code> is the number of cows. Note that both <code>secret</code> and <code>guess</code> may contain duplicate digits.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> secret = &quot;1807&quot;, guess = &quot;7810&quot;\n<strong>Output:</strong> &quot;1A3B&quot;\n<strong>Explanation:</strong> Bulls are connected with a &#39;|&#39; and cows are underlined:\n&quot;1807&quot;\n  |\n&quot;<u>7</u>8<u>10</u>&quot;</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> secret = &quot;1123&quot;, guess = &quot;0111&quot;\n<strong>Output:</strong> &quot;1A1B&quot;\n<strong>Explanation:</strong> Bulls are connected with a &#39;|&#39; and cows are underlined:\n&quot;1123&quot;        &quot;1123&quot;\n  |      or     |\n&quot;01<u>1</u>1&quot;        &quot;011<u>1</u>&quot;\nNote that only one of the two unmatched 1s is counted as a cow since the non-bull digits can only be rearranged to allow one 1 to be a bull.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= secret.length, guess.length &lt;= 1000</code></li>\n\t<li><code>secret.length == guess.length</code></li>\n\t<li><code>secret</code> and <code>guess</code> consist of digits only.</li>\n</ul>\n",
@@ -891,6 +1119,10 @@ const DESCRIPTIONS = {
     "content": "<p><b>Number of Islands II</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
   },
+  "306": {
+    "content": "<h2>Additive Number</h2>\n<p>This problem is frequently asked by Epic Systems.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "307": {
     "content": "<p>Given an integer array <code>nums</code>, handle multiple queries of the following types:</p>\n\n<ol>\n\t<li><strong>Update</strong> the value of an element in <code>nums</code>.</li>\n\t<li>Calculate the <strong>sum</strong> of the elements of <code>nums</code> between indices <code>left</code> and <code>right</code> <strong>inclusive</strong> where <code>left &lt;= right</code>.</li>\n</ol>\n\n<p>Implement the <code>NumArray</code> class:</p>\n\n<ul>\n\t<li><code>NumArray(int[] nums)</code> Initializes the object with the integer array <code>nums</code>.</li>\n\t<li><code>void update(int index, int val)</code> <strong>Updates</strong> the value of <code>nums[index]</code> to be <code>val</code>.</li>\n\t<li><code>int sumRange(int left, int right)</code> Returns the <strong>sum</strong> of the elements of <code>nums</code> between indices <code>left</code> and <code>right</code> <strong>inclusive</strong> (i.e. <code>nums[left] + nums[left + 1] + ... + nums[right]</code>).</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;NumArray&quot;, &quot;sumRange&quot;, &quot;update&quot;, &quot;sumRange&quot;]\n[[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]\n<strong>Output</strong>\n[null, 9, null, 8]\n\n<strong>Explanation</strong>\nNumArray numArray = new NumArray([1, 3, 5]);\nnumArray.sumRange(0, 2); // return 1 + 3 + 5 = 9\nnumArray.update(1, 2);   // nums = [1, 2, 5]\nnumArray.sumRange(0, 2); // return 1 + 2 + 5 = 8\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>-100 &lt;= nums[i] &lt;= 100</code></li>\n\t<li><code>0 &lt;= index &lt; nums.length</code></li>\n\t<li><code>-100 &lt;= val &lt;= 100</code></li>\n\t<li><code>0 &lt;= left &lt;= right &lt; nums.length</code></li>\n\t<li>At most <code>3 * 10<sup>4</sup></code> calls will be made to <code>update</code> and <code>sumRange</code>.</li>\n</ul>\n",
     "testcase": "[\"NumArray\",\"sumRange\",\"update\",\"sumRange\"]\n[[[1,3,5]],[0,2],[1,2],[0,2]]"
@@ -903,6 +1135,10 @@ const DESCRIPTIONS = {
     "content": "<p>A tree is an undirected graph in which any two vertices are connected by&nbsp;<i>exactly</i>&nbsp;one path. In other words, any connected graph without simple cycles is a tree.</p>\n\n<p>Given a tree of <code>n</code> nodes&nbsp;labelled from <code>0</code> to <code>n - 1</code>, and an array of&nbsp;<code>n - 1</code>&nbsp;<code>edges</code> where <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is an undirected edge between the two nodes&nbsp;<code>a<sub>i</sub></code> and&nbsp;<code>b<sub>i</sub></code> in the tree,&nbsp;you can choose any node of the tree as the root. When you select a node <code>x</code> as the root, the result tree has height <code>h</code>. Among all possible rooted trees, those with minimum height (i.e. <code>min(h)</code>)&nbsp; are called <strong>minimum height trees</strong> (MHTs).</p>\n\n<p>Return <em>a list of all <strong>MHTs&#39;</strong> root labels</em>.&nbsp;You can return the answer in <strong>any order</strong>.</p>\n\n<p>The <strong>height</strong> of a rooted tree is the number of edges on the longest downward path between the root and a leaf.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/01/e1.jpg\" style=\"width: 800px; height: 213px;\" />\n<pre>\n<strong>Input:</strong> n = 4, edges = [[1,0],[1,2],[1,3]]\n<strong>Output:</strong> [1]\n<strong>Explanation:</strong> As shown, the height of the tree is 1 when the root is the node with label 1 which is the only MHT.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/01/e2.jpg\" style=\"width: 800px; height: 321px;\" />\n<pre>\n<strong>Input:</strong> n = 6, edges = [[3,0],[3,1],[3,2],[3,4],[5,4]]\n<strong>Output:</strong> [3,4]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>edges.length == n - 1</code></li>\n\t<li><code>0 &lt;= a<sub>i</sub>, b<sub>i</sub> &lt; n</code></li>\n\t<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>\n\t<li>All the pairs <code>(a<sub>i</sub>, b<sub>i</sub>)</code> are distinct.</li>\n\t<li>The given input is <strong>guaranteed</strong> to be a tree and there will be <strong>no repeated</strong> edges.</li>\n</ul>\n",
     "testcase": "4\n[[1,0],[1,2],[1,3]]\n6\n[[3,0],[3,1],[3,2],[3,4],[5,4]]"
   },
+  "311": {
+    "content": "<h2>Sparse Matrix Multiplication</h2>\n<p>This problem is frequently asked by LinkedIn, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "312": {
     "content": "<p>You are given <code>n</code> balloons, indexed from <code>0</code> to <code>n - 1</code>. Each balloon is painted with a number on it represented by an array <code>nums</code>. You are asked to burst all the balloons.</p>\n\n<p>If you burst the <code>i<sup>th</sup></code> balloon, you will get <code>nums[i - 1] * nums[i] * nums[i + 1]</code> coins. If <code>i - 1</code> or <code>i + 1</code> goes out of bounds of the array, then treat it as if there is a balloon with a <code>1</code> painted on it.</p>\n\n<p>Return <em>the maximum coins you can collect by bursting the balloons wisely</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,1,5,8]\n<strong>Output:</strong> 167\n<strong>Explanation:</strong>\nnums = [3,1,5,8] --&gt; [3,5,8] --&gt; [3,8] --&gt; [8] --&gt; []\ncoins =  3*1*5    +   3*5*8   +  1*3*8  + 1*8*1 = 167</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,5]\n<strong>Output:</strong> 10\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 300</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[3,1,5,8]\n[1,5]"
@@ -910,6 +1146,10 @@ const DESCRIPTIONS = {
   "313": {
     "content": "<p>A <strong>super ugly number</strong> is a positive integer whose prime factors are in the array <code>primes</code>.</p>\n\n<p>Given an integer <code>n</code> and an array of integers <code>primes</code>, return <em>the</em> <code>n<sup>th</sup></code> <em><strong>super ugly number</strong></em>.</p>\n\n<p>The <code>n<sup>th</sup></code> <strong>super ugly number</strong> is <strong>guaranteed</strong> to fit in a <strong>32-bit</strong> signed integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 12, primes = [2,7,13,19]\n<strong>Output:</strong> 32\n<strong>Explanation:</strong> [1,2,4,7,8,13,14,16,19,26,28,32] is the sequence of the first 12 super ugly numbers given primes = [2,7,13,19].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, primes = [2,3,5]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> 1 has no prime factors, therefore all of its prime factors are in the array primes = [2,3,5].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= primes.length &lt;= 100</code></li>\n\t<li><code>2 &lt;= primes[i] &lt;= 1000</code></li>\n\t<li><code>primes[i]</code> is <strong>guaranteed</strong> to be a prime number.</li>\n\t<li>All the values of <code>primes</code> are <strong>unique</strong> and sorted in <strong>ascending order</strong>.</li>\n</ul>\n",
     "testcase": "12\n[2,7,13,19]\n1\n[2,3,5]"
+  },
+  "314": {
+    "content": "<h2>Binary Tree Vertical Order Traversal</h2>\n<p>This problem is frequently asked by DoorDash, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "315": {
     "content": "<p>Given an integer array <code>nums</code>, return<em> an integer array </em><code>counts</code><em> where </em><code>counts[i]</code><em> is the number of smaller elements to the right of </em><code>nums[i]</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,2,6,1]\n<strong>Output:</strong> [2,1,1,0]\n<strong>Explanation:</strong>\nTo the right of 5 there are <b>2</b> smaller elements (2 and 1).\nTo the right of 2 there is only <b>1</b> smaller element (1).\nTo the right of 6 there is <b>1</b> smaller element (1).\nTo the right of 1 there is <b>0</b> smaller element.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1]\n<strong>Output:</strong> [0]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [-1,-1]\n<strong>Output:</strong> [0,0]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
@@ -919,6 +1159,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given a string <code>s</code>, remove duplicate letters so that every letter appears once and only once. You must make sure your result is <span data-keyword=\"lexicographically-smaller-string\"><strong>the smallest in lexicographical order</strong></span> among all possible results.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;bcabc&quot;\n<strong>Output:</strong> &quot;abc&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbacdcbc&quot;\n<strong>Output:</strong> &quot;acdb&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Note:</strong> This question is the same as 1081: <a href=\"https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/\" target=\"_blank\">https://leetcode.com/problems/smallest-subsequence-of-distinct-characters/</a></p>\n",
     "testcase": "\"bcabc\"\n\"cbacdcbc\""
   },
+  "317": {
+    "content": "<h2>Shortest Distance from All Buildings</h2>\n<p>This problem is frequently asked by Applied Intuition, ByteDance, DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "318": {
     "content": "<p>Given a string array <code>words</code>, return <em>the maximum value of</em> <code>length(word[i]) * length(word[j])</code> <em>where the two words do not share common letters</em>. If no such two words exist, return <code>0</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;abcw&quot;,&quot;baz&quot;,&quot;foo&quot;,&quot;bar&quot;,&quot;xtfn&quot;,&quot;abcdef&quot;]\n<strong>Output:</strong> 16\n<strong>Explanation:</strong> The two words can be &quot;abcw&quot;, &quot;xtfn&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;a&quot;,&quot;ab&quot;,&quot;abc&quot;,&quot;d&quot;,&quot;cd&quot;,&quot;bcd&quot;,&quot;abcd&quot;]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The two words can be &quot;ab&quot;, &quot;cd&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;a&quot;,&quot;aa&quot;,&quot;aaa&quot;,&quot;aaaa&quot;]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> No such pair of words.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= words.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 1000</code></li>\n\t<li><code>words[i]</code> consists only of lowercase English letters.</li>\n</ul>\n",
     "testcase": "[\"abcw\",\"baz\",\"foo\",\"bar\",\"xtfn\",\"abcdef\"]\n[\"a\",\"ab\",\"abc\",\"d\",\"cd\",\"bcd\",\"abcd\"]\n[\"a\",\"aa\",\"aaa\",\"aaaa\"]"
@@ -926,6 +1170,10 @@ const DESCRIPTIONS = {
   "319": {
     "content": "<p>There are <code>n</code> bulbs that are initially off. You first turn on all the bulbs, then&nbsp;you turn off every second bulb.</p>\n\n<p>On the third round, you toggle every third bulb (turning on if it&#39;s off or turning off if it&#39;s on). For the <code>i<sup>th</sup></code> round, you toggle every <code>i</code> bulb. For the <code>n<sup>th</sup></code> round, you only toggle the last bulb.</p>\n\n<p>Return <em>the number of bulbs that are on after <code>n</code> rounds</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/11/05/bulb.jpg\" style=\"width: 421px; height: 321px;\" />\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> At first, the three bulbs are [off, off, off].\nAfter the first round, the three bulbs are [on, on, on].\nAfter the second round, the three bulbs are [on, off, on].\nAfter the third round, the three bulbs are [on, off, off]. \nSo you should return 1 because there is only one bulb is on.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= n &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
     "testcase": "3\n0\n1"
+  },
+  "321": {
+    "content": "<h2>Create Maximum Number</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "322": {
     "content": "<p>You are given an integer array <code>coins</code> representing coins of different denominations and an integer <code>amount</code> representing a total amount of money.</p>\n\n<p>Return <em>the fewest number of coins that you need to make up that amount</em>. If that amount of money cannot be made up by any combination of the coins, return <code>-1</code>.</p>\n\n<p>You may assume that you have an infinite number of each kind of coin.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> coins = [1,2,5], amount = 11\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 11 = 5 + 5 + 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> coins = [2], amount = 3\n<strong>Output:</strong> -1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> coins = [1], amount = 0\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= coins.length &lt;= 12</code></li>\n\t<li><code>1 &lt;= coins[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>0 &lt;= amount &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
@@ -947,6 +1195,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of three. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of three, if there exists an integer <code>x</code> such that <code>n == 3<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 27\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 27 = 3<sup>3</sup>\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 0\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no x where 3<sup>x</sup> = 0.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = -1\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no x where 3<sup>x</sup> = (-1).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
     "testcase": "27\n0\n-1"
   },
+  "327": {
+    "content": "<h2>Count of Range Sum</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "328": {
     "content": "<p>Given the <code>head</code> of a singly linked list, group all the nodes with odd indices together followed by the nodes with even indices, and return <em>the reordered list</em>.</p>\n\n<p>The <strong>first</strong> node is considered <strong>odd</strong>, and the <strong>second</strong> node is <strong>even</strong>, and so on.</p>\n\n<p>Note that the relative order inside both the even and odd groups should remain as it was in the input.</p>\n\n<p>You must solve the problem&nbsp;in <code>O(1)</code>&nbsp;extra space complexity and <code>O(n)</code> time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/10/oddeven-linked-list.jpg\" style=\"width: 300px; height: 123px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [1,3,5,2,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/10/oddeven2-linked-list.jpg\" style=\"width: 500px; height: 142px;\" />\n<pre>\n<strong>Input:</strong> head = [2,1,3,5,6,4,7]\n<strong>Output:</strong> [2,3,6,7,1,5,4]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the linked list is in the range <code>[0, 10<sup>4</sup>]</code>.</li>\n\t<li><code>-10<sup>6</sup> &lt;= Node.val &lt;= 10<sup>6</sup></code></li>\n</ul>\n",
     "testcase": "[1,2,3,4,5]\n[2,1,3,5,6,4,7]"
@@ -955,6 +1207,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an <code>m x n</code> integers <code>matrix</code>, return <em>the length of the longest increasing path in </em><code>matrix</code>.</p>\n\n<p>From each cell, you can either move in four directions: left, right, up, or down. You <strong>may not</strong> move <strong>diagonally</strong> or move <strong>outside the boundary</strong> (i.e., wrap-around is not allowed).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/05/grid1.jpg\" style=\"width: 242px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[9,9,4],[6,6,8],[2,1,1]]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The longest increasing path is <code>[1, 2, 6, 9]</code>.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/27/tmp-grid.jpg\" style=\"width: 253px; height: 253px;\" />\n<pre>\n<strong>Input:</strong> matrix = [[3,4,5],[3,2,6],[2,2,1]]\n<strong>Output:</strong> 4\n<strong>Explanation: </strong>The longest increasing path is <code>[3, 4, 5, 6]</code>. Moving diagonally is not allowed.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> matrix = [[1]]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == matrix.length</code></li>\n\t<li><code>n == matrix[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>0 &lt;= matrix[i][j] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "[[9,9,4],[6,6,8],[2,1,1]]\n[[3,4,5],[3,2,6],[2,2,1]]\n[[1]]"
   },
+  "330": {
+    "content": "<h2>Patching Array</h2>\n<p>This problem is frequently asked by Flipkart, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "332": {
     "content": "<p>You are given a list of airline <code>tickets</code> where <code>tickets[i] = [from<sub>i</sub>, to<sub>i</sub>]</code> represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.</p>\n\n<p>All of the tickets belong to a man who departs from <code>&quot;JFK&quot;</code>, thus, the itinerary must begin with <code>&quot;JFK&quot;</code>. If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.</p>\n\n<ul>\n\t<li>For example, the itinerary <code>[&quot;JFK&quot;, &quot;LGA&quot;]</code> has a smaller lexical order than <code>[&quot;JFK&quot;, &quot;LGB&quot;]</code>.</li>\n</ul>\n\n<p>You may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/14/itinerary1-graph.jpg\" style=\"width: 382px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> tickets = [[&quot;MUC&quot;,&quot;LHR&quot;],[&quot;JFK&quot;,&quot;MUC&quot;],[&quot;SFO&quot;,&quot;SJC&quot;],[&quot;LHR&quot;,&quot;SFO&quot;]]\n<strong>Output:</strong> [&quot;JFK&quot;,&quot;MUC&quot;,&quot;LHR&quot;,&quot;SFO&quot;,&quot;SJC&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/14/itinerary2-graph.jpg\" style=\"width: 222px; height: 230px;\" />\n<pre>\n<strong>Input:</strong> tickets = [[&quot;JFK&quot;,&quot;SFO&quot;],[&quot;JFK&quot;,&quot;ATL&quot;],[&quot;SFO&quot;,&quot;ATL&quot;],[&quot;ATL&quot;,&quot;JFK&quot;],[&quot;ATL&quot;,&quot;SFO&quot;]]\n<strong>Output:</strong> [&quot;JFK&quot;,&quot;ATL&quot;,&quot;JFK&quot;,&quot;SFO&quot;,&quot;ATL&quot;,&quot;SFO&quot;]\n<strong>Explanation:</strong> Another possible reconstruction is [&quot;JFK&quot;,&quot;SFO&quot;,&quot;ATL&quot;,&quot;JFK&quot;,&quot;ATL&quot;,&quot;SFO&quot;] but it is larger in lexical order.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= tickets.length &lt;= 300</code></li>\n\t<li><code>tickets[i].length == 2</code></li>\n\t<li><code>from<sub>i</sub>.length == 3</code></li>\n\t<li><code>to<sub>i</sub>.length == 3</code></li>\n\t<li><code>from<sub>i</sub></code> and <code>to<sub>i</sub></code> consist of uppercase English letters.</li>\n\t<li><code>from<sub>i</sub> != to<sub>i</sub></code></li>\n</ul>\n",
     "testcase": "[[\"MUC\",\"LHR\"],[\"JFK\",\"MUC\"],[\"SFO\",\"SJC\"],[\"LHR\",\"SFO\"]]\n[[\"JFK\",\"SFO\"],[\"JFK\",\"ATL\"],[\"SFO\",\"ATL\"],[\"ATL\",\"JFK\"],[\"ATL\",\"SFO\"]]"
@@ -962,6 +1218,10 @@ const DESCRIPTIONS = {
   "334": {
     "content": "<p>Given an integer array <code>nums</code>, return <code>true</code><em> if there exists a triple of indices </em><code>(i, j, k)</code><em> such that </em><code>i &lt; j &lt; k</code><em> and </em><code>nums[i] &lt; nums[j] &lt; nums[k]</code>. If no such indices exists, return <code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,5]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Any triplet where i &lt; j &lt; k is valid.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,4,3,2,1]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> No triplet exists.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,5,0,4,6]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> One of the valid triplet is (1, 4, 5), because nums[1] == 1 &lt; nums[4] == 4 &lt; nums[5] == 6.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5 * 10<sup>5</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you implement a solution that runs in <code>O(n)</code> time complexity and <code>O(1)</code> space complexity?",
     "testcase": "[1,2,3,4,5]\n[5,4,3,2,1]\n[2,1,5,0,4,6]"
+  },
+  "335": {
+    "content": "<h2>Self Crossing</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "336": {
     "content": "<p>You are given a <strong>0-indexed</strong> array of <strong>unique</strong> strings <code>words</code>.</p>\n\n<p>A <strong>palindrome pair</strong> is a pair of integers <code>(i, j)</code> such that:</p>\n\n<ul>\n\t<li><code>0 &lt;= i, j &lt; words.length</code>,</li>\n\t<li><code>i != j</code>, and</li>\n\t<li><code>words[i] + words[j]</code> (the concatenation of the two strings) is a <span data-keyword=\"palindrome-string\">palindrome</span>.</li>\n</ul>\n\n<p>Return <em>an array of all the <strong>palindrome pairs</strong> of </em><code>words</code>.</p>\n\n<p>You must write an algorithm with&nbsp;<code>O(sum of words[i].length)</code>&nbsp;runtime complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;abcd&quot;,&quot;dcba&quot;,&quot;lls&quot;,&quot;s&quot;,&quot;sssll&quot;]\n<strong>Output:</strong> [[0,1],[1,0],[3,2],[2,4]]\n<strong>Explanation:</strong> The palindromes are [&quot;abcddcba&quot;,&quot;dcbaabcd&quot;,&quot;slls&quot;,&quot;llssssll&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;bat&quot;,&quot;tab&quot;,&quot;cat&quot;]\n<strong>Output:</strong> [[0,1],[1,0]]\n<strong>Explanation:</strong> The palindromes are [&quot;battab&quot;,&quot;tabbat&quot;]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;a&quot;,&quot;&quot;]\n<strong>Output:</strong> [[0,1],[1,0]]\n<strong>Explanation:</strong> The palindromes are [&quot;a&quot;,&quot;a&quot;]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 5000</code></li>\n\t<li><code>0 &lt;= words[i].length &lt;= 300</code></li>\n\t<li><code>words[i]</code> consists of lowercase English letters.</li>\n</ul>\n",
@@ -991,6 +1251,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an integer <code>n</code>, return <em><code>true</code> if it is a power of four. Otherwise, return <code>false</code></em>.</p>\n\n<p>An integer <code>n</code> is a power of four, if there exists an integer <code>x</code> such that <code>n == 4<sup>x</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 16\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 5\n<strong>Output:</strong> false\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> n = 1\n<strong>Output:</strong> true\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-2<sup>31</sup> &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you solve it without loops/recursion?",
     "testcase": "16\n5\n1"
   },
+  "343": {
+    "content": "<h2>Integer Break</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "344": {
     "content": "<p>Write a function that reverses a string. The input string is given as an array of characters <code>s</code>.</p>\n\n<p>You must do this by modifying the input array <a href=\"https://en.wikipedia.org/wiki/In-place_algorithm\" target=\"_blank\">in-place</a> with <code>O(1)</code> extra memory.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = [\"h\",\"e\",\"l\",\"l\",\"o\"]\n<strong>Output:</strong> [\"o\",\"l\",\"l\",\"e\",\"h\"]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = [\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]\n<strong>Output:</strong> [\"h\",\"a\",\"n\",\"n\",\"a\",\"H\"]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s[i]</code> is a <a href=\"https://en.wikipedia.org/wiki/ASCII#Printable_characters\" target=\"_blank\">printable ascii character</a>.</li>\n</ul>\n",
     "testcase": "[\"h\",\"e\",\"l\",\"l\",\"o\"]\n[\"H\",\"a\",\"n\",\"n\",\"a\",\"h\"]"
@@ -998,6 +1262,10 @@ const DESCRIPTIONS = {
   "345": {
     "content": "<p>Given a string <code>s</code>, reverse only all the vowels in the string and return it.</p>\n\n<p>The vowels are <code>&#39;a&#39;</code>, <code>&#39;e&#39;</code>, <code>&#39;i&#39;</code>, <code>&#39;o&#39;</code>, and <code>&#39;u&#39;</code>, and they can appear in both lower and upper cases, more than once.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;IceCreAm&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;AceCreIm&quot;</span></p>\n\n<p><strong>Explanation:</strong></p>\n\n<p>The vowels in <code>s</code> are <code>[&#39;I&#39;, &#39;e&#39;, &#39;e&#39;, &#39;A&#39;]</code>. On reversing the vowels, s becomes <code>&quot;AceCreIm&quot;</code>.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">s = &quot;leetcode&quot;</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">&quot;leotcede&quot;</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 3 * 10<sup>5</sup></code></li>\n\t<li><code>s</code> consist of <strong>printable ASCII</strong> characters.</li>\n</ul>\n",
     "testcase": "\"IceCreAm\"\n\"leetcode\""
+  },
+  "346": {
+    "content": "<h2>Moving Average from Data Stream</h2>\n<p>This problem is frequently asked by Arista Networks, Citadel, Nuro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "347": {
     "content": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <em>the</em> <code>k</code> <em>most frequent elements</em>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,1,1,2,2,3], k = 2</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,2]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1], k = 1</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">nums = [1,2,1,2,1,2,3,1,3,2], k = 2</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,2]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>k</code> is in the range <code>[1, the number of unique elements in the array]</code>.</li>\n\t<li>It is <strong>guaranteed</strong> that the answer is <strong>unique</strong>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Your algorithm&#39;s time complexity must be better than <code>O(n log n)</code>, where n is the array&#39;s size.</p>\n",
@@ -1019,6 +1287,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given a data stream input of non-negative integers <code>a<sub>1</sub>, a<sub>2</sub>, ..., a<sub>n</sub></code>, summarize the numbers seen so far as a list of disjoint intervals.</p>\n\n<p>Implement the <code>SummaryRanges</code> class:</p>\n\n<ul>\n\t<li><code>SummaryRanges()</code> Initializes the object with an empty stream.</li>\n\t<li><code>void addNum(int value)</code> Adds the integer <code>value</code> to the stream.</li>\n\t<li><code>int[][] getIntervals()</code> Returns a summary of the integers in the stream currently as a list of disjoint intervals <code>[start<sub>i</sub>, end<sub>i</sub>]</code>. The answer should be sorted by <code>start<sub>i</sub></code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;SummaryRanges&quot;, &quot;addNum&quot;, &quot;getIntervals&quot;, &quot;addNum&quot;, &quot;getIntervals&quot;, &quot;addNum&quot;, &quot;getIntervals&quot;, &quot;addNum&quot;, &quot;getIntervals&quot;, &quot;addNum&quot;, &quot;getIntervals&quot;]\n[[], [1], [], [3], [], [7], [], [2], [], [6], []]\n<strong>Output</strong>\n[null, null, [[1, 1]], null, [[1, 1], [3, 3]], null, [[1, 1], [3, 3], [7, 7]], null, [[1, 3], [7, 7]], null, [[1, 3], [6, 7]]]\n\n<strong>Explanation</strong>\nSummaryRanges summaryRanges = new SummaryRanges();\nsummaryRanges.addNum(1);      // arr = [1]\nsummaryRanges.getIntervals(); // return [[1, 1]]\nsummaryRanges.addNum(3);      // arr = [1, 3]\nsummaryRanges.getIntervals(); // return [[1, 1], [3, 3]]\nsummaryRanges.addNum(7);      // arr = [1, 3, 7]\nsummaryRanges.getIntervals(); // return [[1, 1], [3, 3], [7, 7]]\nsummaryRanges.addNum(2);      // arr = [1, 2, 3, 7]\nsummaryRanges.getIntervals(); // return [[1, 3], [7, 7]]\nsummaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]\nsummaryRanges.getIntervals(); // return [[1, 3], [6, 7]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= value &lt;= 10<sup>4</sup></code></li>\n\t<li>At most <code>3 * 10<sup>4</sup></code> calls will be made to <code>addNum</code> and <code>getIntervals</code>.</li>\n\t<li>At most <code>10<sup>2</sup></code>&nbsp;calls will be made to&nbsp;<code>getIntervals</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> What if there are lots of merges and the number of disjoint intervals is small compared to the size of the data stream?</p>\n",
     "testcase": "[\"SummaryRanges\",\"addNum\",\"getIntervals\",\"addNum\",\"getIntervals\",\"addNum\",\"getIntervals\",\"addNum\",\"getIntervals\",\"addNum\",\"getIntervals\"]\n[[],[1],[],[3],[],[7],[],[2],[],[6],[]]"
   },
+  "353": {
+    "content": "<h2>Design Snake Game</h2>\n<p>This problem is frequently asked by Atlassian, IXL.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "354": {
     "content": "<p>You are given a 2D array of integers <code>envelopes</code> where <code>envelopes[i] = [w<sub>i</sub>, h<sub>i</sub>]</code> represents the width and the height of an envelope.</p>\n\n<p>One envelope can fit into another if and only if both the width and height of one envelope are greater than the other envelope&#39;s width and height.</p>\n\n<p>Return <em>the maximum number of envelopes you can Russian doll (i.e., put one inside the other)</em>.</p>\n\n<p><strong>Note:</strong> You cannot rotate an envelope.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> envelopes = [[5,4],[6,4],[6,7],[2,3]]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The maximum number of envelopes you can Russian doll is <code>3</code> ([2,3] =&gt; [5,4] =&gt; [6,7]).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> envelopes = [[1,1],[1,1],[1,1]]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= envelopes.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>envelopes[i].length == 2</code></li>\n\t<li><code>1 &lt;= w<sub>i</sub>, h<sub>i</sub> &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
     "testcase": "[[5,4],[6,4],[6,7],[2,3]]\n[[1,1],[1,1],[1,1]]"
@@ -1027,9 +1299,17 @@ const DESCRIPTIONS = {
     "content": "<p>Design a simplified version of Twitter where users can post tweets, follow/unfollow another user, and is able to see the <code>10</code> most recent tweets in the user&#39;s news feed.</p>\n\n<p>Implement the <code>Twitter</code> class:</p>\n\n<ul>\n\t<li><code>Twitter()</code> Initializes your twitter object.</li>\n\t<li><code>void postTweet(int userId, int tweetId)</code> Composes a new tweet with ID <code>tweetId</code> by the user <code>userId</code>. Each call to this function will be made with a unique <code>tweetId</code>.</li>\n\t<li><code>List&lt;Integer&gt; getNewsFeed(int userId)</code> Retrieves the <code>10</code> most recent tweet IDs in the user&#39;s news feed. Each item in the news feed must be posted by users who the user followed or by the user themself. Tweets must be <strong>ordered from most recent to least recent</strong>.</li>\n\t<li><code>void follow(int followerId, int followeeId)</code> The user with ID <code>followerId</code> started following the user with ID <code>followeeId</code>.</li>\n\t<li><code>void unfollow(int followerId, int followeeId)</code> The user with ID <code>followerId</code> started unfollowing the user with ID <code>followeeId</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;Twitter&quot;, &quot;postTweet&quot;, &quot;getNewsFeed&quot;, &quot;follow&quot;, &quot;postTweet&quot;, &quot;getNewsFeed&quot;, &quot;unfollow&quot;, &quot;getNewsFeed&quot;]\n[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]\n<strong>Output</strong>\n[null, null, [5], null, null, [6, 5], null, [5]]\n\n<strong>Explanation</strong>\nTwitter twitter = new Twitter();\ntwitter.postTweet(1, 5); // User 1 posts a new tweet (id = 5).\ntwitter.getNewsFeed(1);  // User 1&#39;s news feed should return a list with 1 tweet id -&gt; [5]. return [5]\ntwitter.follow(1, 2);    // User 1 follows user 2.\ntwitter.postTweet(2, 6); // User 2 posts a new tweet (id = 6).\ntwitter.getNewsFeed(1);  // User 1&#39;s news feed should return a list with 2 tweet ids -&gt; [6, 5]. Tweet id 6 should precede tweet id 5 because it is posted after tweet id 5.\ntwitter.unfollow(1, 2);  // User 1 unfollows user 2.\ntwitter.getNewsFeed(1);  // User 1&#39;s news feed should return a list with 1 tweet id -&gt; [5], since user 1 is no longer following user 2.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= userId, followerId, followeeId &lt;= 500</code></li>\n\t<li><code>0 &lt;= tweetId &lt;= 10<sup>4</sup></code></li>\n\t<li>All the tweets have <strong>unique</strong> IDs.</li>\n\t<li>At most <code>3 * 10<sup>4</sup></code> calls will be made to <code>postTweet</code>, <code>getNewsFeed</code>, <code>follow</code>, and <code>unfollow</code>.</li>\n\t<li>A user cannot follow himself.</li>\n</ul>\n",
     "testcase": "[\"Twitter\",\"postTweet\",\"getNewsFeed\",\"follow\",\"postTweet\",\"getNewsFeed\",\"unfollow\",\"getNewsFeed\"]\n[[],[1,5],[1],[1,2],[2,6],[1],[1,2],[1]]"
   },
+  "356": {
+    "content": "<h2>Line Reflection</h2>\n<p>This problem is frequently asked by Nuro, Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "357": {
     "content": "<p>Given an integer <code>n</code>, return the count of all numbers with unique digits, <code>x</code>, where <code>0 &lt;= x &lt; 10<sup>n</sup></code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 91\n<strong>Explanation:</strong> The answer should be the total numbers in the range of 0 &le; x &lt; 100, excluding 11,22,33,44,55,66,77,88,99\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 0\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= n &lt;= 8</code></li>\n</ul>\n",
     "testcase": "2\n0"
+  },
+  "359": {
+    "content": "<h2>Logger Rate Limiter</h2>\n<p>This problem is frequently asked by AppFolio, Atlassian, Grammarly.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "360": {
     "content": "<p><b>Sort Transformed Array</b> is a premium problem. The problem statement is not available.</p>",
@@ -1038,6 +1318,18 @@ const DESCRIPTIONS = {
   "362": {
     "content": "<p><b>Design Hit Counter</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
+  },
+  "363": {
+    "content": "<h2>Max Sum of Rectangle No Larger Than K</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "364": {
+    "content": "<h2>Nested List Weight Sum II</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "365": {
+    "content": "<h2>Water and Jug Problem</h2>\n<p>This problem is frequently asked by Lyft, Wells Fargo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "366": {
     "content": "<p><b>Find Leaves of Binary Tree</b> is a premium problem. The problem statement is not available.</p>",
@@ -1050,6 +1342,10 @@ const DESCRIPTIONS = {
   "368": {
     "content": "<p>Given a set of <strong>distinct</strong> positive integers <code>nums</code>, return the largest subset <code>answer</code> such that every pair <code>(answer[i], answer[j])</code> of elements in this subset satisfies:</p>\n\n<ul>\n\t<li><code>answer[i] % answer[j] == 0</code>, or</li>\n\t<li><code>answer[j] % answer[i] == 0</code></li>\n</ul>\n\n<p>If there are multiple solutions, return any of them.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> [1,2]\n<strong>Explanation:</strong> [1,3] is also accepted.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,4,8]\n<strong>Output:</strong> [1,2,4,8]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 2 * 10<sup>9</sup></code></li>\n\t<li>All the integers in <code>nums</code> are <strong>unique</strong>.</li>\n</ul>\n",
     "testcase": "[1,2,3]\n[1,2,4,8]"
+  },
+  "370": {
+    "content": "<h2>Range Addition</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "371": {
     "content": "<p>Given two integers <code>a</code> and <code>b</code>, return <em>the sum of the two integers without using the operators</em> <code>+</code> <em>and</em> <code>-</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> a = 1, b = 2\n<strong>Output:</strong> 3\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> a = 2, b = 3\n<strong>Output:</strong> 5\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>-1000 &lt;= a, b &lt;= 1000</code></li>\n</ul>\n",
@@ -1135,6 +1431,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given a string <code>s</code> and an integer <code>k</code>, return <em>the length of the longest substring of</em> <code>s</code> <em>such that the frequency of each character in this substring is greater than or equal to</em> <code>k</code>.</p>\n\n<p data-pm-slice=\"1 1 []\">if no such substring exists, return 0.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aaabb&quot;, k = 3\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The longest substring is &quot;aaa&quot;, as &#39;a&#39; is repeated 3 times.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;ababbc&quot;, k = 2\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The longest substring is &quot;ababb&quot;, as &#39;a&#39; is repeated 2 times and &#39;b&#39; is repeated 3 times.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s</code> consists of only lowercase English letters.</li>\n\t<li><code>1 &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
     "testcase": "\"aaabb\"\n3\n\"ababbc\"\n2"
   },
+  "397": {
+    "content": "<h2>Integer Replacement</h2>\n<p>This problem is frequently asked by Baidu.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "398": {
     "content": "<p>Given an integer array <code>nums</code> with possible <strong>duplicates</strong>, randomly output the index of a given <code>target</code> number. You can assume that the given target number must exist in the array.</p>\n\n<p>Implement the <code>Solution</code> class:</p>\n\n<ul>\n\t<li><code>Solution(int[] nums)</code> Initializes the object with the array <code>nums</code>.</li>\n\t<li><code>int pick(int target)</code> Picks a random index <code>i</code> from <code>nums</code> where <code>nums[i] == target</code>. If there are multiple valid i&#39;s, then each index should have an equal probability of returning.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;Solution&quot;, &quot;pick&quot;, &quot;pick&quot;, &quot;pick&quot;]\n[[[1, 2, 3, 3, 3]], [3], [1], [3]]\n<strong>Output</strong>\n[null, 4, 0, 2]\n\n<strong>Explanation</strong>\nSolution solution = new Solution([1, 2, 3, 3, 3]);\nsolution.pick(3); // It should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning.\nsolution.pick(1); // It should return 0. Since in the array only nums[0] is equal to 1.\nsolution.pick(3); // It should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>-2<sup>31</sup> &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n\t<li><code>target</code> is an integer from <code>nums</code>.</li>\n\t<li>At most <code>10<sup>4</sup></code> calls will be made to <code>pick</code>.</li>\n</ul>\n",
     "testcase": "[\"Solution\",\"pick\",\"pick\",\"pick\"]\n[[[1,2,3,3,3]],[3],[1],[3]]"
@@ -1162,6 +1462,10 @@ const DESCRIPTIONS = {
   "406": {
     "content": "<p>You are given an array of people, <code>people</code>, which are the attributes of some people in a queue (not necessarily in order). Each <code>people[i] = [h<sub>i</sub>, k<sub>i</sub>]</code> represents the <code>i<sup>th</sup></code> person of height <code>h<sub>i</sub></code> with <strong>exactly</strong> <code>k<sub>i</sub></code> other people in front who have a height greater than or equal to <code>h<sub>i</sub></code>.</p>\n\n<p>Reconstruct and return <em>the queue that is represented by the input array </em><code>people</code>. The returned queue should be formatted as an array <code>queue</code>, where <code>queue[j] = [h<sub>j</sub>, k<sub>j</sub>]</code> is the attributes of the <code>j<sup>th</sup></code> person in the queue (<code>queue[0]</code> is the person at the front of the queue).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> people = [[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]\n<strong>Output:</strong> [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]\n<strong>Explanation:</strong>\nPerson 0 has height 5 with no other people taller or the same height in front.\nPerson 1 has height 7 with no other people taller or the same height in front.\nPerson 2 has height 5 with two persons taller or the same height in front, which is person 0 and 1.\nPerson 3 has height 6 with one person taller or the same height in front, which is person 1.\nPerson 4 has height 4 with four people taller or the same height in front, which are people 0, 1, 2, and 3.\nPerson 5 has height 7 with one person taller or the same height in front, which is person 1.\nHence [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]] is the reconstructed queue.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> people = [[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]\n<strong>Output:</strong> [[4,0],[5,0],[2,2],[3,2],[1,4],[6,0]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= people.length &lt;= 2000</code></li>\n\t<li><code>0 &lt;= h<sub>i</sub> &lt;= 10<sup>6</sup></code></li>\n\t<li><code>0 &lt;= k<sub>i</sub> &lt; people.length</code></li>\n\t<li>It is guaranteed that the queue can be reconstructed.</li>\n</ul>\n",
     "testcase": "[[7,0],[4,4],[7,1],[5,0],[6,1],[5,2]]\n[[6,0],[5,0],[4,0],[3,2],[2,2],[1,4]]"
+  },
+  "407": {
+    "content": "<h2>Trapping Rain Water II</h2>\n<p>This problem is frequently asked by ByteDance, Otter.ai, Palantir Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "408": {
     "content": "<p><b>Valid Word Abbreviation</b> is a premium problem. The problem statement is not available.</p>",
@@ -1203,6 +1507,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an <code>m x n</code> matrix <code>board</code> where each cell is a battleship <code>&#39;X&#39;</code> or empty <code>&#39;.&#39;</code>, return <em>the number of the <strong>battleships</strong> on</em> <code>board</code>.</p>\n\n<p><strong>Battleships</strong> can only be placed horizontally or vertically on <code>board</code>. In other words, they can only be made of the shape <code>1 x k</code> (<code>1</code> row, <code>k</code> columns) or <code>k x 1</code> (<code>k</code> rows, <code>1</code> column), where <code>k</code> can be of any size. At least one horizontal or vertical cell separates between two battleships (i.e., there are no adjacent battleships).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img height=\"333\" src=\"https://assets.leetcode.com/uploads/2024/06/21/image.png\" width=\"333\" />\n<pre>\n<strong>Input:</strong> board = [[&quot;X&quot;,&quot;.&quot;,&quot;.&quot;,&quot;X&quot;],[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;X&quot;],[&quot;.&quot;,&quot;.&quot;,&quot;.&quot;,&quot;X&quot;]]\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> board = [[&quot;.&quot;]]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == board.length</code></li>\n\t<li><code>n == board[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 200</code></li>\n\t<li><code>board[i][j]</code> is either <code>&#39;.&#39;</code> or <code>&#39;X&#39;</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do it in one-pass, using only <code>O(1)</code> extra memory and without modifying the values <code>board</code>?</p>\n",
     "testcase": "[[\"X\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"],[\".\",\".\",\".\",\"X\"]]\n[[\".\"]]"
   },
+  "420": {
+    "content": "<h2>Strong Password Checker</h2>\n<p>This problem is frequently asked by Devtron, Flipkart, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "421": {
     "content": "<p>Given an integer array <code>nums</code>, return <em>the maximum result of </em><code>nums[i] XOR nums[j]</code>, where <code>0 &lt;= i &lt;= j &lt; n</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,10,5,25,2,8]\n<strong>Output:</strong> 28\n<strong>Explanation:</strong> The maximum result is 5 XOR 25 = 28.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [14,70,53,83,49,91,36,80,92,51,66,70]\n<strong>Output:</strong> 127\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "[3,10,5,25,2,8]\n[14,70,53,83,49,91,36,80,92,51,66,70]"
@@ -1231,6 +1539,14 @@ const DESCRIPTIONS = {
     "content": "<p>Design a data structure to store the strings&#39; count with the ability to return the strings with minimum and maximum counts.</p>\n\n<p>Implement the <code>AllOne</code> class:</p>\n\n<ul>\n\t<li><code>AllOne()</code> Initializes the object of the data structure.</li>\n\t<li><code>inc(String key)</code> Increments the count of the string <code>key</code> by <code>1</code>. If <code>key</code> does not exist in the data structure, insert it with count <code>1</code>.</li>\n\t<li><code>dec(String key)</code> Decrements the count of the string <code>key</code> by <code>1</code>. If the count of <code>key</code> is <code>0</code> after the decrement, remove it from the data structure. It is guaranteed that <code>key</code> exists in the data structure before the decrement.</li>\n\t<li><code>getMaxKey()</code> Returns one of the keys with the maximal count. If no element exists, return an empty string <code>&quot;&quot;</code>.</li>\n\t<li><code>getMinKey()</code> Returns one of the keys with the minimum count. If no element exists, return an empty string <code>&quot;&quot;</code>.</li>\n</ul>\n\n<p><strong>Note</strong> that each function must run in <code>O(1)</code> average time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;AllOne&quot;, &quot;inc&quot;, &quot;inc&quot;, &quot;getMaxKey&quot;, &quot;getMinKey&quot;, &quot;inc&quot;, &quot;getMaxKey&quot;, &quot;getMinKey&quot;]\n[[], [&quot;hello&quot;], [&quot;hello&quot;], [], [], [&quot;leet&quot;], [], []]\n<strong>Output</strong>\n[null, null, null, &quot;hello&quot;, &quot;hello&quot;, null, &quot;hello&quot;, &quot;leet&quot;]\n\n<strong>Explanation</strong>\nAllOne allOne = new AllOne();\nallOne.inc(&quot;hello&quot;);\nallOne.inc(&quot;hello&quot;);\nallOne.getMaxKey(); // return &quot;hello&quot;\nallOne.getMinKey(); // return &quot;hello&quot;\nallOne.inc(&quot;leet&quot;);\nallOne.getMaxKey(); // return &quot;hello&quot;\nallOne.getMinKey(); // return &quot;leet&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= key.length &lt;= 10</code></li>\n\t<li><code>key</code> consists of lowercase English letters.</li>\n\t<li>It is guaranteed that for each call to <code>dec</code>, <code>key</code> is existing in the data structure.</li>\n\t<li>At most <code>5 * 10<sup>4</sup></code>&nbsp;calls will be made to <code>inc</code>, <code>dec</code>, <code>getMaxKey</code>, and <code>getMinKey</code>.</li>\n</ul>\n",
     "testcase": "[\"AllOne\",\"inc\",\"inc\",\"getMaxKey\",\"getMinKey\",\"inc\",\"getMaxKey\",\"getMinKey\"]\n[[],[\"hello\"],[\"hello\"],[],[],[\"leet\"],[],[]]"
   },
+  "433": {
+    "content": "<h2>Minimum Genetic Mutation</h2>\n<p>This problem is frequently asked by X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "435": {
+    "content": "<h2>Non-overlapping Intervals</h2>\n<p>This problem is frequently asked by Capital One, Instacart, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "437": {
     "content": "<p>Given the <code>root</code> of a binary tree and an integer <code>targetSum</code>, return <em>the number of paths where the sum of the values&nbsp;along the path equals</em>&nbsp;<code>targetSum</code>.</p>\n\n<p>The path does not need to start or end at the root or a leaf, but it must go downwards (i.e., traveling only from parent nodes to child nodes).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/09/pathsum3-1-tree.jpg\" style=\"width: 450px; height: 386px;\" />\n<pre>\n<strong>Input:</strong> root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The paths that sum to 8 are shown.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 1000]</code>.</li>\n\t<li><code>-10<sup>9</sup> &lt;= Node.val &lt;= 10<sup>9</sup></code></li>\n\t<li><code>-1000 &lt;= targetSum &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[10,5,-3,3,2,null,11,3,-2,null,1]\n8\n[5,4,8,11,null,13,4,7,2,null,null,5,1]\n22"
@@ -1238,6 +1554,10 @@ const DESCRIPTIONS = {
   "438": {
     "content": "<p>Given two strings <code>s</code> and <code>p</code>, return an array of all the start indices of <code>p</code>&#39;s <span data-keyword=\"anagram\">anagrams</span> in <code>s</code>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;cbaebabacd&quot;, p = &quot;abc&quot;\n<strong>Output:</strong> [0,6]\n<strong>Explanation:</strong>\nThe substring with start index = 0 is &quot;cba&quot;, which is an anagram of &quot;abc&quot;.\nThe substring with start index = 6 is &quot;bac&quot;, which is an anagram of &quot;abc&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abab&quot;, p = &quot;ab&quot;\n<strong>Output:</strong> [0,1,2]\n<strong>Explanation:</strong>\nThe substring with start index = 0 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.\nThe substring with start index = 1 is &quot;ba&quot;, which is an anagram of &quot;ab&quot;.\nThe substring with start index = 2 is &quot;ab&quot;, which is an anagram of &quot;ab&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, p.length &lt;= 3 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>p</code> consist of lowercase English letters.</li>\n</ul>\n",
     "testcase": "\"cbaebabacd\"\n\"abc\"\n\"abab\"\n\"ab\""
+  },
+  "439": {
+    "content": "<h2>Ternary Expression Parser</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "440": {
     "content": "<p>Given two integers <code>n</code> and <code>k</code>, return <em>the</em> <code>k<sup>th</sup></code> <em>lexicographically smallest integer in the range</em> <code>[1, n]</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 13, k = 2\n<strong>Output:</strong> 10\n<strong>Explanation:</strong> The lexicographical order is [1, 10, 11, 12, 13, 2, 3, 4, 5, 6, 7, 8, 9], so the second smallest number is 10.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, k = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= n &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
@@ -1258,6 +1578,10 @@ const DESCRIPTIONS = {
   "445": {
     "content": "<p>You are given two <strong>non-empty</strong> linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.</p>\n\n<p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/09/sumii-linked-list.jpg\" style=\"width: 523px; height: 342px;\" />\n<pre>\n<strong>Input:</strong> l1 = [7,2,4,3], l2 = [5,6,4]\n<strong>Output:</strong> [7,8,0,7]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> l1 = [2,4,3], l2 = [5,6,4]\n<strong>Output:</strong> [8,0,7]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> l1 = [0], l2 = [0]\n<strong>Output:</strong> [0]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in each linked list is in the range <code>[1, 100]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 9</code></li>\n\t<li>It is guaranteed that the list represents a number that does not have leading zeros.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong>&nbsp;Could you solve it without reversing the input lists?</p>\n",
     "testcase": "[7,2,4,3]\n[5,6,4]\n[2,4,3]\n[5,6,4]\n[0]\n[0]"
+  },
+  "446": {
+    "content": "<h2>Arithmetic Slices II - Subsequence</h2>\n<p>This problem is frequently asked by Baidu, Dunzo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "448": {
     "content": "<p>Given an array <code>nums</code> of <code>n</code> integers where <code>nums[i]</code> is in the range <code>[1, n]</code>, return <em>an array of all the integers in the range</em> <code>[1, n]</code> <em>that do not appear in</em> <code>nums</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [4,3,2,7,8,2,3,1]\n<strong>Output:</strong> [5,6]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [1,1]\n<strong>Output:</strong> [2]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= n</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Could you do it without extra space and in <code>O(n)</code> runtime? You may assume the returned list does not count as extra space.</p>\n",
@@ -1311,9 +1635,33 @@ const DESCRIPTIONS = {
     "content": "<p>The <a href=\"https://en.wikipedia.org/wiki/Hamming_distance\" target=\"_blank\">Hamming distance</a> between two integers is the number of positions at which the corresponding bits are different.</p>\n\n<p>Given two integers <code>x</code> and <code>y</code>, return <em>the <strong>Hamming distance</strong> between them</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 1, y = 4\n<strong>Output:</strong> 2\n<strong>Explanation:</strong>\n1   (0 0 0 1)\n4   (0 1 0 0)\n       &uarr;   &uarr;\nThe above arrows point to positions where the corresponding bits are different.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> x = 3, y = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;=&nbsp;x, y &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Note:</strong> This question is the same as <a href=\"https://leetcode.com/problems/minimum-bit-flips-to-convert-number/description/\" target=\"_blank\"> 2220: Minimum Bit Flips to Convert Number.</a></p>\n",
     "testcase": "1\n4\n3\n1"
   },
+  "462": {
+    "content": "<h2>Minimum Moves to Equal Array Elements II</h2>\n<p>This problem is frequently asked by Myntra.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "463": {
     "content": "<p>You are given <code>row x col</code> <code>grid</code> representing a map where <code>grid[i][j] = 1</code> represents&nbsp;land and <code>grid[i][j] = 0</code> represents water.</p>\n\n<p>Grid cells are connected <strong>horizontally/vertically</strong> (not diagonally). The <code>grid</code> is completely surrounded by water, and there is exactly one island (i.e., one or more connected land cells).</p>\n\n<p>The island doesn&#39;t have &quot;lakes&quot;, meaning the water inside isn&#39;t connected to the water around the island. One cell is a square with side length 1. The grid is rectangular, width and height don&#39;t exceed 100. Determine the perimeter of the island.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/12/island.png\" style=\"width: 221px; height: 213px;\" />\n<pre>\n<strong>Input:</strong> grid = [[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]\n<strong>Output:</strong> 16\n<strong>Explanation:</strong> The perimeter is the 16 yellow stripes in the image above.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[1]]\n<strong>Output:</strong> 4\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[1,0]]\n<strong>Output:</strong> 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>row == grid.length</code></li>\n\t<li><code>col == grid[i].length</code></li>\n\t<li><code>1 &lt;= row, col &lt;= 100</code></li>\n\t<li><code>grid[i][j]</code> is <code>0</code> or <code>1</code>.</li>\n\t<li>There is exactly one island in <code>grid</code>.</li>\n</ul>\n",
     "testcase": "[[0,1,0,0],[1,1,1,0],[0,1,0,0],[1,1,0,0]]\n[[1]]\n[[1,0]]"
+  },
+  "464": {
+    "content": "<h2>Can I Win</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "465": {
+    "content": "<h2>Optimal Account Balancing</h2>\n<p>This problem is frequently asked by Pinterest, Rippling, Stripe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "467": {
+    "content": "<h2>Unique Substrings in Wraparound String</h2>\n<p>This problem is frequently asked by MAQ Software.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "468": {
+    "content": "<h2>Validate IP Address</h2>\n<p>This problem is frequently asked by Cisco, Deutsche Bank, Flexport.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "472": {
+    "content": "<h2>Concatenated Words</h2>\n<p>This problem is frequently asked by eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "473": {
     "content": "<p>You are given an integer array <code>matchsticks</code> where <code>matchsticks[i]</code> is the length of the <code>i<sup>th</sup></code> matchstick. You want to use <strong>all the matchsticks</strong> to make one square. You <strong>should not break</strong> any stick, but you can link them up, and each matchstick must be used <strong>exactly one time</strong>.</p>\n\n<p>Return <code>true</code> if you can make this square and <code>false</code> otherwise.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/09/matchsticks1-grid.jpg\" style=\"width: 253px; height: 253px;\" />\n<pre>\n<strong>Input:</strong> matchsticks = [1,1,2,2,2]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You can form a square with length 2, one side of the square came two sticks with length 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> matchsticks = [3,3,3,3,4]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> You cannot find a way to form a square with all the matchsticks.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= matchsticks.length &lt;= 15</code></li>\n\t<li><code>1 &lt;= matchsticks[i] &lt;= 10<sup>8</sup></code></li>\n</ul>\n",
@@ -1322,6 +1670,10 @@ const DESCRIPTIONS = {
   "474": {
     "content": "<p>You are given an array of binary strings <code>strs</code> and two integers <code>m</code> and <code>n</code>.</p>\n\n<p>Return <em>the size of the largest subset of <code>strs</code> such that there are <strong>at most</strong> </em><code>m</code><em> </em><code>0</code><em>&#39;s and </em><code>n</code><em> </em><code>1</code><em>&#39;s in the subset</em>.</p>\n\n<p>A set <code>x</code> is a <strong>subset</strong> of a set <code>y</code> if all elements of <code>x</code> are also elements of <code>y</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;10&quot;,&quot;0001&quot;,&quot;111001&quot;,&quot;1&quot;,&quot;0&quot;], m = 5, n = 3\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The largest subset with at most 5 0&#39;s and 3 1&#39;s is {&quot;10&quot;, &quot;0001&quot;, &quot;1&quot;, &quot;0&quot;}, so the answer is 4.\nOther valid but smaller subsets include {&quot;0001&quot;, &quot;1&quot;} and {&quot;10&quot;, &quot;1&quot;, &quot;0&quot;}.\n{&quot;111001&quot;} is an invalid subset because it contains 4 1&#39;s, greater than the maximum of 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> strs = [&quot;10&quot;,&quot;0&quot;,&quot;1&quot;], m = 1, n = 1\n<strong>Output:</strong> 2\n<b>Explanation:</b> The largest subset is {&quot;0&quot;, &quot;1&quot;}, so the answer is 2.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= strs.length &lt;= 600</code></li>\n\t<li><code>1 &lt;= strs[i].length &lt;= 100</code></li>\n\t<li><code>strs[i]</code> consists only of digits <code>&#39;0&#39;</code> and <code>&#39;1&#39;</code>.</li>\n\t<li><code>1 &lt;= m, n &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[\"10\",\"0001\",\"111001\",\"1\",\"0\"]\n5\n3\n[\"10\",\"0\",\"1\"]\n1\n1"
+  },
+  "475": {
+    "content": "<h2>Heaters</h2>\n<p>This problem is frequently asked by Anduril, DE Shaw, Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "476": {
     "content": "<p>The <strong>complement</strong> of an integer is the integer you get when you flip all the <code>0</code>&#39;s to <code>1</code>&#39;s and all the <code>1</code>&#39;s to <code>0</code>&#39;s in its binary representation.</p>\n\n<ul>\n\t<li>For example, The integer <code>5</code> is <code>&quot;101&quot;</code> in binary and its <strong>complement</strong> is <code>&quot;010&quot;</code> which is the integer <code>2</code>.</li>\n</ul>\n\n<p>Given an integer <code>num</code>, return <em>its complement</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 5\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The binary representation of 5 is 101 (no leading zero bits), and its complement is 010. So you need to output 2.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 1\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> The binary representation of 1 is 1 (no leading zero bits), and its complement is 0. So you need to output 0.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= num &lt; 2<sup>31</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Note:</strong> This question is the same as 1009: <a href=\"https://leetcode.com/problems/complement-of-base-10-integer/\" target=\"_blank\">https://leetcode.com/problems/complement-of-base-10-integer/</a></p>\n",
@@ -1347,6 +1699,14 @@ const DESCRIPTIONS = {
     "content": "<p>You are given an integer array <code>nums</code>. Two players are playing a game with this array: player 1 and player 2.</p>\n\n<p>Player 1 and player 2 take turns, with player 1 starting first. Both players start the game with a score of <code>0</code>. At each turn, the player takes one of the numbers from either end of the array (i.e., <code>nums[0]</code> or <code>nums[nums.length - 1]</code>) which reduces the size of the array by <code>1</code>. The player adds the chosen number to their score. The game ends when there are no more elements in the array.</p>\n\n<p>Return <code>true</code> if Player 1 can win the game. If the scores of both players are equal, then player 1 is still the winner, and you should also return <code>true</code>. You may assume that both players are playing optimally.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,5,2]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> Initially, player 1 can choose between 1 and 2. \nIf he chooses 2 (or 1), then player 2 can choose from 1 (or 2) and 5. If player 2 chooses 5, then player 1 will be left with 1 (or 2). \nSo, final score of player 1 is 1 + 2 = 3, and player 2 is 5. \nHence, player 1 will never be the winner and you need to return false.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,5,233,7]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> Player 1 first chooses 1. Then player 2 has to choose between 5 and 7. No matter which number player 2 choose, player 1 can choose 233.\nFinally, player 1 has more score (234) than player 2 (12), so you need to return True representing player1 can win.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 20</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 10<sup>7</sup></code></li>\n</ul>\n",
     "testcase": "[1,5,2]\n[1,5,233,7]"
   },
+  "487": {
+    "content": "<h2>Max Consecutive Ones II</h2>\n<p>This problem is frequently asked by Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "488": {
+    "content": "<h2>Zuma Game</h2>\n<p>This problem is frequently asked by Baidu.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "490": {
     "content": "<p><b>The Maze</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
@@ -1354,6 +1714,10 @@ const DESCRIPTIONS = {
   "494": {
     "content": "<p>You are given an integer array <code>nums</code> and an integer <code>target</code>.</p>\n\n<p>You want to build an <strong>expression</strong> out of nums by adding one of the symbols <code>&#39;+&#39;</code> and <code>&#39;-&#39;</code> before each integer in nums and then concatenate all the integers.</p>\n\n<ul>\n\t<li>For example, if <code>nums = [2, 1]</code>, you can add a <code>&#39;+&#39;</code> before <code>2</code> and a <code>&#39;-&#39;</code> before <code>1</code> and concatenate them to build the expression <code>&quot;+2-1&quot;</code>.</li>\n</ul>\n\n<p>Return the number of different <strong>expressions</strong> that you can build, which evaluates to <code>target</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,1,1,1,1], target = 3\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> There are 5 ways to assign symbols to make the sum of nums be target 3.\n-1 + 1 + 1 + 1 + 1 = 3\n+1 - 1 + 1 + 1 + 1 = 3\n+1 + 1 - 1 + 1 + 1 = 3\n+1 + 1 + 1 - 1 + 1 = 3\n+1 + 1 + 1 + 1 - 1 = 3\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1], target = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 20</code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>0 &lt;= sum(nums[i]) &lt;= 1000</code></li>\n\t<li><code>-1000 &lt;= target &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[1,1,1,1,1]\n3\n[1]\n1"
+  },
+  "495": {
+    "content": "<h2>Teemo Attacking</h2>\n<p>This problem is frequently asked by Riot Games.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "496": {
     "content": "<p>The <strong>next greater element</strong> of some element <code>x</code> in an array is the <strong>first greater</strong> element that is <strong>to the right</strong> of <code>x</code> in the same array.</p>\n\n<p>You are given two <strong>distinct 0-indexed</strong> integer arrays <code>nums1</code> and <code>nums2</code>, where <code>nums1</code> is a subset of <code>nums2</code>.</p>\n\n<p>For each <code>0 &lt;= i &lt; nums1.length</code>, find the index <code>j</code> such that <code>nums1[i] == nums2[j]</code> and determine the <strong>next greater element</strong> of <code>nums2[j]</code> in <code>nums2</code>. If there is no next greater element, then the answer for this query is <code>-1</code>.</p>\n\n<p>Return <em>an array </em><code>ans</code><em> of length </em><code>nums1.length</code><em> such that </em><code>ans[i]</code><em> is the <strong>next greater element</strong> as described above.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [4,1,2], nums2 = [1,3,4,2]\n<strong>Output:</strong> [-1,3,-1]\n<strong>Explanation:</strong> The next greater element for each value of nums1 is as follows:\n- 4 is underlined in nums2 = [1,3,<u>4</u>,2]. There is no next greater element, so the answer is -1.\n- 1 is underlined in nums2 = [<u>1</u>,3,4,2]. The next greater element is 3.\n- 2 is underlined in nums2 = [1,3,4,<u>2</u>]. There is no next greater element, so the answer is -1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [2,4], nums2 = [1,2,3,4]\n<strong>Output:</strong> [3,-1]\n<strong>Explanation:</strong> The next greater element for each value of nums1 is as follows:\n- 2 is underlined in nums2 = [1,<u>2</u>,3,4]. The next greater element is 3.\n- 4 is underlined in nums2 = [1,2,3,<u>4</u>]. There is no next greater element, so the answer is -1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums1.length &lt;= nums2.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 10<sup>4</sup></code></li>\n\t<li>All integers in <code>nums1</code> and <code>nums2</code> are <strong>unique</strong>.</li>\n\t<li>All the integers of <code>nums1</code> also appear in <code>nums2</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Could you find an <code>O(nums1.length + nums2.length)</code> solution?",
@@ -1387,6 +1751,14 @@ const DESCRIPTIONS = {
     "content": "<p><b>The Maze II</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
   },
+  "506": {
+    "content": "<h2>Relative Ranks</h2>\n<p>This problem is frequently asked by Electronic Arts.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "507": {
+    "content": "<h2>Perfect Number</h2>\n<p>This problem is frequently asked by Accenture, Grammarly.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "508": {
     "content": "<p>Given the <code>root</code> of a binary tree, return the most frequent <strong>subtree sum</strong>. If there is a tie, return all the values with the highest frequency in any order.</p>\n\n<p>The <strong>subtree sum</strong> of a node is defined as the sum of all the node values formed by the subtree rooted at that node (including the node itself).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/24/freq1-tree.jpg\" style=\"width: 207px; height: 183px;\" />\n<pre>\n<strong>Input:</strong> root = [5,2,-3]\n<strong>Output:</strong> [2,-3,4]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/24/freq2-tree.jpg\" style=\"width: 207px; height: 183px;\" />\n<pre>\n<strong>Input:</strong> root = [5,2,-5]\n<strong>Output:</strong> [2]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 10<sup>4</sup>]</code>.</li>\n\t<li><code>-10<sup>5</sup> &lt;= Node.val &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
     "testcase": "[5,2,-3]\n[5,2,-5]"
@@ -1394,6 +1766,10 @@ const DESCRIPTIONS = {
   "509": {
     "content": "<p>The <b>Fibonacci numbers</b>, commonly denoted <code>F(n)</code> form a sequence, called the <b>Fibonacci sequence</b>, such that each number is the sum of the two preceding ones, starting from <code>0</code> and <code>1</code>. That is,</p>\n\n<pre>\nF(0) = 0, F(1) = 1\nF(n) = F(n - 1) + F(n - 2), for n &gt; 1.\n</pre>\n\n<p>Given <code>n</code>, calculate <code>F(n)</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> F(2) = F(1) + F(0) = 1 + 0 = 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> F(3) = F(2) + F(1) = 1 + 1 = 2.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 4\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> F(4) = F(3) + F(2) = 2 + 1 = 3.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= n &lt;= 30</code></li>\n</ul>\n",
     "testcase": "2\n3\n4"
+  },
+  "513": {
+    "content": "<h2>Find Bottom Left Tree Value</h2>\n<p>This problem is frequently asked by josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "515": {
     "content": "<p>Given the <code>root</code> of a binary tree, return <em>an array of the largest value in each row</em> of the tree <strong>(0-indexed)</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/21/largest_e1.jpg\" style=\"width: 300px; height: 172px;\" />\n<pre>\n<strong>Input:</strong> root = [1,3,2,5,3,null,9]\n<strong>Output:</strong> [1,3,9]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1,2,3]\n<strong>Output:</strong> [1,3]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree will be in the range <code>[0, 10<sup>4</sup>]</code>.</li>\n\t<li><code>-2<sup>31</sup> &lt;= Node.val &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
@@ -1414,6 +1790,14 @@ const DESCRIPTIONS = {
   "525": {
     "content": "<p>Given a binary array <code>nums</code>, return <em>the maximum length of a contiguous subarray with an equal number of </em><code>0</code><em> and </em><code>1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> [0, 1] is the longest contiguous subarray with an equal number of 0 and 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,0]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> [0, 1] (or [1, 0]) is a longest contiguous subarray with equal number of 0 and 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [0,1,1,1,1,1,0,0,0]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> [1,1,1,0,0,0] is the longest contiguous subarray with equal number of 0 and 1.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums[i]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n",
     "testcase": "[0,1]\n[0,1,0]\n[0,1,1,1,1,1,0,0,0]"
+  },
+  "526": {
+    "content": "<h2>Beautiful Arrangement</h2>\n<p>This problem is frequently asked by Cisco, HashedIn, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "527": {
+    "content": "<h2>Word Abbreviation</h2>\n<p>This problem is frequently asked by Applied Intuition, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "528": {
     "content": "<p>You are given a <strong>0-indexed</strong> array of positive integers <code>w</code> where <code>w[i]</code> describes the <strong>weight</strong> of the <code>i<sup>th</sup></code> index.</p>\n\n<p>You need to implement the function <code>pickIndex()</code>, which <strong>randomly</strong> picks an index in the range <code>[0, w.length - 1]</code> (<strong>inclusive</strong>) and returns it. The <strong>probability</strong> of picking an index <code>i</code> is <code>w[i] / sum(w)</code>.</p>\n\n<ul>\n\t<li>For example, if <code>w = [1, 3]</code>, the probability of picking index <code>0</code> is <code>1 / (1 + 3) = 0.25</code> (i.e., <code>25%</code>), and the probability of picking index <code>1</code> is <code>3 / (1 + 3) = 0.75</code> (i.e., <code>75%</code>).</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;Solution&quot;,&quot;pickIndex&quot;]\n[[[1]],[]]\n<strong>Output</strong>\n[null,0]\n\n<strong>Explanation</strong>\nSolution solution = new Solution([1]);\nsolution.pickIndex(); // return 0. The only option is to return 0 since there is only one element in w.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;Solution&quot;,&quot;pickIndex&quot;,&quot;pickIndex&quot;,&quot;pickIndex&quot;,&quot;pickIndex&quot;,&quot;pickIndex&quot;]\n[[[1,3]],[],[],[],[],[]]\n<strong>Output</strong>\n[null,1,1,1,1,0]\n\n<strong>Explanation</strong>\nSolution solution = new Solution([1, 3]);\nsolution.pickIndex(); // return 1. It is returning the second element (index = 1) that has a probability of 3/4.\nsolution.pickIndex(); // return 1\nsolution.pickIndex(); // return 1\nsolution.pickIndex(); // return 1\nsolution.pickIndex(); // return 0. It is returning the first element (index = 0) that has a probability of 1/4.\n\nSince this is a randomization problem, multiple answers are allowed.\nAll of the following outputs can be considered correct:\n[null,1,1,1,1,0]\n[null,1,1,1,1,1]\n[null,1,1,1,0,0]\n[null,1,1,1,0,1]\n[null,1,0,1,0,0]\n......\nand so on.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= w.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= w[i] &lt;= 10<sup>5</sup></code></li>\n\t<li><code>pickIndex</code> will be called at most <code>10<sup>4</sup></code> times.</li>\n</ul>\n",
@@ -1451,21 +1835,49 @@ const DESCRIPTIONS = {
     "content": "<p>You are given a sorted array consisting of only integers where every element appears exactly twice, except for one element which appears exactly once.</p>\n\n<p>Return <em>the single element that appears only once</em>.</p>\n\n<p>Your solution must run in <code>O(log n)</code> time and <code>O(1)</code> space.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,1,2,3,3,4,4,8,8]\n<strong>Output:</strong> 2\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [3,3,7,7,10,11,11]\n<strong>Output:</strong> 10\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
     "testcase": "[1,1,2,3,3,4,4,8,8]\n[3,3,7,7,10,11,11]"
   },
+  "542": {
+    "content": "<h2>01 Matrix</h2>\n<p>This problem is frequently asked by Accenture, DoorDash, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "543": {
     "content": "<p>Given the <code>root</code> of a binary tree, return <em>the length of the <strong>diameter</strong> of the tree</em>.</p>\n\n<p>The <strong>diameter</strong> of a binary tree is the <strong>length</strong> of the longest path between any two nodes in a tree. This path may or may not pass through the <code>root</code>.</p>\n\n<p>The <strong>length</strong> of a path between two nodes is represented by the number of edges between them.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/03/06/diamtree.jpg\" style=\"width: 292px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,3,4,5]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> 3 is the length of the path [4,2,1,3] or [5,2,1,3].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1,2]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 10<sup>4</sup>]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[1,2,3,4,5]\n[1,2]"
+  },
+  "545": {
+    "content": "<h2>Boundary of Binary Tree</h2>\n<p>This problem is frequently asked by BlackRock, Geico, Juniper Networks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "546": {
+    "content": "<h2>Remove Boxes</h2>\n<p>This problem is frequently asked by Capital One, Cisco, Tencent.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "547": {
     "content": "<p>There are <code>n</code> cities. Some of them are connected, while some are not. If city <code>a</code> is connected directly with city <code>b</code>, and city <code>b</code> is connected directly with city <code>c</code>, then city <code>a</code> is connected indirectly with city <code>c</code>.</p>\n\n<p>A <strong>province</strong> is a group of directly or indirectly connected cities and no other cities outside of the group.</p>\n\n<p>You are given an <code>n x n</code> matrix <code>isConnected</code> where <code>isConnected[i][j] = 1</code> if the <code>i<sup>th</sup></code> city and the <code>j<sup>th</sup></code> city are directly connected, and <code>isConnected[i][j] = 0</code> otherwise.</p>\n\n<p>Return <em>the total number of <strong>provinces</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/12/24/graph1.jpg\" style=\"width: 222px; height: 142px;\" />\n<pre>\n<strong>Input:</strong> isConnected = [[1,1,0],[1,1,0],[0,0,1]]\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/12/24/graph2.jpg\" style=\"width: 222px; height: 142px;\" />\n<pre>\n<strong>Input:</strong> isConnected = [[1,0,0],[0,1,0],[0,0,1]]\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 200</code></li>\n\t<li><code>n == isConnected.length</code></li>\n\t<li><code>n == isConnected[i].length</code></li>\n\t<li><code>isConnected[i][j]</code> is <code>1</code> or <code>0</code>.</li>\n\t<li><code>isConnected[i][i] == 1</code></li>\n\t<li><code>isConnected[i][j] == isConnected[j][i]</code></li>\n</ul>\n",
     "testcase": "[[1,1,0],[1,1,0],[0,0,1]]\n[[1,0,0],[0,1,0],[0,0,1]]"
   },
+  "548": {
+    "content": "<h2>Split Array with Equal Sum</h2>\n<p>This problem is frequently asked by Alibaba.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "550": {
+    "content": "<h2>Shortest Path to Get Food</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "554": {
     "content": "<p>There is a rectangular brick wall in front of you with <code>n</code> rows of bricks. The <code>i<sup>th</sup></code> row has some number of bricks each of the same height (i.e., one unit) but they can be of different widths. The total width of each row is the same.</p>\n\n<p>Draw a vertical line from the top to the bottom and cross the least bricks. If your line goes through the edge of a brick, then the brick is not considered as crossed. You cannot draw a line just along one of the two vertical edges of the wall, in which case the line will obviously cross no bricks.</p>\n\n<p>Given the 2D array <code>wall</code> that contains the information about the wall, return <em>the minimum number of crossed bricks after drawing such a vertical line</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2025/01/17/a.png\" style=\"width: 400px; height: 384px;\" />\n<pre>\n<strong>Input:</strong> wall = [[1,2,2,1],[3,1,2],[1,3,2],[2,4],[3,1,2],[1,3,1,1]]\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> wall = [[1],[1],[1]]\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == wall.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= wall[i].length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= sum(wall[i].length) &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>sum(wall[i])</code> is the same for each row <code>i</code>.</li>\n\t<li><code>1 &lt;= wall[i][j] &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "[[1,2,2,1],[3,1,2],[1,3,2],[2,4],[3,1,2],[1,3,1,1]]\n[[1],[1],[1]]"
   },
+  "555": {
+    "content": "<h2>Split Concatenated Strings</h2>\n<p>This problem is frequently asked by Alibaba.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "556": {
     "content": "<p>Given a positive integer <code>n</code>, find <em>the smallest integer which has exactly the same digits existing in the integer</em> <code>n</code> <em>and is greater in value than</em> <code>n</code>. If no such positive integer exists, return <code>-1</code>.</p>\n\n<p><strong>Note</strong> that the returned integer should fit in <strong>32-bit integer</strong>, if there is a valid answer but it does not fit in <strong>32-bit integer</strong>, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> n = 12\n<strong>Output:</strong> 21\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> n = 21\n<strong>Output:</strong> -1\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "12\n21"
+  },
+  "557": {
+    "content": "<h2>Reverse Words in a String III</h2>\n<p>This problem is frequently asked by BNY Mellon, Devtron, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "560": {
     "content": "<p>Given an array of integers <code>nums</code> and an integer <code>k</code>, return <em>the total number of subarrays whose sum equals to</em> <code>k</code>.</p>\n\n<p>A subarray is a contiguous <strong>non-empty</strong> sequence of elements within an array.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,1,1], k = 2\n<strong>Output:</strong> 2\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,3], k = 3\n<strong>Output:</strong> 2\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>-10<sup>7</sup> &lt;= k &lt;= 10<sup>7</sup></code></li>\n</ul>\n",
@@ -1475,13 +1887,41 @@ const DESCRIPTIONS = {
     "content": "<p><b>Longest Line of Consecutive Ones in Matrix</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
   },
+  "563": {
+    "content": "<h2>Binary Tree Tilt</h2>\n<p>This problem is frequently asked by Indeed.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "564": {
+    "content": "<h2>Find the Closest Palindrome</h2>\n<p>This problem is frequently asked by Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "566": {
+    "content": "<h2>Reshape the Matrix</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "567": {
     "content": "<p>Given two strings <code>s1</code> and <code>s2</code>, return <code>true</code> if <code>s2</code> contains a <span data-keyword=\"permutation-string\">permutation</span> of <code>s1</code>, or <code>false</code> otherwise.</p>\n\n<p>In other words, return <code>true</code> if one of <code>s1</code>&#39;s permutations is the substring of <code>s2</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s1 = &quot;ab&quot;, s2 = &quot;eidbaooo&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> s2 contains one permutation of s1 (&quot;ba&quot;).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s1 = &quot;ab&quot;, s2 = &quot;eidboaoo&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s1.length, s2.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>s1</code> and <code>s2</code> consist of lowercase English letters.</li>\n</ul>\n",
     "testcase": "\"ab\"\n\"eidbaooo\"\n\"ab\"\n\"eidboaoo\""
   },
+  "568": {
+    "content": "<h2>Maximum Vacation Days</h2>\n<p>This problem is frequently asked by Datadog.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "572": {
     "content": "<p>Given the roots of two binary trees <code>root</code> and <code>subRoot</code>, return <code>true</code> if there is a subtree of <code>root</code> with the same structure and node values of<code> subRoot</code> and <code>false</code> otherwise.</p>\n\n<p>A subtree of a binary tree <code>tree</code> is a tree that consists of a node in <code>tree</code> and all of this node&#39;s descendants. The tree <code>tree</code> could also be considered as a subtree of itself.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/28/subtree1-tree.jpg\" style=\"width: 532px; height: 400px;\" />\n<pre>\n<strong>Input:</strong> root = [3,4,5,1,2], subRoot = [4,1,2]\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/04/28/subtree2-tree.jpg\" style=\"width: 502px; height: 458px;\" />\n<pre>\n<strong>Input:</strong> root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the <code>root</code> tree is in the range <code>[1, 2000]</code>.</li>\n\t<li>The number of nodes in the <code>subRoot</code> tree is in the range <code>[1, 1000]</code>.</li>\n\t<li><code>-10<sup>4</sup> &lt;= root.val &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= subRoot.val &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[3,4,5,1,2]\n[4,1,2]\n[3,4,5,1,2,null,null,null,null,0]\n[4,1,2]"
+  },
+  "573": {
+    "content": "<h2>Squirrel Simulation</h2>\n<p>This problem is frequently asked by Block.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "575": {
+    "content": "<h2>Distribute Candies</h2>\n<p>This problem is frequently asked by LiveRamp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "576": {
+    "content": "<h2>Out of Boundary Paths</h2>\n<p>This problem is frequently asked by Baidu.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "581": {
     "content": "<p>Given an integer array <code>nums</code>, you need to find one <b>continuous subarray</b> such that if you only sort this subarray in non-decreasing order, then the whole array will be sorted in non-decreasing order.</p>\n\n<p>Return <em>the shortest such subarray and output its length</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,6,4,8,10,9,15]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> You need to sort [6, 4, 8, 10, 9] in ascending order to make the whole array sorted in ascending order.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> 0\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n\n<p>&nbsp;</p>\n<strong>Follow up:</strong> Can you solve it in <code>O(n)</code> time complexity?",
@@ -1503,13 +1943,29 @@ const DESCRIPTIONS = {
     "content": "<p>Given the <code>root</code> of an n-ary tree, return <em>the postorder traversal of its nodes&#39; values</em>.</p>\n\n<p>Nary-Tree input serialization is represented in their level order traversal. Each group of children is separated by the null value (See examples)</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/12/narytreeexample.png\" style=\"width: 100%; max-width: 300px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,3,2,4,null,5,6]\n<strong>Output:</strong> [5,6,3,2,4,1]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/11/08/sample_4_964.png\" style=\"width: 296px; height: 241px;\" />\n<pre>\n<strong>Input:</strong> root = [1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]\n<strong>Output:</strong> [2,6,14,11,7,3,12,8,4,13,9,10,5,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[0, 10<sup>4</sup>]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 10<sup>4</sup></code></li>\n\t<li>The height of the n-ary tree is less than or equal to <code>1000</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow up:</strong> Recursive solution is trivial, could you do it iteratively?</p>\n",
     "testcase": "[1,null,3,2,4,null,5,6]\n[1,null,2,3,4,5,null,null,6,7,null,8,null,9,10,null,null,11,null,12,null,13,null,null,14]"
   },
+  "592": {
+    "content": "<h2>Fraction Addition and Subtraction</h2>\n<p>This problem is frequently asked by Goldman Sachs, IXL, Zopsmart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "593": {
     "content": "<p>Given the coordinates of four points in 2D space <code>p1</code>, <code>p2</code>, <code>p3</code> and <code>p4</code>, return <code>true</code> <em>if the four points construct a square</em>.</p>\n\n<p>The coordinate of a point <code>p<sub>i</sub></code> is represented as <code>[x<sub>i</sub>, y<sub>i</sub>]</code>. The input is <strong>not</strong> given in any order.</p>\n\n<p>A <strong>valid square</strong> has four equal sides with positive length and four equal angles (90-degree angles).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,1]\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> p1 = [0,0], p2 = [1,1], p3 = [1,0], p4 = [0,12]\n<strong>Output:</strong> false\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> p1 = [1,0], p2 = [-1,0], p3 = [0,1], p4 = [0,-1]\n<strong>Output:</strong> true\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>p1.length == p2.length == p3.length == p4.length == 2</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= x<sub>i</sub>, y<sub>i</sub> &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[0,0]\n[1,1]\n[1,0]\n[0,1]\n[0,0]\n[1,1]\n[1,0]\n[0,12]\n[1,0]\n[-1,0]\n[0,1]\n[0,-1]"
   },
+  "594": {
+    "content": "<h2>Longest Harmonious Subsequence</h2>\n<p>This problem is frequently asked by LiveRamp, ZS Associates.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "598": {
+    "content": "<h2>Range Addition II</h2>\n<p>This problem is frequently asked by IXL.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "599": {
     "content": "<p>Given two arrays of strings <code>list1</code> and <code>list2</code>, find the <strong>common strings with the least index sum</strong>.</p>\n\n<p>A <strong>common string</strong> is a string that appeared in both <code>list1</code> and <code>list2</code>.</p>\n\n<p>A <strong>common string with the least index sum</strong> is a common string such that if it appeared at <code>list1[i]</code> and <code>list2[j]</code> then <code>i + j</code> should be the minimum value among all the other <strong>common strings</strong>.</p>\n\n<p>Return <em>all the <strong>common strings with the least index sum</strong></em>. Return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [&quot;Shogun&quot;,&quot;Tapioca Express&quot;,&quot;Burger King&quot;,&quot;KFC&quot;], list2 = [&quot;Piatti&quot;,&quot;The Grill at Torrey Pines&quot;,&quot;Hungry Hunter Steakhouse&quot;,&quot;Shogun&quot;]\n<strong>Output:</strong> [&quot;Shogun&quot;]\n<strong>Explanation:</strong> The only common string is &quot;Shogun&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [&quot;Shogun&quot;,&quot;Tapioca Express&quot;,&quot;Burger King&quot;,&quot;KFC&quot;], list2 = [&quot;KFC&quot;,&quot;Shogun&quot;,&quot;Burger King&quot;]\n<strong>Output:</strong> [&quot;Shogun&quot;]\n<strong>Explanation:</strong> The common string with the least index sum is &quot;Shogun&quot; with index sum = (0 + 1) = 1.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> list1 = [&quot;happy&quot;,&quot;sad&quot;,&quot;good&quot;], list2 = [&quot;sad&quot;,&quot;happy&quot;,&quot;good&quot;]\n<strong>Output:</strong> [&quot;sad&quot;,&quot;happy&quot;]\n<strong>Explanation:</strong> There are three common strings:\n&quot;happy&quot; with index sum = (0 + 1) = 1.\n&quot;sad&quot; with index sum = (1 + 0) = 1.\n&quot;good&quot; with index sum = (2 + 2) = 4.\nThe strings with the least index sum are &quot;sad&quot; and &quot;happy&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= list1.length, list2.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= list1[i].length, list2[i].length &lt;= 30</code></li>\n\t<li><code>list1[i]</code> and <code>list2[i]</code> consist of spaces <code>&#39; &#39;</code> and English letters.</li>\n\t<li>All the strings of <code>list1</code> are <strong>unique</strong>.</li>\n\t<li>All the strings of <code>list2</code> are <strong>unique</strong>.</li>\n\t<li>There is at least a common string between <code>list1</code> and <code>list2</code>.</li>\n</ul>\n",
     "testcase": "[\"Shogun\",\"Tapioca Express\",\"Burger King\",\"KFC\"]\n[\"Piatti\",\"The Grill at Torrey Pines\",\"Hungry Hunter Steakhouse\",\"Shogun\"]\n[\"Shogun\",\"Tapioca Express\",\"Burger King\",\"KFC\"]\n[\"KFC\",\"Shogun\",\"Burger King\"]\n[\"happy\",\"sad\",\"good\"]\n[\"sad\",\"happy\",\"good\"]"
+  },
+  "600": {
+    "content": "<h2>Non-negative Integers without Consecutive Ones</h2>\n<p>This problem is frequently asked by Pocket Gems.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "604": {
     "content": "<p><b>Design Compressed String Iterator</b> is a premium problem. The problem statement is not available.</p>",
@@ -1535,6 +1991,10 @@ const DESCRIPTIONS = {
     "content": "<p><b>Add Bold Tag in String</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
   },
+  "617": {
+    "content": "<h2>Merge Two Binary Trees</h2>\n<p>This problem is frequently asked by MongoDB.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "621": {
     "content": "<p>You are given an array of CPU <code>tasks</code>, each labeled with a letter from A to Z, and a number <code>n</code>. Each CPU interval can be idle or allow the completion of one task. Tasks can be completed in any order, but there&#39;s a constraint: there has to be a gap of <strong>at least</strong> <code>n</code> intervals between two tasks with the same label.</p>\n\n<p>Return the <strong>minimum</strong> number of CPU intervals required to complete all tasks.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\" style=\"\n    border-color: var(--border-tertiary);\n    border-left-width: 2px;\n    color: var(--text-secondary);\n    font-size: .875rem;\n    margin-bottom: 1rem;\n    margin-top: 1rem;\n    overflow: visible;\n    padding-left: 1rem;\n\">\n<p><strong>Input:</strong> <span class=\"example-io\" style=\"\n    font-family: Menlo,sans-serif;\n    font-size: 0.85rem;\n\">tasks = [&quot;A&quot;,&quot;A&quot;,&quot;A&quot;,&quot;B&quot;,&quot;B&quot;,&quot;B&quot;], n = 2</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\" style=\"\nfont-family: Menlo,sans-serif;\nfont-size: 0.85rem;\n\">8</span></p>\n\n<p><strong>Explanation:</strong> A possible sequence is: A -&gt; B -&gt; idle -&gt; A -&gt; B -&gt; idle -&gt; A -&gt; B.</p>\n\n<p>After completing task A, you must wait two intervals before doing A again. The same applies to task B. In the 3<sup>rd</sup> interval, neither A nor B can be done, so you idle. By the 4<sup>th</sup> interval, you can do A again as 2 intervals have passed.</p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\" style=\"\n    border-color: var(--border-tertiary);\n    border-left-width: 2px;\n    color: var(--text-secondary);\n    font-size: .875rem;\n    margin-bottom: 1rem;\n    margin-top: 1rem;\n    overflow: visible;\n    padding-left: 1rem;\n\">\n<p><strong>Input:</strong> <span class=\"example-io\" style=\"\n    font-family: Menlo,sans-serif;\n    font-size: 0.85rem;\n\">tasks = [&quot;A&quot;,&quot;C&quot;,&quot;A&quot;,&quot;B&quot;,&quot;D&quot;,&quot;B&quot;], n = 1</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\" style=\"\n    font-family: Menlo,sans-serif;\n    font-size: 0.85rem;\n\">6</span></p>\n\n<p><strong>Explanation:</strong> A possible sequence is: A -&gt; B -&gt; C -&gt; D -&gt; A -&gt; B.</p>\n\n<p>With a cooling interval of 1, you can repeat a task after just one other task.</p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\" style=\"\n    border-color: var(--border-tertiary);\n    border-left-width: 2px;\n    color: var(--text-secondary);\n    font-size: .875rem;\n    margin-bottom: 1rem;\n    margin-top: 1rem;\n    overflow: visible;\n    padding-left: 1rem;\n\">\n<p><strong>Input:</strong> <span class=\"example-io\" style=\"\n    font-family: Menlo,sans-serif;\n    font-size: 0.85rem;\n\">tasks = [&quot;A&quot;,&quot;A&quot;,&quot;A&quot;, &quot;B&quot;,&quot;B&quot;,&quot;B&quot;], n = 3</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\" style=\"\n    font-family: Menlo,sans-serif;\n    font-size: 0.85rem;\n\">10</span></p>\n\n<p><strong>Explanation:</strong> A possible sequence is: A -&gt; B -&gt; idle -&gt; idle -&gt; A -&gt; B -&gt; idle -&gt; idle -&gt; A -&gt; B.</p>\n\n<p>There are only two types of tasks, A and B, which need to be separated by 3 intervals. This leads to idling twice between repetitions of these tasks.</p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= tasks.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>tasks[i]</code> is an uppercase English letter.</li>\n\t<li><code>0 &lt;= n &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[\"A\",\"A\",\"A\",\"B\",\"B\",\"B\"]\n2\n[\"A\",\"C\",\"A\",\"B\",\"D\",\"B\"]\n1\n[\"A\",\"A\",\"A\", \"B\",\"B\",\"B\"]\n3"
@@ -1551,9 +2011,25 @@ const DESCRIPTIONS = {
     "content": "<p>You are given <code>m</code> <code>arrays</code>, where each array is sorted in <strong>ascending order</strong>.</p>\n\n<p>You can pick up two integers from two different arrays (each array picks one) and calculate the distance. We define the distance between two integers <code>a</code> and <code>b</code> to be their absolute difference <code>|a - b|</code>.</p>\n\n<p>Return <em>the maximum distance</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> arrays = [[1,2,3],[4,5],[1,2,3]]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> One way to reach the maximum distance 4 is to pick 1 in the first or third array and pick 5 in the second array.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> arrays = [[1],[1]]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == arrays.length</code></li>\n\t<li><code>2 &lt;= m &lt;= 10<sup>5</sup></code></li>\n\t<li><code>1 &lt;= arrays[i].length &lt;= 500</code></li>\n\t<li><code>-10<sup>4</sup> &lt;= arrays[i][j] &lt;= 10<sup>4</sup></code></li>\n\t<li><code>arrays[i]</code> is sorted in <strong>ascending order</strong>.</li>\n\t<li>There will be at most <code>10<sup>5</sup></code> integers in all the arrays.</li>\n</ul>\n",
     "testcase": "[[1,2,3],[4,5],[1,2,3]]\n[[1],[1]]"
   },
+  "625": {
+    "content": "<h2>Minimum Factorization</h2>\n<p>This problem is frequently asked by Tencent.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "628": {
     "content": "<p>Given an integer array <code>nums</code>, <em>find three numbers whose product is maximum and return the maximum product</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> 6\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,3,4]\n<strong>Output:</strong> 24\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> nums = [-1,-2,-3]\n<strong>Output:</strong> -6\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= nums.length &lt;=&nbsp;10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[1,2,3]\n[1,2,3,4]\n[-1,-2,-3]"
+  },
+  "629": {
+    "content": "<h2>K Inverse Pairs Array</h2>\n<p>This problem is frequently asked by Works Applications.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "630": {
+    "content": "<h2>Course Schedule III</h2>\n<p>This problem is frequently asked by Flipkart, Works Applications.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "631": {
+    "content": "<h2>Design Excel Sum Formula</h2>\n<p>This problem is frequently asked by Airbnb, Citadel, OpenAI.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "632": {
     "content": "<p>You have <code>k</code> lists of sorted integers in <strong>non-decreasing&nbsp;order</strong>. Find the <b>smallest</b> range that includes at least one number from each of the <code>k</code> lists.</p>\n\n<p>We define the range <code>[a, b]</code> is smaller than range <code>[c, d]</code> if <code>b - a &lt; d - c</code> <strong>or</strong> <code>a &lt; c</code> if <code>b - a == d - c</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [[4,10,15,24,26],[0,9,12,20],[5,18,22,30]]\n<strong>Output:</strong> [20,24]\n<strong>Explanation: </strong>\nList 1: [4, 10, 15, 24,26], 24 is in range [20,24].\nList 2: [0, 9, 12, 20], 20 is in range [20,24].\nList 3: [5, 18, 22, 30], 22 is in range [20,24].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [[1,2,3],[1,2,3],[1,2,3]]\n<strong>Output:</strong> [1,1]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>nums.length == k</code></li>\n\t<li><code>1 &lt;= k &lt;= 3500</code></li>\n\t<li><code>1 &lt;= nums[i].length &lt;= 50</code></li>\n\t<li><code>-10<sup>5</sup> &lt;= nums[i][j] &lt;= 10<sup>5</sup></code></li>\n\t<li><code>nums[i]</code>&nbsp;is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
@@ -1562,6 +2038,14 @@ const DESCRIPTIONS = {
   "633": {
     "content": "<p>Given a non-negative integer <code>c</code>, decide whether there&#39;re two integers <code>a</code> and <code>b</code> such that <code>a<sup>2</sup> + b<sup>2</sup> = c</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> c = 5\n<strong>Output:</strong> true\n<strong>Explanation:</strong> 1 * 1 + 2 * 2 = 5\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> c = 3\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= c &lt;= 2<sup>31</sup> - 1</code></li>\n</ul>\n",
     "testcase": "5\n3"
+  },
+  "634": {
+    "content": "<h2>Find the Derangement of An Array</h2>\n<p>This problem is frequently asked by IXL.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "635": {
+    "content": "<h2>Design Log Storage System</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "636": {
     "content": "<p>On a <strong>single-threaded</strong> CPU, we execute a program containing <code>n</code> functions. Each function has a unique ID between <code>0</code> and <code>n-1</code>.</p>\n\n<p>Function calls are <strong>stored in a <a href=\"https://en.wikipedia.org/wiki/Call_stack\">call stack</a></strong>: when a function call starts, its ID is pushed onto the stack, and when a function call ends, its ID is popped off the stack. The function whose ID is at the top of the stack is <strong>the current function being executed</strong>. Each time a function starts or ends, we write a log with the ID, whether it started or ended, and the timestamp.</p>\n\n<p>You are given a list <code>logs</code>, where <code>logs[i]</code> represents the <code>i<sup>th</sup></code> log message formatted as a string <code>&quot;{function_id}:{&quot;start&quot; | &quot;end&quot;}:{timestamp}&quot;</code>. For example, <code>&quot;0:start:3&quot;</code> means a function call with function ID <code>0</code> <strong>started at the beginning</strong> of timestamp <code>3</code>, and <code>&quot;1:end:2&quot;</code> means a function call with function ID <code>1</code> <strong>ended at the end</strong> of timestamp <code>2</code>. Note that a function can be called <b>multiple times, possibly recursively</b>.</p>\n\n<p>A function&#39;s <strong>exclusive time</strong> is the sum of execution times for all function calls in the program. For example, if a function is called twice, one call executing for <code>2</code> time units and another call executing for <code>1</code> time unit, the <strong>exclusive time</strong> is <code>2 + 1 = 3</code>.</p>\n\n<p>Return <em>the <strong>exclusive time</strong> of each function in an array, where the value at the </em><code>i<sup>th</sup></code><em> index represents the exclusive time for the function with ID </em><code>i</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/04/05/diag1b.png\" style=\"width: 550px; height: 239px;\" />\n<pre>\n<strong>Input:</strong> n = 2, logs = [&quot;0:start:0&quot;,&quot;1:start:2&quot;,&quot;1:end:5&quot;,&quot;0:end:6&quot;]\n<strong>Output:</strong> [3,4]\n<strong>Explanation:</strong>\nFunction 0 starts at the beginning of time 0, then it executes 2 for units of time and reaches the end of time 1.\nFunction 1 starts at the beginning of time 2, executes for 4 units of time, and ends at the end of time 5.\nFunction 0 resumes execution at the beginning of time 6 and executes for 1 unit of time.\nSo function 0 spends 2 + 1 = 3 units of total time executing, and function 1 spends 4 units of total time executing.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, logs = [&quot;0:start:0&quot;,&quot;0:start:2&quot;,&quot;0:end:5&quot;,&quot;0:start:6&quot;,&quot;0:end:6&quot;,&quot;0:end:7&quot;]\n<strong>Output:</strong> [8]\n<strong>Explanation:</strong>\nFunction 0 starts at the beginning of time 0, executes for 2 units of time, and recursively calls itself.\nFunction 0 (recursive call) starts at the beginning of time 2 and executes for 4 units of time.\nFunction 0 (initial call) resumes execution then immediately calls itself again.\nFunction 0 (2nd recursive call) starts at the beginning of time 6 and executes for 1 unit of time.\nFunction 0 (initial call) resumes execution at the beginning of time 7 and executes for 1 unit of time.\nSo function 0 spends 2 + 4 + 1 + 1 = 8 units of total time executing.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2, logs = [&quot;0:start:0&quot;,&quot;0:start:2&quot;,&quot;0:end:5&quot;,&quot;1:start:6&quot;,&quot;1:end:6&quot;,&quot;0:end:7&quot;]\n<strong>Output:</strong> [7,1]\n<strong>Explanation:</strong>\nFunction 0 starts at the beginning of time 0, executes for 2 units of time, and recursively calls itself.\nFunction 0 (recursive call) starts at the beginning of time 2 and executes for 4 units of time.\nFunction 0 (initial call) resumes execution then immediately calls function 1.\nFunction 1 starts at the beginning of time 6, executes 1 unit of time, and ends at the end of time 6.\nFunction 0 resumes execution at the beginning of time 6 and executes for 2 units of time.\nSo function 0 spends 2 + 4 + 1 = 7 units of total time executing, and function 1 spends 1 unit of total time executing.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 100</code></li>\n\t<li><code>2 &lt;= logs.length &lt;= 500</code></li>\n\t<li><code>0 &lt;= function_id &lt; n</code></li>\n\t<li><code>0 &lt;= timestamp &lt;= 10<sup>9</sup></code></li>\n\t<li>No two start events will happen at the same timestamp.</li>\n\t<li>No two end events will happen at the same timestamp.</li>\n\t<li>Each function has an <code>&quot;end&quot;</code> log for each <code>&quot;start&quot;</code> log.</li>\n</ul>\n",
@@ -1575,6 +2059,10 @@ const DESCRIPTIONS = {
     "content": "<p>In LeetCode Store, there are <code>n</code> items to sell. Each item has a price. However, there are some special offers, and a special offer consists of one or more different kinds of items with a sale price.</p>\n\n<p>You are given an integer array <code>price</code> where <code>price[i]</code> is the price of the <code>i<sup>th</sup></code> item, and an integer array <code>needs</code> where <code>needs[i]</code> is the number of pieces of the <code>i<sup>th</sup></code> item you want to buy.</p>\n\n<p>You are also given an array <code>special</code> where <code>special[i]</code> is of size <code>n + 1</code> where <code>special[i][j]</code> is the number of pieces of the <code>j<sup>th</sup></code> item in the <code>i<sup>th</sup></code> offer and <code>special[i][n]</code> (i.e., the last integer in the array) is the price of the <code>i<sup>th</sup></code> offer.</p>\n\n<p>Return <em>the lowest price you have to pay for exactly certain items as given, where you could make optimal use of the special offers</em>. You are not allowed to buy more items than you want, even if that would lower the overall price. You could use any of the special offers as many times as you want.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> price = [2,5], special = [[3,0,5],[1,2,10]], needs = [3,2]\n<strong>Output:</strong> 14\n<strong>Explanation:</strong> There are two kinds of items, A and B. Their prices are $2 and $5 respectively. \nIn special offer 1, you can pay $5 for 3A and 0B\nIn special offer 2, you can pay $10 for 1A and 2B. \nYou need to buy 3A and 2B, so you may pay $10 for 1A and 2B (special offer #2), and $4 for 2A.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> price = [2,3,4], special = [[1,1,0,4],[2,2,1,9]], needs = [1,2,1]\n<strong>Output:</strong> 11\n<strong>Explanation:</strong> The price of A is $2, and $3 for B, $4 for C. \nYou may pay $4 for 1A and 1B, and $9 for 2A ,2B and 1C. \nYou need to buy 1A ,2B and 1C, so you may pay $4 for 1A and 1B (special offer #1), and $3 for 1B, $4 for 1C. \nYou cannot add more items, though only $9 for 2A ,2B and 1C.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == price.length == needs.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 6</code></li>\n\t<li><code>0 &lt;= price[i], needs[i] &lt;= 10</code></li>\n\t<li><code>1 &lt;= special.length &lt;= 100</code></li>\n\t<li><code>special[i].length == n + 1</code></li>\n\t<li><code>0 &lt;= special[i][j] &lt;= 50</code></li>\n\t<li>The input is generated that at least one of <code>special[i][j]</code> is non-zero for <code>0 &lt;= j &lt;= n - 1</code>.</li>\n</ul>\n",
     "testcase": "[2,5]\n[[3,0,5],[1,2,10]]\n[3,2]\n[2,3,4]\n[[1,1,0,4],[2,2,1,9]]\n[1,2,1]"
   },
+  "639": {
+    "content": "<h2>Decode Ways II</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "640": {
     "content": "<p>Solve a given equation and return the value of <code>&#39;x&#39;</code> in the form of a string <code>&quot;x=#value&quot;</code>. The equation contains only <code>&#39;+&#39;</code>, <code>&#39;-&#39;</code> operation, the variable <code>&#39;x&#39;</code> and its coefficient. You should return <code>&quot;No solution&quot;</code> if there is no solution for the equation, or <code>&quot;Infinite solutions&quot;</code> if there are infinite solutions for the equation.</p>\n\n<p>If there is exactly one solution for the equation, we ensure that the value of <code>&#39;x&#39;</code> is an integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> equation = &quot;x+5-3+x=6+x-2&quot;\n<strong>Output:</strong> &quot;x=2&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> equation = &quot;x=x&quot;\n<strong>Output:</strong> &quot;Infinite solutions&quot;\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> equation = &quot;2x=x&quot;\n<strong>Output:</strong> &quot;x=0&quot;\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= equation.length &lt;= 1000</code></li>\n\t<li><code>equation</code> has exactly one <code>&#39;=&#39;</code>.</li>\n\t<li><code>equation</code> consists of integers with an absolute value in the range <code>[0, 100]</code> without any leading zeros, and the variable <code>&#39;x&#39;</code>.</li>\n\t<li>The input is generated that if there is a single solution, it will be an integer.</li>\n</ul>\n",
     "testcase": "\"x+5-3+x=6+x-2\"\n\"x=x\"\n\"2x=x\""
@@ -1583,6 +2071,10 @@ const DESCRIPTIONS = {
     "content": "<p>Design your implementation of the circular double-ended queue (deque).</p>\n\n<p>Implement the <code>MyCircularDeque</code> class:</p>\n\n<ul>\n\t<li><code>MyCircularDeque(int k)</code> Initializes the deque with a maximum size of <code>k</code>.</li>\n\t<li><code>boolean insertFront()</code> Adds an item at the front of Deque. Returns <code>true</code> if the operation is successful, or <code>false</code> otherwise.</li>\n\t<li><code>boolean insertLast()</code> Adds an item at the rear of Deque. Returns <code>true</code> if the operation is successful, or <code>false</code> otherwise.</li>\n\t<li><code>boolean deleteFront()</code> Deletes an item from the front of Deque. Returns <code>true</code> if the operation is successful, or <code>false</code> otherwise.</li>\n\t<li><code>boolean deleteLast()</code> Deletes an item from the rear of Deque. Returns <code>true</code> if the operation is successful, or <code>false</code> otherwise.</li>\n\t<li><code>int getFront()</code> Returns the front item from the Deque. Returns <code>-1</code> if the deque is empty.</li>\n\t<li><code>int getRear()</code> Returns the last item from Deque. Returns <code>-1</code> if the deque is empty.</li>\n\t<li><code>boolean isEmpty()</code> Returns <code>true</code> if the deque is empty, or <code>false</code> otherwise.</li>\n\t<li><code>boolean isFull()</code> Returns <code>true</code> if the deque is full, or <code>false</code> otherwise.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;MyCircularDeque&quot;, &quot;insertLast&quot;, &quot;insertLast&quot;, &quot;insertFront&quot;, &quot;insertFront&quot;, &quot;getRear&quot;, &quot;isFull&quot;, &quot;deleteLast&quot;, &quot;insertFront&quot;, &quot;getFront&quot;]\n[[3], [1], [2], [3], [4], [], [], [], [4], []]\n<strong>Output</strong>\n[null, true, true, true, false, 2, true, true, true, 4]\n\n<strong>Explanation</strong>\nMyCircularDeque myCircularDeque = new MyCircularDeque(3);\nmyCircularDeque.insertLast(1);  // return True\nmyCircularDeque.insertLast(2);  // return True\nmyCircularDeque.insertFront(3); // return True\nmyCircularDeque.insertFront(4); // return False, the queue is full.\nmyCircularDeque.getRear();      // return 2\nmyCircularDeque.isFull();       // return True\nmyCircularDeque.deleteLast();   // return True\nmyCircularDeque.insertFront(4); // return True\nmyCircularDeque.getFront();     // return 4\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= 1000</code></li>\n\t<li><code>0 &lt;= value &lt;= 1000</code></li>\n\t<li>At most <code>2000</code> calls will be made to <code>insertFront</code>, <code>insertLast</code>, <code>deleteFront</code>, <code>deleteLast</code>, <code>getFront</code>, <code>getRear</code>, <code>isEmpty</code>, <code>isFull</code>.</li>\n</ul>\n",
     "testcase": "[\"MyCircularDeque\",\"insertLast\",\"insertLast\",\"insertFront\",\"insertFront\",\"getRear\",\"isFull\",\"deleteLast\",\"insertFront\",\"getFront\"]\n[[3],[1],[2],[3],[4],[],[],[],[4],[]]"
   },
+  "642": {
+    "content": "<h2>Design Search Autocomplete System</h2>\n<p>This problem is frequently asked by Citadel, DoorDash, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "643": {
     "content": "<p>You are given an integer array <code>nums</code> consisting of <code>n</code> elements, and an integer <code>k</code>.</p>\n\n<p>Find a contiguous subarray whose <strong>length is equal to</strong> <code>k</code> that has the maximum average value and return <em>this value</em>. Any answer with a calculation error less than <code>10<sup>-5</sup></code> will be accepted.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,12,-5,-6,50,3], k = 4\n<strong>Output:</strong> 12.75000\n<strong>Explanation:</strong> Maximum average is (12 - 5 - 6 + 50) / 4 = 51 / 4 = 12.75\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5], k = 1\n<strong>Output:</strong> 5.00000\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= k &lt;= n &lt;= 10<sup>5</sup></code></li>\n\t<li><code>-10<sup>4</sup> &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[1,12,-5,-6,50,3]\n4\n[5]\n1"
@@ -1590,6 +2082,10 @@ const DESCRIPTIONS = {
   "645": {
     "content": "<p>You have a set of integers <code>s</code>, which originally contains all the numbers from <code>1</code> to <code>n</code>. Unfortunately, due to some error, one of the numbers in <code>s</code> got duplicated to another number in the set, which results in <strong>repetition of one</strong> number and <strong>loss of another</strong> number.</p>\n\n<p>You are given an integer array <code>nums</code> representing the data status of this set after the error.</p>\n\n<p>Find the number that occurs twice and the number that is missing and return <em>them in the form of an array</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> nums = [1,2,2,4]\n<strong>Output:</strong> [2,3]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> nums = [1,1]\n<strong>Output:</strong> [1,2]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[1,2,2,4]\n[1,1]"
+  },
+  "646": {
+    "content": "<h2>Maximum Length of Pair Chain</h2>\n<p>This problem is frequently asked by Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "647": {
     "content": "<p>Given a string <code>s</code>, return <em>the number of <strong>palindromic substrings</strong> in it</em>.</p>\n\n<p>A string is a <strong>palindrome</strong> when it reads the same backward as forward.</p>\n\n<p>A <strong>substring</strong> is a contiguous sequence of characters within the string.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abc&quot;\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Three palindromic strings: &quot;a&quot;, &quot;b&quot;, &quot;c&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aaa&quot;\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> Six palindromic strings: &quot;a&quot;, &quot;a&quot;, &quot;a&quot;, &quot;aa&quot;, &quot;aa&quot;, &quot;aaa&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
@@ -1603,6 +2099,10 @@ const DESCRIPTIONS = {
     "content": "<p>In the world of Dota2, there are two parties: the Radiant and the Dire.</p>\n\n<p>The Dota2 senate consists of senators coming from two parties. Now the Senate wants to decide on a change in the Dota2 game. The voting for this change is a round-based procedure. In each round, each senator can exercise <strong>one</strong> of the two rights:</p>\n\n<ul>\n\t<li><strong>Ban one senator&#39;s right:</strong> A senator can make another senator lose all his rights in this and all the following rounds.</li>\n\t<li><strong>Announce the victory:</strong> If this senator found the senators who still have rights to vote are all from the same party, he can announce the victory and decide on the change in the game.</li>\n</ul>\n\n<p>Given a string <code>senate</code> representing each senator&#39;s party belonging. The character <code>&#39;R&#39;</code> and <code>&#39;D&#39;</code> represent the Radiant party and the Dire party. Then if there are <code>n</code> senators, the size of the given string will be <code>n</code>.</p>\n\n<p>The round-based procedure starts from the first senator to the last senator in the given order. This procedure will last until the end of voting. All the senators who have lost their rights will be skipped during the procedure.</p>\n\n<p>Suppose every senator is smart enough and will play the best strategy for his own party. Predict which party will finally announce the victory and change the Dota2 game. The output should be <code>&quot;Radiant&quot;</code> or <code>&quot;Dire&quot;</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> senate = &quot;RD&quot;\n<strong>Output:</strong> &quot;Radiant&quot;\n<strong>Explanation:</strong> \nThe first senator comes from Radiant and he can just ban the next senator&#39;s right in round 1. \nAnd the second senator can&#39;t exercise any rights anymore since his right has been banned. \nAnd in round 2, the first senator can just announce the victory since he is the only guy in the senate who can vote.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> senate = &quot;RDD&quot;\n<strong>Output:</strong> &quot;Dire&quot;\n<strong>Explanation:</strong> \nThe first senator comes from Radiant and he can just ban the next senator&#39;s right in round 1. \nAnd the second senator can&#39;t exercise any rights anymore since his right has been banned. \nAnd the third senator comes from Dire and he can ban the first senator&#39;s right in round 1. \nAnd in round 2, the third senator can just announce the victory since he is the only guy in the senate who can vote.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == senate.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>senate[i]</code> is either <code>&#39;R&#39;</code> or <code>&#39;D&#39;</code>.</li>\n</ul>\n",
     "testcase": "\"RD\"\n\"RDD\""
   },
+  "650": {
+    "content": "<h2>2 Keys Keyboard</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "652": {
     "content": "<p>Given the <code>root</code>&nbsp;of a binary tree, return all <strong>duplicate subtrees</strong>.</p>\n\n<p>For each kind of duplicate subtrees, you only need to return the root node of any <b>one</b> of them.</p>\n\n<p>Two trees are <strong>duplicate</strong> if they have the <strong>same structure</strong> with the <strong>same node values</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/16/e1.jpg\" style=\"width: 450px; height: 354px;\" />\n<pre>\n<strong>Input:</strong> root = [1,2,3,4,null,2,4,null,null,4]\n<strong>Output:</strong> [[2,4],[4]]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/16/e2.jpg\" style=\"width: 321px; height: 201px;\" />\n<pre>\n<strong>Input:</strong> root = [2,1,1]\n<strong>Output:</strong> [[1]]\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/08/16/e33.jpg\" style=\"width: 450px; height: 303px;\" />\n<pre>\n<strong>Input:</strong> root = [2,2,2,3,null,3,null]\n<strong>Output:</strong> [[2,3],[3]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of the nodes in the tree will be in the range <code>[1, 5000]</code></li>\n\t<li><code>-200 &lt;= Node.val &lt;= 200</code></li>\n</ul>\n",
     "testcase": "[1,2,3,4,null,2,4,null,null,4]\n[2,1,1]\n[2,2,2,3,null,3,null]"
@@ -1610,6 +2110,10 @@ const DESCRIPTIONS = {
   "653": {
     "content": "<p>Given the <code>root</code> of a binary search tree and an integer <code>k</code>, return <code>true</code> <em>if there exist two elements in the BST such that their sum is equal to</em> <code>k</code>, <em>or</em> <code>false</code> <em>otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/21/sum_tree_1.jpg\" style=\"width: 400px; height: 229px;\" />\n<pre>\n<strong>Input:</strong> root = [5,3,6,2,4,null,7], k = 9\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/21/sum_tree_2.jpg\" style=\"width: 400px; height: 229px;\" />\n<pre>\n<strong>Input:</strong> root = [5,3,6,2,4,null,7], k = 28\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 10<sup>4</sup>]</code>.</li>\n\t<li><code>-10<sup>4</sup> &lt;= Node.val &lt;= 10<sup>4</sup></code></li>\n\t<li><code>root</code> is guaranteed to be a <strong>valid</strong> binary search tree.</li>\n\t<li><code>-10<sup>5</sup> &lt;= k &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
     "testcase": "[5,3,6,2,4,null,7]\n9\n[5,3,6,2,4,null,7]\n28"
+  },
+  "657": {
+    "content": "<h2>Robot Return to Origin</h2>\n<p>This problem is frequently asked by Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "658": {
     "content": "<p>Given a <strong>sorted</strong> integer array <code>arr</code>, two integers <code>k</code> and <code>x</code>, return the <code>k</code> closest integers to <code>x</code> in the array. The result should also be sorted in ascending order.</p>\n\n<p>An integer <code>a</code> is closer to <code>x</code> than an integer <code>b</code> if:</p>\n\n<ul>\n\t<li><code>|a - x| &lt; |b - x|</code>, or</li>\n\t<li><code>|a - x| == |b - x|</code> and <code>a &lt; b</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">arr = [1,2,3,4,5], k = 4, x = 3</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,2,3,4]</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">arr = [1,1,2,3,4,5], k = 4, x = -1</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">[1,1,2,3]</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= arr.length</code></li>\n\t<li><code>1 &lt;= arr.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>arr</code> is sorted in <strong>ascending</strong> order.</li>\n\t<li><code>-10<sup>4</sup> &lt;= arr[i], x &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
@@ -1619,13 +2123,37 @@ const DESCRIPTIONS = {
     "content": "<p>You are given an integer array <code>nums</code> that is <strong>sorted in non-decreasing order</strong>.</p>\n\n<p>Determine if it is possible to split <code>nums</code> into <strong>one or more subsequences</strong> such that <strong>both</strong> of the following conditions are true:</p>\n\n<ul>\n\t<li>Each subsequence is a <strong>consecutive increasing sequence</strong> (i.e. each integer is <strong>exactly one</strong> more than the previous integer).</li>\n\t<li>All subsequences have a length of <code>3</code><strong> or more</strong>.</li>\n</ul>\n\n<p>Return <code>true</code><em> if you can split </em><code>nums</code><em> according to the above conditions, or </em><code>false</code><em> otherwise</em>.</p>\n\n<p>A <strong>subsequence</strong> of an array is a new array that is formed from the original array by deleting some (can be none) of the elements without disturbing the relative positions of the remaining elements. (i.e., <code>[1,3,5]</code> is a subsequence of <code>[<u>1</u>,2,<u>3</u>,4,<u>5</u>]</code> while <code>[1,3,2]</code> is not).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,3,4,5]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> nums can be split into the following subsequences:\n[<strong><u>1</u></strong>,<strong><u>2</u></strong>,<strong><u>3</u></strong>,3,4,5] --&gt; 1, 2, 3\n[1,2,3,<strong><u>3</u></strong>,<strong><u>4</u></strong>,<strong><u>5</u></strong>] --&gt; 3, 4, 5\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,3,4,4,5,5]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> nums can be split into the following subsequences:\n[<strong><u>1</u></strong>,<strong><u>2</u></strong>,<strong><u>3</u></strong>,3,<strong><u>4</u></strong>,4,<strong><u>5</u></strong>,5] --&gt; 1, 2, 3, 4, 5\n[1,2,3,<strong><u>3</u></strong>,4,<strong><u>4</u></strong>,5,<strong><u>5</u></strong>] --&gt; 3, 4, 5\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4,4,5]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> It is impossible to split nums into consecutive increasing subsequences of length 3 or more.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n\t<li><code>nums</code> is sorted in <strong>non-decreasing</strong> order.</li>\n</ul>\n",
     "testcase": "[1,2,3,3,4,5]\n[1,2,3,3,4,4,5,5]\n[1,2,3,4,4,5]"
   },
+  "660": {
+    "content": "<h2>Remove 9</h2>\n<p>This problem is frequently asked by Houzz.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "661": {
+    "content": "<h2>Image Smoother</h2>\n<p>This problem is frequently asked by Roblox, Toptal, Verkada.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "662": {
     "content": "<p>Given the <code>root</code> of a binary tree, return <em>the <strong>maximum width</strong> of the given tree</em>.</p>\n\n<p>The <strong>maximum width</strong> of a tree is the maximum <strong>width</strong> among all levels.</p>\n\n<p>The <strong>width</strong> of one level is defined as the length between the end-nodes (the leftmost and rightmost non-null nodes), where the null nodes between the end-nodes that would be present in a complete binary tree extending down to that level are also counted into the length calculation.</p>\n\n<p>It is <strong>guaranteed</strong> that the answer will in the range of a <strong>32-bit</strong> signed integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/05/03/width1-tree.jpg\" style=\"width: 359px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> root = [1,3,2,5,3,null,9]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> The maximum width exists in the third level with length 4 (5,3,null,9).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2022/03/14/maximum-width-of-binary-tree-v3.jpg\" style=\"width: 442px; height: 422px;\" />\n<pre>\n<strong>Input:</strong> root = [1,3,2,5,null,null,9,6,null,7]\n<strong>Output:</strong> 7\n<strong>Explanation:</strong> The maximum width exists in the fourth level with length 7 (6,null,null,null,null,null,7).\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/05/03/width3-tree.jpg\" style=\"width: 289px; height: 299px;\" />\n<pre>\n<strong>Input:</strong> root = [1,3,2,5]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The maximum width exists in the second level with length 2 (3,2).\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 3000]</code>.</li>\n\t<li><code>-100 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[1,3,2,5,3,null,9]\n[1,3,2,5,null,null,9,6,null,7]\n[1,3,2,5]"
   },
+  "664": {
+    "content": "<h2>Strange Printer</h2>\n<p>This problem is frequently asked by Cisco, NetEase.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "665": {
     "content": "<p>Given an array <code>nums</code> with <code>n</code> integers, your task is to check if it could become non-decreasing by modifying <strong>at most one element</strong>.</p>\n\n<p>We define an array is non-decreasing if <code>nums[i] &lt;= nums[i + 1]</code> holds for every <code>i</code> (<strong>0-based</strong>) such that (<code>0 &lt;= i &lt;= n - 2</code>).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [4,2,3]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You could modify the first 4 to 1 to get a non-decreasing array.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [4,2,1]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> You cannot get a non-decreasing array by modifying at most one element.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == nums.length</code></li>\n\t<li><code>1 &lt;= n &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>\n</ul>\n",
     "testcase": "[4,2,3]\n[4,2,1]"
+  },
+  "666": {
+    "content": "<h2>Path Sum IV</h2>\n<p>This problem is frequently asked by Alibaba.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "668": {
+    "content": "<h2>Kth Smallest Number in Multiplication Table</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "669": {
+    "content": "<h2>Trim a Binary Search Tree</h2>\n<p>This problem is frequently asked by josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "670": {
     "content": "<p>You are given an integer <code>num</code>. You can swap two digits at most once to get the maximum valued number.</p>\n\n<p>Return <em>the maximum valued number you can get</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 2736\n<strong>Output:</strong> 7236\n<strong>Explanation:</strong> Swap the number 2 and the number 7.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> num = 9973\n<strong>Output:</strong> 9973\n<strong>Explanation:</strong> No swap.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= num &lt;= 10<sup>8</sup></code></li>\n</ul>\n",
@@ -1643,6 +2171,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given an unsorted array of integers <code>nums</code>, return <em>the length of the longest <strong>continuous increasing subsequence</strong> (i.e. subarray)</em>. The subsequence must be <strong>strictly</strong> increasing.</p>\n\n<p>A <strong>continuous increasing subsequence</strong> is defined by two indices <code>l</code> and <code>r</code> (<code>l &lt; r</code>) such that it is <code>[nums[l], nums[l + 1], ..., nums[r - 1], nums[r]]</code> and for each <code>l &lt;= i &lt; r</code>, <code>nums[i] &lt; nums[i + 1]</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,3,5,4,7]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The longest continuous increasing subsequence is [1,3,5] with length 3.\nEven though [1,3,5,7] is an increasing subsequence, it is not continuous as elements 5 and 7 are separated by element\n4.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,2,2,2,2]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> The longest continuous increasing subsequence is [2] with length 1. Note that it must be strictly\nincreasing.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-10<sup>9</sup> &lt;= nums[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
     "testcase": "[1,3,5,4,7]\n[2,2,2,2,2]"
   },
+  "675": {
+    "content": "<h2>Cut Off Trees for Golf Event</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "677": {
     "content": "<p>Design a map that allows you to do the following:</p>\n\n<ul>\n\t<li>Maps a string key to a given value.</li>\n\t<li>Returns the sum of the values that have a key with a prefix equal to a given string.</li>\n</ul>\n\n<p>Implement the <code>MapSum</code> class:</p>\n\n<ul>\n\t<li><code>MapSum()</code> Initializes the <code>MapSum</code> object.</li>\n\t<li><code>void insert(String key, int val)</code> Inserts the <code>key-val</code> pair into the map. If the <code>key</code> already existed, the original <code>key-value</code> pair will be overridden to the new one.</li>\n\t<li><code>int sum(string prefix)</code> Returns the sum of all the pairs&#39; value whose <code>key</code> starts with the <code>prefix</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;MapSum&quot;, &quot;insert&quot;, &quot;sum&quot;, &quot;insert&quot;, &quot;sum&quot;]\n[[], [&quot;apple&quot;, 3], [&quot;ap&quot;], [&quot;app&quot;, 2], [&quot;ap&quot;]]\n<strong>Output</strong>\n[null, null, 3, null, 5]\n\n<strong>Explanation</strong>\nMapSum mapSum = new MapSum();\nmapSum.insert(&quot;apple&quot;, 3);  \nmapSum.sum(&quot;ap&quot;);           // return 3 (<u>ap</u>ple = 3)\nmapSum.insert(&quot;app&quot;, 2);    \nmapSum.sum(&quot;ap&quot;);           // return 5 (<u>ap</u>ple + <u>ap</u>p = 3 + 2 = 5)\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= key.length, prefix.length &lt;= 50</code></li>\n\t<li><code>key</code> and <code>prefix</code> consist of only lowercase English letters.</li>\n\t<li><code>1 &lt;= val &lt;= 1000</code></li>\n\t<li>At most <code>50</code> calls will be made to <code>insert</code> and <code>sum</code>.</li>\n</ul>\n",
     "testcase": "[\"MapSum\",\"insert\",\"sum\",\"insert\",\"sum\"]\n[[],[\"apple\",3],[\"ap\"],[\"app\",2],[\"ap\"]]"
@@ -1651,6 +2183,10 @@ const DESCRIPTIONS = {
     "content": "<p>Given a string <code>s</code> containing only three types of characters: <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code> and <code>&#39;*&#39;</code>, return <code>true</code> <em>if</em> <code>s</code> <em>is <strong>valid</strong></em>.</p>\n\n<p>The following rules define a <strong>valid</strong> string:</p>\n\n<ul>\n\t<li>Any left parenthesis <code>&#39;(&#39;</code> must have a corresponding right parenthesis <code>&#39;)&#39;</code>.</li>\n\t<li>Any right parenthesis <code>&#39;)&#39;</code> must have a corresponding left parenthesis <code>&#39;(&#39;</code>.</li>\n\t<li>Left parenthesis <code>&#39;(&#39;</code> must go before the corresponding right parenthesis <code>&#39;)&#39;</code>.</li>\n\t<li><code>&#39;*&#39;</code> could be treated as a single right parenthesis <code>&#39;)&#39;</code> or a single left parenthesis <code>&#39;(&#39;</code> or an empty string <code>&quot;&quot;</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"()\"\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"(*)\"\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> s = \"(*))\"\n<strong>Output:</strong> true\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 100</code></li>\n\t<li><code>s[i]</code> is <code>&#39;(&#39;</code>, <code>&#39;)&#39;</code> or <code>&#39;*&#39;</code>.</li>\n</ul>\n",
     "testcase": "\"()\"\n\"(*)\"\n\"(*))\""
   },
+  "679": {
+    "content": "<h2>24 Game</h2>\n<p>This problem is frequently asked by Huawei, Roku.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "680": {
     "content": "<p>Given a string <code>s</code>, return <code>true</code> <em>if the </em><code>s</code><em> can be palindrome after deleting <strong>at most one</strong> character from it</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aba&quot;\n<strong>Output:</strong> true\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abca&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You could delete the character &#39;c&#39;.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;abc&quot;\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
     "testcase": "\"aba\"\n\"abca\"\n\"abc\""
@@ -1658,6 +2194,10 @@ const DESCRIPTIONS = {
   "681": {
     "content": "<p><b>Next Closest Time</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
+  },
+  "682": {
+    "content": "<h2>Baseball Game</h2>\n<p>This problem is frequently asked by Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "684": {
     "content": "<p>In this problem, a tree is an <strong>undirected graph</strong> that is connected and has no cycles.</p>\n\n<p>You are given a graph that started as a tree with <code>n</code> nodes labeled from <code>1</code> to <code>n</code>, with one additional edge added. The added edge has two <strong>different</strong> vertices chosen from <code>1</code> to <code>n</code>, and was not an edge that already existed. The graph is represented as an array <code>edges</code> of length <code>n</code> where <code>edges[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that there is an edge between nodes <code>a<sub>i</sub></code> and <code>b<sub>i</sub></code> in the graph.</p>\n\n<p>Return <em>an edge that can be removed so that the resulting graph is a tree of </em><code>n</code><em> nodes</em>. If there are multiple answers, return the answer that occurs last in the input.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/05/02/reduntant1-1-graph.jpg\" style=\"width: 222px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> edges = [[1,2],[1,3],[2,3]]\n<strong>Output:</strong> [2,3]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/05/02/reduntant1-2-graph.jpg\" style=\"width: 382px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> edges = [[1,2],[2,3],[3,4],[1,4],[1,5]]\n<strong>Output:</strong> [1,4]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == edges.length</code></li>\n\t<li><code>3 &lt;= n &lt;= 1000</code></li>\n\t<li><code>edges[i].length == 2</code></li>\n\t<li><code>1 &lt;= a<sub>i</sub> &lt; b<sub>i</sub> &lt;= edges.length</code></li>\n\t<li><code>a<sub>i</sub> != b<sub>i</sub></code></li>\n\t<li>There are no repeated edges.</li>\n\t<li>The given graph is connected.</li>\n</ul>\n",
@@ -1679,9 +2219,21 @@ const DESCRIPTIONS = {
     "content": "<p>On an <code>n x n</code> chessboard, a knight starts at the cell <code>(row, column)</code> and attempts to make exactly <code>k</code> moves. The rows and columns are <strong>0-indexed</strong>, so the top-left cell is <code>(0, 0)</code>, and the bottom-right cell is <code>(n - 1, n - 1)</code>.</p>\n\n<p>A chess knight has eight possible moves it can make, as illustrated below. Each move is two cells in a cardinal direction, then one cell in an orthogonal direction.</p>\n<img src=\"https://assets.leetcode.com/uploads/2018/10/12/knight.png\" style=\"width: 300px; height: 300px;\" />\n<p>Each time the knight is to move, it chooses one of eight possible moves uniformly at random (even if the piece would go off the chessboard) and moves there.</p>\n\n<p>The knight continues moving until it has made exactly <code>k</code> moves or has moved off the chessboard.</p>\n\n<p>Return <em>the probability that the knight remains on the board after it has stopped moving</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3, k = 2, row = 0, column = 0\n<strong>Output:</strong> 0.06250\n<strong>Explanation:</strong> There are two moves (to (1,2), (2,1)) that will keep the knight on the board.\nFrom each of those positions, there are also two moves that will keep the knight on the board.\nThe total probability the knight stays on the board is 0.0625.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, k = 0, row = 0, column = 0\n<strong>Output:</strong> 1.00000\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 25</code></li>\n\t<li><code>0 &lt;= k &lt;= 100</code></li>\n\t<li><code>0 &lt;= row, column &lt;= n - 1</code></li>\n</ul>\n",
     "testcase": "3\n2\n0\n0\n1\n0\n0\n0"
   },
+  "690": {
+    "content": "<h2>Employee Importance</h2>\n<p>This problem is frequently asked by Rippling, Robinhood.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "691": {
+    "content": "<h2>Stickers to Spell Word</h2>\n<p>This problem is frequently asked by IXL.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "692": {
     "content": "<p>Given an array of strings <code>words</code> and an integer <code>k</code>, return <em>the </em><code>k</code><em> most frequent strings</em>.</p>\n\n<p>Return the answer <strong>sorted</strong> by <strong>the frequency</strong> from highest to lowest. Sort the words with the same frequency by their <strong>lexicographical order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;i&quot;,&quot;love&quot;,&quot;leetcode&quot;,&quot;i&quot;,&quot;love&quot;,&quot;coding&quot;], k = 2\n<strong>Output:</strong> [&quot;i&quot;,&quot;love&quot;]\n<strong>Explanation:</strong> &quot;i&quot; and &quot;love&quot; are the two most frequent words.\nNote that &quot;i&quot; comes before &quot;love&quot; due to a lower alphabetical order.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;the&quot;,&quot;day&quot;,&quot;is&quot;,&quot;sunny&quot;,&quot;the&quot;,&quot;the&quot;,&quot;the&quot;,&quot;sunny&quot;,&quot;is&quot;,&quot;is&quot;], k = 4\n<strong>Output:</strong> [&quot;the&quot;,&quot;is&quot;,&quot;sunny&quot;,&quot;day&quot;]\n<strong>Explanation:</strong> &quot;the&quot;, &quot;is&quot;, &quot;sunny&quot; and &quot;day&quot; are the four most frequent words, with the number of occurrence being 4, 3, 2 and 1 respectively.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 500</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 10</code></li>\n\t<li><code>words[i]</code> consists of lowercase English letters.</li>\n\t<li><code>k</code> is in the range <code>[1, The number of <strong>unique</strong> words[i]]</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Follow-up:</strong> Could you solve it in <code>O(n log(k))</code> time and <code>O(n)</code> extra space?</p>\n",
     "testcase": "[\"i\",\"love\",\"leetcode\",\"i\",\"love\",\"coding\"]\n2\n[\"the\",\"day\",\"is\",\"sunny\",\"the\",\"the\",\"the\",\"sunny\",\"is\",\"is\"]\n4"
+  },
+  "694": {
+    "content": "<h2>Number of Distinct Islands</h2>\n<p>This problem is frequently asked by Anduril, Aurora, Coupang.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "695": {
     "content": "<p>You are given an <code>m x n</code> binary matrix <code>grid</code>. An island is a group of <code>1</code>&#39;s (representing land) connected <strong>4-directionally</strong> (horizontal or vertical.) You may assume all four edges of the grid are surrounded by water.</p>\n\n<p>The <strong>area</strong> of an island is the number of cells with a value <code>1</code> in the island.</p>\n\n<p>Return <em>the maximum <strong>area</strong> of an island in </em><code>grid</code>. If there is no island, return <code>0</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/05/01/maxarea1-grid.jpg\" style=\"width: 500px; height: 310px;\" />\n<pre>\n<strong>Input:</strong> grid = [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> The answer is not 11, because the island must be connected 4-directionally.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[0,0,0,0,0,0,0,0]]\n<strong>Output:</strong> 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>m == grid.length</code></li>\n\t<li><code>n == grid[i].length</code></li>\n\t<li><code>1 &lt;= m, n &lt;= 50</code></li>\n\t<li><code>grid[i][j]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n",
@@ -1698,6 +2250,10 @@ const DESCRIPTIONS = {
   "698": {
     "content": "<p>Given an integer array <code>nums</code> and an integer <code>k</code>, return <code>true</code> if it is possible to divide this array into <code>k</code> non-empty subsets whose sums are all equal.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [4,3,2,3,5,2,1], k = 4\n<strong>Output:</strong> true\n<strong>Explanation:</strong> It is possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3,4], k = 3\n<strong>Output:</strong> false\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= nums.length &lt;= 16</code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n\t<li>The frequency of each element is in the range <code>[1, 4]</code>.</li>\n</ul>\n",
     "testcase": "[4,3,2,3,5,2,1]\n4\n[1,2,3,4]\n3"
+  },
+  "699": {
+    "content": "<h2>Falling Squares</h2>\n<p>This problem is frequently asked by Block.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "700": {
     "content": "<p>You are given the <code>root</code> of a binary search tree (BST) and an integer <code>val</code>.</p>\n\n<p>Find the node in the BST that the node&#39;s value equals <code>val</code> and return the subtree rooted with that node. If such a node does not exist, return <code>null</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/12/tree1.jpg\" style=\"width: 422px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> root = [4,2,7,1,3], val = 2\n<strong>Output:</strong> [2,1,3]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/01/12/tree2.jpg\" style=\"width: 422px; height: 302px;\" />\n<pre>\n<strong>Input:</strong> root = [4,2,7,1,3], val = 5\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 5000]</code>.</li>\n\t<li><code>1 &lt;= Node.val &lt;= 10<sup>7</sup></code></li>\n\t<li><code>root</code> is a binary search tree.</li>\n\t<li><code>1 &lt;= val &lt;= 10<sup>7</sup></code></li>\n</ul>\n",
@@ -1743,13 +2299,25 @@ const DESCRIPTIONS = {
     "content": "<p>You are given an array <code>prices</code> where <code>prices[i]</code> is the price of a given stock on the <code>i<sup>th</sup></code> day, and an integer <code>fee</code> representing a transaction fee.</p>\n\n<p>Find the maximum profit you can achieve. You may complete as many transactions as you like, but you need to pay the transaction fee for each transaction.</p>\n\n<p><strong>Note:</strong></p>\n\n<ul>\n\t<li>You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).</li>\n\t<li>The transaction fee is only charged once for each stock purchase and sale.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [1,3,2,8,4,9], fee = 2\n<strong>Output:</strong> 8\n<strong>Explanation:</strong> The maximum profit can be achieved by:\n- Buying at prices[0] = 1\n- Selling at prices[3] = 8\n- Buying at prices[4] = 4\n- Selling at prices[5] = 9\nThe total profit is ((8 - 1) - 2) + ((9 - 4) - 2) = 8.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> prices = [1,3,7,5,10,3], fee = 3\n<strong>Output:</strong> 6\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= prices.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= prices[i] &lt; 5 * 10<sup>4</sup></code></li>\n\t<li><code>0 &lt;= fee &lt; 5 * 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[1,3,2,8,4,9]\n2\n[1,3,7,5,10,3]\n3"
   },
+  "715": {
+    "content": "<h2>Range Module</h2>\n<p>This problem is frequently asked by Coupang, Machine Zone.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "716": {
     "content": "<p><b>Max Stack</b> is a premium problem. The problem statement is not available.</p>",
     "testcase": "1\n2"
   },
+  "717": {
+    "content": "<h2>1-bit and 2-bit Characters</h2>\n<p>This problem is frequently asked by IXL, Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "718": {
     "content": "<p>Given two integer arrays <code>nums1</code> and <code>nums2</code>, return <em>the maximum length of a subarray that appears in <strong>both</strong> arrays</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [1,2,3,2,1], nums2 = [3,2,1,4,7]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> The repeated subarray with maximum length is [3,2,1].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums1 = [0,0,0,0,0], nums2 = [0,0,0,0,0]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> The repeated subarray with maximum length is [0,0,0,0,0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums1.length, nums2.length &lt;= 1000</code></li>\n\t<li><code>0 &lt;= nums1[i], nums2[i] &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[1,2,3,2,1]\n[3,2,1,4,7]\n[0,0,0,0,0]\n[0,0,0,0,0]"
+  },
+  "719": {
+    "content": "<h2>Find K-th Smallest Pair Distance</h2>\n<p>This problem is frequently asked by Flipkart, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "720": {
     "content": "<p>Given an array of strings <code>words</code> representing an English Dictionary, return <em>the longest word in</em> <code>words</code> <em>that can be built one character at a time by other words in</em> <code>words</code>.</p>\n\n<p>If there is more than one possible answer, return the longest word with the smallest lexicographical order. If there is no answer, return the empty string.</p>\n\n<p>Note that the word should be built from left to right with each additional character being added to the end of a previous word.&nbsp;</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;w&quot;,&quot;wo&quot;,&quot;wor&quot;,&quot;worl&quot;,&quot;world&quot;]\n<strong>Output:</strong> &quot;world&quot;\n<strong>Explanation:</strong> The word &quot;world&quot; can be built one character at a time by &quot;w&quot;, &quot;wo&quot;, &quot;wor&quot;, and &quot;worl&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;a&quot;,&quot;banana&quot;,&quot;app&quot;,&quot;appl&quot;,&quot;ap&quot;,&quot;apply&quot;,&quot;apple&quot;]\n<strong>Output:</strong> &quot;apple&quot;\n<strong>Explanation:</strong> Both &quot;apply&quot; and &quot;apple&quot; can be built from other words in the dictionary. However, &quot;apple&quot; is lexicographically smaller than &quot;apply&quot;.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 30</code></li>\n\t<li><code>words[i]</code> consists of lowercase English letters.</li>\n</ul>\n",
@@ -1758,6 +2326,14 @@ const DESCRIPTIONS = {
   "721": {
     "content": "<p>Given a list of <code>accounts</code> where each element <code>accounts[i]</code> is a list of strings, where the first element <code>accounts[i][0]</code> is a name, and the rest of the elements are <strong>emails</strong> representing emails of the account.</p>\n\n<p>Now, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some common email to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name. A person can have any number of accounts initially, but all of their accounts definitely have the same name.</p>\n\n<p>After merging the accounts, return the accounts in the following format: the first element of each account is the name, and the rest of the elements are emails <strong>in sorted order</strong>. The accounts themselves can be returned in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> accounts = [[&quot;John&quot;,&quot;johnsmith@mail.com&quot;,&quot;john_newyork@mail.com&quot;],[&quot;John&quot;,&quot;johnsmith@mail.com&quot;,&quot;john00@mail.com&quot;],[&quot;Mary&quot;,&quot;mary@mail.com&quot;],[&quot;John&quot;,&quot;johnnybravo@mail.com&quot;]]\n<strong>Output:</strong> [[&quot;John&quot;,&quot;john00@mail.com&quot;,&quot;john_newyork@mail.com&quot;,&quot;johnsmith@mail.com&quot;],[&quot;Mary&quot;,&quot;mary@mail.com&quot;],[&quot;John&quot;,&quot;johnnybravo@mail.com&quot;]]\n<strong>Explanation:</strong>\nThe first and second John&#39;s are the same person as they have the common email &quot;johnsmith@mail.com&quot;.\nThe third John and Mary are different people as none of their email addresses are used by other accounts.\nWe could return these lists in any order, for example the answer [[&#39;Mary&#39;, &#39;mary@mail.com&#39;], [&#39;John&#39;, &#39;johnnybravo@mail.com&#39;], \n[&#39;John&#39;, &#39;john00@mail.com&#39;, &#39;john_newyork@mail.com&#39;, &#39;johnsmith@mail.com&#39;]] would still be accepted.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> accounts = [[&quot;Gabe&quot;,&quot;Gabe0@m.co&quot;,&quot;Gabe3@m.co&quot;,&quot;Gabe1@m.co&quot;],[&quot;Kevin&quot;,&quot;Kevin3@m.co&quot;,&quot;Kevin5@m.co&quot;,&quot;Kevin0@m.co&quot;],[&quot;Ethan&quot;,&quot;Ethan5@m.co&quot;,&quot;Ethan4@m.co&quot;,&quot;Ethan0@m.co&quot;],[&quot;Hanzo&quot;,&quot;Hanzo3@m.co&quot;,&quot;Hanzo1@m.co&quot;,&quot;Hanzo0@m.co&quot;],[&quot;Fern&quot;,&quot;Fern5@m.co&quot;,&quot;Fern1@m.co&quot;,&quot;Fern0@m.co&quot;]]\n<strong>Output:</strong> [[&quot;Ethan&quot;,&quot;Ethan0@m.co&quot;,&quot;Ethan4@m.co&quot;,&quot;Ethan5@m.co&quot;],[&quot;Gabe&quot;,&quot;Gabe0@m.co&quot;,&quot;Gabe1@m.co&quot;,&quot;Gabe3@m.co&quot;],[&quot;Hanzo&quot;,&quot;Hanzo0@m.co&quot;,&quot;Hanzo1@m.co&quot;,&quot;Hanzo3@m.co&quot;],[&quot;Kevin&quot;,&quot;Kevin0@m.co&quot;,&quot;Kevin3@m.co&quot;,&quot;Kevin5@m.co&quot;],[&quot;Fern&quot;,&quot;Fern0@m.co&quot;,&quot;Fern1@m.co&quot;,&quot;Fern5@m.co&quot;]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= accounts.length &lt;= 1000</code></li>\n\t<li><code>2 &lt;= accounts[i].length &lt;= 10</code></li>\n\t<li><code>1 &lt;= accounts[i][j].length &lt;= 30</code></li>\n\t<li><code>accounts[i][0]</code> consists of English letters.</li>\n\t<li><code>accounts[i][j] (for j &gt; 0)</code> is a valid email.</li>\n</ul>\n",
     "testcase": "[[\"John\",\"johnsmith@mail.com\",\"john_newyork@mail.com\"],[\"John\",\"johnsmith@mail.com\",\"john00@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]\n[[\"Gabe\",\"Gabe0@m.co\",\"Gabe3@m.co\",\"Gabe1@m.co\"],[\"Kevin\",\"Kevin3@m.co\",\"Kevin5@m.co\",\"Kevin0@m.co\"],[\"Ethan\",\"Ethan5@m.co\",\"Ethan4@m.co\",\"Ethan0@m.co\"],[\"Hanzo\",\"Hanzo3@m.co\",\"Hanzo1@m.co\",\"Hanzo0@m.co\"],[\"Fern\",\"Fern5@m.co\",\"Fern1@m.co\",\"Fern0@m.co\"]]"
+  },
+  "722": {
+    "content": "<h2>Remove Comments</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "723": {
+    "content": "<h2>Candy Crush</h2>\n<p>This problem is frequently asked by Braze, Capital One, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "724": {
     "content": "<p>Given an array of integers <code>nums</code>, calculate the <strong>pivot index</strong> of this array.</p>\n\n<p>The <strong>pivot index</strong> is the index where the sum of all the numbers <strong>strictly</strong> to the left of the index is equal to the sum of all the numbers <strong>strictly</strong> to the index&#39;s right.</p>\n\n<p>If the index is on the left edge of the array, then the left sum is <code>0</code> because there are no elements to the left. This also applies to the right edge of the array.</p>\n\n<p>Return <em>the <strong>leftmost pivot index</strong></em>. If no such index exists, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,7,3,6,5,6]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong>\nThe pivot index is 3.\nLeft sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11\nRight sum = nums[4] + nums[5] = 5 + 6 = 11\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [1,2,3]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong>\nThere is no index that satisfies the conditions in the problem statement.</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,1,-1]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong>\nThe pivot index is 0.\nLeft sum = 0 (no elements to the left of index 0)\nRight sum = nums[1] + nums[2] = 1 + -1 = 0\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= nums[i] &lt;= 1000</code></li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong>Note:</strong> This question is the same as&nbsp;1991:&nbsp;<a href=\"https://leetcode.com/problems/find-the-middle-index-in-array/\" target=\"_blank\">https://leetcode.com/problems/find-the-middle-index-in-array/</a></p>\n",
@@ -1770,6 +2346,10 @@ const DESCRIPTIONS = {
   "726": {
     "content": "<p>Given a string <code>formula</code> representing a chemical formula, return <em>the count of each atom</em>.</p>\n\n<p>The atomic element always starts with an uppercase character, then zero or more lowercase letters, representing the name.</p>\n\n<p>One or more digits representing that element&#39;s count may follow if the count is greater than <code>1</code>. If the count is <code>1</code>, no digits will follow.</p>\n\n<ul>\n\t<li>For example, <code>&quot;H2O&quot;</code> and <code>&quot;H2O2&quot;</code> are possible, but <code>&quot;H1O2&quot;</code> is impossible.</li>\n</ul>\n\n<p>Two formulas are concatenated together to produce another formula.</p>\n\n<ul>\n\t<li>For example, <code>&quot;H2O2He3Mg4&quot;</code> is also a formula.</li>\n</ul>\n\n<p>A formula placed in parentheses, and a count (optionally added) is also a formula.</p>\n\n<ul>\n\t<li>For example, <code>&quot;(H2O2)&quot;</code> and <code>&quot;(H2O2)3&quot;</code> are formulas.</li>\n</ul>\n\n<p>Return the count of all elements as a string in the following form: the first name (in sorted order), followed by its count (if that count is more than <code>1</code>), followed by the second name (in sorted order), followed by its count (if that count is more than <code>1</code>), and so on.</p>\n\n<p>The test cases are generated so that all the values in the output fit in a <strong>32-bit</strong> integer.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> formula = &quot;H2O&quot;\n<strong>Output:</strong> &quot;H2O&quot;\n<strong>Explanation:</strong> The count of elements are {&#39;H&#39;: 2, &#39;O&#39;: 1}.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> formula = &quot;Mg(OH)2&quot;\n<strong>Output:</strong> &quot;H2MgO2&quot;\n<strong>Explanation:</strong> The count of elements are {&#39;H&#39;: 2, &#39;Mg&#39;: 1, &#39;O&#39;: 2}.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> formula = &quot;K4(ON(SO3)2)2&quot;\n<strong>Output:</strong> &quot;K4N2O14S4&quot;\n<strong>Explanation:</strong> The count of elements are {&#39;K&#39;: 4, &#39;N&#39;: 2, &#39;O&#39;: 14, &#39;S&#39;: 4}.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= formula.length &lt;= 1000</code></li>\n\t<li><code>formula</code> consists of English letters, digits, <code>&#39;(&#39;</code>, and <code>&#39;)&#39;</code>.</li>\n\t<li><code>formula</code> is always valid.</li>\n</ul>\n",
     "testcase": "\"H2O\"\n\"Mg(OH)2\"\n\"K4(ON(SO3)2)2\""
+  },
+  "727": {
+    "content": "<h2>Minimum Window Subsequence</h2>\n<p>This problem is frequently asked by eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "728": {
     "content": "<p>A <strong>self-dividing number</strong> is a number that is divisible by every digit it contains.</p>\n\n<ul>\n\t<li>For example, <code>128</code> is <strong>a self-dividing number</strong> because <code>128 % 1 == 0</code>, <code>128 % 2 == 0</code>, and <code>128 % 8 == 0</code>.</li>\n</ul>\n\n<p>A <strong>self-dividing number</strong> is not allowed to contain the digit zero.</p>\n\n<p>Given two integers <code>left</code> and <code>right</code>, return <em>a list of all the <strong>self-dividing numbers</strong> in the range</em> <code>[left, right]</code> (both <strong>inclusive</strong>).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> left = 1, right = 22\n<strong>Output:</strong> [1,2,3,4,5,6,7,8,9,11,12,15,22]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> left = 47, right = 85\n<strong>Output:</strong> [48,55,66,77]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= left &lt;= right &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
@@ -1795,6 +2375,14 @@ const DESCRIPTIONS = {
     "content": "<p>We are given an array <code>asteroids</code> of integers representing asteroids in a row. The indices of the asteroid in the array represent their relative position in space.</p>\n\n<p>For each asteroid, the absolute value represents its size, and the sign represents its direction (positive meaning right, negative meaning left). Each asteroid moves at the same speed.</p>\n\n<p>Find out the state of the asteroids after all collisions. If two asteroids meet, the smaller one will explode. If both are the same size, both will explode. Two asteroids moving in the same direction will never meet.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> asteroids = [5,10,-5]\n<strong>Output:</strong> [5,10]\n<strong>Explanation:</strong> The 10 and -5 collide resulting in 10. The 5 and 10 never collide.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> asteroids = [8,-8]\n<strong>Output:</strong> []\n<strong>Explanation:</strong> The 8 and -8 collide exploding each other.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> asteroids = [10,2,-5]\n<strong>Output:</strong> [10]\n<strong>Explanation:</strong> The 2 and -5 collide resulting in -5. The 10 and -5 collide resulting in 10.\n</pre>\n\n<p><strong class=\"example\">Example 4:</strong></p>\n\n<pre>\n<strong>Input:</strong> asteroids = [3,5,-6,2,-1,4]​​​​​​​\n<strong>Output:</strong> [-6,2,4]\n<strong>Explanation:</strong> The asteroid -6 makes the asteroid 3 and 5 explode, and then continues going left. On the other side, the asteroid 2 makes the asteroid -1 explode and then continues going right, without reaching asteroid 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= asteroids.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>-1000 &lt;= asteroids[i] &lt;= 1000</code></li>\n\t<li><code>asteroids[i] != 0</code></li>\n</ul>\n",
     "testcase": "[5,10,-5]\n[8,-8]\n[10,2,-5]\n[3,5,-6,2,-1,4]"
   },
+  "736": {
+    "content": "<h2>Parse Lisp Expression</h2>\n<p>This problem is frequently asked by Affirm, Attentive.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "738": {
+    "content": "<h2>Monotone Increasing Digits</h2>\n<p>This problem is frequently asked by SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "739": {
     "content": "<p>Given an array of integers <code>temperatures</code> represents the daily temperatures, return <em>an array</em> <code>answer</code> <em>such that</em> <code>answer[i]</code> <em>is the number of days you have to wait after the</em> <code>i<sup>th</sup></code> <em>day to get a warmer temperature</em>. If there is no future day for which this is possible, keep <code>answer[i] == 0</code> instead.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> temperatures = [73,74,75,71,69,72,76,73]\n<strong>Output:</strong> [1,1,4,2,1,1,0,0]\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> temperatures = [30,40,50,60]\n<strong>Output:</strong> [1,1,1,0]\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> temperatures = [30,60,90]\n<strong>Output:</strong> [1,1,0]\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;=&nbsp;temperatures.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>30 &lt;=&nbsp;temperatures[i] &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[73,74,75,71,69,72,76,73]\n[30,40,50,60]\n[30,60,90]"
@@ -1802,6 +2390,14 @@ const DESCRIPTIONS = {
   "740": {
     "content": "<p>You are given an integer array <code>nums</code>. You want to maximize the number of points you get by performing the following operation any number of times:</p>\n\n<ul>\n\t<li>Pick any <code>nums[i]</code> and delete it to earn <code>nums[i]</code> points. Afterwards, you must delete <b>every</b> element equal to <code>nums[i] - 1</code> and <strong>every</strong> element equal to <code>nums[i] + 1</code>.</li>\n</ul>\n\n<p>Return <em>the <strong>maximum number of points</strong> you can earn by applying the above operation some number of times</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [3,4,2]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> You can perform the following operations:\n- Delete 4 to earn 4 points. Consequently, 3 is also deleted. nums = [2].\n- Delete 2 to earn 2 points. nums = [].\nYou earn a total of 6 points.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [2,2,3,3,3,4]\n<strong>Output:</strong> 9\n<strong>Explanation:</strong> You can perform the following operations:\n- Delete a 3 to earn 3 points. All 2&#39;s and 4&#39;s are also deleted. nums = [3,3].\n- Delete a 3 again to earn 3 points. nums = [3].\n- Delete a 3 once more to earn 3 points. nums = [].\nYou earn a total of 9 points.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>1 &lt;= nums[i] &lt;= 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[3,4,2]\n[2,2,3,3,3,4]"
+  },
+  "741": {
+    "content": "<h2>Cherry Pickup</h2>\n<p>This problem is frequently asked by Akuna Capital, Atlassian, Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "742": {
+    "content": "<h2>To Lower Case</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "743": {
     "content": "<p>You are given a network of <code>n</code> nodes, labeled from <code>1</code> to <code>n</code>. You are also given <code>times</code>, a list of travel times as directed edges <code>times[i] = (u<sub>i</sub>, v<sub>i</sub>, w<sub>i</sub>)</code>, where <code>u<sub>i</sub></code> is the source node, <code>v<sub>i</sub></code> is the target node, and <code>w<sub>i</sub></code> is the time it takes for a signal to travel from source to target.</p>\n\n<p>We will send a signal from a given node <code>k</code>. Return <em>the <strong>minimum</strong> time it takes for all the</em> <code>n</code> <em>nodes to receive the signal</em>. If it is impossible for all the <code>n</code> nodes to receive the signal, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2019/05/23/931_example_1.png\" style=\"width: 217px; height: 239px;\" />\n<pre>\n<strong>Input:</strong> times = [[2,1,1],[2,3,1],[3,4,1]], n = 4, k = 2\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> times = [[1,2,1]], n = 2, k = 1\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> times = [[1,2,1]], n = 2, k = 2\n<strong>Output:</strong> -1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= k &lt;= n &lt;= 100</code></li>\n\t<li><code>1 &lt;= times.length &lt;= 6000</code></li>\n\t<li><code>times[i].length == 3</code></li>\n\t<li><code>1 &lt;= u<sub>i</sub>, v<sub>i</sub> &lt;= n</code></li>\n\t<li><code>u<sub>i</sub> != v<sub>i</sub></code></li>\n\t<li><code>0 &lt;= w<sub>i</sub> &lt;= 100</code></li>\n\t<li>All the pairs <code>(u<sub>i</sub>, v<sub>i</sub>)</code> are <strong>unique</strong>. (i.e., no multiple edges.)</li>\n</ul>\n",
@@ -1843,6 +2439,26 @@ const DESCRIPTIONS = {
     "content": "<p>There is a safe protected by a password. The password is a sequence of <code>n</code> digits where each digit can be in the range <code>[0, k - 1]</code>.</p>\n\n<p>The safe has a peculiar way of checking the password. When you enter in a sequence, it checks the <strong>most recent </strong><code>n</code><strong> digits</strong> that were entered each time you type a digit.</p>\n\n<ul>\n\t<li>For example, the correct password is <code>&quot;345&quot;</code> and you enter in <code>&quot;012345&quot;</code>:\n\n\t<ul>\n\t\t<li>After typing <code>0</code>, the most recent <code>3</code> digits is <code>&quot;0&quot;</code>, which is incorrect.</li>\n\t\t<li>After typing <code>1</code>, the most recent <code>3</code> digits is <code>&quot;01&quot;</code>, which is incorrect.</li>\n\t\t<li>After typing <code>2</code>, the most recent <code>3</code> digits is <code>&quot;012&quot;</code>, which is incorrect.</li>\n\t\t<li>After typing <code>3</code>, the most recent <code>3</code> digits is <code>&quot;123&quot;</code>, which is incorrect.</li>\n\t\t<li>After typing <code>4</code>, the most recent <code>3</code> digits is <code>&quot;234&quot;</code>, which is incorrect.</li>\n\t\t<li>After typing <code>5</code>, the most recent <code>3</code> digits is <code>&quot;345&quot;</code>, which is correct and the safe unlocks.</li>\n\t</ul>\n\t</li>\n</ul>\n\n<p>Return <em>any string of <strong>minimum length</strong> that will unlock the safe <strong>at some point</strong> of entering it</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 1, k = 2\n<strong>Output:</strong> &quot;10&quot;\n<strong>Explanation:</strong> The password is a single digit, so enter each digit. &quot;01&quot; would also unlock the safe.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 2, k = 2\n<strong>Output:</strong> &quot;01100&quot;\n<strong>Explanation:</strong> For each possible password:\n- &quot;00&quot; is typed in starting from the 4<sup>th</sup> digit.\n- &quot;01&quot; is typed in starting from the 1<sup>st</sup> digit.\n- &quot;10&quot; is typed in starting from the 3<sup>rd</sup> digit.\n- &quot;11&quot; is typed in starting from the 2<sup>nd</sup> digit.\nThus &quot;01100&quot; will unlock the safe. &quot;10011&quot;, and &quot;11001&quot; would also unlock the safe.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 4</code></li>\n\t<li><code>1 &lt;= k &lt;= 10</code></li>\n\t<li><code>1 &lt;= k<sup>n</sup> &lt;= 4096</code></li>\n</ul>\n",
     "testcase": "1\n2\n2\n2"
   },
+  "755": {
+    "content": "<h2>Reach a Number</h2>\n<p>This problem is frequently asked by Commvault, InMobi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "756": {
+    "content": "<h2>Pour Water</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "757": {
+    "content": "<h2>Pyramid Transition Matrix</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "759": {
+    "content": "<h2>Set Intersection Size At Least Two</h2>\n<p>This problem is frequently asked by DP world.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "761": {
+    "content": "<h2>Employee Free Time</h2>\n<p>This problem is frequently asked by Airbnb, Citadel, DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "763": {
     "content": "<p>You are given a string <code>s</code>. We want to partition the string into as many parts as possible so that each letter appears in at most one part. For example, the string <code>&quot;ababcc&quot;</code> can be partitioned into <code>[&quot;abab&quot;, &quot;cc&quot;]</code>, but partitions such as <code>[&quot;aba&quot;, &quot;bcc&quot;]</code> or <code>[&quot;ab&quot;, &quot;ab&quot;, &quot;cc&quot;]</code> are invalid.</p>\n\n<p>Note that the partition is done so that after concatenating all the parts in order, the resultant string should be <code>s</code>.</p>\n\n<p>Return <em>a list of integers representing the size of these parts</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;ababcbacadefegdehijhklij&quot;\n<strong>Output:</strong> [9,7,8]\n<strong>Explanation:</strong>\nThe partition is &quot;ababcbaca&quot;, &quot;defegde&quot;, &quot;hijhklij&quot;.\nThis is a partition so that each letter appears in at most one part.\nA partition like &quot;ababcbacadefegde&quot;, &quot;hijhklij&quot; is incorrect, because it splits s into less parts.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;eccbbbbdec&quot;\n<strong>Output:</strong> [10]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 500</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
     "testcase": "\"ababcbacadefegdehijhklij\"\n\"eccbbbbdec\""
@@ -1850,6 +2466,14 @@ const DESCRIPTIONS = {
   "767": {
     "content": "<p>Given a string <code>s</code>, rearrange the characters of <code>s</code> so that any two adjacent characters are not the same.</p>\n\n<p>Return <em>any possible rearrangement of</em> <code>s</code> <em>or return</em> <code>&quot;&quot;</code> <em>if not possible</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> s = \"aab\"\n<strong>Output:</strong> \"aba\"\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> s = \"aaab\"\n<strong>Output:</strong> \"\"\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 500</code></li>\n\t<li><code>s</code> consists of lowercase English letters.</li>\n</ul>\n",
     "testcase": "\"aab\"\n\"aaab\""
+  },
+  "769": {
+    "content": "<h2>Largest Plus Sign</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "770": {
+    "content": "<h2>Couples Holding Hands</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "771": {
     "content": "<p>You&#39;re given strings <code>jewels</code> representing the types of stones that are jewels, and <code>stones</code> representing the stones you have. Each character in <code>stones</code> is a type of stone you have. You want to know how many of the stones you have are also jewels.</p>\n\n<p>Letters are case sensitive, so <code>&quot;a&quot;</code> is considered a different type of stone from <code>&quot;A&quot;</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> jewels = \"aA\", stones = \"aAAbbbb\"\n<strong>Output:</strong> 3\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> jewels = \"z\", stones = \"ZZ\"\n<strong>Output:</strong> 0\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;=&nbsp;jewels.length, stones.length &lt;= 50</code></li>\n\t<li><code>jewels</code> and <code>stones</code> consist of only English letters.</li>\n\t<li>All the characters of&nbsp;<code>jewels</code> are <strong>unique</strong>.</li>\n</ul>\n",
@@ -1863,9 +2487,25 @@ const DESCRIPTIONS = {
     "content": "<p>On an <code>2 x 3</code> board, there are five tiles labeled from <code>1</code> to <code>5</code>, and an empty square represented by <code>0</code>. A <strong>move</strong> consists of choosing <code>0</code> and a 4-directionally adjacent number and swapping it.</p>\n\n<p>The state of the board is solved if and only if the board is <code>[[1,2,3],[4,5,0]]</code>.</p>\n\n<p>Given the puzzle board <code>board</code>, return <em>the least number of moves required so that the state of the board is solved</em>. If it is impossible for the state of the board to be solved, return <code>-1</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/29/slide1-grid.jpg\" style=\"width: 244px; height: 165px;\" />\n<pre>\n<strong>Input:</strong> board = [[1,2,3],[4,0,5]]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> Swap the 0 and the 5 in one move.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/29/slide2-grid.jpg\" style=\"width: 244px; height: 165px;\" />\n<pre>\n<strong>Input:</strong> board = [[1,2,3],[5,4,0]]\n<strong>Output:</strong> -1\n<strong>Explanation:</strong> No number of moves will make the board solved.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/29/slide3-grid.jpg\" style=\"width: 244px; height: 165px;\" />\n<pre>\n<strong>Input:</strong> board = [[4,1,2],[5,0,3]]\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> 5 is the smallest number of moves that solves the board.\nAn example path:\nAfter move 0: [[4,1,2],[5,0,3]]\nAfter move 1: [[4,1,2],[0,5,3]]\nAfter move 2: [[0,1,2],[4,5,3]]\nAfter move 3: [[1,0,2],[4,5,3]]\nAfter move 4: [[1,2,0],[4,5,3]]\nAfter move 5: [[1,2,3],[4,5,0]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>board.length == 2</code></li>\n\t<li><code>board[i].length == 3</code></li>\n\t<li><code>0 &lt;= board[i][j] &lt;= 5</code></li>\n\t<li>Each value <code>board[i][j]</code> is <strong>unique</strong>.</li>\n</ul>\n",
     "testcase": "[[1,2,3],[4,0,5]]\n[[1,2,3],[5,4,0]]\n[[4,1,2],[5,0,3]]"
   },
+  "774": {
+    "content": "<h2>Maximum Depth of N-ary Tree</h2>\n<p>This problem is frequently asked by Datadog.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "777": {
+    "content": "<h2>Toeplitz Matrix</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "778": {
     "content": "<p>You are given an <code>n x n</code> integer matrix <code>grid</code> where each value <code>grid[i][j]</code> represents the elevation at that point <code>(i, j)</code>.</p>\n\n<p>It starts raining, and water gradually rises over time. At time <code>t</code>, the water level is <code>t</code>, meaning <strong>any</strong> cell with elevation less than equal to <code>t</code> is submerged or reachable.</p>\n\n<p>You can swim from a square to another 4-directionally adjacent square if and only if the elevation of both squares individually are at most <code>t</code>. You can swim infinite distances in zero time. Of course, you must stay within the boundaries of the grid during your swim.</p>\n\n<p>Return <em>the minimum time until you can reach the bottom right square </em><code>(n - 1, n - 1)</code><em> if you start at the top left square </em><code>(0, 0)</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/29/swim1-grid.jpg\" style=\"width: 164px; height: 165px;\" />\n<pre>\n<strong>Input:</strong> grid = [[0,2],[1,3]]\n<strong>Output:</strong> 3\nExplanation:\nAt time 0, you are in grid location (0, 0).\nYou cannot go anywhere else because 4-directionally adjacent neighbors have a higher elevation than t = 0.\nYou cannot reach point (1, 1) until time 3.\nWhen the depth of water is 3, we can swim anywhere inside the grid.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/29/swim2-grid-1.jpg\" style=\"width: 404px; height: 405px;\" />\n<pre>\n<strong>Input:</strong> grid = [[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]]\n<strong>Output:</strong> 16\n<strong>Explanation:</strong> The final route is shown.\nWe need to wait until time 16 so that (0, 0) and (4, 4) are connected.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == grid.length</code></li>\n\t<li><code>n == grid[i].length</code></li>\n\t<li><code>1 &lt;= n &lt;= 50</code></li>\n\t<li><code>0 &lt;= grid[i][j] &lt;&nbsp;n<sup>2</sup></code></li>\n\t<li>Each value <code>grid[i][j]</code> is <strong>unique</strong>.</li>\n</ul>\n",
     "testcase": "[[0,2],[1,3]]\n[[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20],[10,9,8,7,6]]"
+  },
+  "780": {
+    "content": "<h2>Max Chunks To Make Sorted</h2>\n<p>This problem is frequently asked by Poshmark.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "781": {
+    "content": "<h2>Basic Calculator IV</h2>\n<p>This problem is frequently asked by Intuit, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "785": {
     "content": "<p>There is an <strong>undirected</strong> graph with <code>n</code> nodes, where each node is numbered between <code>0</code> and <code>n - 1</code>. You are given a 2D array <code>graph</code>, where <code>graph[u]</code> is an array of nodes that node <code>u</code> is adjacent to. More formally, for each <code>v</code> in <code>graph[u]</code>, there is an undirected edge between node <code>u</code> and node <code>v</code>. The graph has the following properties:</p>\n\n<ul>\n\t<li>There are no self-edges (<code>graph[u]</code> does not contain <code>u</code>).</li>\n\t<li>There are no parallel edges (<code>graph[u]</code> does not contain duplicate values).</li>\n\t<li>If <code>v</code> is in <code>graph[u]</code>, then <code>u</code> is in <code>graph[v]</code> (the graph is undirected).</li>\n\t<li>The graph may not be connected, meaning there may be two nodes <code>u</code> and <code>v</code> such that there is no path between them.</li>\n</ul>\n\n<p>A graph is <strong>bipartite</strong> if the nodes can be partitioned into two independent sets <code>A</code> and <code>B</code> such that <strong>every</strong> edge in the graph connects a node in set <code>A</code> and a node in set <code>B</code>.</p>\n\n<p>Return <code>true</code><em> if and only if it is <strong>bipartite</strong></em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/21/bi2.jpg\" style=\"width: 222px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> graph = [[1,2,3],[0,2],[0,1,3],[0,2]]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> There is no way to partition the nodes into two independent sets such that every edge connects a node in one and a node in the other.</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/10/21/bi1.jpg\" style=\"width: 222px; height: 222px;\" />\n<pre>\n<strong>Input:</strong> graph = [[1,3],[0,2],[1,3],[0,2]]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> We can partition the nodes into two sets: {0, 2} and {1, 3}.</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>graph.length == n</code></li>\n\t<li><code>1 &lt;= n &lt;= 100</code></li>\n\t<li><code>0 &lt;= graph[u].length &lt; n</code></li>\n\t<li><code>0 &lt;= graph[u][i] &lt;= n - 1</code></li>\n\t<li><code>graph[u]</code>&nbsp;does not contain&nbsp;<code>u</code>.</li>\n\t<li>All the values of <code>graph[u]</code> are <strong>unique</strong>.</li>\n\t<li>If <code>graph[u]</code> contains <code>v</code>, then <code>graph[v]</code> contains <code>u</code>.</li>\n</ul>\n",
@@ -1887,17 +2527,45 @@ const DESCRIPTIONS = {
     "content": "<p>Given a directed acyclic graph (<strong>DAG</strong>) of <code>n</code> nodes labeled from <code>0</code> to <code>n - 1</code>, find all possible paths from node <code>0</code> to node <code>n - 1</code> and return them in <strong>any order</strong>.</p>\n\n<p>The graph is given as follows: <code>graph[i]</code> is a list of all nodes you can visit from node <code>i</code> (i.e., there is a directed edge from node <code>i</code> to node <code>graph[i][j]</code>).</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/28/all_1.jpg\" style=\"width: 242px; height: 242px;\" />\n<pre>\n<strong>Input:</strong> graph = [[1,2],[3],[3],[]]\n<strong>Output:</strong> [[0,1,3],[0,2,3]]\n<strong>Explanation:</strong> There are two paths: 0 -&gt; 1 -&gt; 3 and 0 -&gt; 2 -&gt; 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2020/09/28/all_2.jpg\" style=\"width: 423px; height: 301px;\" />\n<pre>\n<strong>Input:</strong> graph = [[4,3,1],[3,2,4],[3],[4],[]]\n<strong>Output:</strong> [[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == graph.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 15</code></li>\n\t<li><code>0 &lt;= graph[i][j] &lt; n</code></li>\n\t<li><code>graph[i][j] != i</code> (i.e., there will be no self-loops).</li>\n\t<li>All the elements of <code>graph[i]</code> are <strong>unique</strong>.</li>\n\t<li>The input graph is <strong>guaranteed</strong> to be a <strong>DAG</strong>.</li>\n</ul>\n",
     "testcase": "[[1,2],[3],[3],[]]\n[[4,3,1],[3,2,4],[3],[4],[]]"
   },
+  "798": {
+    "content": "<h2>Transform to Chessboard</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "799": {
     "content": "<p>We stack glasses in a pyramid, where the <strong>first</strong> row has <code>1</code> glass, the <strong>second</strong> row has <code>2</code> glasses, and so on until the 100<sup>th</sup> row.&nbsp; Each glass holds one cup&nbsp;of champagne.</p>\n\n<p>Then, some champagne is poured into the first glass at the top.&nbsp; When the topmost glass is full, any excess liquid poured will fall equally to the glass immediately to the left and right of it.&nbsp; When those glasses become full, any excess champagne will fall equally to the left and right of those glasses, and so on.&nbsp; (A glass at the bottom row has its excess champagne fall on the floor.)</p>\n\n<p>For example, after one cup of champagne is poured, the top most glass is full.&nbsp; After two cups of champagne are poured, the two glasses on the second row are half full.&nbsp; After three cups of champagne are poured, those two cups become full - there are 3 full glasses total now.&nbsp; After four cups of champagne are poured, the third row has the middle glass half full, and the two outside glasses are a quarter full, as pictured below.</p>\n\n<p><img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/03/09/tower.png\" style=\"height: 241px; width: 350px;\" /></p>\n\n<p>Now after pouring some non-negative integer cups of champagne, return how full the <code>j<sup>th</sup></code> glass in the <code>i<sup>th</sup></code> row is (both <code>i</code> and <code>j</code> are 0-indexed.)</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> poured = 1, query_row = 1, query_glass = 1\n<strong>Output:</strong> 0.00000\n<strong>Explanation:</strong> We poured 1 cup of champange to the top glass of the tower (which is indexed as (0, 0)). There will be no excess liquid so all the glasses under the top glass will remain empty.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> poured = 2, query_row = 1, query_glass = 1\n<strong>Output:</strong> 0.50000\n<strong>Explanation:</strong> We poured 2 cups of champange to the top glass of the tower (which is indexed as (0, 0)). There is one cup of excess liquid. The glass indexed as (1, 0) and the glass indexed as (1, 1) will share the excess liquid equally, and each will get half cup of champange.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> poured = 100000009, query_row = 33, query_glass = 17\n<strong>Output:</strong> 1.00000\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;=&nbsp;poured &lt;= 10<sup>9</sup></code></li>\n\t<li><code>0 &lt;= query_glass &lt;= query_row&nbsp;&lt; 100</code></li>\n</ul>\n",
     "testcase": "1\n1\n1\n2\n1\n1\n100000009\n33\n17"
+  },
+  "800": {
+    "content": "<h2>Letter Case Permutation</h2>\n<p>This problem is frequently asked by Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "801": {
+    "content": "<h2>Is Graph Bipartite?</h2>\n<p>This problem is frequently asked by Pinterest, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "802": {
+    "content": "<h2>K-th Smallest Prime Fraction</h2>\n<p>This problem is frequently asked by Pony.ai.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "804": {
     "content": "<p>International Morse Code defines a standard encoding where each letter is mapped to a series of dots and dashes, as follows:</p>\n\n<ul>\n\t<li><code>&#39;a&#39;</code> maps to <code>&quot;.-&quot;</code>,</li>\n\t<li><code>&#39;b&#39;</code> maps to <code>&quot;-...&quot;</code>,</li>\n\t<li><code>&#39;c&#39;</code> maps to <code>&quot;-.-.&quot;</code>, and so on.</li>\n</ul>\n\n<p>For convenience, the full table for the <code>26</code> letters of the English alphabet is given below:</p>\n\n<pre>\n[&quot;.-&quot;,&quot;-...&quot;,&quot;-.-.&quot;,&quot;-..&quot;,&quot;.&quot;,&quot;..-.&quot;,&quot;--.&quot;,&quot;....&quot;,&quot;..&quot;,&quot;.---&quot;,&quot;-.-&quot;,&quot;.-..&quot;,&quot;--&quot;,&quot;-.&quot;,&quot;---&quot;,&quot;.--.&quot;,&quot;--.-&quot;,&quot;.-.&quot;,&quot;...&quot;,&quot;-&quot;,&quot;..-&quot;,&quot;...-&quot;,&quot;.--&quot;,&quot;-..-&quot;,&quot;-.--&quot;,&quot;--..&quot;]</pre>\n\n<p>Given an array of strings <code>words</code> where each word can be written as a concatenation of the Morse code of each letter.</p>\n\n<ul>\n\t<li>For example, <code>&quot;cab&quot;</code> can be written as <code>&quot;-.-..--...&quot;</code>, which is the concatenation of <code>&quot;-.-.&quot;</code>, <code>&quot;.-&quot;</code>, and <code>&quot;-...&quot;</code>. We will call such a concatenation the <strong>transformation</strong> of a word.</li>\n</ul>\n\n<p>Return <em>the number of different <strong>transformations</strong> among all words we have</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;gin&quot;,&quot;zen&quot;,&quot;gig&quot;,&quot;msg&quot;]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> The transformation of each word is:\n&quot;gin&quot; -&gt; &quot;--...-.&quot;\n&quot;zen&quot; -&gt; &quot;--...-.&quot;\n&quot;gig&quot; -&gt; &quot;--...--.&quot;\n&quot;msg&quot; -&gt; &quot;--...--.&quot;\nThere are 2 different transformations: &quot;--...-.&quot; and &quot;--...--.&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;a&quot;]\n<strong>Output:</strong> 1\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 12</code></li>\n\t<li><code>words[i]</code> consists of lowercase English letters.</li>\n</ul>\n",
     "testcase": "[\"gin\",\"zen\",\"gig\",\"msg\"]\n[\"a\"]"
   },
+  "805": {
+    "content": "<h2>Escape The Ghosts</h2>\n<p>This problem is frequently asked by Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "806": {
+    "content": "<h2>Domino and Tromino Tiling</h2>\n<p>This problem is frequently asked by WinZO.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "807": {
     "content": "<p>There is a city composed of <code>n x n</code> blocks, where each block contains a single building shaped like a vertical square prism. You are given a <strong>0-indexed</strong> <code>n x n</code> integer matrix <code>grid</code> where <code>grid[r][c]</code> represents the <strong>height</strong> of the building located in the block at row <code>r</code> and column <code>c</code>.</p>\n\n<p>A city&#39;s <strong>skyline</strong> is the&nbsp;outer contour formed by all the building when viewing the side of the city from a distance. The <strong>skyline</strong> from each cardinal direction north, east, south, and west may be different.</p>\n\n<p>We are allowed to increase the height of <strong>any number of buildings by any amount</strong> (the amount can be different per building). The height of a <code>0</code>-height building can also be increased. However, increasing the height of a building should <strong>not</strong> affect the city&#39;s <strong>skyline</strong> from any cardinal direction.</p>\n\n<p>Return <em>the <strong>maximum total sum</strong> that the height of the buildings can be increased by <strong>without</strong> changing the city&#39;s <strong>skyline</strong> from any cardinal direction</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/21/807-ex1.png\" style=\"width: 700px; height: 603px;\" />\n<pre>\n<strong>Input:</strong> grid = [[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]\n<strong>Output:</strong> 35\n<strong>Explanation:</strong> The building heights are shown in the center of the above image.\nThe skylines when viewed from each cardinal direction are drawn in red.\nThe grid after increasing the height of buildings without affecting skylines is:\ngridNew = [ [8, 4, 8, 7],\n            [7, 4, 7, 7],\n            [9, 4, 8, 7],\n            [3, 3, 3, 3] ]\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[0,0,0],[0,0,0],[0,0,0]]\n<strong>Output:</strong> 0\n<strong>Explanation:</strong> Increasing the height of any building will result in the skyline changing.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == grid.length</code></li>\n\t<li><code>n == grid[r].length</code></li>\n\t<li><code>2 &lt;= n &lt;= 50</code></li>\n\t<li><code>0 &lt;= grid[r][c] &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[[3,0,8,4],[2,4,5,7],[9,2,6,3],[0,3,1,0]]\n[[0,0,0],[0,0,0],[0,0,0]]"
+  },
+  "808": {
+    "content": "<h2>Number of Matching Subsequences</h2>\n<p>This problem is frequently asked by Salesforce, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "811": {
     "content": "<p>A website domain <code>&quot;discuss.leetcode.com&quot;</code> consists of various subdomains. At the top level, we have <code>&quot;com&quot;</code>, at the next level, we have <code>&quot;leetcode.com&quot;</code>&nbsp;and at the lowest level, <code>&quot;discuss.leetcode.com&quot;</code>. When we visit a domain like <code>&quot;discuss.leetcode.com&quot;</code>, we will also visit the parent domains <code>&quot;leetcode.com&quot;</code> and <code>&quot;com&quot;</code> implicitly.</p>\n\n<p>A <strong>count-paired domain</strong> is a domain that has one of the two formats <code>&quot;rep d1.d2.d3&quot;</code> or <code>&quot;rep d1.d2&quot;</code> where <code>rep</code> is the number of visits to the domain and <code>d1.d2.d3</code> is the domain itself.</p>\n\n<ul>\n\t<li>For example, <code>&quot;9001 discuss.leetcode.com&quot;</code> is a <strong>count-paired domain</strong> that indicates that <code>discuss.leetcode.com</code> was visited <code>9001</code> times.</li>\n</ul>\n\n<p>Given an array of <strong>count-paired domains</strong> <code>cpdomains</code>, return <em>an array of the <strong>count-paired domains</strong> of each subdomain in the input</em>. You may return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> cpdomains = [&quot;9001 discuss.leetcode.com&quot;]\n<strong>Output:</strong> [&quot;9001 leetcode.com&quot;,&quot;9001 discuss.leetcode.com&quot;,&quot;9001 com&quot;]\n<strong>Explanation:</strong> We only have one website domain: &quot;discuss.leetcode.com&quot;.\nAs discussed above, the subdomain &quot;leetcode.com&quot; and &quot;com&quot; will also be visited. So they will all be visited 9001 times.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> cpdomains = [&quot;900 google.mail.com&quot;, &quot;50 yahoo.com&quot;, &quot;1 intel.mail.com&quot;, &quot;5 wiki.org&quot;]\n<strong>Output:</strong> [&quot;901 mail.com&quot;,&quot;50 yahoo.com&quot;,&quot;900 google.mail.com&quot;,&quot;5 wiki.org&quot;,&quot;5 org&quot;,&quot;1 intel.mail.com&quot;,&quot;951 com&quot;]\n<strong>Explanation:</strong> We will visit &quot;google.mail.com&quot; 900 times, &quot;yahoo.com&quot; 50 times, &quot;intel.mail.com&quot; once and &quot;wiki.org&quot; 5 times.\nFor the subdomains, we will visit &quot;mail.com&quot; 900 + 1 = 901 times, &quot;com&quot; 900 + 50 + 1 = 951 times, and &quot;org&quot; 5 times.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= cpdomain.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= cpdomain[i].length &lt;= 100</code></li>\n\t<li><code>cpdomain[i]</code> follows either the <code>&quot;rep<sub>i</sub> d1<sub>i</sub>.d2<sub>i</sub>.d3<sub>i</sub>&quot;</code> format or the <code>&quot;rep<sub>i</sub> d1<sub>i</sub>.d2<sub>i</sub>&quot;</code> format.</li>\n\t<li><code>rep<sub>i</sub></code> is an integer in the range <code>[1, 10<sup>4</sup>]</code>.</li>\n\t<li><code>d1<sub>i</sub></code>, <code>d2<sub>i</sub></code>, and <code>d3<sub>i</sub></code> consist of lowercase English letters.</li>\n</ul>\n",
@@ -1911,6 +2579,10 @@ const DESCRIPTIONS = {
     "content": "<p>A <strong>valid encoding</strong> of an array of <code>words</code> is any reference string <code>s</code> and array of indices <code>indices</code> such that:</p>\n\n<ul>\n\t<li><code>words.length == indices.length</code></li>\n\t<li>The reference string <code>s</code> ends with the <code>&#39;#&#39;</code> character.</li>\n\t<li>For each index <code>indices[i]</code>, the <strong>substring</strong> of <code>s</code> starting from <code>indices[i]</code> and up to (but not including) the next <code>&#39;#&#39;</code> character is equal to <code>words[i]</code>.</li>\n</ul>\n\n<p>Given an array of <code>words</code>, return <em>the <strong>length of the shortest reference string</strong> </em><code>s</code><em> possible of any <strong>valid encoding</strong> of </em><code>words</code><em>.</em></p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;time&quot;, &quot;me&quot;, &quot;bell&quot;]\n<strong>Output:</strong> 10\n<strong>Explanation:</strong> A valid encoding would be s = <code>&quot;time#bell#&quot; and indices = [0, 2, 5</code>].\nwords[0] = &quot;time&quot;, the substring of s starting from indices[0] = 0 to the next &#39;#&#39; is underlined in &quot;<u>time</u>#bell#&quot;\nwords[1] = &quot;me&quot;, the substring of s starting from indices[1] = 2 to the next &#39;#&#39; is underlined in &quot;ti<u>me</u>#bell#&quot;\nwords[2] = &quot;bell&quot;, the substring of s starting from indices[2] = 5 to the next &#39;#&#39; is underlined in &quot;time#<u>bell</u>#&quot;\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> words = [&quot;t&quot;]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> A valid encoding would be s = &quot;t#&quot; and indices = [0].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= words.length &lt;= 2000</code></li>\n\t<li><code>1 &lt;= words[i].length &lt;= 7</code></li>\n\t<li><code>words[i]</code> consists of only lowercase letters.</li>\n</ul>\n",
     "testcase": "[\"time\",\"me\",\"bell\"]\n[\"t\"]"
   },
+  "821": {
+    "content": "<h2>Bricks Falling When Hit</h2>\n<p>This problem is frequently asked by Snap, Tower Research Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "824": {
     "content": "<p>You are given a string <code>sentence</code> that consist of words separated by spaces. Each word consists of lowercase and uppercase letters only.</p>\n\n<p>We would like to convert the sentence to &quot;Goat Latin&quot; (a made-up language similar to Pig Latin.) The rules of Goat Latin are as follows:</p>\n\n<ul>\n\t<li>If a word begins with a vowel (<code>&#39;a&#39;</code>, <code>&#39;e&#39;</code>, <code>&#39;i&#39;</code>, <code>&#39;o&#39;</code>, or <code>&#39;u&#39;</code>), append <code>&quot;ma&quot;</code> to the end of the word.\n\n\t<ul>\n\t\t<li>For example, the word <code>&quot;apple&quot;</code> becomes <code>&quot;applema&quot;</code>.</li>\n\t</ul>\n\t</li>\n\t<li>If a word begins with a consonant (i.e., not a vowel), remove the first letter and append it to the end, then add <code>&quot;ma&quot;</code>.\n\t<ul>\n\t\t<li>For example, the word <code>&quot;goat&quot;</code> becomes <code>&quot;oatgma&quot;</code>.</li>\n\t</ul>\n\t</li>\n\t<li>Add one letter <code>&#39;a&#39;</code> to the end of each word per its word index in the sentence, starting with <code>1</code>.\n\t<ul>\n\t\t<li>For example, the first word gets <code>&quot;a&quot;</code> added to the end, the second word gets <code>&quot;aa&quot;</code> added to the end, and so on.</li>\n\t</ul>\n\t</li>\n</ul>\n\n<p>Return<em> the final sentence representing the conversion from sentence to Goat Latin</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> sentence = \"I speak Goat Latin\"\n<strong>Output:</strong> \"Imaa peaksmaaa oatGmaaaa atinLmaaaaa\"\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> sentence = \"The quick brown fox jumped over the lazy dog\"\n<strong>Output:</strong> \"heTmaa uickqmaaa rownbmaaaa oxfmaaaaa umpedjmaaaaaa overmaaaaaaa hetmaaaaaaaa azylmaaaaaaaaa ogdmaaaaaaaaaa\"\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= sentence.length &lt;= 150</code></li>\n\t<li><code>sentence</code> consists of English letters and spaces.</li>\n\t<li><code>sentence</code> has no leading or trailing spaces.</li>\n\t<li>All the words in <code>sentence</code> are separated by a single space.</li>\n</ul>\n",
     "testcase": "\"I speak Goat Latin\"\n\"The quick brown fox jumped over the lazy dog\""
@@ -1923,6 +2595,14 @@ const DESCRIPTIONS = {
     "content": "<p>You are given an <code>n x n</code> binary matrix <code>grid</code>. You are allowed to change <strong>at most one</strong> <code>0</code> to be <code>1</code>.</p>\n\n<p>Return <em>the size of the largest <strong>island</strong> in</em> <code>grid</code> <em>after applying this operation</em>.</p>\n\n<p>An <strong>island</strong> is a 4-directionally connected group of <code>1</code>s.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[1,0],[0,1]]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> Change one 0 to 1 and connect two 1s, then we get an island with area = 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[1,1],[1,0]]\n<strong>Output:</strong> 4\n<strong>Explanation: </strong>Change the 0 to 1 and make the island bigger, only one island with area = 4.</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> grid = [[1,1],[1,1]]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Can&#39;t change any 0 to 1, only one island with area = 4.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == grid.length</code></li>\n\t<li><code>n == grid[i].length</code></li>\n\t<li><code>1 &lt;= n &lt;= 500</code></li>\n\t<li><code>grid[i][j]</code> is either <code>0</code> or <code>1</code>.</li>\n</ul>\n",
     "testcase": "[[1,0],[0,1]]\n[[1,1],[1,0]]\n[[1,1],[1,1]]"
   },
+  "828": {
+    "content": "<h2>Chalkboard XOR Game</h2>\n<p>This problem is frequently asked by HashedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "832": {
+    "content": "<h2>Binary Tree Pruning</h2>\n<p>This problem is frequently asked by Hulu.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "833": {
     "content": "<p>You are given a <strong>0-indexed</strong> string <code>s</code> that you must perform <code>k</code> replacement operations on. The replacement operations are given as three <strong>0-indexed</strong> parallel arrays, <code>indices</code>, <code>sources</code>, and <code>targets</code>, all of length <code>k</code>.</p>\n\n<p>To complete the <code>i<sup>th</sup></code> replacement operation:</p>\n\n<ol>\n\t<li>Check if the <strong>substring</strong> <code>sources[i]</code> occurs at index <code>indices[i]</code> in the <strong>original string</strong> <code>s</code>.</li>\n\t<li>If it does not occur, <strong>do nothing</strong>.</li>\n\t<li>Otherwise if it does occur, <strong>replace</strong> that substring with <code>targets[i]</code>.</li>\n</ol>\n\n<p>For example, if <code>s = &quot;<u>ab</u>cd&quot;</code>, <code>indices[i] = 0</code>, <code>sources[i] = &quot;ab&quot;</code>, and <code>targets[i] = &quot;eee&quot;</code>, then the result of this replacement will be <code>&quot;<u>eee</u>cd&quot;</code>.</p>\n\n<p>All replacement operations must occur <strong>simultaneously</strong>, meaning the replacement operations should not affect the indexing of each other. The testcases will be generated such that the replacements will <strong>not overlap</strong>.</p>\n\n<ul>\n\t<li>For example, a testcase with <code>s = &quot;abc&quot;</code>, <code>indices = [0, 1]</code>, and <code>sources = [&quot;ab&quot;,&quot;bc&quot;]</code> will not be generated because the <code>&quot;ab&quot;</code> and <code>&quot;bc&quot;</code> replacements overlap.</li>\n</ul>\n\n<p>Return <em>the <strong>resulting string</strong> after performing all replacement operations on </em><code>s</code>.</p>\n\n<p>A <strong>substring</strong> is a contiguous sequence of characters in a string.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/12/833-ex1.png\" style=\"width: 411px; height: 251px;\" />\n<pre>\n<strong>Input:</strong> s = &quot;abcd&quot;, indices = [0, 2], sources = [&quot;a&quot;, &quot;cd&quot;], targets = [&quot;eee&quot;, &quot;ffff&quot;]\n<strong>Output:</strong> &quot;eeebffff&quot;\n<strong>Explanation:</strong>\n&quot;a&quot; occurs at index 0 in s, so we replace it with &quot;eee&quot;.\n&quot;cd&quot; occurs at index 2 in s, so we replace it with &quot;ffff&quot;.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/06/12/833-ex2-1.png\" style=\"width: 411px; height: 251px;\" />\n<pre>\n<strong>Input:</strong> s = &quot;abcd&quot;, indices = [0, 2], sources = [&quot;ab&quot;,&quot;ec&quot;], targets = [&quot;eee&quot;,&quot;ffff&quot;]\n<strong>Output:</strong> &quot;eeecd&quot;\n<strong>Explanation:</strong>\n&quot;ab&quot; occurs at index 0 in s, so we replace it with &quot;eee&quot;.\n&quot;ec&quot; does not occur at index 2 in s, so we do nothing.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>k == indices.length == sources.length == targets.length</code></li>\n\t<li><code>1 &lt;= k &lt;= 100</code></li>\n\t<li><code>0 &lt;= indexes[i] &lt; s.length</code></li>\n\t<li><code>1 &lt;= sources[i].length, targets[i].length &lt;= 50</code></li>\n\t<li><code>s</code> consists of only lowercase English letters.</li>\n\t<li><code>sources[i]</code> and <code>targets[i]</code> consist of only lowercase English letters.</li>\n</ul>\n",
     "testcase": "\"abcd\"\n[0, 2]\n[\"a\", \"cd\"]\n[\"eee\", \"ffff\"]\n\"abcd\"\n[0, 2]\n[\"ab\",\"ec\"]\n[\"eee\",\"ffff\"]"
@@ -1930,6 +2610,10 @@ const DESCRIPTIONS = {
   "836": {
     "content": "<p>An axis-aligned rectangle is represented as a list <code>[x1, y1, x2, y2]</code>, where <code>(x1, y1)</code> is the coordinate of its bottom-left corner, and <code>(x2, y2)</code> is the coordinate of its top-right corner. Its top and bottom edges are parallel to the X-axis, and its left and right edges are parallel to the Y-axis.</p>\n\n<p>Two rectangles overlap if the area of their intersection is <strong>positive</strong>. To be clear, two rectangles that only touch at the corner or edges do not overlap.</p>\n\n<p>Given two axis-aligned rectangles <code>rec1</code> and <code>rec2</code>, return <code>true</code><em> if they overlap, otherwise return </em><code>false</code>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<pre><strong>Input:</strong> rec1 = [0,0,2,2], rec2 = [1,1,3,3]\n<strong>Output:</strong> true\n</pre><p><strong class=\"example\">Example 2:</strong></p>\n<pre><strong>Input:</strong> rec1 = [0,0,1,1], rec2 = [1,0,2,1]\n<strong>Output:</strong> false\n</pre><p><strong class=\"example\">Example 3:</strong></p>\n<pre><strong>Input:</strong> rec1 = [0,0,1,1], rec2 = [2,2,3,3]\n<strong>Output:</strong> false\n</pre>\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>rec1.length == 4</code></li>\n\t<li><code>rec2.length == 4</code></li>\n\t<li><code>-10<sup>9</sup> &lt;= rec1[i], rec2[i] &lt;= 10<sup>9</sup></code></li>\n\t<li><code>rec1</code> and <code>rec2</code> represent a valid rectangle with a non-zero area.</li>\n</ul>\n",
     "testcase": "[0,0,2,2]\n[1,1,3,3]\n[0,0,1,1]\n[1,0,2,1]\n[0,0,1,1]\n[2,2,3,3]"
+  },
+  "837": {
+    "content": "<h2>Most Common Word</h2>\n<p>This problem is frequently asked by Datadog.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "841": {
     "content": "<p>There are <code>n</code> rooms labeled from <code>0</code> to <code>n - 1</code>&nbsp;and all the rooms are locked except for room <code>0</code>. Your goal is to visit all the rooms. However, you cannot enter a locked room without having its key.</p>\n\n<p>When you visit a room, you may find a set of <strong>distinct keys</strong> in it. Each key has a number on it, denoting which room it unlocks, and you can take all of them with you to unlock the other rooms.</p>\n\n<p>Given an array <code>rooms</code> where <code>rooms[i]</code> is the set of keys that you can obtain if you visited room <code>i</code>, return <code>true</code> <em>if you can visit <strong>all</strong> the rooms, or</em> <code>false</code> <em>otherwise</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> rooms = [[1],[2],[3],[]]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> \nWe visit room 0 and pick up key 1.\nWe then visit room 1 and pick up key 2.\nWe then visit room 2 and pick up key 3.\nWe then visit room 3.\nSince we were able to visit every room, we return true.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> rooms = [[1,3],[3,0,1],[2],[0]]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> We can not enter room number 2 since the only key that unlocks it is in that room.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>n == rooms.length</code></li>\n\t<li><code>2 &lt;= n &lt;= 1000</code></li>\n\t<li><code>0 &lt;= rooms[i].length &lt;= 1000</code></li>\n\t<li><code>1 &lt;= sum(rooms[i].length) &lt;= 3000</code></li>\n\t<li><code>0 &lt;= rooms[i][j] &lt; n</code></li>\n\t<li>All the values of <code>rooms[i]</code> are <strong>unique</strong>.</li>\n</ul>\n",
@@ -1947,17 +2631,41 @@ const DESCRIPTIONS = {
     "content": "<p>You are given an integer <strong>mountain</strong> array <code>arr</code> of length <code>n</code> where the values increase to a <strong>peak element</strong> and then decrease.</p>\n\n<p>Return the index of the peak element.</p>\n\n<p>Your task is to solve it in <code>O(log(n))</code> time complexity.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">arr = [0,1,0]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">arr = [0,2,1,0]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<div class=\"example-block\">\n<p><strong>Input:</strong> <span class=\"example-io\">arr = [0,10,5,2]</span></p>\n\n<p><strong>Output:</strong> <span class=\"example-io\">1</span></p>\n</div>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>3 &lt;= arr.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= arr[i] &lt;= 10<sup>6</sup></code></li>\n\t<li><code>arr</code> is <strong>guaranteed</strong> to be a mountain array.</li>\n</ul>\n",
     "testcase": "[0,1,0]\n[0,2,1,0]\n[0,10,5,2]"
   },
+  "853": {
+    "content": "<h2>Most Profit Assigning Work</h2>\n<p>This problem is frequently asked by DoorDash, NetEase.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "856": {
     "content": "<p>Given a balanced parentheses string <code>s</code>, return <em>the <strong>score</strong> of the string</em>.</p>\n\n<p>The <strong>score</strong> of a balanced parentheses string is based on the following rule:</p>\n\n<ul>\n\t<li><code>&quot;()&quot;</code> has score <code>1</code>.</li>\n\t<li><code>AB</code> has score <code>A + B</code>, where <code>A</code> and <code>B</code> are balanced parentheses strings.</li>\n\t<li><code>(A)</code> has score <code>2 * A</code>, where <code>A</code> is a balanced parentheses string.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;()&quot;\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;(())&quot;\n<strong>Output:</strong> 2\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;()()&quot;\n<strong>Output:</strong> 2\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>2 &lt;= s.length &lt;= 50</code></li>\n\t<li><code>s</code> consists of only <code>&#39;(&#39;</code> and <code>&#39;)&#39;</code>.</li>\n\t<li><code>s</code> is a balanced parentheses string.</li>\n</ul>\n",
     "testcase": "\"()\"\n\"(())\"\n\"()()\""
+  },
+  "858": {
+    "content": "<h2>Masking Personal Information</h2>\n<p>This problem is frequently asked by X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "859": {
     "content": "<p>Given two strings <code>s</code> and <code>goal</code>, return <code>true</code><em> if you can swap two letters in </em><code>s</code><em> so the result is equal to </em><code>goal</code><em>, otherwise, return </em><code>false</code><em>.</em></p>\n\n<p>Swapping letters is defined as taking two indices <code>i</code> and <code>j</code> (0-indexed) such that <code>i != j</code> and swapping the characters at <code>s[i]</code> and <code>s[j]</code>.</p>\n\n<ul>\n\t<li>For example, swapping at indices <code>0</code> and <code>2</code> in <code>&quot;abcd&quot;</code> results in <code>&quot;cbad&quot;</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;ab&quot;, goal = &quot;ba&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You can swap s[0] = &#39;a&#39; and s[1] = &#39;b&#39; to get &quot;ba&quot;, which is equal to goal.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;ab&quot;, goal = &quot;ab&quot;\n<strong>Output:</strong> false\n<strong>Explanation:</strong> The only letters you can swap are s[0] = &#39;a&#39; and s[1] = &#39;b&#39;, which results in &quot;ba&quot; != goal.\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;aa&quot;, goal = &quot;aa&quot;\n<strong>Output:</strong> true\n<strong>Explanation:</strong> You can swap s[0] = &#39;a&#39; and s[1] = &#39;a&#39; to get &quot;aa&quot;, which is equal to goal.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length, goal.length &lt;= 2 * 10<sup>4</sup></code></li>\n\t<li><code>s</code> and <code>goal</code> consist of lowercase letters.</li>\n</ul>\n",
     "testcase": "\"ab\"\n\"ba\"\n\"ab\"\n\"ab\"\n\"aa\"\n\"aa\""
   },
+  "861": {
+    "content": "<h2>Flipping an Image</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "863": {
     "content": "<p>Given the <code>root</code> of a binary tree, the value of a target node <code>target</code>, and an integer <code>k</code>, return <em>an array of the values of all nodes that have a distance </em><code>k</code><em> from the target node.</em></p>\n\n<p>You can return the answer in <strong>any order</strong>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/28/sketch0.png\" style=\"width: 500px; height: 429px;\" />\n<pre>\n<strong>Input:</strong> root = [3,5,1,6,2,0,8,null,null,7,4], target = 5, k = 2\n<strong>Output:</strong> [7,4,1]\nExplanation: The nodes that are a distance 2 from the target node (with value 5) have values 7, 4, and 1.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> root = [1], target = 1, k = 3\n<strong>Output:</strong> []\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree is in the range <code>[1, 500]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 500</code></li>\n\t<li>All the values <code>Node.val</code> are <strong>unique</strong>.</li>\n\t<li><code>target</code> is the value of one of the nodes in the tree.</li>\n\t<li><code>0 &lt;= k &lt;= 1000</code></li>\n</ul>\n",
     "testcase": "[3,5,1,6,2,0,8,null,null,7,4]\n5\n2\n[1]\n1\n3"
+  },
+  "865": {
+    "content": "<h2>Robot Room Cleaner</h2>\n<p>This problem is frequently asked by Citadel, DRW, Two Sigma.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "869": {
+    "content": "<h2>Similar String Groups</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "873": {
+    "content": "<h2>Guess the Word</h2>\n<p>This problem is frequently asked by Dropbox, Verily, Verkada.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "875": {
     "content": "<p>Koko loves to eat bananas. There are <code>n</code> piles of bananas, the <code>i<sup>th</sup></code> pile has <code>piles[i]</code> bananas. The guards have gone and will come back in <code>h</code> hours.</p>\n\n<p>Koko can decide her bananas-per-hour eating speed of <code>k</code>. Each hour, she chooses some pile of bananas and eats <code>k</code> bananas from that pile. If the pile has less than <code>k</code> bananas, she eats all of them instead and will not eat any more bananas during this hour.</p>\n\n<p>Koko likes to eat slowly but still wants to finish eating all the bananas before the guards return.</p>\n\n<p>Return <em>the minimum integer</em> <code>k</code> <em>such that she can eat all the bananas within</em> <code>h</code> <em>hours</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [3,6,7,11], h = 8\n<strong>Output:</strong> 4\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [30,11,23,4,20], h = 5\n<strong>Output:</strong> 30\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> piles = [30,11,23,4,20], h = 6\n<strong>Output:</strong> 23\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= piles.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>piles.length &lt;= h &lt;= 10<sup>9</sup></code></li>\n\t<li><code>1 &lt;= piles[i] &lt;= 10<sup>9</sup></code></li>\n</ul>\n",
@@ -1967,25 +2675,93 @@ const DESCRIPTIONS = {
     "content": "<p>Given the <code>head</code> of a singly linked list, return <em>the middle node of the linked list</em>.</p>\n\n<p>If there are two middle nodes, return <strong>the second middle</strong> node.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/07/23/lc-midlist1.jpg\" style=\"width: 544px; height: 65px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5]\n<strong>Output:</strong> [3,4,5]\n<strong>Explanation:</strong> The middle node of the list is node 3.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/07/23/lc-midlist2.jpg\" style=\"width: 664px; height: 65px;\" />\n<pre>\n<strong>Input:</strong> head = [1,2,3,4,5,6]\n<strong>Output:</strong> [4,5,6]\n<strong>Explanation:</strong> Since the list has two middle nodes with values 3 and 4, we return the second one.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the list is in the range <code>[1, 100]</code>.</li>\n\t<li><code>1 &lt;= Node.val &lt;= 100</code></li>\n</ul>\n",
     "testcase": "[1,2,3,4,5]\n[1,2,3,4,5,6]"
   },
+  "881": {
+    "content": "<h2>Loud and Rich</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "883": {
+    "content": "<h2>Car Fleet</h2>\n<p>This problem is frequently asked by BharatPe, BNY Mellon, GE Healthcare.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "884": {
+    "content": "<h2>K-Similar Strings</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "885": {
+    "content": "<h2>Exam Room</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "886": {
     "content": "<p>We want to split a group of <code>n</code> people (labeled from <code>1</code> to <code>n</code>) into two groups of <strong>any size</strong>. Each person may dislike some other people, and they should not go into the same group.</p>\n\n<p>Given the integer <code>n</code> and the array <code>dislikes</code> where <code>dislikes[i] = [a<sub>i</sub>, b<sub>i</sub>]</code> indicates that the person labeled <code>a<sub>i</sub></code> does not like the person labeled <code>b<sub>i</sub></code>, return <code>true</code> <em>if it is possible to split everyone into two groups in this way</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 4, dislikes = [[1,2],[1,3],[2,4]]\n<strong>Output:</strong> true\n<strong>Explanation:</strong> The first group has [1,4], and the second group has [2,3].\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> n = 3, dislikes = [[1,2],[1,3],[2,3]]\n<strong>Output:</strong> false\n<strong>Explanation:</strong> We need at least 3 groups to divide them. We cannot put them in two groups.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= n &lt;= 2000</code></li>\n\t<li><code>0 &lt;= dislikes.length &lt;= 10<sup>4</sup></code></li>\n\t<li><code>dislikes[i].length == 2</code></li>\n\t<li><code>1 &lt;= a<sub>i</sub> &lt; b<sub>i</sub> &lt;= n</code></li>\n\t<li>All the pairs of <code>dislikes</code> are <strong>unique</strong>.</li>\n</ul>\n",
     "testcase": "4\n[[1,2],[1,3],[2,4]]\n3\n[[1,2],[1,3],[2,3]]"
+  },
+  "890": {
+    "content": "<h2>Lemonade Change</h2>\n<p>This problem is frequently asked by Zalando.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "891": {
+    "content": "<h2>Score After Flipping Matrix</h2>\n<p>This problem is frequently asked by IIT Bombay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "895": {
     "content": "<p>Design a stack-like data structure to push elements to the stack and pop the most frequent element from the stack.</p>\n\n<p>Implement the <code>FreqStack</code> class:</p>\n\n<ul>\n\t<li><code>FreqStack()</code> constructs an empty frequency stack.</li>\n\t<li><code>void push(int val)</code> pushes an integer <code>val</code> onto the top of the stack.</li>\n\t<li><code>int pop()</code> removes and returns the most frequent element in the stack.\n\t<ul>\n\t\t<li>If there is a tie for the most frequent element, the element closest to the stack&#39;s top is removed and returned.</li>\n\t</ul>\n\t</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;FreqStack&quot;, &quot;push&quot;, &quot;push&quot;, &quot;push&quot;, &quot;push&quot;, &quot;push&quot;, &quot;push&quot;, &quot;pop&quot;, &quot;pop&quot;, &quot;pop&quot;, &quot;pop&quot;]\n[[], [5], [7], [5], [7], [4], [5], [], [], [], []]\n<strong>Output</strong>\n[null, null, null, null, null, null, null, 5, 7, 5, 4]\n\n<strong>Explanation</strong>\nFreqStack freqStack = new FreqStack();\nfreqStack.push(5); // The stack is [5]\nfreqStack.push(7); // The stack is [5,7]\nfreqStack.push(5); // The stack is [5,7,5]\nfreqStack.push(7); // The stack is [5,7,5,7]\nfreqStack.push(4); // The stack is [5,7,5,7,4]\nfreqStack.push(5); // The stack is [5,7,5,7,4,5]\nfreqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,5,7,4].\nfreqStack.pop();   // return 7, as 5 and 7 is the most frequent, but 7 is closest to the top. The stack becomes [5,7,5,4].\nfreqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,4].\nfreqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>0 &lt;= val &lt;= 10<sup>9</sup></code></li>\n\t<li>At most <code>2 * 10<sup>4</sup></code> calls will be made to <code>push</code> and <code>pop</code>.</li>\n\t<li>It is guaranteed that there will be at least one element in the stack before calling <code>pop</code>.</li>\n</ul>\n",
     "testcase": "[\"FreqStack\",\"push\",\"push\",\"push\",\"push\",\"push\",\"push\",\"pop\",\"pop\",\"pop\",\"pop\"]\n[[],[5],[7],[5],[7],[4],[5],[],[],[],[]]"
   },
+  "896": {
+    "content": "<h2>Smallest Subtree with all the Deepest Nodes</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "898": {
+    "content": "<h2>Transpose Matrix</h2>\n<p>This problem is frequently asked by ConsultAdd, Verkada.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "899": {
+    "content": "<h2>Binary Gap</h2>\n<p>This problem is frequently asked by eBay, X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "901": {
     "content": "<p>Design an algorithm that collects daily price quotes for some stock and returns <strong>the span</strong> of that stock&#39;s price for the current day.</p>\n\n<p>The <strong>span</strong> of the stock&#39;s price in one day is the maximum number of consecutive days (starting from that day and going backward) for which the stock price was less than or equal to the price of that day.</p>\n\n<ul>\n\t<li>For example, if the prices of the stock in the last four days is <code>[7,2,1,2]</code> and the price of the stock today is <code>2</code>, then the span of today is <code>4</code> because starting from today, the price of the stock was less than or equal <code>2</code> for <code>4</code> consecutive days.</li>\n\t<li>Also, if the prices of the stock in the last four days is <code>[7,34,1,2]</code> and the price of the stock today is <code>8</code>, then the span of today is <code>3</code> because starting from today, the price of the stock was less than or equal <code>8</code> for <code>3</code> consecutive days.</li>\n</ul>\n\n<p>Implement the <code>StockSpanner</code> class:</p>\n\n<ul>\n\t<li><code>StockSpanner()</code> Initializes the object of the class.</li>\n\t<li><code>int next(int price)</code> Returns the <strong>span</strong> of the stock&#39;s price given that today&#39;s price is <code>price</code>.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input</strong>\n[&quot;StockSpanner&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;, &quot;next&quot;]\n[[], [100], [80], [60], [70], [60], [75], [85]]\n<strong>Output</strong>\n[null, 1, 1, 1, 2, 1, 4, 6]\n\n<strong>Explanation</strong>\nStockSpanner stockSpanner = new StockSpanner();\nstockSpanner.next(100); // return 1\nstockSpanner.next(80);  // return 1\nstockSpanner.next(60);  // return 1\nstockSpanner.next(70);  // return 2\nstockSpanner.next(60);  // return 1\nstockSpanner.next(75);  // return 4, because the last 4 prices (including today&#39;s price of 75) were less than or equal to today&#39;s price.\nstockSpanner.next(85);  // return 6\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= price &lt;= 10<sup>5</sup></code></li>\n\t<li>At most <code>10<sup>4</sup></code> calls will be made to <code>next</code>.</li>\n</ul>\n",
     "testcase": "[\"StockSpanner\",\"next\",\"next\",\"next\",\"next\",\"next\",\"next\",\"next\"]\n[[],[100],[80],[60],[70],[60],[75],[85]]"
+  },
+  "902": {
+    "content": "<h2>Minimum Number of Refueling Stops</h2>\n<p>This problem is frequently asked by Barclays, DE Shaw, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "903": {
+    "content": "<h2>Implement Rand10() Using Rand7()</h2>\n<p>This problem is frequently asked by Tencent.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "904": {
     "content": "<p>You are visiting a farm that has a single row of fruit trees arranged from left to right. The trees are represented by an integer array <code>fruits</code> where <code>fruits[i]</code> is the <strong>type</strong> of fruit the <code>i<sup>th</sup></code> tree produces.</p>\n\n<p>You want to collect as much fruit as possible. However, the owner has some strict rules that you must follow:</p>\n\n<ul>\n\t<li>You only have <strong>two</strong> baskets, and each basket can only hold a <strong>single type</strong> of fruit. There is no limit on the amount of fruit each basket can hold.</li>\n\t<li>Starting from any tree of your choice, you must pick <strong>exactly one fruit</strong> from <strong>every</strong> tree (including the start tree) while moving to the right. The picked fruits must fit in one of your baskets.</li>\n\t<li>Once you reach a tree with fruit that cannot fit in your baskets, you must stop.</li>\n</ul>\n\n<p>Given the integer array <code>fruits</code>, return <em>the <strong>maximum</strong> number of fruits you can pick</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> fruits = [<u>1,2,1</u>]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> We can pick from all 3 trees.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> fruits = [0,<u>1,2,2</u>]\n<strong>Output:</strong> 3\n<strong>Explanation:</strong> We can pick from trees [1,2,2].\nIf we had started at the first tree, we would only pick from trees [0,1].\n</pre>\n\n<p><strong class=\"example\">Example 3:</strong></p>\n\n<pre>\n<strong>Input:</strong> fruits = [1,<u>2,3,2,2</u>]\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> We can pick from trees [2,3,2,2].\nIf we had started at the first tree, we would only pick from trees [1,2].\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= fruits.length &lt;= 10<sup>5</sup></code></li>\n\t<li><code>0 &lt;= fruits[i] &lt; fruits.length</code></li>\n</ul>\n",
     "testcase": "[1,2,1]\n[0,1,2,2]\n[1,2,3,2,2]"
   },
+  "905": {
+    "content": "<h2>Length of Longest Fibonacci Subsequence</h2>\n<p>This problem is frequently asked by Baidu.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "906": {
+    "content": "<h2>Walking Robot Simulation</h2>\n<p>This problem is frequently asked by Jane Street, PhonePe, Shopify.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "909": {
+    "content": "<h2>Stone Game</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "912": {
     "content": "<p>Given an array of integers <code>nums</code>, sort the array in ascending order and return it.</p>\n\n<p>You must solve the problem <strong>without using any built-in</strong> functions in <code>O(nlog(n))</code> time complexity and with the smallest space complexity possible.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,2,3,1]\n<strong>Output:</strong> [1,2,3,5]\n<strong>Explanation:</strong> After sorting the array, the positions of some numbers are not changed (for example, 2 and 3), while the positions of other numbers are changed (for example, 1 and 5).\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> nums = [5,1,1,2,0,0]\n<strong>Output:</strong> [0,0,1,1,2,5]\n<strong>Explanation:</strong> Note that the values of nums are not necessarily unique.\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= nums.length &lt;= 5 * 10<sup>4</sup></code></li>\n\t<li><code>-5 * 10<sup>4</sup> &lt;= nums[i] &lt;= 5 * 10<sup>4</sup></code></li>\n</ul>\n",
     "testcase": "[5,2,3,1]\n[5,1,1,2,0,0]"
+  },
+  "916": {
+    "content": "<h2>Decoded String at Index</h2>\n<p>This problem is frequently asked by National Instruments, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "917": {
+    "content": "<h2>Boats to Save People</h2>\n<p>This problem is frequently asked by Atlassian, Deutsche Bank, Docusign.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "918": {
+    "content": "<h2>Reachable Nodes In Subdivided Graph</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
   },
   "919": {
     "content": "<p>A <strong>complete binary tree</strong> is a binary tree in which every level, except possibly the last, is completely filled, and all nodes are as far left as possible.</p>\n\n<p>Design an algorithm to insert a new node to a complete binary tree keeping it complete after the insertion.</p>\n\n<p>Implement the <code>CBTInserter</code> class:</p>\n\n<ul>\n\t<li><code>CBTInserter(TreeNode root)</code> Initializes the data structure with the <code>root</code> of the complete binary tree.</li>\n\t<li><code>int insert(int v)</code> Inserts a <code>TreeNode</code> into the tree with value <code>Node.val == val</code> so that the tree remains complete, and returns the value of the parent of the inserted <code>TreeNode</code>.</li>\n\t<li><code>TreeNode get_root()</code> Returns the root node of the tree.</li>\n</ul>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n<img alt=\"\" src=\"https://assets.leetcode.com/uploads/2021/08/03/lc-treeinsert.jpg\" style=\"width: 500px; height: 143px;\" />\n<pre>\n<strong>Input</strong>\n[&quot;CBTInserter&quot;, &quot;insert&quot;, &quot;insert&quot;, &quot;get_root&quot;]\n[[[1, 2]], [3], [4], []]\n<strong>Output</strong>\n[null, 1, 2, [1, 2, 3, 4]]\n\n<strong>Explanation</strong>\nCBTInserter cBTInserter = new CBTInserter([1, 2]);\ncBTInserter.insert(3);  // return 1\ncBTInserter.insert(4);  // return 2\ncBTInserter.get_root(); // return [1, 2, 3, 4]\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li>The number of nodes in the tree will be in the range <code>[1, 1000]</code>.</li>\n\t<li><code>0 &lt;= Node.val &lt;= 5000</code></li>\n\t<li><code>root</code> is a complete binary tree.</li>\n\t<li><code>0 &lt;= val &lt;= 5000</code></li>\n\t<li>At most <code>10<sup>4</sup></code> calls will be made to <code>insert</code> and <code>get_root</code>.</li>\n</ul>\n",
@@ -1995,159 +2771,4413 @@ const DESCRIPTIONS = {
     "content": "<p>A parentheses string is valid if and only if:</p>\n\n<ul>\n\t<li>It is the empty string,</li>\n\t<li>It can be written as <code>AB</code> (<code>A</code> concatenated with <code>B</code>), where <code>A</code> and <code>B</code> are valid strings, or</li>\n\t<li>It can be written as <code>(A)</code>, where <code>A</code> is a valid string.</li>\n</ul>\n\n<p>You are given a parentheses string <code>s</code>. In one move, you can insert a parenthesis at any position of the string.</p>\n\n<ul>\n\t<li>For example, if <code>s = &quot;()))&quot;</code>, you can insert an opening parenthesis to be <code>&quot;(<strong>(</strong>)))&quot;</code> or a closing parenthesis to be <code>&quot;())<strong>)</strong>)&quot;</code>.</li>\n</ul>\n\n<p>Return <em>the minimum number of moves required to make </em><code>s</code><em> valid</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;())&quot;\n<strong>Output:</strong> 1\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> s = &quot;(((&quot;\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= s.length &lt;= 1000</code></li>\n\t<li><code>s[i]</code> is either <code>&#39;(&#39;</code> or <code>&#39;)&#39;</code>.</li>\n</ul>\n",
     "testcase": "\"())\"\n\"(((\""
   },
+  "924": {
+    "content": "<h2>Fair Candy Swap</h2>\n<p>This problem is frequently asked by Odoo, Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "926": {
+    "content": "<h2>Find and Replace Pattern</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "929": {
     "content": "<p>Every <strong>valid email</strong> consists of a <strong>local name</strong> and a <strong>domain name</strong>, separated by the <code>&#39;@&#39;</code> sign. Besides lowercase letters, the email may contain one or more <code>&#39;.&#39;</code> or <code>&#39;+&#39;</code>.</p>\n\n<ul>\n\t<li>For example, in <code>&quot;alice@leetcode.com&quot;</code>, <code>&quot;alice&quot;</code> is the <strong>local name</strong>, and <code>&quot;leetcode.com&quot;</code> is the <strong>domain name</strong>.</li>\n</ul>\n\n<p>If you add periods <code>&#39;.&#39;</code> between some characters in the <strong>local name</strong> part of an email address, mail sent there will be forwarded to the same address without dots in the local name. Note that this rule <strong>does not apply</strong> to <strong>domain names</strong>.</p>\n\n<ul>\n\t<li>For example, <code>&quot;alice.z@leetcode.com&quot;</code> and <code>&quot;alicez@leetcode.com&quot;</code> forward to the same email address.</li>\n</ul>\n\n<p>If you add a plus <code>&#39;+&#39;</code> in the <strong>local name</strong>, everything after the first plus sign <strong>will be ignored</strong>. This allows certain emails to be filtered. Note that this rule <strong>does not apply</strong> to <strong>domain names</strong>.</p>\n\n<ul>\n\t<li>For example, <code>&quot;m.y+name@email.com&quot;</code> will be forwarded to <code>&quot;my@email.com&quot;</code>.</li>\n</ul>\n\n<p>It is possible to use both of these rules at the same time.</p>\n\n<p>Given an array of strings <code>emails</code> where we send one email to each <code>emails[i]</code>, return <em>the number of different addresses that actually receive mails</em>.</p>\n\n<p>&nbsp;</p>\n<p><strong class=\"example\">Example 1:</strong></p>\n\n<pre>\n<strong>Input:</strong> emails = [&quot;test.email+alex@leetcode.com&quot;,&quot;test.e.mail+bob.cathy@leetcode.com&quot;,&quot;testemail+david@lee.tcode.com&quot;]\n<strong>Output:</strong> 2\n<strong>Explanation:</strong> &quot;testemail@leetcode.com&quot; and &quot;testemail@lee.tcode.com&quot; actually receive mails.\n</pre>\n\n<p><strong class=\"example\">Example 2:</strong></p>\n\n<pre>\n<strong>Input:</strong> emails = [&quot;a@leetcode.com&quot;,&quot;b@leetcode.com&quot;,&quot;c@leetcode.com&quot;]\n<strong>Output:</strong> 3\n</pre>\n\n<p>&nbsp;</p>\n<p><strong>Constraints:</strong></p>\n\n<ul>\n\t<li><code>1 &lt;= emails.length &lt;= 100</code></li>\n\t<li><code>1 &lt;= emails[i].length &lt;= 100</code></li>\n\t<li><code>emails[i]</code> consist of lowercase English letters, <code>&#39;+&#39;</code>, <code>&#39;.&#39;</code> and <code>&#39;@&#39;</code>.</li>\n\t<li>Each <code>emails[i]</code> contains exactly one <code>&#39;@&#39;</code> character.</li>\n\t<li>All local and domain names are non-empty.</li>\n\t<li>Local names do not start with a <code>&#39;+&#39;</code> character.</li>\n\t<li>Domain names end with the <code>&quot;.com&quot;</code> suffix.</li>\n\t<li>Domain names must contain at least one character before <code>&quot;.com&quot;</code> suffix.</li>\n</ul>\n",
     "testcase": "[\"test.email+alex@leetcode.com\",\"test.e.mail+bob.cathy@leetcode.com\",\"testemail+david@lee.tcode.com\"]\n[\"a@leetcode.com\",\"b@leetcode.com\",\"c@leetcode.com\"]"
   },
-
+  "930": {
+    "content": "<h2>All Possible Full Binary Trees</h2>\n<p>This problem is frequently asked by Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "932": {
+    "content": "<h2>Monotonic Array</h2>\n<p>This problem is frequently asked by Ozon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "934": {
+    "content": "<h2>Bitwise ORs of Subarrays</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "941": {
+    "content": "<h2>Sort Array By Parity</h2>\n<p>This problem is frequently asked by DXC Technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "943": {
+    "content": "<h2>Sum of Subarray Minimums</h2>\n<p>This problem is frequently asked by Avito, Paytm, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "945": {
+    "content": "<h2>Snakes and Ladders</h2>\n<p>This problem is frequently asked by Anduril, Cisco, National Instruments.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "947": {
+    "content": "<h2>Online Election</h2>\n<p>This problem is frequently asked by Atlassian, CARS24.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "953": {
+    "content": "<h2>Reverse Only Letters</h2>\n<p>This problem is frequently asked by Snowflake, Turing, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "954": {
+    "content": "<h2>Maximum Sum Circular Subarray</h2>\n<p>This problem is frequently asked by Flipkart, Two Sigma.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "956": {
+    "content": "<h2>Number of Music Playlists</h2>\n<p>This problem is frequently asked by Coursera.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "959": {
+    "content": "<h2>3Sum With Multiplicity</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "960": {
+    "content": "<h2>Minimize Malware Spread</h2>\n<p>This problem is frequently asked by DoorDash, Dropbox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "962": {
+    "content": "<h2>Flip String to Monotone Increasing</h2>\n<p>This problem is frequently asked by IBM, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "963": {
+    "content": "<h2>Three Equal Parts</h2>\n<p>This problem is frequently asked by Hotstar.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "964": {
+    "content": "<h2>Minimize Malware Spread II</h2>\n<p>This problem is frequently asked by Dropbox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "967": {
+    "content": "<h2>Minimum Falling Path Sum</h2>\n<p>This problem is frequently asked by Dream11, Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "969": {
+    "content": "<h2>Number of Recent Calls</h2>\n<p>This problem is frequently asked by Affirm, Databricks, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "971": {
+    "content": "<h2>Shortest Bridge</h2>\n<p>This problem is frequently asked by Coupang, Docusign, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "972": {
+    "content": "<h2>Knight Dialer</h2>\n<p>This problem is frequently asked by Bridgewater Associates, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "973": {
+    "content": "<h2>Stamping The Sequence</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "974": {
+    "content": "<h2>Reorder Data in Log Files</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "976": {
+    "content": "<h2>Minimum Area Rectangle</h2>\n<p>This problem is frequently asked by ByteDance, Flipkart, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "980": {
+    "content": "<h2>Find the Shortest Superstring</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "981": {
+    "content": "<h2>Delete Columns to Make Sorted</h2>\n<p>This problem is frequently asked by Garmin.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "982": {
+    "content": "<h2>Minimum Increment to Make Array Unique</h2>\n<p>This problem is frequently asked by Coursera, PayPal, ZScaler.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "983": {
+    "content": "<h2>Validate Stack Sequences</h2>\n<p>This problem is frequently asked by Apollo.io.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "984": {
+    "content": "<h2>Most Stones Removed with Same Row or Column</h2>\n<p>This problem is frequently asked by PhonePe, Tekion, thoughtspot.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "985": {
+    "content": "<h2>Bag of Tokens</h2>\n<p>This problem is frequently asked by Flexport.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "986": {
+    "content": "<h2>Largest Time for Given Digits</h2>\n<p>This problem is frequently asked by LiveRamp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "988": {
+    "content": "<h2>Flip Equivalent Binary Trees</h2>\n<p>This problem is frequently asked by Anduril.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "990": {
+    "content": "<h2>Verifying an Alien Dictionary</h2>\n<p>This problem is frequently asked by Snap, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "993": {
+    "content": "<h2>Tallest Billboard</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "998": {
+    "content": "<h2>Check Completeness of a Binary Tree</h2>\n<p>This problem is frequently asked by Lyft.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
   "1001": {
     "content": "<h2>Watermelon (Codeforces 4A)</h2><p>Pete and Billy have a watermelon of weight <code>w</code> kg. They want to split it into two parts such that <strong>both parts have even weight</strong> and each part weighs at least 1 kg.</p><p>Determine whether this is possible.</p><p>&nbsp;</p><p><strong class=\"example\">Example 1:</strong></p><pre>\n<strong>Input:</strong> w = 8\n<strong>Output:</strong> YES\n<strong>Explanation:</strong> 8 = 2 + 6, both even.\n</pre><p><strong class=\"example\">Example 2:</strong></p><pre>\n<strong>Input:</strong> w = 3\n<strong>Output:</strong> NO\n<strong>Explanation:</strong> No valid even split exists.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= w &lt;= 100</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> If <code>w</code> is even and <code>w &gt;= 4</code>, always YES (split as 2 and w-2). If odd, always NO.</p>",
     "testcase": "8\n3\n2\n4"
   },
-
   "1002": {
     "content": "<h2>Way Too Long Words (Codeforces 71A)</h2><p>You are given <code>n</code> words. If a word has more than 10 characters, replace it with its <strong>abbreviation</strong>: first character + number of omitted letters + last character.</p><p>Words with 10 or fewer characters stay unchanged.</p><p>&nbsp;</p><p><strong class=\"example\">Example 1:</strong></p><pre>\n<strong>Input:</strong> 4\nword\nlocalisation\nresponsibilities\nabcdefghij\n<strong>Output:</strong>\nword\nl10n\nr14s\nabcdefghij\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 100</code></li><li><code>1 &lt;= |word| &lt;= 100</code></li><li>Each word consists of lowercase English letters.</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> For word of length L &gt; 10, output is <code>word[0] + (L-2) + word[L-1]</code>.</p>",
     "testcase": "4\nword\nlocalisation\nresponsibilities\nabcdefghij"
   },
-
   "1003": {
     "content": "<h2>Beautiful Matrix (Codeforces 263A)</h2><p>You are given a 5×5 matrix filled with distinct integers 1–25. A matrix is <strong>beautiful</strong> if the number 1 is in the <strong>center cell</strong> (row 3, col 3, 1-indexed).</p><p>You can swap adjacent cells (horizontally or vertically). Find the <strong>minimum number of swaps</strong> to make the matrix beautiful.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong>\n1 2 3 4 5\n6 7 8 9 10\n11 12 13 14 15\n16 17 18 19 20\n21 22 23 24 25\n<strong>Output:</strong> 8\n<strong>Explanation:</strong> 1 is at position (1,1). Center is (3,3). Distance = |3-1|+|3-1| = 4. Wait — example output 8 since we move 2+2 steps each costing actual swaps. Minimum moves = Manhattan distance of 1 from center.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li>Matrix is always 5×5</li><li>Contains all integers 1 to 25 exactly once</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Find position (r,c) of element 1. Answer = |r - 2| + |c - 2| (0-indexed).</p>",
     "testcase": "1 2 3 4 5\n6 7 8 9 10\n11 12 13 14 15\n16 17 18 19 20\n21 22 23 24 25"
   },
-
   "1004": {
     "content": "<h2>Stones on the Table (Codeforces 165A)</h2><p>There are <code>n</code> stones on a table, each colored with one of <code>k</code> colors (represented as integers 1..k). Vasya removes a stone if it has the <strong>same color as the previous stone</strong> on the table.</p><p>Find the <strong>minimum number of stones</strong> Vasya will remove.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=6, k=3, colors=[2,1,1,3,2,1]\n<strong>Output:</strong> 1\n<strong>Explanation:</strong> Only the second '1' is removed (same as the preceding '1').\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>2 &lt;= n &lt;= 150000</code></li><li><code>1 &lt;= k &lt;= 50</code></li><li>Colors are in range [1, k]</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Count adjacent duplicate pairs — linear scan, remove stones[i] if stones[i] == stones[i-1].</p>",
     "testcase": "6 3\n2 1 1 3 2 1\n4 2\n1 2 1 2"
   },
-
   "1005": {
     "content": "<h2>Next Round (Codeforces 158A)</h2><p>In a round of a programming contest there are <code>n</code> participants. The participant at position <code>k</code> advances to the next round if their score is <strong>strictly greater than 0</strong> and their score is <strong>greater than or equal to</strong> the score at position <code>k</code>.</p><p>Find how many participants advance.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=8, k=5\nscores = [10, 9, 8, 7, 7, 7, 5, 5]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> scores[k-1]=scores[4]=7. Participants with score >= 7 and > 0: positions 1-6 (all score 7+). Total = 6.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= k &lt;= n &lt;= 50</code></li><li>Scores are non-increasing: <code>s1 >= s2 >= ... >= sn >= 0</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Threshold = scores[k-1]. Count participants with score >= threshold and score > 0.</p>",
     "testcase": "8 5\n10 9 8 7 7 7 5 5\n4 2\n0 0 0 0"
   },
-
   "1006": {
     "content": "<h2>Helpful Maths (Codeforces 339A)</h2><p>Xenia has a string of additions like <code>\"1+1+2+3\"</code> containing digits 1, 2, 3 and plus signs. She wants the <strong>lexicographically smallest</strong> arrangement of the same numbers with plus signs.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> 3+1+2\n<strong>Output:</strong> 1+2+3\n</pre><pre>\n<strong>Input:</strong> 1+1+1+2+2\n<strong>Output:</strong> 1+1+1+2+2\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li>String length is between 1 and 1000</li><li>Only contains digits 1, 2, 3 and plus signs</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Count occurrences of 1, 2, 3. Reconstruct sorted: all 1s, then 2s, then 3s with + between each number.</p>",
     "testcase": "3+1+2\n1+1+1+2+2\n2"
   },
-
   "1007": {
     "content": "<h2>Petya and Strings (Codeforces 131A)</h2><p>Given two strings <code>s</code> and <code>t</code> of equal length, compare them <strong>lexicographically</strong> treating uppercase letters as their lowercase equivalent.</p><p>Return <code>-1</code> if s &lt; t, <code>1</code> if s &gt; t, <code>0</code> if equal.</p><p>&nbsp;</p><p><strong class=\"example\">Example 1:</strong></p><pre>\n<strong>Input:</strong> s=\"aaaa\", t=\"aaab\"\n<strong>Output:</strong> -1\n</pre><p><strong class=\"example\">Example 2:</strong></p><pre>\n<strong>Input:</strong> s=\"Bob\", t=\"bob\"\n<strong>Output:</strong> 0\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= |s| = |t| &lt;= 100</code></li><li>Strings contain only English letters</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Compare <code>toLowerCase(s[i])</code> vs <code>toLowerCase(t[i])</code> for each position.</p>",
     "testcase": "aaaa\naaab\nBob\nbob\nxY\nxY"
   },
-
   "1008": {
     "content": "<h2>Codeforces 2B — The least round way</h2><p>You have an <code>n × n</code> matrix of positive integers. Find a path from <strong>top-left to bottom-right</strong> (moving only right or down) that minimizes the number of <strong>trailing zeroes</strong> in the product of all elements along the path.</p><p>A trailing zero appears for each factor of 10 = 2 × 5. Count min factors of 2 and 5 separately along each path.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=3\n1 2 3\n4 5 6\n7 8 9\n<strong>Output:</strong> 0\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 1000</code></li><li><code>1 &lt;= matrix[i][j] &lt;= 10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Run DP twice: once counting factor-2s, once factor-5s. Answer = min(dp2[n-1][n-1], dp5[n-1][n-1]). Edge case: if matrix contains 0, answer may be 1 (path through zero).</p>",
     "testcase": "3\n1 2 3\n4 5 6\n7 8 9"
   },
-
   "1009": {
     "content": "<h2>Lucky Numbers (Codeforces 122C)</h2><p>Petya calls a number <strong>lucky</strong> if all its digits are 4 or 7. Given a number <code>n</code>, find the <strong>nearest lucky number</strong> to <code>n</code> (smallest absolute difference). If two lucky numbers are equidistant, choose the smaller one.</p><p>&nbsp;</p><p><strong class=\"example\">Example 1:</strong></p><pre>\n<strong>Input:</strong> n = 4500\n<strong>Output:</strong> 4444\n<strong>Explanation:</strong> |4500-4444|=56, |4500-4477|=23, |4500-4747|=247. Closest is 4477.\n</pre><p><strong class=\"example\">Example 2:</strong></p><pre>\n<strong>Input:</strong> n = 7\n<strong>Output:</strong> 7\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Generate all lucky numbers (at most 2^1 + 2^2 + ... + 2^10 = 2046 numbers since max 10 digits). Find the one with minimum |n - lucky|.</p>",
     "testcase": "4500\n7\n1\n77777777"
   },
-
   "1010": {
     "content": "<h2>Fibonacci Sum (CodeChef FIBSUM)</h2><p>Given two integers <code>L</code> and <code>R</code>, compute the sum of Fibonacci numbers <code>F(L) + F(L+1) + ... + F(R)</code> modulo <code>10^9 + 7</code>.</p><p>Recall: F(1)=1, F(2)=1, F(n) = F(n-1)+F(n-2).</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> L=1, R=5\n<strong>Output:</strong> 12\n<strong>Explanation:</strong> F(1)+F(2)+F(3)+F(4)+F(5) = 1+1+2+3+5 = 12\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= L &lt;= R &lt;= 10^18</code></li><li>Answer modulo <code>10^9 + 7</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Use identity: sum F(1..n) = F(n+2) - 1. So answer = F(R+2) - F(L+1). Compute F(n) mod p using <strong>matrix exponentiation</strong> in O(log n).<br/><br/>Matrix: [[1,1],[1,0]]^n gives [[F(n+1),F(n)],[F(n),F(n-1)]].</p>",
     "testcase": "1\n1 5\n1\n3 8"
   },
-
   "1011": {
     "content": "<h2>Chef and Subarrays (CodeChef CHEFARRAY)</h2><p>Given an array of <code>n</code> integers and an integer <code>K</code>, count the number of <strong>subarrays</strong> whose sum is <strong>less than or equal to K</strong>.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=5, K=12\narr = [1, 4, 6, 2, 3]\n<strong>Output:</strong> 9\n<strong>Explanation:</strong> Valid subarrays: [1],[4],[6],[2],[3],[1,4],[4,6] is 10>12 no,[1,4,6] is 11<=12 yes, [6,2],[2,3],[6,2,3] is 11 yes, [1,4,6,2] is 13 no. Count carefully.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li><code>0 &lt;= arr[i] &lt;= 10^9</code></li><li><code>0 &lt;= K &lt;= 10^18</code></li></ul><p>&nbsp;</p><p><strong>Key Insight (non-negative values):</strong> Use two-pointer / sliding window. Maintain window [l,r] with sum &lt;= K. For each r, advance l until sum &lt;= K. Add (r - l + 1) valid subarrays ending at r.</p>",
     "testcase": "5 12\n1 4 6 2 3\n3 10\n1 2 3"
   },
-
   "1012": {
     "content": "<h2>Segment Tree Range Update (Codeforces 558E)</h2><p>You have an array of <code>n</code> integers. Support two types of queries:</p><ol><li><strong>Range Assign:</strong> Set all elements in [l, r] to value <code>v</code>.</li><li><strong>Range Sum Query:</strong> Return the sum of elements in [l, r].</li></ol><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=5, arr=[1,2,3,4,5]\nQuery: assign [1,3] = 7 → arr=[7,7,7,4,5]\nQuery: sum [1,5] → 7+7+7+4+5 = 30\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li><code>1 &lt;= q &lt;= 10^5</code></li><li>Values up to <code>10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Use a <strong>Segment Tree with Lazy Propagation</strong>. Each node stores sum. Lazy tag = pending assignment value (-1 if none). On push-down, propagate lazy to children before visiting them. Time: O((n+q) log n).</p>",
     "testcase": "5\n1 2 3 4 5\n3\n1 1 3 7\n2 1 5\n2 2 4"
   },
-
   "1013": {
     "content": "<h2>Dijkstra's Shortest Path (Codeforces 20C)</h2><p>Given a weighted directed graph with <code>n</code> nodes and <code>m</code> edges, find the <strong>shortest path</strong> from node 1 to node <code>n</code>, and print the path itself.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong>\nn=5, m=6\n1 2 2\n2 5 5\n2 3 4\n1 3 1\n3 4 3\n4 5 1\n<strong>Output:</strong>\n5\n1 3 4 5\n<strong>Explanation:</strong> Path 1→3→4→5 costs 1+3+1=5.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li><code>0 &lt;= m &lt;= 10^5</code></li><li>Edge weights: <code>1 &lt;= w &lt;= 10^6</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Standard Dijkstra with a min-heap (priority queue). Track <code>prev[]</code> array to reconstruct path. Output -1 if node n is unreachable.</p>",
     "testcase": "5 6\n1 2 2\n2 5 5\n2 3 4\n1 3 1\n3 4 3\n4 5 1"
   },
-
   "1014": {
     "content": "<h2>Travelling Salesman Bitmask DP</h2><p>Given <code>n</code> cities and an <code>n×n</code> distance matrix, find the <strong>minimum cost tour</strong> that visits every city exactly once and returns to the start (Travelling Salesman Problem).</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=4\ndist = [[0,10,15,20],[10,0,35,25],[15,35,0,30],[20,25,30,0]]\n<strong>Output:</strong> 80\n<strong>Explanation:</strong> Tour 0→1→3→2→0: 10+25+30+15=80\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 20</code></li><li><code>0 &lt;= dist[i][j] &lt;= 10^6</code></li><li><code>dist[i][i] = 0</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Use bitmask DP. <code>dp[mask][i]</code> = min cost to visit cities in <code>mask</code> ending at city <code>i</code>. Transition: try adding city <code>j</code> not in mask. Final answer: min over all i of dp[(1&lt;&lt;n)-1][i] + dist[i][0].</p>",
     "testcase": "4\n0 10 15 20\n10 0 35 25\n15 35 0 30\n20 25 30 0"
   },
-
   "1015": {
     "content": "<h2>Longest Bitonic Subsequence (CodeChef LONGBIT)</h2><p>A sequence is <strong>bitonic</strong> if it first increases and then decreases (one of the two parts can be empty). Given an array of <code>n</code> integers, find the length of the <strong>longest bitonic subsequence</strong>.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=6, arr=[1,11,2,10,4,5,2,1]\n<strong>Output:</strong> 6\n<strong>Explanation:</strong> Subsequence [1,2,10,4,2,1] is bitonic of length 6.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 1000</code></li><li><code>1 &lt;= arr[i] &lt;= 10^6</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Compute two arrays:<br/>• <code>LIS[i]</code> = Longest Increasing Subsequence ending at i<br/>• <code>LDS[i]</code> = Longest Decreasing Subsequence starting at i<br/>Answer = max(LIS[i] + LDS[i] - 1) for all i.</p>",
     "testcase": "8\n1 11 2 10 4 5 2 1\n3\n1 2 3"
   },
-
   "1016": {
     "content": "<h2>Minimum Spanning Tree (Kruskal)</h2><p>Given an undirected weighted graph with <code>n</code> vertices and <code>m</code> edges, find the weight of the <strong>Minimum Spanning Tree (MST)</strong>.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=4, m=5\n0 1 10\n0 2 6\n0 3 5\n1 3 15\n2 3 4\n<strong>Output:</strong> 19\n<strong>Explanation:</strong> MST edges: (2,3)=4, (0,3)=5, (0,1)=10. Total=19.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>2 &lt;= n &lt;= 10^5</code></li><li><code>1 &lt;= m &lt;= 3×10^5</code></li><li>Edge weights: <code>1 &lt;= w &lt;= 10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> <strong>Kruskal's Algorithm</strong> — sort edges by weight, use Union-Find to add edges that don't form a cycle. Always produces optimal MST. Time: O(E log E).</p>",
     "testcase": "4 5\n0 1 10\n0 2 6\n0 3 5\n1 3 15\n2 3 4"
   },
-
   "1017": {
     "content": "<h2>Strongly Connected Components (Kosaraju)</h2><p>Given a directed graph with <code>n</code> vertices and <code>m</code> edges, find all <strong>Strongly Connected Components (SCCs)</strong> — maximal subgraphs where every vertex is reachable from every other vertex.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=5, m=5\nEdges: 1→2, 2→3, 3→1, 3→4, 4→5\n<strong>Output:</strong> 3 SCCs: {1,2,3}, {4}, {5}\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li><code>1 &lt;= m &lt;= 10^5</code></li></ul><p>&nbsp;</p><p><strong>Key Insight (Kosaraju's Algorithm):</strong><br/>1. DFS on original graph, push nodes to stack by finish time.<br/>2. Transpose the graph (reverse all edges).<br/>3. DFS on transposed graph in reverse finish order — each DFS tree = one SCC.</p>",
     "testcase": "5 5\n1 2\n2 3\n3 1\n3 4\n4 5"
   },
-
   "1018": {
     "content": "<h2>0/1 Knapsack Problem</h2><p>You have a knapsack with capacity <code>W</code> and <code>n</code> items. Each item <code>i</code> has weight <code>w[i]</code> and value <code>v[i]</code>. Select items to <strong>maximize total value</strong> without exceeding capacity <code>W</code>. Each item can be used at most once.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=4, W=8\nweights = [2, 3, 4, 5]\nvalues  = [3, 4, 5, 6]\n<strong>Output:</strong> 10\n<strong>Explanation:</strong> Pick items with weights 3+5=8, values 4+6=10.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 1000</code></li><li><code>1 &lt;= W &lt;= 10^5</code></li><li><code>1 &lt;= w[i], v[i] &lt;= 10^4</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> DP table <code>dp[j]</code> = max value with capacity j. Iterate items, then iterate capacity from W down to w[i] (backward to avoid reuse). <code>dp[j] = max(dp[j], dp[j-w[i]] + v[i])</code>.</p>",
     "testcase": "4 8\n2 3 4 5\n3 4 5 6"
   },
-
   "1019": {
     "content": "<h2>Matrix Chain Multiplication</h2><p>Given a sequence of <code>n</code> matrices with dimensions such that matrix <code>i</code> has dimensions <code>p[i-1] × p[i]</code>, find the <strong>minimum number of scalar multiplications</strong> needed to multiply the entire chain.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=4, dims=[10, 30, 5, 60]\n<strong>Output:</strong> 27000\n<strong>Explanation:</strong> ((A×B)×C) costs 10×30×5 + 10×5×60 = 1500+3000=4500, ((A×(B×C)) costs 30×5×60+10×30×60=9000+18000=27000. Optimal is 4500... wait, minimum is 4500 with first grouping.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>2 &lt;= n &lt;= 100</code></li><li><code>1 &lt;= p[i] &lt;= 500</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Interval DP: <code>dp[i][j]</code> = min cost to multiply matrices i..j. Try every split point k: <code>dp[i][j] = min(dp[i][k] + dp[k+1][j] + p[i-1]*p[k]*p[j])</code>.</p>",
     "testcase": "4\n10 30 5 60\n3\n40 20 30"
   },
-
   "1020": {
     "content": "<h2>Number of Divisors (Sieve)</h2><p>Given an integer <code>n</code>, compute the number of positive divisors of every integer from 1 to <code>n</code> efficiently using a sieve approach. Then answer Q queries: for each query number x, output its number of divisors.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=12\nDivisors: 1→1, 2→2, 3→2, 4→3, 5→2, 6→4, 7→2, 8→4, 9→3, 10→4, 11→2, 12→6\n<strong>Query:</strong> 12 → <strong>Output:</strong> 6\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^6</code></li><li><code>1 &lt;= Q &lt;= 10^5</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Sieve of Eratosthenes variant — for each i from 1 to n, increment divisor count for all multiples of i. Total time: O(n log n) due to harmonic series. Precompute once, answer each query in O(1).</p>",
     "testcase": "12\n5\n12\n6\n7\n1\n10"
   },
-
   "1021": {
     "content": "<h2>Modular Exponentiation & Modular Inverse</h2><p>Compute <code>a^b mod m</code> efficiently, and find the modular inverse of <code>a</code> modulo a prime <code>p</code> (i.e., find x such that <code>a*x ≡ 1 (mod p)</code>).</p><p>&nbsp;</p><p><strong class=\"example\">Example 1 (Fast Power):</strong></p><pre>\n<strong>Input:</strong> a=2, b=10, m=1000000007\n<strong>Output:</strong> 1024\n</pre><p><strong class=\"example\">Example 2 (Modular Inverse):</strong></p><pre>\n<strong>Input:</strong> a=3, p=7\n<strong>Output:</strong> 5\n<strong>Explanation:</strong> 3*5 = 15 ≡ 1 (mod 7)\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= a, b &lt;= 10^18</code></li><li><code>p</code> is prime</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong><br/>• Fast power: square-and-multiply in O(log b).<br/>• Modular inverse by Fermat's little theorem: <code>a^(p-2) mod p</code> when p is prime.<br/>• Or use Extended Euclidean Algorithm for non-prime moduli.</p>",
     "testcase": "2 10 1000000007\n3 7"
   },
-
   "1022": {
     "content": "<h2>Fenwick Tree (Binary Indexed Tree)</h2><p>Given an array of <code>n</code> integers, support two operations efficiently:</p><ol><li><strong>Point Update:</strong> Add value <code>v</code> to position <code>i</code>.</li><li><strong>Prefix Sum Query:</strong> Return sum of elements from index 1 to <code>r</code>.</li></ol><p>Implement using a <strong>Fenwick Tree (BIT)</strong> for O(log n) per operation.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=5, arr=[1,2,3,4,5]\nQuery prefix(3) → 1+2+3 = 6\nUpdate(2, +5) → arr=[1,7,3,4,5]\nQuery prefix(3) → 1+7+3 = 11\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^6</code></li><li><code>1 &lt;= q &lt;= 10^6</code></li><li>Values up to <code>10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> BIT stores partial sums. Update: add at i and propagate: <code>i += i & (-i)</code>. Query: sum while going down: <code>i -= i & (-i)</code>. Range query [l,r] = prefix(r) - prefix(l-1).</p>",
     "testcase": "5\n1 2 3 4 5\n4\nQ 1 3\nU 2 5\nQ 1 3\nQ 1 5"
   },
-
   "1023": {
     "content": "<h2>Z-Function String Matching</h2><p>Given a text string <code>T</code> and a pattern string <code>P</code>, find all starting positions (0-indexed) where <code>P</code> occurs in <code>T</code>.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> T=\"aabxaaabx\", P=\"aab\"\n<strong>Output:</strong> [0, 5]\n<strong>Explanation:</strong> Pattern appears at index 0 and 5.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= |P| &lt;= |T| &lt;= 10^6</code></li><li>Strings consist of lowercase English letters</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Construct combined string <code>S = P + '#' + T</code>. Compute Z-array where <code>Z[i]</code> = length of longest prefix of S that matches S[i..]. Whenever <code>Z[i] == |P|</code>, position <code>i - |P| - 1</code> in T is a match. Time: O(|P| + |T|).</p>",
     "testcase": "aabxaaabx\naab\naaaaa\naa"
   },
-
   "1024": {
     "content": "<h2>Suffix Array Construction</h2><p>Given a string <code>s</code>, construct its <strong>Suffix Array</strong> — a sorted array of indices of all suffixes of <code>s</code>.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> s = \"banana\"\nSuffixes: 0:banana, 1:anana, 2:nana, 3:ana, 4:na, 5:a\nSorted:   5:a, 3:ana, 1:anana, 0:banana, 4:na, 2:nana\n<strong>Output:</strong> [5, 3, 1, 0, 4, 2]\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= |s| &lt;= 10^6</code></li><li>Lowercase English letters</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Build suffix array in O(n log n) using prefix doubling (DC3/SA-IS also possible). Sort suffixes by rank pairs of length 2^k at each step. LCP array can be computed via Kasai's algorithm in O(n) after building SA.</p>",
     "testcase": "banana\nabcab"
   },
-
   "1025": {
     "content": "<h2>Game Theory — Nim</h2><p>The Nim game: there are <code>n</code> piles of stones. Two players alternate picking any number of stones from a single pile. The player who cannot move <strong>loses</strong>. Given pile sizes, determine who wins with optimal play.</p><p>&nbsp;</p><p><strong class=\"example\">Example 1:</strong></p><pre>\n<strong>Input:</strong> n=3, piles=[1, 2, 3]\n<strong>Output:</strong> Second player wins\n<strong>Explanation:</strong> XOR = 1^2^3 = 0. First player loses.\n</pre><p><strong class=\"example\">Example 2:</strong></p><pre>\n<strong>Input:</strong> n=2, piles=[3, 5]\n<strong>Output:</strong> First player wins\n<strong>Explanation:</strong> XOR = 3^5 = 6 ≠ 0.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li><code>0 &lt;= piles[i] &lt;= 10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight (Sprague-Grundy / Nim Theory):</strong> First player wins iff XOR of all pile sizes ≠ 0. This is the fundamental theorem of combinatorial game theory.</p>",
     "testcase": "3\n1 2 3\n2\n3 5\n1\n0"
   },
-
   "1026": {
     "content": "<h2>Convex Hull</h2><p>Given <code>n</code> points in 2D space, find the <strong>Convex Hull</strong> — the smallest convex polygon containing all points. Output the vertices of the hull in counter-clockwise order.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=6\nPoints: (0,0), (1,1), (2,2), (0,2), (2,0), (1,0)\n<strong>Output:</strong> Hull vertices: (0,0), (2,0), (2,2), (0,2)\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>3 &lt;= n &lt;= 10^5</code></li><li><code>-10^9 &lt;= x, y &lt;= 10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight (Andrew's Monotone Chain):</strong><br/>1. Sort points by (x, y).<br/>2. Build lower hull left-to-right using cross product to remove non-left turns.<br/>3. Build upper hull right-to-left similarly.<br/>4. Combine. Time: O(n log n).</p>",
     "testcase": "6\n0 0\n1 1\n2 2\n0 2\n2 0\n1 0"
   },
-
   "1027": {
     "content": "<h2>Trie Prefix Search</h2><p>Given <code>n</code> strings, build a <strong>Trie</strong> and support two operations:</p><ol><li><strong>Insert</strong> a string into the trie.</li><li><strong>Count</strong> how many inserted strings have a given prefix.</li></ol><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong>\nInsert: apple, app, application, banana\nCount prefix \"app\" → 3 (apple, app, application)\nCount prefix \"ban\" → 1\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li>String length &lt;= 100</li><li>Lowercase English letters only</li></ul><p>&nbsp;</p><p><strong>Key Insight:</strong> Each Trie node has 26 children and a <code>count</code> field. On insert, increment count at every node along the path. For prefix count query, traverse the trie following the prefix; the count at the final node is the answer.</p>",
     "testcase": "4\napple\napp\napplication\nbanana\n2\napp\nban"
   },
-
   "1028": {
     "content": "<h2>Maximum Flow (Dinic's Algorithm)</h2><p>Given a directed graph with <code>n</code> nodes, <code>m</code> edges, a source <code>s</code> and sink <code>t</code>, find the <strong>maximum flow</strong> from s to t. Each edge has a capacity.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=4, s=0, t=3\nEdges: 0→1 cap=3, 0→2 cap=2, 1→3 cap=2, 2→3 cap=3, 1→2 cap=1\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> Flow: 2 units 0→1→3, 1 unit 0→1→2→3, 1 unit 0→2→3 = total 4.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>2 &lt;= n &lt;= 500</code></li><li><code>1 &lt;= m &lt;= 10^4</code></li><li>Capacities up to <code>10^9</code></li></ul><p>&nbsp;</p><p><strong>Key Insight (Dinic's Algorithm):</strong><br/>1. BFS to build level graph (shortest paths from s).<br/>2. DFS to find blocking flows along level graph.<br/>3. Repeat until no augmenting path. Time: O(V² · E).<br/><br/><strong>Max-Flow Min-Cut Theorem:</strong> Maximum flow = Minimum cut capacity.</p>",
     "testcase": "4 5 0 3\n0 1 3\n0 2 2\n1 3 2\n2 3 3\n1 2 1"
   },
-
   "1029": {
     "content": "<h2>Mo's Algorithm (Offline Range Queries)</h2><p>Given an array of <code>n</code> integers and <code>q</code> queries, each query asks for the number of <strong>distinct elements</strong> in range [l, r]. Answer all queries offline efficiently.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> n=5, arr=[1,2,1,3,2]\nQuery [0,2] → distinct in [1,2,1] = {1,2} = 2\nQuery [1,4] → distinct in [2,1,3,2] = {1,2,3} = 3\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= n &lt;= 10^5</code></li><li><code>1 &lt;= q &lt;= 10^5</code></li><li>Values up to <code>10^6</code></li></ul><p>&nbsp;</p><p><strong>Key Insight (Mo's Algorithm):</strong><br/>• Divide array into blocks of size √n.<br/>• Sort queries: primary key = left/√n block, secondary = right (alternate direction per block).<br/>• Maintain current window [L,R]. Expand/shrink by ±1 updating frequency count and distinct count.<br/>• Total time: O((n + q)·√n).</p>",
     "testcase": "5\n1 2 1 3 2\n3\n0 2\n1 4\n0 4"
   },
-
   "1030": {
     "content": "<h2>LCS with Bitmask DP</h2><p>Given two strings <code>s</code> and <code>t</code>, find the length of their <strong>Longest Common Subsequence (LCS)</strong>.</p><p>For an optimized variant: when the alphabet is small (e.g., DNA with 4 chars, or just lowercase), use bitset-based LCS for speedup.</p><p>&nbsp;</p><p><strong class=\"example\">Example:</strong></p><pre>\n<strong>Input:</strong> s=\"ABCBDAB\", t=\"BDCABA\"\n<strong>Output:</strong> 4\n<strong>Explanation:</strong> LCS is \"BCBA\" or \"BDAB\" of length 4.\n</pre><p>&nbsp;</p><p><strong>Constraints:</strong></p><ul><li><code>1 &lt;= |s|, |t| &lt;= 10^4</code></li><li>Uppercase English letters</li></ul><p>&nbsp;</p><p><strong>Key Insight (Standard LCS DP):</strong> <code>dp[i][j]</code> = LCS length of s[0..i-1] and t[0..j-1].<br/>• If s[i-1]==t[j-1]: <code>dp[i][j] = dp[i-1][j-1] + 1</code><br/>• Else: <code>dp[i][j] = max(dp[i-1][j], dp[i][j-1])</code><br/>Time: O(nm), Space: O(min(n,m)) with rolling array.<br/><br/><strong>Bitmask speedup:</strong> For each char c, precompute bitmask of positions in t where t[j]=c. Then use bitwise ops to compute DP rows ~64x faster.</p>",
     "testcase": "ABCBDAB\nBDCABA\nAGGT\nGXTXAYB"
+  },
+  "1031": {
+    "content": "<h2>Add to Array-Form of Integer</h2>\n<p>This problem is frequently asked by Avito, ByteDance, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1032": {
+    "content": "<h2>Satisfiability of Equality Equations</h2>\n<p>This problem is frequently asked by Sumo Logic, UiPath.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1033": {
+    "content": "<h2>Broken Calculator</h2>\n<p>This problem is frequently asked by Millennium, Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1034": {
+    "content": "<h2>Subarrays with K Different Integers</h2>\n<p>This problem is frequently asked by Morgan Stanley, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1035": {
+    "content": "<h2>Cousins in Binary Tree</h2>\n<p>This problem is frequently asked by Tekion.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1036": {
+    "content": "<h2>Rotting Oranges</h2>\n<p>This problem is frequently asked by Anduril, ByteDance, Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1037": {
+    "content": "<h2>Minimum Number of K Consecutive Bit Flips</h2>\n<p>This problem is frequently asked by thoughtspot.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1039": {
+    "content": "<h2>Find the Town Judge</h2>\n<p>This problem is frequently asked by Arista Networks, Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1041": {
+    "content": "<h2>Available Captures for Rook</h2>\n<p>This problem is frequently asked by Block.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1043": {
+    "content": "<h2>Grid Illumination</h2>\n<p>This problem is frequently asked by Dropbox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1044": {
+    "content": "<h2>Find Common Characters</h2>\n<p>This problem is frequently asked by Tripadvisor.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1045": {
+    "content": "<h2>Check If Word Is Valid After Substitutions</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1046": {
+    "content": "<h2>Max Consecutive Ones III</h2>\n<p>This problem is frequently asked by Expedia, Roku, SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1047": {
+    "content": "<h2>Maximize Sum Of Array After K Negations</h2>\n<p>This problem is frequently asked by Druva.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1050": {
+    "content": "<h2>Construct Binary Search Tree from Preorder Traversal</h2>\n<p>This problem is frequently asked by Akamai.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1051": {
+    "content": "<h2>Shortest Way to Form String</h2>\n<p>This problem is frequently asked by Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1053": {
+    "content": "<h2>Minimize Rounding Error to Meet Target</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1054": {
+    "content": "<h2>Complement of Base 10 Integer</h2>\n<p>This problem is frequently asked by Cloudera, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1055": {
+    "content": "<h2>Pairs of Songs With Total Durations Divisible by 60</h2>\n<p>This problem is frequently asked by Akamai, Atlassian, BlackRock.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1056": {
+    "content": "<h2>Capacity To Ship Packages Within D Days</h2>\n<p>This problem is frequently asked by Agoda, DoorDash, DP world.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1057": {
+    "content": "<h2>Numbers With Repeated Digits</h2>\n<p>This problem is frequently asked by IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1058": {
+    "content": "<h2>Lexicographically Smallest Equivalent String</h2>\n<p>This problem is frequently asked by Cloudera.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1059": {
+    "content": "<h2>Missing Element in Sorted Array</h2>\n<p>This problem is frequently asked by Arista Networks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1060": {
+    "content": "<h2>Longest Repeating Substring</h2>\n<p>This problem is frequently asked by Coupang.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1061": {
+    "content": "<h2>Number of Valid Subarrays</h2>\n<p>This problem is frequently asked by Hulu.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1062": {
+    "content": "<h2>Partition Array Into Three Parts With Equal Sum</h2>\n<p>This problem is frequently asked by Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1063": {
+    "content": "<h2>Best Sightseeing Pair</h2>\n<p>This problem is frequently asked by Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1070": {
+    "content": "<h2>Convert to Base -2</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1076": {
+    "content": "<h2>Brace Expansion</h2>\n<p>This problem is frequently asked by DoorDash, Niantic, Stripe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1080": {
+    "content": "<h2>Camelcase Matching</h2>\n<p>This problem is frequently asked by Compass.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1081": {
+    "content": "<h2>Video Stitching</h2>\n<p>This problem is frequently asked by Anduril, Verily.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1085": {
+    "content": "<h2>The Earliest Moment When Everyone Become Friends</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1086": {
+    "content": "<h2>Divisor Game</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1087": {
+    "content": "<h2>Longest Arithmetic Subsequence</h2>\n<p>This problem is frequently asked by Snapdeal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1092": {
+    "content": "<h2>Maximum Difference Between Node and Ancestor</h2>\n<p>This problem is frequently asked by EPAM Systems, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1095": {
+    "content": "<h2>Two City Scheduling</h2>\n<p>This problem is frequently asked by Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1097": {
+    "content": "<h2>Stream of Characters</h2>\n<p>This problem is frequently asked by Jane Street, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1099": {
+    "content": "<h2>Path With Maximum Minimum Value</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1101": {
+    "content": "<h2>Parallel Courses</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1102": {
+    "content": "<h2>Check If a Number Is Majority Element in a Sorted Array</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1104": {
+    "content": "<h2>Coloring A Border</h2>\n<p>This problem is frequently asked by Booking.com.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1106": {
+    "content": "<h2>Escape a Large Maze</h2>\n<p>This problem is frequently asked by UiPath.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1107": {
+    "content": "<h2>Minimum Swaps to Group All 1's Together</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1108": {
+    "content": "<h2>Analyze User Website Visit Pattern</h2>\n<p>This problem is frequently asked by DoorDash, Spotify.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1112": {
+    "content": "<h2>Find Words That Can Be Formed by Characters</h2>\n<p>This problem is frequently asked by Atlassian, Datadog, Karat.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1114": {
+    "content": "<h2>Binary Search Tree to Greater Sum Tree</h2>\n<p>This problem is frequently asked by Datadog, eBay, SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1117": {
+    "content": "<h2>As Far from Land as Possible</h2>\n<p>This problem is frequently asked by UiPath, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1119": {
+    "content": "<h2>Robot Bounded In Circle</h2>\n<p>This problem is frequently asked by Airbnb, Chewy, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1120": {
+    "content": "<h2>Flower Planting With No Adjacent</h2>\n<p>This problem is frequently asked by Vimeo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1122": {
+    "content": "<h2>Longest Duplicate Substring</h2>\n<p>This problem is frequently asked by Coupang.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1125": {
+    "content": "<h2>Design File System</h2>\n<p>This problem is frequently asked by Airbnb, Atlassian, Capital One.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1126": {
+    "content": "<h2>Minimum Cost to Connect Sticks</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1127": {
+    "content": "<h2>Last Stone Weight</h2>\n<p>This problem is frequently asked by Flipkart, Nvidia, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1128": {
+    "content": "<h2>Remove All Adjacent Duplicates In String</h2>\n<p>This problem is frequently asked by Geico, Grammarly, Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1129": {
+    "content": "<h2>Longest String Chain</h2>\n<p>This problem is frequently asked by Atlassian, Citadel, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1131": {
+    "content": "<h2>Count Substrings with Only One Distinct Letter</h2>\n<p>This problem is frequently asked by Virtu Financial.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1133": {
+    "content": "<h2>Last Substring in Lexicographical Order</h2>\n<p>This problem is frequently asked by Fastenal, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1137": {
+    "content": "<h2>Height Checker</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1138": {
+    "content": "<h2>Grumpy Bookstore Owner</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1141": {
+    "content": "<h2>How Many Apples Can You Put into the Basket</h2>\n<p>This problem is frequently asked by Virtu Financial.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1142": {
+    "content": "<h2>Minimum Knight Moves</h2>\n<p>This problem is frequently asked by Citadel, IMC, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1145": {
+    "content": "<h2>Number of Submatrices That Sum to Target</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1146": {
+    "content": "<h2>Greatest Common Divisor of Strings</h2>\n<p>This problem is frequently asked by Datadog, Infosys, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1148": {
+    "content": "<h2>Adding Two Negabinary Numbers</h2>\n<p>This problem is frequently asked by Grab.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1151": {
+    "content": "<h2>Stepping Numbers</h2>\n<p>This problem is frequently asked by Epic Systems.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1152": {
+    "content": "<h2>Maximum Number of Ones</h2>\n<p>This problem is frequently asked by Qualcomm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1159": {
+    "content": "<h2>Smallest Subsequence of Distinct Characters</h2>\n<p>This problem is frequently asked by ByteDance, FactSet.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1164": {
+    "content": "<h2>Missing Number In Arithmetic Progression</h2>\n<p>This problem is frequently asked by Audible.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1165": {
+    "content": "<h2>Meeting Scheduler</h2>\n<p>This problem is frequently asked by Citadel, Datadog, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1166": {
+    "content": "<h2>Toss Strange Coins</h2>\n<p>This problem is frequently asked by Twitch.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1171": {
+    "content": "<h2>Shortest Path in Binary Matrix</h2>\n<p>This problem is frequently asked by Airbnb, Intuit, Palo Alto Networks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1175": {
+    "content": "<h2>Array Transformation</h2>\n<p>This problem is frequently asked by Virtu Financial.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1176": {
+    "content": "<h2>Design A Leaderboard</h2>\n<p>This problem is frequently asked by Databricks, Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1184": {
+    "content": "<h2>Car Pooling</h2>\n<p>This problem is frequently asked by Flipkart, Lyft, Zepto.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1189": {
+    "content": "<h2>Encode Number</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1190": {
+    "content": "<h2>Smallest Common Region</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1191": {
+    "content": "<h2>Synonymous Sentences</h2>\n<p>This problem is frequently asked by Cruise, Moveworks, Rippling.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1196": {
+    "content": "<h2>Filling Bookcase Shelves</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1197": {
+    "content": "<h2>Parsing A Boolean Expression</h2>\n<p>This problem is frequently asked by HiLabs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1199": {
+    "content": "<h2>Hexspeak</h2>\n<p>This problem is frequently asked by Virtu Financial.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1205": {
+    "content": "<h2>Defanging an IP Address</h2>\n<p>This problem is frequently asked by Robinhood.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1217": {
+    "content": "<h2>Relative Sort Array</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1219": {
+    "content": "<h2>Longest Well-Performing Interval</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1224": {
+    "content": "<h2>Minimum Falling Path Sum II</h2>\n<p>This problem is frequently asked by Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1228": {
+    "content": "<h2>Minimum Cost Tree From Leaf Values</h2>\n<p>This problem is frequently asked by MathWorks, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1231": {
+    "content": "<h2>Replace Elements with Greatest Element on Right Side</h2>\n<p>This problem is frequently asked by Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1234": {
+    "content": "<h2>Number of Paths with Max Score</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1236": {
+    "content": "<h2>N-th Tribonacci Number</h2>\n<p>This problem is frequently asked by Accenture, Coursera, tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1239": {
+    "content": "<h2>Largest 1-Bordered Square</h2>\n<p>This problem is frequently asked by DE Shaw, Samsung, ZS Associates.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1249": {
+    "content": "<h2>Snapshot Array</h2>\n<p>This problem is frequently asked by Coupang, Databricks, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1250": {
+    "content": "<h2>Longest Common Subsequence</h2>\n<p>This problem is frequently asked by Accolite, Arista Networks, BP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1252": {
+    "content": "<h2>Break a Palindrome</h2>\n<p>This problem is frequently asked by Expedia, J.P. Morgan, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1253": {
+    "content": "<h2>Sort the Matrix Diagonally</h2>\n<p>This problem is frequently asked by Quora, Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1254": {
+    "content": "<h2>Deepest Leaves Sum</h2>\n<p>This problem is frequently asked by Myntra.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1257": {
+    "content": "<h2>Rank Transform of a Matrix</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1260": {
+    "content": "<h2>Day of the Year</h2>\n<p>This problem is frequently asked by ZScaler.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1261": {
+    "content": "<h2>Swap For Longest Repeated Character Substring</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1262": {
+    "content": "<h2>Online Majority Element In Subarray</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1263": {
+    "content": "<h2>Number of Dice Rolls With Target Sum</h2>\n<p>This problem is frequently asked by StackAdapt.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1264": {
+    "content": "<h2>Maximum Number of Words You Can Type</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1267": {
+    "content": "<h2>Remove Zero Sum Consecutive Nodes from Linked List</h2>\n<p>This problem is frequently asked by ByteDance, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1271": {
+    "content": "<h2>Web Crawler</h2>\n<p>This problem is frequently asked by Dropbox, Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1272": {
+    "content": "<h2>Invalid Transactions</h2>\n<p>This problem is frequently asked by PayPal, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1274": {
+    "content": "<h2>Number of Days Between Two Dates</h2>\n<p>This problem is frequently asked by Accenture, Optiver.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1281": {
+    "content": "<h2>Can Make Palindrome from Substring</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1282": {
+    "content": "<h2>Number of Valid Words for Each Puzzle</h2>\n<p>This problem is frequently asked by Dropbox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1283": {
+    "content": "<h2>Reformat Date</h2>\n<p>This problem is frequently asked by Celigo, Expedia, Twilio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1284": {
+    "content": "<h2>Four Divisors</h2>\n<p>This problem is frequently asked by Capital One.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1286": {
+    "content": "<h2>Constrained Subsequence Sum</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1288": {
+    "content": "<h2>Maximum Subarray Sum with One Deletion</h2>\n<p>This problem is frequently asked by Two Sigma.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1294": {
+    "content": "<h2>Range Frequency Queries</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1297": {
+    "content": "<h2>Maximum Number of Balloons</h2>\n<p>This problem is frequently asked by Tesla, Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1298": {
+    "content": "<h2>Reverse Substrings Between Each Pair of Parentheses</h2>\n<p>This problem is frequently asked by Agoda.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1300": {
+    "content": "<h2>Critical Connections in a Network</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1302": {
+    "content": "<h2>Delete Characters to Make Fancy String</h2>\n<p>This problem is frequently asked by Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1303": {
+    "content": "<h2>Minimum Moves to Reach Target Score</h2>\n<p>This problem is frequently asked by Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1304": {
+    "content": "<h2>Longest Happy String</h2>\n<p>This problem is frequently asked by Capgemini, EY, Geico.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1305": {
+    "content": "<h2>Number of Visible People in a Queue</h2>\n<p>This problem is frequently asked by Citigroup, DoorDash, Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1306": {
+    "content": "<h2>Minimum Absolute Difference</h2>\n<p>This problem is frequently asked by Agoda, Audible, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1307": {
+    "content": "<h2>Ugly Number III</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1308": {
+    "content": "<h2>Smallest String With Swaps</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1309": {
+    "content": "<h2>Sort Items by Groups Respecting Dependencies</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1310": {
+    "content": "<h2>Watering Plants</h2>\n<p>This problem is frequently asked by Amadeus.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1311": {
+    "content": "<h2>Largest Magic Square</h2>\n<p>This problem is frequently asked by Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1319": {
+    "content": "<h2>Unique Number of Occurrences</h2>\n<p>This problem is frequently asked by Datadog.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1320": {
+    "content": "<h2>Remove All Adjacent Duplicates in String II</h2>\n<p>This problem is frequently asked by Attentive, Disney, FactSet.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1321": {
+    "content": "<h2>Get Equal Substrings Within Budget</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1322": {
+    "content": "<h2>Minimum Moves to Reach Target with Rotations</h2>\n<p>This problem is frequently asked by Kakao.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1325": {
+    "content": "<h2>Path with Maximum Probability</h2>\n<p>This problem is frequently asked by BlackRock, tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1329": {
+    "content": "<h2>Minimum Cost to Move Chips to The Same Position</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1331": {
+    "content": "<h2>Path with Maximum Gold</h2>\n<p>This problem is frequently asked by Geico.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1332": {
+    "content": "<h2>Count Vowels Permutation</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1337": {
+    "content": "<h2>Design Skiplist</h2>\n<p>This problem is frequently asked by eBay, Pure Storage, X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1342": {
+    "content": "<h2>Queens That Can Attack the King</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1343": {
+    "content": "<h2>Dice Roll Simulation</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1344": {
+    "content": "<h2>Maximum Equal Frequency</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1346": {
+    "content": "<h2>Maximize the Topmost Element After K Moves</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1347": {
+    "content": "<h2>Distance to a Cycle in Undirected Graph</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1349": {
+    "content": "<h2>Check If It Is a Straight Line</h2>\n<p>This problem is frequently asked by Datadog, Palantir Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1350": {
+    "content": "<h2>Remove Sub-Folders from the Filesystem</h2>\n<p>This problem is frequently asked by Snowflake, Verkada.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1351": {
+    "content": "<h2>Replace the Substring for Balanced String</h2>\n<p>This problem is frequently asked by Accolite.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1352": {
+    "content": "<h2>Maximum Profit in Job Scheduling</h2>\n<p>This problem is frequently asked by Airbnb, Akuna Capital, Databricks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1353": {
+    "content": "<h2>Find Resultant Array After Removing Anagrams</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1354": {
+    "content": "<h2>Find Players With Zero or One Losses</h2>\n<p>This problem is frequently asked by Indeed, Palantir Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1360": {
+    "content": "<h2>Maximum Length of a Concatenated String with Unique Characters</h2>\n<p>This problem is frequently asked by Palo Alto Networks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1362": {
+    "content": "<h2>Airplane Seat Assignment Probability</h2>\n<p>This problem is frequently asked by Microstrategy, Toptal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1369": {
+    "content": "<h2>Minimum Swaps to Make Strings Equal</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1370": {
+    "content": "<h2>Count Number of Nice Subarrays</h2>\n<p>This problem is frequently asked by Deliveroo, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1371": {
+    "content": "<h2>Minimum Remove to Make Valid Parentheses</h2>\n<p>This problem is frequently asked by GE Digital, Netflix, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1372": {
+    "content": "<h2>Check If It Is a Good Array</h2>\n<p>This problem is frequently asked by Dropbox, Jump Trading, Nokia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1374": {
+    "content": "<h2>Leftmost Column with at Least a One</h2>\n<p>This problem is frequently asked by SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1375": {
+    "content": "<h2>Find Palindrome With Fixed Length</h2>\n<p>This problem is frequently asked by VMware.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1376": {
+    "content": "<h2>Selling Pieces of Wood</h2>\n<p>This problem is frequently asked by Palantir Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1379": {
+    "content": "<h2>Reconstruct a 2-Row Binary Matrix</h2>\n<p>This problem is frequently asked by American Express, Grab.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1380": {
+    "content": "<h2>Number of Closed Islands</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1381": {
+    "content": "<h2>Maximum Score Words Formed by Letters</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1382": {
+    "content": "<h2>Calculate Amount Paid in Taxes</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1385": {
+    "content": "<h2>Number of Ways to Build House of Cards</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1388": {
+    "content": "<h2>Greatest Sum Divisible by Three</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1391": {
+    "content": "<h2>Counting Elements</h2>\n<p>This problem is frequently asked by DRW.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1392": {
+    "content": "<h2>Find the Difference of Two Arrays</h2>\n<p>This problem is frequently asked by Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1395": {
+    "content": "<h2>Minimum Time Visiting All Points</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1397": {
+    "content": "<h2>Search Suggestions System</h2>\n<p>This problem is frequently asked by Anduril, Atlassian, Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1400": {
+    "content": "<h2>Find Winner on a Tic Tac Toe Game</h2>\n<p>This problem is frequently asked by Qualcomm, Tesla, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1402": {
+    "content": "<h2>Count Square Submatrices with All Ones</h2>\n<p>This problem is frequently asked by Tinkoff.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1406": {
+    "content": "<h2>Subtract the Product and Sum of Digits of an Integer</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1407": {
+    "content": "<h2>Group the People Given the Group Size They Belong To</h2>\n<p>This problem is frequently asked by Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1408": {
+    "content": "<h2>Find the Smallest Divisor Given a Threshold</h2>\n<p>This problem is frequently asked by Agoda, DE Shaw, Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1409": {
+    "content": "<h2>Minimum Number of Flips to Convert Binary Matrix to Zero Matrix</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1411": {
+    "content": "<h2>Convert Binary Number in a Linked List to Integer</h2>\n<p>This problem is frequently asked by MathWorks, Roblox, Workday.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1413": {
+    "content": "<h2>Maximum Side Length of a Square with Sum Less than or Equal to Threshold</h2>\n<p>This problem is frequently asked by IMC.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1414": {
+    "content": "<h2>Shortest Path in a Grid with Obstacles Elimination</h2>\n<p>This problem is frequently asked by AppFolio, Databricks, IMC.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1419": {
+    "content": "<h2>Make Array Non-decreasing or Non-increasing</h2>\n<p>This problem is frequently asked by VMware.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1421": {
+    "content": "<h2>Find Numbers with Even Number of Digits</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1422": {
+    "content": "<h2>Divide Array in Sets of K Consecutive Numbers</h2>\n<p>This problem is frequently asked by Waymo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1423": {
+    "content": "<h2>Maximum Number of Occurrences of a Substring</h2>\n<p>This problem is frequently asked by Atlassian, Hubspot, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1424": {
+    "content": "<h2>Maximum Candies You Can Get from Boxes</h2>\n<p>This problem is frequently asked by Airbnb, Lyft.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1428": {
+    "content": "<h2>Jump Game III</h2>\n<p>This problem is frequently asked by Pinterest, Snap, Tanium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1429": {
+    "content": "<h2>Verbal Arithmetic Puzzle</h2>\n<p>This problem is frequently asked by Atlassian, Wells Fargo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1430": {
+    "content": "<h2>Find the K-Beauty of a Number</h2>\n<p>This problem is frequently asked by Postmates, Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1431": {
+    "content": "<h2>All Ancestors of a Node in a Directed Acyclic Graph</h2>\n<p>This problem is frequently asked by Palantir Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1433": {
+    "content": "<h2>Encrypt and Decrypt Strings</h2>\n<p>This problem is frequently asked by Duolingo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1435": {
+    "content": "<h2>XOR Queries of a Subarray</h2>\n<p>This problem is frequently asked by Airtel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1436": {
+    "content": "<h2>Get Watched Videos by Your Friends</h2>\n<p>This problem is frequently asked by Guidewire.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1437": {
+    "content": "<h2>Minimum Insertion Steps to Make a String Palindrome</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1440": {
+    "content": "<h2>Convert Integer to the Sum of Two No-Zero Integers</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1442": {
+    "content": "<h2>Number of Operations to Make Network Connected</h2>\n<p>This problem is frequently asked by Akuna Capital, IBM, Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1444": {
+    "content": "<h2>Number of Steps to Reduce a Number to Zero</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1445": {
+    "content": "<h2>Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold</h2>\n<p>This problem is frequently asked by Turo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1446": {
+    "content": "<h2>Angle Between Hands of a Clock</h2>\n<p>This problem is frequently asked by Epic Systems, Siemens, UKG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1448": {
+    "content": "<h2>Maximum 69 Number</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1449": {
+    "content": "<h2>Print Words Vertically</h2>\n<p>This problem is frequently asked by Guidewire.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1451": {
+    "content": "<h2>Minimum Number of Taps to Open to Water a Garden</h2>\n<p>This problem is frequently asked by Akuna Capital, BNY Mellon, DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1455": {
+    "content": "<h2>Filter Restaurants by Vegan-Friendly, Price and Distance</h2>\n<p>This problem is frequently asked by Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1456": {
+    "content": "<h2>Find the City With the Smallest Number of Neighbors at a Threshold Distance</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1457": {
+    "content": "<h2>Minimum Difficulty of a Job Schedule</h2>\n<p>This problem is frequently asked by Turvo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1458": {
+    "content": "<h2>Sort Integers by The Number of 1 Bits</h2>\n<p>This problem is frequently asked by Accenture, J.P. Morgan, Mapbox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1460": {
+    "content": "<h2>Number of Substrings Containing All Three Characters</h2>\n<p>This problem is frequently asked by DE Shaw, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1461": {
+    "content": "<h2>Count All Valid Pickup and Delivery Options</h2>\n<p>This problem is frequently asked by Acko, DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1464": {
+    "content": "<h2>Reduce Array Size to The Half</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1469": {
+    "content": "<h2>Minimum Number of Steps to Make Two Strings Anagram</h2>\n<p>This problem is frequently asked by DoorDash, IXL, SoFi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1470": {
+    "content": "<h2>Tweet Counts Per Frequency</h2>\n<p>This problem is frequently asked by X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1471": {
+    "content": "<h2>Maximum Students Taking Exam</h2>\n<p>This problem is frequently asked by SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1472": {
+    "content": "<h2>Increasing Decreasing String</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1474": {
+    "content": "<h2>Longest ZigZag Path in a Binary Tree</h2>\n<p>This problem is frequently asked by eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1475": {
+    "content": "<h2>Maximum Sum BST in Binary Tree</h2>\n<p>This problem is frequently asked by Zepto.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1477": {
+    "content": "<h2>Product of the Last K Numbers</h2>\n<p>This problem is frequently asked by Target, Tekion.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1478": {
+    "content": "<h2>Maximum Number of Events That Can Be Attended</h2>\n<p>This problem is frequently asked by Instacart, PayPal, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1479": {
+    "content": "<h2>Construct Target Array With Multiple Sums</h2>\n<p>This problem is frequently asked by Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1482": {
+    "content": "<h2>How Many Numbers Are Smaller Than the Current Number</h2>\n<p>This problem is frequently asked by Accenture, tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1483": {
+    "content": "<h2>Rank Teams by Votes</h2>\n<p>This problem is frequently asked by Atlassian, Coursera, eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1484": {
+    "content": "<h2>Linked List in Binary Tree</h2>\n<p>This problem is frequently asked by SoundHound.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1485": {
+    "content": "<h2>Minimum Cost to Make at Least One Valid Path in a Grid</h2>\n<p>This problem is frequently asked by Cleartrip.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1486": {
+    "content": "<h2>Find the Distance Value Between Two Arrays</h2>\n<p>This problem is frequently asked by Zepto.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1487": {
+    "content": "<h2>Cinema Seat Allocation</h2>\n<p>This problem is frequently asked by Geico, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1496": {
+    "content": "<h2>Lucky Numbers in a Matrix</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1497": {
+    "content": "<h2>Design a Stack With Increment Operation</h2>\n<p>This problem is frequently asked by Cloudflare, eBay, IMC.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1499": {
+    "content": "<h2>Maximum Performance of a Team</h2>\n<p>This problem is frequently asked by Citrix, DE Shaw, DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1500": {
+    "content": "<h2>Count Largest Group</h2>\n<p>This problem is frequently asked by Mercari.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1503": {
+    "content": "<h2>Reducing Dishes</h2>\n<p>This problem is frequently asked by Sony.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1505": {
+    "content": "<h2>Create Target Array in the Given Order</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1507": {
+    "content": "<h2>Check if There is a Valid Path in a Grid</h2>\n<p>This problem is frequently asked by Robinhood.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1511": {
+    "content": "<h2>Count Number of Teams</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1513": {
+    "content": "<h2>Find All Good Strings</h2>\n<p>This problem is frequently asked by Dunzo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1514": {
+    "content": "<h2>Minimum Value to Get Positive Step by Step Sum</h2>\n<p>This problem is frequently asked by Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1519": {
+    "content": "<h2>Minimum Subsequence in Non-Increasing Order</h2>\n<p>This problem is frequently asked by Mercari.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1520": {
+    "content": "<h2>Number of Steps to Reduce a Number in Binary Representation to One</h2>\n<p>This problem is frequently asked by Geico, Grab.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1527": {
+    "content": "<h2>Number of Ways to Paint N × 3 Grid</h2>\n<p>This problem is frequently asked by Fortinet.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1528": {
+    "content": "<h2>Kids With the Greatest Number of Candies</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1529": {
+    "content": "<h2>Max Difference You Can Get From Changing an Integer</h2>\n<p>This problem is frequently asked by Mercari, Trexquant.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1531": {
+    "content": "<h2>Number of Ways to Wear Different Hats to Each Other</h2>\n<p>This problem is frequently asked by Mindtickle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1533": {
+    "content": "<h2>Display Table of Food Orders in a Restaurant</h2>\n<p>This problem is frequently asked by J.P. Morgan, Nordstrom.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1534": {
+    "content": "<h2>Minimum Number of Frogs Croaking</h2>\n<p>This problem is frequently asked by Roblox, Zoox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1535": {
+    "content": "<h2>Build Array Where You Can Find The Maximum Exactly K Comparisons</h2>\n<p>This problem is frequently asked by Amdocs, Dunzo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1538": {
+    "content": "<h2>Maximum Points You Can Obtain from Cards</h2>\n<p>This problem is frequently asked by DE Shaw, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1539": {
+    "content": "<h2>Diagonal Traverse II</h2>\n<p>This problem is frequently asked by BP, Liftoff.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1544": {
+    "content": "<h2>Count Good Nodes in Binary Tree</h2>\n<p>This problem is frequently asked by Docusign, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1547": {
+    "content": "<h2>Destination City</h2>\n<p>This problem is frequently asked by Yandex, Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1549": {
+    "content": "<h2>Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit</h2>\n<p>This problem is frequently asked by Capital One, Databricks, eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1554": {
+    "content": "<h2>Minimum Time to Collect All Apples in a Tree</h2>\n<p>This problem is frequently asked by Myntra.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1559": {
+    "content": "<h2>Cherry Pickup II</h2>\n<p>This problem is frequently asked by Flipkart, Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1561": {
+    "content": "<h2>Rearrange Words in a Sentence</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1562": {
+    "content": "<h2>People Whose List of Favorite Companies Is Not a Subset of Another List</h2>\n<p>This problem is frequently asked by Datadog.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1566": {
+    "content": "<h2>Check If a Word Occurs As a Prefix of Any Word in a Sentence</h2>\n<p>This problem is frequently asked by Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1567": {
+    "content": "<h2>Maximum Number of Vowels in a Substring of Given Length</h2>\n<p>This problem is frequently asked by Turing, Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1570": {
+    "content": "<h2>Final Prices With a Special Discount in a Shop</h2>\n<p>This problem is frequently asked by Dream11.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1572": {
+    "content": "<h2>Subrectangle Queries</h2>\n<p>This problem is frequently asked by Info Edge, Nuro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1574": {
+    "content": "<h2>Maximum Product of Two Elements in an Array</h2>\n<p>This problem is frequently asked by Cisco, J.P. Morgan, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1575": {
+    "content": "<h2>Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts</h2>\n<p>This problem is frequently asked by BNY Mellon, IXL.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1576": {
+    "content": "<h2>Reorder Routes to Make All Paths Lead to the City Zero</h2>\n<p>This problem is frequently asked by Docusign, DRW.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1580": {
+    "content": "<h2>Shuffle the Array</h2>\n<p>This problem is frequently asked by Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1582": {
+    "content": "<h2>Design Browser History</h2>\n<p>This problem is frequently asked by Cisco, DoorDash, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1583": {
+    "content": "<h2>Paint House III</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1584": {
+    "content": "<h2>Average Salary Excluding the Minimum and Maximum Salary</h2>\n<p>This problem is frequently asked by Netsuite.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1585": {
+    "content": "<h2>The kth Factor of n</h2>\n<p>This problem is frequently asked by Expedia, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1586": {
+    "content": "<h2>Longest Subarray of 1's After Deleting One Element</h2>\n<p>This problem is frequently asked by Tinkoff, VK, Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1603": {
+    "content": "<h2>Running Sum of 1d Array</h2>\n<p>This problem is frequently asked by EPAM Systems.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1604": {
+    "content": "<h2>Least Number of Unique Integers after K Removals</h2>\n<p>This problem is frequently asked by Expedia, IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1605": {
+    "content": "<h2>Minimum Number of Days to Make m Bouquets</h2>\n<p>This problem is frequently asked by Navi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1612": {
+    "content": "<h2>Avoid Flood in The City</h2>\n<p>This problem is frequently asked by blinkit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1619": {
+    "content": "<h2>Path Crossing</h2>\n<p>This problem is frequently asked by Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1620": {
+    "content": "<h2>Check If Array Pairs Are Divisible by k</h2>\n<p>This problem is frequently asked by DevRev, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1621": {
+    "content": "<h2>Number of Subsequences That Satisfy the Given Sum Condition</h2>\n<p>This problem is frequently asked by Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1631": {
+    "content": "<h2>Number of Sub-arrays With Odd Sum</h2>\n<p>This problem is frequently asked by Directi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1633": {
+    "content": "<h2>Minimum Number of Increments on Subarrays to Form a Target Array</h2>\n<p>This problem is frequently asked by Dream11.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1637": {
+    "content": "<h2>String Compression II</h2>\n<p>This problem is frequently asked by Toptal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1638": {
+    "content": "<h2>Best Position for a Service Centre</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1640": {
+    "content": "<h2>Design a File Sharing System</h2>\n<p>This problem is frequently asked by Twitch.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1642": {
+    "content": "<h2>Water Bottles</h2>\n<p>This problem is frequently asked by Amadeus, HiLabs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1643": {
+    "content": "<h2>Number of Nodes in the Sub-Tree With the Same Label</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1645": {
+    "content": "<h2>Find a Value of a Mysterious Function Closest to Target</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1646": {
+    "content": "<h2>Kth Missing Positive Number</h2>\n<p>This problem is frequently asked by Arista Networks, Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1647": {
+    "content": "<h2>Can Convert String in K Moves</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1648": {
+    "content": "<h2>Minimum Insertions to Balance a Parentheses String</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1652": {
+    "content": "<h2>Minimum Suffix Flips</h2>\n<p>This problem is frequently asked by IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1653": {
+    "content": "<h2>Number of Good Leaf Nodes Pairs</h2>\n<p>This problem is frequently asked by ByteDance, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1656": {
+    "content": "<h2>Count Good Triplets</h2>\n<p>This problem is frequently asked by Turvo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1657": {
+    "content": "<h2>Find the Winner of an Array Game</h2>\n<p>This problem is frequently asked by Directi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1659": {
+    "content": "<h2>Get the Maximum Score</h2>\n<p>This problem is frequently asked by Intuit, Mindtickle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1661": {
+    "content": "<h2>Minimum Number of Vertices to Reach All Nodes</h2>\n<p>This problem is frequently asked by Airbnb.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1663": {
+    "content": "<h2>Detect Cycles in 2D Grid</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1665": {
+    "content": "<h2>Diameter of N-Ary Tree</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1666": {
+    "content": "<h2>Make The String Great</h2>\n<p>This problem is frequently asked by Accenture, BlackStone.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1668": {
+    "content": "<h2>Find Longest Awesome Substring</h2>\n<p>This problem is frequently asked by Directi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1669": {
+    "content": "<h2>Minimum Cost to Cut a Stick</h2>\n<p>This problem is frequently asked by LINE, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1675": {
+    "content": "<h2>Magnetic Force Between Two Balls</h2>\n<p>This problem is frequently asked by PhonePe, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1679": {
+    "content": "<h2>Shortest Subarray to be Removed to Make Array Sorted</h2>\n<p>This problem is frequently asked by DE Shaw, razorpay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1682": {
+    "content": "<h2>Most Visited Sector in  a Circular Track</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1689": {
+    "content": "<h2>Detect Pattern of Length M Repeated K or More Times</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1690": {
+    "content": "<h2>Maximum Length of Subarray With Positive Product</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1692": {
+    "content": "<h2>Number of Ways to Reorder Array to Get Same BST</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1694": {
+    "content": "<h2>Make Sum Divisible by P</h2>\n<p>This problem is frequently asked by PhonePe, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1695": {
+    "content": "<h2>Maximum Sum Obtained of Any Permutation</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1697": {
+    "content": "<h2>Strings Differ by One Character</h2>\n<p>This problem is frequently asked by Airbnb, Okta.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1706": {
+    "content": "<h2>Min Cost to Connect All Points</h2>\n<p>This problem is frequently asked by DE Shaw, Directi, Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1708": {
+    "content": "<h2>Design Parking System</h2>\n<p>This problem is frequently asked by Valve.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1709": {
+    "content": "<h2>Alert Using Same Key-Card Three or More Times in a One Hour Period</h2>\n<p>This problem is frequently asked by Karat, Wayfair.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1710": {
+    "content": "<h2>Find Servers That Handled Most Number of Requests</h2>\n<p>This problem is frequently asked by Capital One, Cisco, Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1713": {
+    "content": "<h2>Dot Product of Two Sparse Vectors</h2>\n<p>This problem is frequently asked by General Motors, Nvidia, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1720": {
+    "content": "<h2>Crawler Log Folder</h2>\n<p>This problem is frequently asked by Atlassian, Flipkart, Mercari.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1721": {
+    "content": "<h2>Maximum Profit of Operating a Centennial Wheel</h2>\n<p>This problem is frequently asked by peak6.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1722": {
+    "content": "<h2>Throne Inheritance</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1726": {
+    "content": "<h2>Coordinate With Maximum Network Quality</h2>\n<p>This problem is frequently asked by Lyft, peak6.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1732": {
+    "content": "<h2>Minimum One Bit Operations to Make Integers Zero</h2>\n<p>This problem is frequently asked by Expedia, McKinsey, ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1733": {
+    "content": "<h2>Maximum Number of Visible Points</h2>\n<p>This problem is frequently asked by Anduril, Applied Intuition, Nuro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1736": {
+    "content": "<h2>Build Binary Expression Tree From Infix Expression</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1737": {
+    "content": "<h2>Maximum Nesting Depth of the Parentheses</h2>\n<p>This problem is frequently asked by Intel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1738": {
+    "content": "<h2>Maximal Network Rank</h2>\n<p>This problem is frequently asked by DRW, smartnews.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1741": {
+    "content": "<h2>Sort Array by Increasing Frequency</h2>\n<p>This problem is frequently asked by Accenture, Agoda, Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1742": {
+    "content": "<h2>Widest Vertical Area Between Two Points Containing No Points</h2>\n<p>This problem is frequently asked by General Motors.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1744": {
+    "content": "<h2>Number of Ways to Form a Target String Given a Dictionary</h2>\n<p>This problem is frequently asked by Dunzo, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1747": {
+    "content": "<h2>Lexicographically Smallest String After Applying Operations</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1748": {
+    "content": "<h2>Best Team With No Conflicts</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1753": {
+    "content": "<h2>Path With Minimum Effort</h2>\n<p>This problem is frequently asked by Cohesity, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1756": {
+    "content": "<h2>Minimum Deletions to Make String Balanced</h2>\n<p>This problem is frequently asked by redbus.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1762": {
+    "content": "<h2>Furthest Building You Can Reach</h2>\n<p>This problem is frequently asked by DE Shaw, Dream11, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1764": {
+    "content": "<h2>Maximum Repeating Substring</h2>\n<p>This problem is frequently asked by Asana, Pure Storage, Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1765": {
+    "content": "<h2>Merge In Between Linked Lists</h2>\n<p>This problem is frequently asked by Arista Networks, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1766": {
+    "content": "<h2>Minimum Number of Removals to Make Mountain Array</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1767": {
+    "content": "<h2>Design Front Middle Back Queue</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1770": {
+    "content": "<h2>Minimum Deletions to Make Character Frequencies Unique</h2>\n<p>This problem is frequently asked by American Express, ConsultAdd, smartnews.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1771": {
+    "content": "<h2>Sell Diminishing-Valued Colored Balls</h2>\n<p>This problem is frequently asked by Groupon, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1772": {
+    "content": "<h2>Create Sorted Array through Instructions</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1776": {
+    "content": "<h2>Minimum Operations to Reduce X to Zero</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1777": {
+    "content": "<h2>Determine if Two Strings Are Close</h2>\n<p>This problem is frequently asked by Postmates.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1782": {
+    "content": "<h2>Smallest String With A Given Numeric Value</h2>\n<p>This problem is frequently asked by Lendingkart Technologies.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1783": {
+    "content": "<h2>Ways to Make a Fair Array</h2>\n<p>This problem is frequently asked by DoorDash, Dunzo, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1784": {
+    "content": "<h2>Minimum Initial Energy to Finish Tasks</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1786": {
+    "content": "<h2>Count the Number of Consistent Strings</h2>\n<p>This problem is frequently asked by Robinhood.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1788": {
+    "content": "<h2>Stone Game VI</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1789": {
+    "content": "<h2>Delivering Boxes from Storage to Ports</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1790": {
+    "content": "<h2>Lowest Common Ancestor of a Binary Tree III</h2>\n<p>This problem is frequently asked by Atlassian, Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1793": {
+    "content": "<h2>Minimum Moves to Make Array Complementary</h2>\n<p>This problem is frequently asked by CureFit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1794": {
+    "content": "<h2>Minimize Deviation in Array</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1798": {
+    "content": "<h2>Max Number of K-Sum Pairs</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1802": {
+    "content": "<h2>Number of Students Unable to Eat Lunch</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1803": {
+    "content": "<h2>Average Waiting Time</h2>\n<p>This problem is frequently asked by DE Shaw, Instacart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1804": {
+    "content": "<h2>Maximum Binary String After Change</h2>\n<p>This problem is frequently asked by Huawei.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1805": {
+    "content": "<h2>Minimum Adjacent Swaps for K Consecutive Ones</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1807": {
+    "content": "<h2>Partitioning Into Minimum Number Of Deci-Binary Numbers</h2>\n<p>This problem is frequently asked by Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1808": {
+    "content": "<h2>Stone Game VII</h2>\n<p>This problem is frequently asked by Dunzo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1809": {
+    "content": "<h2>Sum Of Special Evenly-Spaced Elements In Array</h2>\n<p>This problem is frequently asked by MakeMyTrip.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1812": {
+    "content": "<h2>Reformat Phone Number</h2>\n<p>This problem is frequently asked by Activision.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1813": {
+    "content": "<h2>Maximum Erasure Value</h2>\n<p>This problem is frequently asked by Cashfree.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1814": {
+    "content": "<h2>Jump Game VI</h2>\n<p>This problem is frequently asked by AQR Capital Management.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1818": {
+    "content": "<h2>Maximum Score From Removing Substrings</h2>\n<p>This problem is frequently asked by Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1825": {
+    "content": "<h2>Find Minimum Time to Finish All Jobs</h2>\n<p>This problem is frequently asked by Lyft, PhonePe, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1829": {
+    "content": "<h2>Maximum Units on a Truck</h2>\n<p>This problem is frequently asked by Arista Networks, IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1830": {
+    "content": "<h2>Count Good Meals</h2>\n<p>This problem is frequently asked by Robinhood, Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1831": {
+    "content": "<h2>Ways to Split Array Into Three Subarrays</h2>\n<p>This problem is frequently asked by Robinhood, Tekion.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1834": {
+    "content": "<h2>Minimum Number of People to Teach</h2>\n<p>This problem is frequently asked by Duolingo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1838": {
+    "content": "<h2>Number of Distinct Substrings in a String</h2>\n<p>This problem is frequently asked by Dunzo, Intuit, ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1844": {
+    "content": "<h2>Maximum Number of Balls in a Box</h2>\n<p>This problem is frequently asked by AppDynamics, Lucid.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1845": {
+    "content": "<h2>Largest Submatrix With Rearrangements</h2>\n<p>This problem is frequently asked by Directi, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1848": {
+    "content": "<h2>Sum of Unique Elements</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1866": {
+    "content": "<h2>Restore the Array From Adjacent Pairs</h2>\n<p>This problem is frequently asked by Robinhood.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1871": {
+    "content": "<h2>Palindrome Partitioning IV</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1878": {
+    "content": "<h2>Check if Array Is Sorted and Rotated</h2>\n<p>This problem is frequently asked by SoundHound, tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1880": {
+    "content": "<h2>Largest Merge Of Two Strings</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1881": {
+    "content": "<h2>Closest Subsequence Sum</h2>\n<p>This problem is frequently asked by LTI, Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1884": {
+    "content": "<h2>Minimum Changes To Make Alternating Binary String</h2>\n<p>This problem is frequently asked by Tesla.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1885": {
+    "content": "<h2>Count Number of Homogenous Substrings</h2>\n<p>This problem is frequently asked by Virtu Financial.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1886": {
+    "content": "<h2>Minimum Limit of Balls in a Bag</h2>\n<p>This problem is frequently asked by Flipkart, Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1888": {
+    "content": "<h2>Find Nearest Point That Has the Same X or Y Coordinate</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1890": {
+    "content": "<h2>Sum of Beauty of All Substrings</h2>\n<p>This problem is frequently asked by Fastenal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1893": {
+    "content": "<h2>Maximum Subarray Sum After One Operation</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1894": {
+    "content": "<h2>Merge Strings Alternately</h2>\n<p>This problem is frequently asked by Wells Fargo, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1901": {
+    "content": "<h2>Equal Sum Arrays With Minimum Number of Operations</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1904": {
+    "content": "<h2>Second Largest Digit in a String</h2>\n<p>This problem is frequently asked by Softwire.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1905": {
+    "content": "<h2>Design Authentication Manager</h2>\n<p>This problem is frequently asked by Confluent, Docusign, Genpact.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1906": {
+    "content": "<h2>Maximize Score After N Operations</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1907": {
+    "content": "<h2>Count Pairs With XOR in a Range</h2>\n<p>This problem is frequently asked by Vimeo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1909": {
+    "content": "<h2>Buildings With an Ocean View</h2>\n<p>This problem is frequently asked by Coupang.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1910": {
+    "content": "<h2>Check if Binary String Has at Most One Segment of Ones</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1911": {
+    "content": "<h2>Minimum Elements to Add to Form a Given Sum</h2>\n<p>This problem is frequently asked by X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1913": {
+    "content": "<h2>Make the XOR of All Segments Equal to Zero</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1915": {
+    "content": "<h2>Check if One String Swap Can Make Strings Equal</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1920": {
+    "content": "<h2>Determine Color of a Chessboard Square</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1925": {
+    "content": "<h2>Count Nice Pairs in an Array</h2>\n<p>This problem is frequently asked by Block.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1927": {
+    "content": "<h2>Maximum Ascending Subarray Sum</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1928": {
+    "content": "<h2>Number of Orders in the Backlog</h2>\n<p>This problem is frequently asked by Coinbase, Jane Street, Robinhood.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1929": {
+    "content": "<h2>Maximum Value at a Given Index in a Bounded Array</h2>\n<p>This problem is frequently asked by ByteDance.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1930": {
+    "content": "<h2>Maximum Number of Consecutive Values You Can Make</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1934": {
+    "content": "<h2>Evaluate the Bracket Pairs of a String</h2>\n<p>This problem is frequently asked by Remitly.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1938": {
+    "content": "<h2>Minimum Operations to Make the Array Increasing</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1941": {
+    "content": "<h2>Minimum Number of Operations to Make String Sorted</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1944": {
+    "content": "<h2>Truncate Sentence</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1945": {
+    "content": "<h2>Finding the Users Active Minutes</h2>\n<p>This problem is frequently asked by X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1947": {
+    "content": "<h2>Number of Different Subsequences GCDs</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1949": {
+    "content": "<h2>Implement Trie II (Prefix Tree)</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1951": {
+    "content": "<h2>Find the Winner of the Circular Game</h2>\n<p>This problem is frequently asked by Accenture, Arista Networks, Groupon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1952": {
+    "content": "<h2>Minimum Sideway Jumps</h2>\n<p>This problem is frequently asked by Pony.ai.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1955": {
+    "content": "<h2>Seat Reservation Manager</h2>\n<p>This problem is frequently asked by Dropbox, Siemens.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1960": {
+    "content": "<h2>Check if the Sentence Is Pangram</h2>\n<p>This problem is frequently asked by Vanguard.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1962": {
+    "content": "<h2>Single-Threaded CPU</h2>\n<p>This problem is frequently asked by DoorDash, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1966": {
+    "content": "<h2>Frequency of the Most Frequent Element</h2>\n<p>This problem is frequently asked by CRED, Deutsche Bank, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1967": {
+    "content": "<h2>Longest Substring Of All Vowels in Order</h2>\n<p>This problem is frequently asked by Thomson Reuters.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1968": {
+    "content": "<h2>Maximum Building Height</h2>\n<p>This problem is frequently asked by Dataminr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1972": {
+    "content": "<h2>Rotating the Box</h2>\n<p>This problem is frequently asked by Block, Capital One, Commvault.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1975": {
+    "content": "<h2>Minimum Distance to the Target Element</h2>\n<p>This problem is frequently asked by Honeywell.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1983": {
+    "content": "<h2>Maximum Population Year</h2>\n<p>This problem is frequently asked by PayPal, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1986": {
+    "content": "<h2>Largest Color Value in a Directed Graph</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1987": {
+    "content": "<h2>Substrings of Size Three with Distinct Characters</h2>\n<p>This problem is frequently asked by Accenture, Quora, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1988": {
+    "content": "<h2>Minimize Maximum Pair Sum in Array</h2>\n<p>This problem is frequently asked by eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1989": {
+    "content": "<h2>Minimum XOR Sum of Two Arrays</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1990": {
+    "content": "<h2>Get Biggest Three Rhombus Sums in a Grid</h2>\n<p>This problem is frequently asked by Capital One, Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1994": {
+    "content": "<h2>Minimum Number of Swaps to Make the Binary String Alternating</h2>\n<p>This problem is frequently asked by Societe Generale.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "1995": {
+    "content": "<h2>Finding Pairs With a Certain Sum</h2>\n<p>This problem is frequently asked by Databricks, Quora.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2002": {
+    "content": "<h2>Stone Game VIII</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2012": {
+    "content": "<h2>Process Tasks Using Servers</h2>\n<p>This problem is frequently asked by Lyft, PayPal, X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2017": {
+    "content": "<h2>Minimum Number of Flips to Make the Binary String Alternating</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2018": {
+    "content": "<h2>Minimum Space Wasted From Packaging</h2>\n<p>This problem is frequently asked by Two Sigma.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2020": {
+    "content": "<h2>Remove One Element to Make the Array Strictly Increasing</h2>\n<p>This problem is frequently asked by eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2021": {
+    "content": "<h2>Remove All Occurrences of a Substring</h2>\n<p>This problem is frequently asked by Arista Networks, X, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2023": {
+    "content": "<h2>Design Movie Rental System</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2025": {
+    "content": "<h2>Redistribute Characters to Make All Strings Equal</h2>\n<p>This problem is frequently asked by Moengage.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2027": {
+    "content": "<h2>Maximum Number of Removable Characters</h2>\n<p>This problem is frequently asked by Moveworks, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2031": {
+    "content": "<h2>Egg Drop With 2 Eggs and N Floors</h2>\n<p>This problem is frequently asked by Citadel, Disney.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2033": {
+    "content": "<h2>The Number of Full Rounds You Have Played</h2>\n<p>This problem is frequently asked by General Motors.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2035": {
+    "content": "<h2>Count Sub Islands</h2>\n<p>This problem is frequently asked by DoorDash, X, Zepto.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2036": {
+    "content": "<h2>Count Pairs in Two Arrays</h2>\n<p>This problem is frequently asked by Shopee, Teradata.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2037": {
+    "content": "<h2>Count Square Sum Triples</h2>\n<p>This problem is frequently asked by Qualtrics.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2038": {
+    "content": "<h2>Nearest Exit from Entrance in Maze</h2>\n<p>This problem is frequently asked by eBay, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2039": {
+    "content": "<h2>Sum Game</h2>\n<p>This problem is frequently asked by ByteDance, DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2043": {
+    "content": "<h2>Cyclically Rotating a Grid</h2>\n<p>This problem is frequently asked by Applied Intuition.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2044": {
+    "content": "<h2>Number of Wonderful Substrings</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2047": {
+    "content": "<h2>Find a Peak Element II</h2>\n<p>This problem is frequently asked by Zeta.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2049": {
+    "content": "<h2>Eliminate Maximum Number of Monsters</h2>\n<p>This problem is frequently asked by Agoda.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2053": {
+    "content": "<h2>Check if All Characters Have Equal Number of Occurrences</h2>\n<p>This problem is frequently asked by Bolt.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2054": {
+    "content": "<h2>The Number of the Smallest Unoccupied Chair</h2>\n<p>This problem is frequently asked by Otter.ai.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2058": {
+    "content": "<h2>Concatenation of Array</h2>\n<p>This problem is frequently asked by GE Healthcare.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2068": {
+    "content": "<h2>Maximum Genetic Difference Query</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2075": {
+    "content": "<h2>Brightest Position on Street</h2>\n<p>This problem is frequently asked by Hertz, Robinhood, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2077": {
+    "content": "<h2>Largest Number After Mutating Substring</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2079": {
+    "content": "<h2>Delete Duplicate Folders in System</h2>\n<p>This problem is frequently asked by Booking.com, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2081": {
+    "content": "<h2>Minimum Total Space Wasted With K Resizing Operations</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2084": {
+    "content": "<h2>Maximum Number of Weeks for Which You Can Work</h2>\n<p>This problem is frequently asked by SAP, Wells Fargo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2088": {
+    "content": "<h2>Minimum Time to Type Word Using Special Typewriter</h2>\n<p>This problem is frequently asked by LinkedIn, Thomson Reuters.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2089": {
+    "content": "<h2>Maximum Matrix Sum</h2>\n<p>This problem is frequently asked by Honeywell.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2091": {
+    "content": "<h2>Number of Ways to Separate Numbers</h2>\n<p>This problem is frequently asked by Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2095": {
+    "content": "<h2>Minimum Number of Swaps to Make the String Balanced</h2>\n<p>This problem is frequently asked by Expedia, Microstrategy, Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2096": {
+    "content": "<h2>Find the Longest Valid Obstacle Course at Each Position</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2100": {
+    "content": "<h2>Minimum Non-Zero Product of the Array Elements</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2101": {
+    "content": "<h2>Last Day Where You Can Still Cross</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2103": {
+    "content": "<h2>Find All Groups of Farmland</h2>\n<p>This problem is frequently asked by Citrix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2104": {
+    "content": "<h2>Operations on Tree</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2105": {
+    "content": "<h2>The Number of Good Subsets</h2>\n<p>This problem is frequently asked by Lowe's, Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2108": {
+    "content": "<h2>Minimize the Difference Between Target and Chosen Elements</h2>\n<p>This problem is frequently asked by Deutsche Bank, Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2109": {
+    "content": "<h2>Find Array Given Subset Sums</h2>\n<p>This problem is frequently asked by Mindtickle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2112": {
+    "content": "<h2>Minimum Difference Between Highest and Lowest of K Scores</h2>\n<p>This problem is frequently asked by Tinkoff.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2114": {
+    "content": "<h2>Minimum Number of Work Sessions to Finish the Tasks</h2>\n<p>This problem is frequently asked by Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2115": {
+    "content": "<h2>Number of Unique Good Subsequences</h2>\n<p>This problem is frequently asked by Oracle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2116": {
+    "content": "<h2>Count Number of Pairs With Absolute Difference K</h2>\n<p>This problem is frequently asked by Expedia, Goldman Sachs, Oracle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2117": {
+    "content": "<h2>Find Original Array From Doubled Array</h2>\n<p>This problem is frequently asked by Accenture, Verily.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2118": {
+    "content": "<h2>Maximum Earnings From Taxi</h2>\n<p>This problem is frequently asked by Myntra.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2123": {
+    "content": "<h2>The Number of Weak Characters in the Game</h2>\n<p>This problem is frequently asked by Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2124": {
+    "content": "<h2>First Day Where You Have Been in All the Rooms</h2>\n<p>This problem is frequently asked by ByteDance.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2128": {
+    "content": "<h2>Reverse Prefix of Word</h2>\n<p>This problem is frequently asked by Optum.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2134": {
+    "content": "<h2>Maximize the Confusion of an Exam</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2141": {
+    "content": "<h2>Smallest Greater Multiple Made of Two Digits</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2144": {
+    "content": "<h2>Maximum Difference Between Increasing Elements</h2>\n<p>This problem is frequently asked by Cisco, MathWorks, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2147": {
+    "content": "<h2>The Score of Students Solving Math Expression</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2149": {
+    "content": "<h2>Remove Colored Pieces if Both Neighbors are the Same Color</h2>\n<p>This problem is frequently asked by J.P. Morgan, MathWorks, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2150": {
+    "content": "<h2>Kth Smallest Product of Two Sorted Arrays</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2151": {
+    "content": "<h2>The Time When the Network Becomes Idle</h2>\n<p>This problem is frequently asked by Atlassian, Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2153": {
+    "content": "<h2>Subtree Removal Game with Fibonacci Tree</h2>\n<p>This problem is frequently asked by Sony.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2156": {
+    "content": "<h2>Stone Game IX</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2157": {
+    "content": "<h2>Smallest K-Length Subsequence With Occurrences of a Letter</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2159": {
+    "content": "<h2>Two Out of Three</h2>\n<p>This problem is frequently asked by Booking.com, Info Edge.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2160": {
+    "content": "<h2>Minimum Operations to Make a Uni-Value Grid</h2>\n<p>This problem is frequently asked by EPAM Systems.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2162": {
+    "content": "<h2>Partition Array Into Two Arrays to Minimize Sum Difference</h2>\n<p>This problem is frequently asked by Arcesium, Millennium, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2164": {
+    "content": "<h2>Two Best Non-Overlapping Events</h2>\n<p>This problem is frequently asked by razorpay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2166": {
+    "content": "<h2>Number of Valid Move Combinations On Chessboard</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2169": {
+    "content": "<h2>Simple Bank System</h2>\n<p>This problem is frequently asked by Airbnb, Capital One, Circle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2170": {
+    "content": "<h2>Count Number of Maximum Bitwise-OR Subsets</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2173": {
+    "content": "<h2>Number of Valid Words in a Sentence</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2174": {
+    "content": "<h2>Next Greater Numerically Balanced Number</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2175": {
+    "content": "<h2>Count Nodes With the Highest Score</h2>\n<p>This problem is frequently asked by DoorDash, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2176": {
+    "content": "<h2>Parallel Courses III</h2>\n<p>This problem is frequently asked by Acko, Citadel, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2177": {
+    "content": "<h2>Check Whether Two Strings are Almost Equivalent</h2>\n<p>This problem is frequently asked by J.P. Morgan, Salesforce, Vanguard.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2178": {
+    "content": "<h2>Walking Robot Simulation II</h2>\n<p>This problem is frequently asked by Block.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2179": {
+    "content": "<h2>Most Beautiful Item for Each Query</h2>\n<p>This problem is frequently asked by Postmates, razorpay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2180": {
+    "content": "<h2>Maximum Number of Tasks You Can Assign</h2>\n<p>This problem is frequently asked by Coupang, IBM, Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2182": {
+    "content": "<h2>Find the Minimum and Maximum Number of Nodes Between Critical Points</h2>\n<p>This problem is frequently asked by Info Edge, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2184": {
+    "content": "<h2>Check if an Original String Exists Given Two Encoded Strings</h2>\n<p>This problem is frequently asked by BitGo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2186": {
+    "content": "<h2>Count Vowel Substrings of a String</h2>\n<p>This problem is frequently asked by BNY Mellon, Commvault, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2187": {
+    "content": "<h2>Vowels of All Substrings</h2>\n<p>This problem is frequently asked by ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2188": {
+    "content": "<h2>Minimized Maximum of Products Distributed to Any Store</h2>\n<p>This problem is frequently asked by Siemens.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2189": {
+    "content": "<h2>Maximum Path Quality of a Graph</h2>\n<p>This problem is frequently asked by Atlassian, DoorDash, SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2190": {
+    "content": "<h2>Count Common Words With One Occurrence</h2>\n<p>This problem is frequently asked by Jane Street.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2191": {
+    "content": "<h2>Minimum Number of Food Buckets to Feed the Hamsters</h2>\n<p>This problem is frequently asked by Geico, Grab, Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2192": {
+    "content": "<h2>Minimum Cost Homecoming of a Robot in a Grid</h2>\n<p>This problem is frequently asked by Goldman Sachs, HP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2195": {
+    "content": "<h2>Time Needed to Buy Tickets</h2>\n<p>This problem is frequently asked by Komprise, X.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2196": {
+    "content": "<h2>Reverse Nodes in Even Length Groups</h2>\n<p>This problem is frequently asked by Zopsmart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2197": {
+    "content": "<h2>Decode the Slanted Ciphertext</h2>\n<p>This problem is frequently asked by Grammarly.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2199": {
+    "content": "<h2>Two Furthest Houses With Different Colors</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2200": {
+    "content": "<h2>Stamping the Grid</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2201": {
+    "content": "<h2>Valid Arrangement of Pairs</h2>\n<p>This problem is frequently asked by Goldman Sachs, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2202": {
+    "content": "<h2>Sum of k-Mirror Numbers</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2203": {
+    "content": "<h2>Number of Spaces Cleaning Robot Cleaned</h2>\n<p>This problem is frequently asked by Geico.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2204": {
+    "content": "<h2>Find Subsequence of Length K With the Largest Sum</h2>\n<p>This problem is frequently asked by Accenture, Oracle.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2206": {
+    "content": "<h2>Detonate the Maximum Bombs</h2>\n<p>This problem is frequently asked by Chime.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2209": {
+    "content": "<h2>Number of Equal Count Substrings</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2210": {
+    "content": "<h2>Find Target Indices After Sorting Array</h2>\n<p>This problem is frequently asked by TikTok.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2211": {
+    "content": "<h2>K Radius Subarray Averages</h2>\n<p>This problem is frequently asked by Duolingo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2217": {
+    "content": "<h2>Step-By-Step Directions From a Binary Tree Node to Another</h2>\n<p>This problem is frequently asked by Databricks, Snowflake, TikTok.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2220": {
+    "content": "<h2>Find All Possible Recipes from Given Supplies</h2>\n<p>This problem is frequently asked by PhonePe, TikTok, Verily.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2221": {
+    "content": "<h2>Check if a Parentheses String Can Be Valid</h2>\n<p>This problem is frequently asked by ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2222": {
+    "content": "<h2>Abbreviating the Product of a Range</h2>\n<p>This problem is frequently asked by Avalara.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2227": {
+    "content": "<h2>Sum of Subarray Ranges</h2>\n<p>This problem is frequently asked by J.P. Morgan, TikTok.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2229": {
+    "content": "<h2>Maximum Fruits Harvested After at Most K Steps</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2230": {
+    "content": "<h2>Minimum Cost to Reach City With Discounts</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2236": {
+    "content": "<h2>Maximum Twin Sum of a Linked List</h2>\n<p>This problem is frequently asked by josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2237": {
+    "content": "<h2>Longest Palindrome by Concatenating Two Letter Words</h2>\n<p>This problem is frequently asked by Databricks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2240": {
+    "content": "<h2>Intervals Between Identical Elements</h2>\n<p>This problem is frequently asked by TuSimple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2242": {
+    "content": "<h2>Subsequence of Size K With the Largest Even Sum</h2>\n<p>This problem is frequently asked by DRW.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2246": {
+    "content": "<h2>Maximum Employees to Be Invited to a Meeting</h2>\n<p>This problem is frequently asked by Barclays, SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2247": {
+    "content": "<h2>Number of Unique Flavors After Sharing K Candies</h2>\n<p>This problem is frequently asked by ciena.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2248": {
+    "content": "<h2>Minimum Cost of Buying Candies With Discount</h2>\n<p>This problem is frequently asked by Garmin, Nokia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2249": {
+    "content": "<h2>Count the Hidden Sequences</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2250": {
+    "content": "<h2>K Highest Ranked Items Within a Price Range</h2>\n<p>This problem is frequently asked by Booking.com.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2251": {
+    "content": "<h2>Number of Ways to Divide a Long Corridor</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2254": {
+    "content": "<h2>Check if Every Row and Column Contains All Numbers</h2>\n<p>This problem is frequently asked by Indeed, Instacart, Karat.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2255": {
+    "content": "<h2>Minimum Swaps to Group All 1's Together II</h2>\n<p>This problem is frequently asked by IBM, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2257": {
+    "content": "<h2>Earliest Possible Day of Full Bloom</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2260": {
+    "content": "<h2>Divide a String Into Groups of Size k</h2>\n<p>This problem is frequently asked by Canonical.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2263": {
+    "content": "<h2>Maximum Running Time of N Computers</h2>\n<p>This problem is frequently asked by Deutsche Bank, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2266": {
+    "content": "<h2>Minimum Cost to Set Cooking Time</h2>\n<p>This problem is frequently asked by GE Digital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2271": {
+    "content": "<h2>Rearrange Array Elements by Sign</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2272": {
+    "content": "<h2>Maximum Good People Based on Statements</h2>\n<p>This problem is frequently asked by TuSimple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2273": {
+    "content": "<h2>Pour Water Between Buckets to Make Water Levels Equal</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2274": {
+    "content": "<h2>Keep Multiplying Found Values by Two</h2>\n<p>This problem is frequently asked by Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2276": {
+    "content": "<h2>Groups of Strings</h2>\n<p>This problem is frequently asked by Lowe's.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2277": {
+    "content": "<h2>Count Equal and Divisible Pairs in an Array</h2>\n<p>This problem is frequently asked by zeta suite.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2278": {
+    "content": "<h2>Find Three Consecutive Integers That Sum to a Given Number</h2>\n<p>This problem is frequently asked by FPT.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2280": {
+    "content": "<h2>Count Good Triplets in an Array</h2>\n<p>This problem is frequently asked by Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2283": {
+    "content": "<h2>Sort Even and Odd Indices Independently</h2>\n<p>This problem is frequently asked by Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2284": {
+    "content": "<h2>Smallest Value of the Rearranged Number</h2>\n<p>This problem is frequently asked by Cognizant.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2287": {
+    "content": "<h2>Minimum Number of Lines to Cover Points</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2288": {
+    "content": "<h2>Count Operations to Obtain Zero</h2>\n<p>This problem is frequently asked by Accenture, Capital One, PayU.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2290": {
+    "content": "<h2>Removing Minimum Number of Magic Beans</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2292": {
+    "content": "<h2>Counting Words With a Given Prefix</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2293": {
+    "content": "<h2>Minimum Number of Steps to Make Two Strings Anagram II</h2>\n<p>This problem is frequently asked by Wealthfront.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2294": {
+    "content": "<h2>Minimum Time to Complete Trips</h2>\n<p>This problem is frequently asked by Amadeus.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2298": {
+    "content": "<h2>Count Integers With Even Digit Sum</h2>\n<p>This problem is frequently asked by MindTree.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2299": {
+    "content": "<h2>Merge Nodes in Between Zeros</h2>\n<p>This problem is frequently asked by josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2300": {
+    "content": "<h2>Construct String With Repeat Limit</h2>\n<p>This problem is frequently asked by Arista Networks, Fortinet.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2301": {
+    "content": "<h2>Count Array Pairs Divisible by K</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2303": {
+    "content": "<h2>Unique Substrings With Equal Digit Frequency</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2306": {
+    "content": "<h2>Create Binary Tree From Descriptions</h2>\n<p>This problem is frequently asked by Clari, LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2317": {
+    "content": "<h2>Count Collisions on a Road</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2318": {
+    "content": "<h2>Maximum Points in an Archery Competition</h2>\n<p>This problem is frequently asked by Kakao.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2322": {
+    "content": "<h2>Number of Ways to Build Sturdy Brick Wall</h2>\n<p>This problem is frequently asked by Microstrategy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2323": {
+    "content": "<h2>Minimum Bit Flips to Convert Number</h2>\n<p>This problem is frequently asked by persistent systems.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2324": {
+    "content": "<h2>Find Triangular Sum of an Array</h2>\n<p>This problem is frequently asked by Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2325": {
+    "content": "<h2>Number of Ways to Select Buildings</h2>\n<p>This problem is frequently asked by Dream11.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2327": {
+    "content": "<h2>Largest Number After Digit Swaps by Parity</h2>\n<p>This problem is frequently asked by ZScaler.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2328": {
+    "content": "<h2>Minimize Result by Adding Parentheses to Expression</h2>\n<p>This problem is frequently asked by Pinterest, Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2329": {
+    "content": "<h2>Maximum Product After K Increments</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2330": {
+    "content": "<h2>Maximum Total Beauty of the Gardens</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2332": {
+    "content": "<h2>Count Lattice Points Inside a Circle</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2334": {
+    "content": "<h2>Number of Flowers in Full Bloom</h2>\n<p>This problem is frequently asked by Capital One, Databricks, Netflix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2343": {
+    "content": "<h2>Count Unguarded Cells in the Grid</h2>\n<p>This problem is frequently asked by Poshmark.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2346": {
+    "content": "<h2>Largest 3-Same-Digit Number in String</h2>\n<p>This problem is frequently asked by opentext, PayPay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2347": {
+    "content": "<h2>Count Nodes Equal to Average of Subtree</h2>\n<p>This problem is frequently asked by INDmoney, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2348": {
+    "content": "<h2>Count Number of Texts</h2>\n<p>This problem is frequently asked by Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2350": {
+    "content": "<h2>Find Closest Number to Zero</h2>\n<p>This problem is frequently asked by Tiger Analytics.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2351": {
+    "content": "<h2>Number of Ways to Buy Pens and Pencils</h2>\n<p>This problem is frequently asked by Reddit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2352": {
+    "content": "<h2>Design an ATM Machine</h2>\n<p>This problem is frequently asked by Yandex.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2356": {
+    "content": "<h2>Largest Combination With Bitwise AND Greater Than Zero</h2>\n<p>This problem is frequently asked by Jump Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2357": {
+    "content": "<h2>Count Integers in Intervals</h2>\n<p>This problem is frequently asked by Databricks, LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2359": {
+    "content": "<h2>Maximum White Tiles Covered by a Carpet</h2>\n<p>This problem is frequently asked by LTI.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2364": {
+    "content": "<h2>Longest Path With Different Adjacent Characters</h2>\n<p>This problem is frequently asked by Hudson River Trading, Target.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2365": {
+    "content": "<h2>Percentage of Letter in String</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2374": {
+    "content": "<h2>Steps to Make Array Non-decreasing</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2377": {
+    "content": "<h2>Check if Number Has Equal Digit Count and Digit Value</h2>\n<p>This problem is frequently asked by J.P. Morgan, PornHub.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2379": {
+    "content": "<h2>Maximum Total Importance of Roads</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2383": {
+    "content": "<h2>Add Two Integers</h2>\n<p>This problem is frequently asked by Atlassian, Jane Street.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2389": {
+    "content": "<h2>Design a Text Editor</h2>\n<p>This problem is frequently asked by Block, Dropbox, Jane Street.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2392": {
+    "content": "<h2>Successful Pairs of Spells and Potions</h2>\n<p>This problem is frequently asked by Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2394": {
+    "content": "<h2>Count Subarrays With Score Less Than K</h2>\n<p>This problem is frequently asked by Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2397": {
+    "content": "<h2>Count Number of Ways to Place Houses</h2>\n<p>This problem is frequently asked by Nagarro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2403": {
+    "content": "<h2>Count Unreachable Pairs of Nodes in an Undirected Graph</h2>\n<p>This problem is frequently asked by Commvault.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2404": {
+    "content": "<h2>Number of Distinct Roll Sequences</h2>\n<p>This problem is frequently asked by ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2405": {
+    "content": "<h2>Minimum Number of Keypresses</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2406": {
+    "content": "<h2>Decode the Message</h2>\n<p>This problem is frequently asked by Coinbase, Tesla.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2408": {
+    "content": "<h2>Number of People Aware of a Secret</h2>\n<p>This problem is frequently asked by Arcesium, NCR.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2415": {
+    "content": "<h2>Count the Number of Ideal Arrays</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2417": {
+    "content": "<h2>The Latest Time to Catch a Bus</h2>\n<p>This problem is frequently asked by Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2419": {
+    "content": "<h2>Subarray With Elements Greater Than Varying Threshold</h2>\n<p>This problem is frequently asked by instabase.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2421": {
+    "content": "<h2>Maximum Number of Pairs in Array</h2>\n<p>This problem is frequently asked by Altimetrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2422": {
+    "content": "<h2>Query Kth Smallest Trimmed Number</h2>\n<p>This problem is frequently asked by DE Shaw, Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2423": {
+    "content": "<h2>Minimum Deletions to Make Array Divisible</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2426": {
+    "content": "<h2>Maximum Profit From Trading Stocks</h2>\n<p>This problem is frequently asked by BlackRock, Snowflake, Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2428": {
+    "content": "<h2>Equal Row and Column Pairs</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2429": {
+    "content": "<h2>Design a Food Rating System</h2>\n<p>This problem is frequently asked by Altimetrik, Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2438": {
+    "content": "<h2>Find Closest Node to Given Two Nodes</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2439": {
+    "content": "<h2>Longest Cycle in a Graph</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2443": {
+    "content": "<h2>Check if There is a Valid Partition For The Array</h2>\n<p>This problem is frequently asked by Coinbase.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2444": {
+    "content": "<h2>Longest Ideal Subsequence</h2>\n<p>This problem is frequently asked by MakeMyTrip.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2445": {
+    "content": "<h2>Reachable Nodes With Restrictions</h2>\n<p>This problem is frequently asked by MakeMyTrip.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2449": {
+    "content": "<h2>Maximum Number of Robots Within Budget</h2>\n<p>This problem is frequently asked by InMobi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2450": {
+    "content": "<h2>Minimum Replacements to Sort the Array</h2>\n<p>This problem is frequently asked by Expedia, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2454": {
+    "content": "<h2>Largest Local Values in a Matrix</h2>\n<p>This problem is frequently asked by OpenAI.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2455": {
+    "content": "<h2>Node With Highest Edge Score</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2456": {
+    "content": "<h2>Construct Smallest Number From DI String</h2>\n<p>This problem is frequently asked by Goldman Sachs, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2461": {
+    "content": "<h2>Amount of Time for Binary Tree to Be Infected</h2>\n<p>This problem is frequently asked by Flipkart, Goldman Sachs, Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2462": {
+    "content": "<h2>Find the K-Sum of an Array</h2>\n<p>This problem is frequently asked by Hubspot.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2463": {
+    "content": "<h2>Minimum Recolors to Get K Consecutive Black Blocks</h2>\n<p>This problem is frequently asked by HP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2464": {
+    "content": "<h2>Time Needed to Rearrange a Binary String</h2>\n<p>This problem is frequently asked by PayPal, ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2465": {
+    "content": "<h2>Shifting Letters II</h2>\n<p>This problem is frequently asked by Veritas.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2466": {
+    "content": "<h2>Maximum Segment Sum After Removals</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2470": {
+    "content": "<h2>Removing Stars From a String</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2475": {
+    "content": "<h2>Largest Palindromic Number</h2>\n<p>This problem is frequently asked by Bentley Systems, Geico, smartnews.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2478": {
+    "content": "<h2>Longest Nice Subarray</h2>\n<p>This problem is frequently asked by Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2479": {
+    "content": "<h2>Meeting Rooms III</h2>\n<p>This problem is frequently asked by PayPal, Pinterest.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2480": {
+    "content": "<h2>Find Subarrays With Equal Sum</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2483": {
+    "content": "<h2>Task Scheduler II</h2>\n<p>This problem is frequently asked by DoorDash, Duolingo, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2487": {
+    "content": "<h2>Optimal Partition of String</h2>\n<p>This problem is frequently asked by Docusign.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2488": {
+    "content": "<h2>Divide Intervals Into Minimum Number of Groups</h2>\n<p>This problem is frequently asked by Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2493": {
+    "content": "<h2>Reverse Odd Levels of Binary Tree</h2>\n<p>This problem is frequently asked by J.P. Morgan, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2500": {
+    "content": "<h2>Minimum Costs Using the Train Line</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2502": {
+    "content": "<h2>Sort the People</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2503": {
+    "content": "<h2>Longest Subarray With Maximum Bitwise AND</h2>\n<p>This problem is frequently asked by fourkites.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2504": {
+    "content": "<h2>Find All Good Indices</h2>\n<p>This problem is frequently asked by ByteDance, Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2508": {
+    "content": "<h2>Maximum Sum of an Hourglass</h2>\n<p>This problem is frequently asked by Nutanix, Zoho.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2510": {
+    "content": "<h2>Maximum Deletions on a String</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2517": {
+    "content": "<h2>Choose Edges to Maximize Score in a Tree</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2518": {
+    "content": "<h2>The Employee That Worked on the Longest Task</h2>\n<p>This problem is frequently asked by IBM, Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2519": {
+    "content": "<h2>Find The Original Array of Prefix Xor</h2>\n<p>This problem is frequently asked by IBM, Morgan Stanley, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2522": {
+    "content": "<h2>Median of a Row Wise Sorted Matrix</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2527": {
+    "content": "<h2>Count Subarrays With Fixed Bounds</h2>\n<p>This problem is frequently asked by MathWorks, Morgan Stanley, OKX.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2529": {
+    "content": "<h2>Range Product Queries of Powers</h2>\n<p>This problem is frequently asked by Goldman Sachs, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2530": {
+    "content": "<h2>Minimize Maximum of Array</h2>\n<p>This problem is frequently asked by Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2531": {
+    "content": "<h2>Create Components With Same Value</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2532": {
+    "content": "<h2>Remove Letter To Equalize Frequency</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2533": {
+    "content": "<h2>Bitwise XOR of All Pairings</h2>\n<p>This problem is frequently asked by Trilogy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2535": {
+    "content": "<h2>Count Strictly Increasing Subarrays</h2>\n<p>This problem is frequently asked by Bridgewater Associates, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2536": {
+    "content": "<h2>Determine if Two Events Have Conflict</h2>\n<p>This problem is frequently asked by Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2537": {
+    "content": "<h2>Minimum Time to Kill All Monsters</h2>\n<p>This problem is frequently asked by Trilogy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2538": {
+    "content": "<h2>Minimum Cost to Make Array Equal</h2>\n<p>This problem is frequently asked by Cisco, HashedIn, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2539": {
+    "content": "<h2>Minimum Number of Operations to Make Arrays Similar</h2>\n<p>This problem is frequently asked by Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2542": {
+    "content": "<h2>Average Value of Even Numbers That Are Divisible by Three</h2>\n<p>This problem is frequently asked by Accenture, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2544": {
+    "content": "<h2>Minimum Addition to Make Integer Beautiful</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2547": {
+    "content": "<h2>Odd String Difference</h2>\n<p>This problem is frequently asked by Datadog, IBM, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2548": {
+    "content": "<h2>Destroy Sequential Targets</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2552": {
+    "content": "<h2>Maximum Sum of Distinct Subarrays With Length K</h2>\n<p>This problem is frequently asked by IBM, Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2553": {
+    "content": "<h2>Total Cost to Hire K Workers</h2>\n<p>This problem is frequently asked by BNY Mellon, GSA Capital, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2554": {
+    "content": "<h2>Minimum Total Distance Traveled</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2555": {
+    "content": "<h2>Design SQL</h2>\n<p>This problem is frequently asked by OpenAI.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2557": {
+    "content": "<h2>Number of Subarrays With LCM Equal to K</h2>\n<p>This problem is frequently asked by Unity.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2558": {
+    "content": "<h2>Minimum Number of Operations to Sort a Binary Tree by Level</h2>\n<p>This problem is frequently asked by Guidewire.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2559": {
+    "content": "<h2>Maximum Number of Non-overlapping Palindrome Substrings</h2>\n<p>This problem is frequently asked by LinkedIn, SoFi, Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2562": {
+    "content": "<h2>Count Ways To Build Good Strings</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2563": {
+    "content": "<h2>Split Message Based on Limit</h2>\n<p>This problem is frequently asked by Capital One, Databricks, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2564": {
+    "content": "<h2>Most Profitable Path in a Tree</h2>\n<p>This problem is frequently asked by Intuit, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2565": {
+    "content": "<h2>Merge Operations to Turn Array Into a Palindrome</h2>\n<p>This problem is frequently asked by Accolite.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2566": {
+    "content": "<h2>Number of Unequal Triplets in Array</h2>\n<p>This problem is frequently asked by Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2568": {
+    "content": "<h2>Minimum Fuel Cost to Report to the Capital</h2>\n<p>This problem is frequently asked by American Express, DRW.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2570": {
+    "content": "<h2>Maximize Total Tastiness of Purchased Fruits</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2574": {
+    "content": "<h2>Count Subarrays With Median K</h2>\n<p>This problem is frequently asked by Confluent, thoughtspot.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2575": {
+    "content": "<h2>Minimum Cuts to Divide a Circle</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2576": {
+    "content": "<h2>Minimum Penalty for a Shop</h2>\n<p>This problem is frequently asked by Stripe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2577": {
+    "content": "<h2>Count Palindromic Subsequences</h2>\n<p>This problem is frequently asked by Citadel, Goldman Sachs, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2581": {
+    "content": "<h2>Divide Players Into Teams of Equal Skill</h2>\n<p>This problem is frequently asked by Expedia, IBM, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2584": {
+    "content": "<h2>Number of Nodes With Value One</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2587": {
+    "content": "<h2>Design Memory Allocator</h2>\n<p>This problem is frequently asked by ByteDance, OpenAI, Qualcomm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2588": {
+    "content": "<h2>Maximum Number of Points From Grid Queries</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2590": {
+    "content": "<h2>Maximum Star Sum of a Graph</h2>\n<p>This problem is frequently asked by Akuna Capital.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2592": {
+    "content": "<h2>Minimum Total Cost to Make Arrays Unequal</h2>\n<p>This problem is frequently asked by Flipkart, razorpay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2594": {
+    "content": "<h2>Count Pairs Of Similar Strings</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2596": {
+    "content": "<h2>Add Edges to Make Degrees of All Nodes Even</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2597": {
+    "content": "<h2>Cycle Length Queries in a Tree</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2600": {
+    "content": "<h2>Maximum Tastiness of Candy Basket</h2>\n<p>This problem is frequently asked by eBay, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2601": {
+    "content": "<h2>Number of Great Partitions</h2>\n<p>This problem is frequently asked by Darwinbox, Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2603": {
+    "content": "<h2>Reward Top K Students</h2>\n<p>This problem is frequently asked by Booking.com.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2604": {
+    "content": "<h2>Minimum Operations to Make Array Equal II</h2>\n<p>This problem is frequently asked by Walmart Labs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2605": {
+    "content": "<h2>Count Anagrams</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2608": {
+    "content": "<h2>Count the Digits That Divide a Number</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2612": {
+    "content": "<h2>Minimum Cost to Buy Apples</h2>\n<p>This problem is frequently asked by Directi, Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2614": {
+    "content": "<h2>Maximum Count of Positive Integer and Negative Integer</h2>\n<p>This problem is frequently asked by ShareChat.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2616": {
+    "content": "<h2>Maximal Score After Applying K Operations</h2>\n<p>This problem is frequently asked by McKinsey.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2617": {
+    "content": "<h2>Time Taken to Cross the Door</h2>\n<p>This problem is frequently asked by IMC.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2619": {
+    "content": "<h2>Categorize Box According to Criteria</h2>\n<p>This problem is frequently asked by Zendesk.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2620": {
+    "content": "<h2>Find Consecutive Integers from a Data Stream</h2>\n<p>This problem is frequently asked by Intel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2623": {
+    "content": "<h2>Maximum XOR of Two Non-Overlapping Subtrees</h2>\n<p>This problem is frequently asked by Directi, Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2627": {
+    "content": "<h2>Difference Between Maximum and Minimum Price Sum</h2>\n<p>This problem is frequently asked by Directi, Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2628": {
+    "content": "<h2>Minimize the Maximum of Two Arrays</h2>\n<p>This problem is frequently asked by Goldman Sachs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2629": {
+    "content": "<h2>Number of Substrings With Fixed Ratio</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2630": {
+    "content": "<h2>Alternating Digit Sum</h2>\n<p>This problem is frequently asked by eBay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2631": {
+    "content": "<h2>Sort the Students by Their Kth Score</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2632": {
+    "content": "<h2>Apply Bitwise Operations to Make Strings Equal</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2633": {
+    "content": "<h2>Minimum Cost to Split an Array</h2>\n<p>This problem is frequently asked by Indeed.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2635": {
+    "content": "<h2>Check if Point Is Reachable</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2636": {
+    "content": "<h2>Maximum Subsequence Score</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2640": {
+    "content": "<h2>Maximum Number of Integers to Choose From a Range I</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2642": {
+    "content": "<h2>Time to Cross a Bridge</h2>\n<p>This problem is frequently asked by LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2644": {
+    "content": "<h2>Bitwise OR of All Subsequence Sums</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2645": {
+    "content": "<h2>Pass the Pillow</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2647": {
+    "content": "<h2>Split the Array to Make Coprime Products</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2648": {
+    "content": "<h2>Number of Ways to Earn Points</h2>\n<p>This problem is frequently asked by TuSimple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2651": {
+    "content": "<h2>Count Ways to Group Overlapping Ranges</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2654": {
+    "content": "<h2>Count the Number of Vowel Strings in Range</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2655": {
+    "content": "<h2>Rearrange Array to Maximize Prefix Score</h2>\n<p>This problem is frequently asked by IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2657": {
+    "content": "<h2>Minimum Time to Complete All Tasks</h2>\n<p>This problem is frequently asked by Snap.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2661": {
+    "content": "<h2>Smallest Missing Non-negative Integer After Operations</h2>\n<p>This problem is frequently asked by Atlassian, IBM, Mercari.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2663": {
+    "content": "<h2>Distribute Money to Maximum Children</h2>\n<p>This problem is frequently asked by Zendesk.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2664": {
+    "content": "<h2>Maximize Greatness of an Array</h2>\n<p>This problem is frequently asked by BlackRock, Salesforce, Twilio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2665": {
+    "content": "<h2>Minimum Time to Repair Cars</h2>\n<p>This problem is frequently asked by Deloitte, HashedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2666": {
+    "content": "<h2>Minimum Time to Eat All Grains</h2>\n<p>This problem is frequently asked by Confluent.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2667": {
+    "content": "<h2>Maximum Frequency Score of a Subarray</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2668": {
+    "content": "<h2>Form Smallest Number From Two Digit Arrays</h2>\n<p>This problem is frequently asked by Tinkoff.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2669": {
+    "content": "<h2>Find the Substring With Maximum Cost</h2>\n<p>This problem is frequently asked by josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2670": {
+    "content": "<h2>Make K-Subarray Sums Equal</h2>\n<p>This problem is frequently asked by Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2671": {
+    "content": "<h2>Shortest Cycle in a Graph</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2672": {
+    "content": "<h2>Number of Good Binary Strings</h2>\n<p>This problem is frequently asked by Citadel, Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2675": {
+    "content": "<h2>Find the Width of Columns of a Grid</h2>\n<p>This problem is frequently asked by Atlassian, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2678": {
+    "content": "<h2>Design Graph With Shortest Path Calculator</h2>\n<p>This problem is frequently asked by Nike, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2681": {
+    "content": "<h2>Put Marbles in Bags</h2>\n<p>This problem is frequently asked by DE Shaw, Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2682": {
+    "content": "<h2>Count Increasing Quadruplets</h2>\n<p>This problem is frequently asked by SAP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2683": {
+    "content": "<h2>Count the Number of Good Subsequences</h2>\n<p>This problem is frequently asked by Nvidia, Palantir Technologies, TuSimple.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2684": {
+    "content": "<h2>Determine the Winner of a Bowling Game</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2685": {
+    "content": "<h2>First Completely Painted Row or Column</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2686": {
+    "content": "<h2>Minimum Cost of a Path With Special Roads</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2688": {
+    "content": "<h2>Design a Todo List</h2>\n<p>This problem is frequently asked by Notion.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2690": {
+    "content": "<h2>House Robber IV</h2>\n<p>This problem is frequently asked by Cashfree, LinkedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2691": {
+    "content": "<h2>Count Vowel Strings in Ranges</h2>\n<p>This problem is frequently asked by Atlassian, IBM, PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2692": {
+    "content": "<h2>Take Gifts From the Richest Pile</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2694": {
+    "content": "<h2>Find the Maximum Divisibility Score</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2695": {
+    "content": "<h2>Find Score of an Array After Marking All Elements</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2696": {
+    "content": "<h2>The Number of Beautiful Subsets</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2697": {
+    "content": "<h2>Minimum Number of Visited Cells in a Grid</h2>\n<p>This problem is frequently asked by DE Shaw, Huawei, WorldQuant.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2698": {
+    "content": "<h2>Find the Array Concatenation Value</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2699": {
+    "content": "<h2>Count the Number of Fair Pairs</h2>\n<p>This problem is frequently asked by Qualcomm, Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2700": {
+    "content": "<h2>Substring XOR Queries</h2>\n<p>This problem is frequently asked by Trilogy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2701": {
+    "content": "<h2>Subsequence With the Minimum Score</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2702": {
+    "content": "<h2>Maximum Number of Integers to Choose From a Range II</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2703": {
+    "content": "<h2>Handling Sum Queries After Update</h2>\n<p>This problem is frequently asked by Trilogy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2709": {
+    "content": "<h2>Count the Number of Square-Free Subsets</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2710": {
+    "content": "<h2>Minimum Operations to Reduce an Integer to 0</h2>\n<p>This problem is frequently asked by IBM, Nvidia, Two Sigma.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2711": {
+    "content": "<h2>Minimum Time to Visit a Cell In a Grid</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2717": {
+    "content": "<h2>Collect Coins in a Tree</h2>\n<p>This problem is frequently asked by Graviton, Lucid.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2718": {
+    "content": "<h2>Minimum Operations to Make All Array Elements Equal</h2>\n<p>This problem is frequently asked by IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2720": {
+    "content": "<h2>Minimize the Maximum Difference of Pairs</h2>\n<p>This problem is frequently asked by Media.net, Navi.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2721": {
+    "content": "<h2>Sum of Distances</h2>\n<p>This problem is frequently asked by BNY Mellon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2722": {
+    "content": "<h2>Prime In Diagonal</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2723": {
+    "content": "<h2>Find the Longest Balanced Substring of a Binary String</h2>\n<p>This problem is frequently asked by Tinkoff.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2724": {
+    "content": "<h2>Convert an Array Into a 2D Array With Conditions</h2>\n<p>This problem is frequently asked by Gojek.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2725": {
+    "content": "<h2>Mice and Cheese</h2>\n<p>This problem is frequently asked by DoorDash.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2726": {
+    "content": "<h2>Minimum Reverse Operations</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2729": {
+    "content": "<h2>Minimum Operations to Make Numbers Non-positive</h2>\n<p>This problem is frequently asked by Citadel, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2730": {
+    "content": "<h2>Maximum OR</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2755": {
+    "content": "<h2>Extra Characters in a String</h2>\n<p>This problem is frequently asked by PornHub.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2757": {
+    "content": "<h2>Count of Integers</h2>\n<p>This problem is frequently asked by Cisco, Morgan Stanley.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2765": {
+    "content": "<h2>Make Array Empty</h2>\n<p>This problem is frequently asked by Zepto.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2779": {
+    "content": "<h2>Number of Adjacent Elements With the Same Color</h2>\n<p>This problem is frequently asked by Capital One, Roblox, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2780": {
+    "content": "<h2>Make Costs of Paths Equal in a Binary Tree</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2800": {
+    "content": "<h2>Minimum String Length After Removing Substrings</h2>\n<p>This problem is frequently asked by J.P. Morgan, Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2808": {
+    "content": "<h2>Painting the Walls</h2>\n<p>This problem is frequently asked by DE Shaw, Media.net, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2810": {
+    "content": "<h2>Collecting Chocolates</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2811": {
+    "content": "<h2>Determine the Minimum Sum of a k-avoiding Array</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2816": {
+    "content": "<h2>Lexicographically Smallest Palindrome</h2>\n<p>This problem is frequently asked by PayPal.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2828": {
+    "content": "<h2>Lexicographically Smallest String After Substring Operation</h2>\n<p>This problem is frequently asked by Agoda, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2832": {
+    "content": "<h2>Find the Longest Equal Subarray</h2>\n<p>This problem is frequently asked by Palo Alto Networks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2833": {
+    "content": "<h2>Count Zero Request Servers</h2>\n<p>This problem is frequently asked by DP world, Flexport, Honeywell.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2838": {
+    "content": "<h2>Sum of Matrix After Queries</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2846": {
+    "content": "<h2>Robot Collisions</h2>\n<p>This problem is frequently asked by Deutsche Bank, Samsung, Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2850": {
+    "content": "<h2>Construct the Longest New String</h2>\n<p>This problem is frequently asked by Guidewire, Zalando.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2857": {
+    "content": "<h2>Total Distance Traveled</h2>\n<p>This problem is frequently asked by Compass.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2869": {
+    "content": "<h2>Longest Non-decreasing Subarray From Two Arrays</h2>\n<p>This problem is frequently asked by Citadel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2871": {
+    "content": "<h2>Double a Number Represented as a Linked List</h2>\n<p>This problem is frequently asked by Nvidia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2876": {
+    "content": "<h2>Number of Employees Who Met the Target</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2877": {
+    "content": "<h2>Shortest String That Contains Three Strings</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2881": {
+    "content": "<h2>Split Strings by Separator</h2>\n<p>This problem is frequently asked by Coupang.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2886": {
+    "content": "<h2>Faulty Keyboard</h2>\n<p>This problem is frequently asked by Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2889": {
+    "content": "<h2>Number of Black Blocks</h2>\n<p>This problem is frequently asked by Block, Capital One, SIG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2904": {
+    "content": "<h2>Sorting Three Groups</h2>\n<p>This problem is frequently asked by UiPath.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2905": {
+    "content": "<h2>Count Paths That Can Form a Palindrome in a Tree</h2>\n<p>This problem is frequently asked by thoughtspot.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2914": {
+    "content": "<h2>Find the Safest Path in a Grid</h2>\n<p>This problem is frequently asked by IMC, Wells Fargo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2917": {
+    "content": "<h2>Count Pairs Whose Sum is Less than Target</h2>\n<p>This problem is frequently asked by Accenture, josh technology.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2952": {
+    "content": "<h2>Minimum Time to Make Array Sum At Most x</h2>\n<p>This problem is frequently asked by Jane Street.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2978": {
+    "content": "<h2>Check if Strings Can be Made Equal With Operations II</h2>\n<p>This problem is frequently asked by Citrix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "2999": {
+    "content": "<h2>Check if Strings Can be Made Equal With Operations I</h2>\n<p>This problem is frequently asked by Citrix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3000": {
+    "content": "<h2>Minimum Absolute Difference Between Elements With Constraint</h2>\n<p>This problem is frequently asked by Capital One, Databricks, Roblox.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3017": {
+    "content": "<h2>Number of Beautiful Integers in the Range</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3019": {
+    "content": "<h2>Furthest Point From Origin</h2>\n<p>This problem is frequently asked by Barclays.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3024": {
+    "content": "<h2>String Transformation</h2>\n<p>This problem is frequently asked by Atlassian, MathWorks, Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3025": {
+    "content": "<h2>Minimum Operations to Form Subsequence With Target Sum</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3026": {
+    "content": "<h2>Find the Minimum Possible Sum of a Beautiful Array</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3033": {
+    "content": "<h2>Apply Operations to Make Two Strings Equal</h2>\n<p>This problem is frequently asked by Zeta.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3043": {
+    "content": "<h2>Minimum Time Takes to Reach Destination Without Drowning</h2>\n<p>This problem is frequently asked by Wix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3044": {
+    "content": "<h2>Minimum Operations to Collect Elements</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3045": {
+    "content": "<h2>Minimum Right Shifts to Sort the Array</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3079": {
+    "content": "<h2>Minimum Edge Weight Equilibrium Queries in a Tree</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3081": {
+    "content": "<h2>Minimum Array Length After Pair Removals</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3092": {
+    "content": "<h2>Minimum Moves to Spread Stones Over Grid</h2>\n<p>This problem is frequently asked by Geico, Guidewire.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3093": {
+    "content": "<h2>Sum of Values at Indices With K Set Bits</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3095": {
+    "content": "<h2>Maximum Number of Alloys</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3101": {
+    "content": "<h2>Maximum Coins Heroes Can Collect</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3105": {
+    "content": "<h2>Minimum Edge Reversals So Every Node Is Reachable</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3106": {
+    "content": "<h2>Length of the Longest Subsequence That Sums to Target</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3107": {
+    "content": "<h2>Maximum Spending After Buying Items</h2>\n<p>This problem is frequently asked by Zomato.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3112": {
+    "content": "<h2>Count Valid Paths in a Tree</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3113": {
+    "content": "<h2>Beautiful Towers II</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3114": {
+    "content": "<h2>Beautiful Towers I</h2>\n<p>This problem is frequently asked by Salesforce.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3140": {
+    "content": "<h2>Count Visited Nodes in a Directed Graph</h2>\n<p>This problem is frequently asked by BNY Mellon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3141": {
+    "content": "<h2>Minimum Size Subarray in Infinite Array</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3142": {
+    "content": "<h2>Longest Unequal Adjacent Groups Subsequence II</h2>\n<p>This problem is frequently asked by fourkites.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3143": {
+    "content": "<h2>Longest Unequal Adjacent Groups Subsequence I</h2>\n<p>This problem is frequently asked by fourkites, ZS Associates.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3148": {
+    "content": "<h2>Sum of Remoteness of All Cells</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3150": {
+    "content": "<h2>Shortest and Lexicographically Smallest Beautiful String</h2>\n<p>This problem is frequently asked by IBM, Wells Fargo, Yelp.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3151": {
+    "content": "<h2>Minimum Processing Time</h2>\n<p>This problem is frequently asked by Akuna Capital, Nutanix.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3152": {
+    "content": "<h2>Maximum Value of an Ordered Triplet II</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3153": {
+    "content": "<h2>Apply Operations on Array to Maximize Sum of Squares</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3154": {
+    "content": "<h2>Maximum Value of an Ordered Triplet I</h2>\n<p>This problem is frequently asked by Media.net.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3164": {
+    "content": "<h2>Last Visited Integers</h2>\n<p>This problem is frequently asked by General Motors.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3165": {
+    "content": "<h2>Find Indices With Index and Value Difference I</h2>\n<p>This problem is frequently asked by Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3166": {
+    "content": "<h2>Minimum Number of Groups to Create a Valid Assignment</h2>\n<p>This problem is frequently asked by BNY Mellon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3170": {
+    "content": "<h2>Find Indices With Index and Value Difference II</h2>\n<p>This problem is frequently asked by Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3171": {
+    "content": "<h2>Minimum Equal Sum of Two Arrays After Replacing Zeros</h2>\n<p>This problem is frequently asked by Citadel, Palantir Technologies, Twilio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3177": {
+    "content": "<h2>Minimizing Array After Replacing Pairs With Their Product</h2>\n<p>This problem is frequently asked by Wells Fargo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3179": {
+    "content": "<h2>Maximum Points After Collecting Coins From All Nodes</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3181": {
+    "content": "<h2>Find Building Where Alice and Bob Can Meet</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3187": {
+    "content": "<h2>Maximum Profitable Triplets With Increasing Prices I</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3193": {
+    "content": "<h2>Maximum Strong Pair XOR I</h2>\n<p>This problem is frequently asked by ZScaler.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3194": {
+    "content": "<h2>Find Words Containing Character</h2>\n<p>This problem is frequently asked by Deliveroo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3196": {
+    "content": "<h2>Apply Operations to Maximize Frequency Score</h2>\n<p>This problem is frequently asked by Deutsche Bank, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3197": {
+    "content": "<h2>Maximum Strong Pair XOR II</h2>\n<p>This problem is frequently asked by ZScaler.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3199": {
+    "content": "<h2>Distribute Candies Among Children I</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3201": {
+    "content": "<h2>Distribute Candies Among Children II</h2>\n<p>This problem is frequently asked by Rubrik, ZS Associates.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3202": {
+    "content": "<h2>High-Access Employees</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3204": {
+    "content": "<h2>Maximum Profitable Triplets With Increasing Prices II</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3214": {
+    "content": "<h2>Maximize Area of Square Hole in Grid</h2>\n<p>This problem is frequently asked by Swiggy.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3216": {
+    "content": "<h2>Distribute Candies Among Children III</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3217": {
+    "content": "<h2>Number of Possible Sets of Closing Branches</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3219": {
+    "content": "<h2>Make Lexicographically Smallest Array by Swapping Elements</h2>\n<p>This problem is frequently asked by Atlassian, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3220": {
+    "content": "<h2>Count Tested Devices After Test Operations</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3224": {
+    "content": "<h2>Count the Number of Infection Sequences</h2>\n<p>This problem is frequently asked by SAP, Tekion.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3225": {
+    "content": "<h2>Length of Longest Subarray With at Most K Frequency</h2>\n<p>This problem is frequently asked by Citadel, MakeMyTrip.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3231": {
+    "content": "<h2>Minimum Number of Coins to be Added</h2>\n<p>This problem is frequently asked by Flipkart.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3232": {
+    "content": "<h2>Maximum GCD-Sum of a Subarray</h2>\n<p>This problem is frequently asked by ThoughtWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3233": {
+    "content": "<h2>Maximize the Number of Partitions After Operations</h2>\n<p>This problem is frequently asked by HiLabs, ThoughtWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3234": {
+    "content": "<h2>Double Modular Exponentiation</h2>\n<p>This problem is frequently asked by Barclays.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3235": {
+    "content": "<h2>Minimum Cost to Convert String I</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3237": {
+    "content": "<h2>Number of Divisible Substrings</h2>\n<p>This problem is frequently asked by Amdocs, IBM, Paytm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3238": {
+    "content": "<h2>Minimum Cost to Convert String II</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3239": {
+    "content": "<h2>Minimum Number of Operations to Make X and Y Equal</h2>\n<p>This problem is frequently asked by Groww.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3242": {
+    "content": "<h2>Count Elements With Maximum Frequency</h2>\n<p>This problem is frequently asked by Capgemini, CRED.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3243": {
+    "content": "<h2>Count the Number of Powerful Integers</h2>\n<p>This problem is frequently asked by HashedIn, Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3244": {
+    "content": "<h2>Minimize Length of Array Using Operations</h2>\n<p>This problem is frequently asked by BNY Mellon, HashedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3245": {
+    "content": "<h2>Find Beautiful Indices in the Given Array I</h2>\n<p>This problem is frequently asked by Palantir Technologies, Samsara.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3247": {
+    "content": "<h2>Number of Same-End Substrings</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3248": {
+    "content": "<h2>Count the Number of Incremovable Subarrays II</h2>\n<p>This problem is frequently asked by DE Shaw, IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3249": {
+    "content": "<h2>Minimum Number of Operations to Make Array XOR Equal to K</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3250": {
+    "content": "<h2>Maximum Square Area by Removing Fences From a Field</h2>\n<p>This problem is frequently asked by Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3251": {
+    "content": "<h2>Maximum Area of Longest Diagonal Rectangle</h2>\n<p>This problem is frequently asked by Accenture, Atlassian.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3254": {
+    "content": "<h2>Number of Divisible Triplet Sums</h2>\n<p>This problem is frequently asked by Activision, IBM, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3260": {
+    "content": "<h2>Divide an Array Into Subarrays With Minimum Cost II</h2>\n<p>This problem is frequently asked by American Express, jio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3261": {
+    "content": "<h2>Minimize OR of Remaining Elements Using Operations</h2>\n<p>This problem is frequently asked by Aon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3262": {
+    "content": "<h2>Find Polygon With the Largest Perimeter</h2>\n<p>This problem is frequently asked by Airtel.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3263": {
+    "content": "<h2>Divide an Array Into Subarrays With Minimum Cost I</h2>\n<p>This problem is frequently asked by American Express.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3264": {
+    "content": "<h2>Maximum Points After Enemy Battles</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3265": {
+    "content": "<h2>Maximum Good Subarray Sum</h2>\n<p>This problem is frequently asked by Atlassian, Groww, Zepto.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3266": {
+    "content": "<h2>Find Longest Special Substring That Occurs Thrice II</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3269": {
+    "content": "<h2>Number of Subarrays That Match a Pattern I</h2>\n<p>This problem is frequently asked by Autodesk, Capital One, Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3270": {
+    "content": "<h2>Minimum Moves to Capture The Queen</h2>\n<p>This problem is frequently asked by Wipro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3272": {
+    "content": "<h2>Find the Grid of Region Average</h2>\n<p>This problem is frequently asked by jio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3276": {
+    "content": "<h2>Minimum Number of Pushes to Type Word II</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3279": {
+    "content": "<h2>Alice and Bob Playing Flower Game</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3289": {
+    "content": "<h2>Earliest Second to Mark Indices II</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3290": {
+    "content": "<h2>Number of Subarrays That Match a Pattern II</h2>\n<p>This problem is frequently asked by Autodesk, ThoughtWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3291": {
+    "content": "<h2>Find if Array Can Be Sorted</h2>\n<p>This problem is frequently asked by Edelweiss Group.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3292": {
+    "content": "<h2>Earliest Second to Mark Indices I</h2>\n<p>This problem is frequently asked by MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3296": {
+    "content": "<h2>Minimum Time to Revert Word to Initial State II</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3297": {
+    "content": "<h2>Minimum Time to Revert Word to Initial State I</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3303": {
+    "content": "<h2>Find Beautiful Indices in the Given Array II</h2>\n<p>This problem is frequently asked by Palantir Technologies, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3304": {
+    "content": "<h2>Maximum Subtree of the Same Color</h2>\n<p>This problem is frequently asked by BlackRock.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3305": {
+    "content": "<h2>Count Prefix and Suffix Pairs II</h2>\n<p>This problem is frequently asked by Autodesk, Capital One, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3306": {
+    "content": "<h2>Mark Elements on Array by Performing Queries</h2>\n<p>This problem is frequently asked by Barclays, Samsung.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3307": {
+    "content": "<h2>Find the Maximum Sum of Node Values</h2>\n<p>This problem is frequently asked by BlackRock, Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3308": {
+    "content": "<h2>Apply Operations to Make String Empty</h2>\n<p>This problem is frequently asked by Virtusa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3309": {
+    "content": "<h2>Count Prefix and Suffix Pairs I</h2>\n<p>This problem is frequently asked by Autodesk, Capital One.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3311": {
+    "content": "<h2>Ant on the Boundary</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3312": {
+    "content": "<h2>Number of Changing Keys</h2>\n<p>This problem is frequently asked by Autodesk.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3313": {
+    "content": "<h2>Maximum Strength of K Disjoint Subarrays</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3316": {
+    "content": "<h2>Find the Sum of Subsequence Powers</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3317": {
+    "content": "<h2>Maximum Palindromes After Operations</h2>\n<p>This problem is frequently asked by Grammarly, MathWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3321": {
+    "content": "<h2>Type of Triangle</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3324": {
+    "content": "<h2>Split the Array</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3325": {
+    "content": "<h2>Find the Largest Area of Square Inside Two Rectangles</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3326": {
+    "content": "<h2>Count Pairs of Connectable Servers in a Weighted Tree Network</h2>\n<p>This problem is frequently asked by thoughtspot, UBS.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3328": {
+    "content": "<h2>Apply Operations to Make Sum of Array Greater Than or Equal to k</h2>\n<p>This problem is frequently asked by Turing, ZScaler.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3329": {
+    "content": "<h2>Find the Length of the Longest Common Prefix</h2>\n<p>This problem is frequently asked by Capital One, Coinbase, Databricks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3330": {
+    "content": "<h2>Modify the Matrix</h2>\n<p>This problem is frequently asked by Fidelity.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3331": {
+    "content": "<h2>Minimum Operations to Exceed Threshold Value I</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3332": {
+    "content": "<h2>Minimum Operations to Exceed Threshold Value II</h2>\n<p>This problem is frequently asked by tcs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3335": {
+    "content": "<h2>Minimum Operations to Write the Letter Y on a Grid</h2>\n<p>This problem is frequently asked by Capital One, Visa, Zeta.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3338": {
+    "content": "<h2>Count Submatrices with Top-Left Element and Sum Less Than k</h2>\n<p>This problem is frequently asked by Barclays.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3344": {
+    "content": "<h2>Minimize Manhattan Distances</h2>\n<p>This problem is frequently asked by Deutsche Bank.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3345": {
+    "content": "<h2>Find the Sum of the Power of All Subsequences</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3346": {
+    "content": "<h2>Lexicographically Smallest String After Operations With Constraint</h2>\n<p>This problem is frequently asked by ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3347": {
+    "content": "<h2>Distribute Elements Into Two Arrays I</h2>\n<p>This problem is frequently asked by Autodesk.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3348": {
+    "content": "<h2>Minimum Cost Walk in Weighted Graph</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3350": {
+    "content": "<h2>Distribute Elements Into Two Arrays II</h2>\n<p>This problem is frequently asked by Autodesk.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3353": {
+    "content": "<h2>Existence of a Substring in a String and Its Reverse</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3355": {
+    "content": "<h2>Minimum Levels to Gain More Points</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3356": {
+    "content": "<h2>Shortest Uncommon Substring in an Array</h2>\n<p>This problem is frequently asked by Affirm, Airbnb, Moveworks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3360": {
+    "content": "<h2>Minimum Deletions to Make String K-Special</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3367": {
+    "content": "<h2>Find the Sum of Encrypted Integers</h2>\n<p>This problem is frequently asked by Larsen & Toubro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3372": {
+    "content": "<h2>Longest Strictly Increasing or Strictly Decreasing Subarray</h2>\n<p>This problem is frequently asked by Larsen & Toubro.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3374": {
+    "content": "<h2>Count Alternating Subarrays</h2>\n<p>This problem is frequently asked by Capital One.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3380": {
+    "content": "<h2>Shortest Subarray With OR at Least K II</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3381": {
+    "content": "<h2>Shortest Subarray With OR at Least K I</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3383": {
+    "content": "<h2>Taking Maximum Energy From the Mystic Dungeon</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3384": {
+    "content": "<h2>Minimum Number of Operations to Make Word K-Periodic</h2>\n<p>This problem is frequently asked by Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3385": {
+    "content": "<h2>Match Alphanumerical Pattern in Matrix I</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3386": {
+    "content": "<h2>Find Edges in Shortest Paths</h2>\n<p>This problem is frequently asked by WeRide.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3387": {
+    "content": "<h2>Minimum Operations to Make Median of Array Equal to K</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3388": {
+    "content": "<h2>Right Triangles</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3391": {
+    "content": "<h2>Maximum Difference Score in a Grid</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3393": {
+    "content": "<h2>Make String Anti-palindrome</h2>\n<p>This problem is frequently asked by Intuit.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3395": {
+    "content": "<h2>Minimum Length of Anagram Concatenation</h2>\n<p>This problem is frequently asked by Turing, UKG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3396": {
+    "content": "<h2>Valid Word</h2>\n<p>This problem is frequently asked by Expedia, UKG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3397": {
+    "content": "<h2>Find the Integer Added to Array I</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3399": {
+    "content": "<h2>Find the Integer Added to Array II</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3403": {
+    "content": "<h2>Minimum Substring Partition of Equal Character Frequency</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3404": {
+    "content": "<h2>Minimum Number of Operations to Satisfy Conditions</h2>\n<p>This problem is frequently asked by Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3407": {
+    "content": "<h2>Find All Possible Stable Binary Arrays II</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3411": {
+    "content": "<h2>Find Products of Elements of Big Array</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3412": {
+    "content": "<h2>Permutation Difference between Two Strings</h2>\n<p>This problem is frequently asked by Accenture.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3413": {
+    "content": "<h2>Find The First Player to win K Games in a Row</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3416": {
+    "content": "<h2>Sum of Digit Differences of All Pairs</h2>\n<p>This problem is frequently asked by Turing.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3419": {
+    "content": "<h2>Maximum Points Inside the Square</h2>\n<p>This problem is frequently asked by HashedIn.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3420": {
+    "content": "<h2>Find Occurrences of an Element in an Array</h2>\n<p>This problem is frequently asked by IBM, J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3423": {
+    "content": "<h2>Maximum Sum of Subsequence With Non-adjacent Elements</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3425": {
+    "content": "<h2>Maximum Number of Potholes That Can Be Fixed</h2>\n<p>This problem is frequently asked by Geico.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3426": {
+    "content": "<h2>Minimum Number of Chairs in a Waiting Room</h2>\n<p>This problem is frequently asked by Expedia.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3427": {
+    "content": "<h2>Special Array II</h2>\n<p>This problem is frequently asked by National Payments Corporation of India.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3429": {
+    "content": "<h2>Special Array I</h2>\n<p>This problem is frequently asked by National Payments Corporation of India.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3435": {
+    "content": "<h2>Block Placement Queries</h2>\n<p>This problem is frequently asked by Autodesk, Capital One, PayPay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3437": {
+    "content": "<h2>Maximum Total Damage With Spell Casting</h2>\n<p>This problem is frequently asked by Citadel, PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3438": {
+    "content": "<h2>Peaks in Array</h2>\n<p>This problem is frequently asked by Siemens.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3439": {
+    "content": "<h2>Find Minimum Diameter After Merging Two Trees</h2>\n<p>This problem is frequently asked by ServiceNow.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3442": {
+    "content": "<h2>Maximum Total Reward Using Operations I</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3443": {
+    "content": "<h2>Maximum Total Reward Using Operations II</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3444": {
+    "content": "<h2>Find the Number of Good Pairs II</h2>\n<p>This problem is frequently asked by Airbus SE.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3445": {
+    "content": "<h2>Lexicographically Minimum String After Removing Stars</h2>\n<p>This problem is frequently asked by Flexera.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3446": {
+    "content": "<h2>Find the Number of Good Pairs I</h2>\n<p>This problem is frequently asked by Airbus SE.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3447": {
+    "content": "<h2>Clear Digits</h2>\n<p>This problem is frequently asked by Flexera.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3450": {
+    "content": "<h2>Find the Child Who Has the Ball After K Seconds</h2>\n<p>This problem is frequently asked by Agoda.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3451": {
+    "content": "<h2>String Compression III</h2>\n<p>This problem is frequently asked by Affirm, Qualcomm.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3452": {
+    "content": "<h2>Find the Maximum Length of a Good Subsequence II</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3455": {
+    "content": "<h2>Minimum Length of String After Operations</h2>\n<p>This problem is frequently asked by IBM.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3456": {
+    "content": "<h2>Find the Maximum Length of a Good Subsequence I</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3458": {
+    "content": "<h2>Maximum Number of Upgradable Servers</h2>\n<p>This problem is frequently asked by Snowflake.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3463": {
+    "content": "<h2>Alternating Groups I</h2>\n<p>This problem is frequently asked by Samsara.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3466": {
+    "content": "<h2>Number of Subarrays With AND Value of K</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3470": {
+    "content": "<h2>Maximum Score From Grid Operations</h2>\n<p>This problem is frequently asked by Hudson River Trading.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3474": {
+    "content": "<h2>Better Compression of String</h2>\n<p>This problem is frequently asked by Riot Games.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3482": {
+    "content": "<h2>Construct String with Minimum Cost</h2>\n<p>This problem is frequently asked by Mitsogo.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3483": {
+    "content": "<h2>Alternating Groups II</h2>\n<p>This problem is frequently asked by Samsara.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3484": {
+    "content": "<h2>Lexicographically Smallest String After a Swap</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3498": {
+    "content": "<h2>Minimum Array Changes to Make Differences Equal</h2>\n<p>This problem is frequently asked by Airbus SE.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3508": {
+    "content": "<h2>Number of Bit Changes to Make Two Integers Equal</h2>\n<p>This problem is frequently asked by ThoughtWorks.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3513": {
+    "content": "<h2>Maximum Array Hopping Score I</h2>\n<p>This problem is frequently asked by Zluri.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3529": {
+    "content": "<h2>Maximum Array Hopping Score II</h2>\n<p>This problem is frequently asked by Zluri.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3534": {
+    "content": "<h2>Count Almost Equal Pairs I</h2>\n<p>This problem is frequently asked by Info Edge.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3535": {
+    "content": "<h2>Find the Count of Monotonic Pairs I</h2>\n<p>This problem is frequently asked by Arcesium.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3536": {
+    "content": "<h2>Find the Count of Monotonic Pairs II</h2>\n<p>This problem is frequently asked by BNY Mellon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3562": {
+    "content": "<h2>Maximum Score of Non-overlapping Intervals</h2>\n<p>This problem is frequently asked by Sprinklr.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3565": {
+    "content": "<h2>Minimize Connected Groups by Inserting Interval</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3587": {
+    "content": "<h2>Maximum Points Tourist Can Earn</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3593": {
+    "content": "<h2>Find the Maximum Factor Score of Array</h2>\n<p>This problem is frequently asked by Info Edge.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3605": {
+    "content": "<h2>Construct the Minimum Bitwise Array I</h2>\n<p>This problem is frequently asked by Aon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3608": {
+    "content": "<h2>Find the Number of Subsequences With Equal GCD</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3611": {
+    "content": "<h2>Construct the Minimum Bitwise Array II</h2>\n<p>This problem is frequently asked by Aon.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3613": {
+    "content": "<h2>Maximize Amount After Two Days of Conversions</h2>\n<p>This problem is frequently asked by Rippling.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3617": {
+    "content": "<h2>Find the Original Typed String I</h2>\n<p>This problem is frequently asked by Lowe's.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3621": {
+    "content": "<h2>Minimum Operations to Make Array Values Equal to K</h2>\n<p>This problem is frequently asked by Lowe's.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3632": {
+    "content": "<h2>Button with Longest Push Time</h2>\n<p>This problem is frequently asked by J.P. Morgan.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3633": {
+    "content": "<h2>Maximize the Number of Target Nodes After Connecting Trees I</h2>\n<p>This problem is frequently asked by jio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3634": {
+    "content": "<h2>Find Mirror Score of a String</h2>\n<p>This problem is frequently asked by carwale.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3645": {
+    "content": "<h2>Maximize the Number of Target Nodes After Connecting Trees II</h2>\n<p>This problem is frequently asked by jio.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3649": {
+    "content": "<h2>Minimum Time to Break Locks I</h2>\n<p>This problem is frequently asked by IVP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3675": {
+    "content": "<h2>Maximize Sum of Weights after Edge Removals</h2>\n<p>This problem is frequently asked by Gameskraft.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3677": {
+    "content": "<h2>Maximum Amount of Money Robot Can Earn</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3681": {
+    "content": "<h2>Maximum Area Rectangle With Point Constraints I</h2>\n<p>This problem is frequently asked by UKG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3682": {
+    "content": "<h2>Count the Number of Arrays with K Matching Adjacent Elements</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3685": {
+    "content": "<h2>Count Subarrays of Length Three With a Condition</h2>\n<p>This problem is frequently asked by Cognizant.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3688": {
+    "content": "<h2>Maximize Subarray Sum After Removing All Occurrences of One Element</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3689": {
+    "content": "<h2>Maximum Area Rectangle With Point Constraints II</h2>\n<p>This problem is frequently asked by UKG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3693": {
+    "content": "<h2>Minimum Time to Break Locks II</h2>\n<p>This problem is frequently asked by IVP.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3713": {
+    "content": "<h2>Frequencies of Shortest Supersequences</h2>\n<p>This problem is frequently asked by PhonePe.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3716": {
+    "content": "<h2>Longest Subsequence With Decreasing Adjacent Difference</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3718": {
+    "content": "<h2>Minimum Runes to Add to Cast Spell</h2>\n<p>This problem is frequently asked by DE Shaw.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3733": {
+    "content": "<h2>Length of Longest V-Shaped Diagonal Segment</h2>\n<p>This problem is frequently asked by Visa.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3735": {
+    "content": "<h2>Design a 3D Binary Matrix with Efficient Layer Tracking</h2>\n<p>This problem is frequently asked by Amdocs.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3739": {
+    "content": "<h2>Manhattan Distances of All Arrangements of Pieces</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3755": {
+    "content": "<h2>Maximum Product of First and Last Elements of a Subsequence</h2>\n<p>This problem is frequently asked by KLA.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3762": {
+    "content": "<h2>Maximize the Minimum Game Score</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3770": {
+    "content": "<h2>Lexicographically Smallest Generated String</h2>\n<p>This problem is frequently asked by Barclays.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3778": {
+    "content": "<h2>Transform Array by Parity</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3779": {
+    "content": "<h2>Eat Pizzas!</h2>\n<p>This problem is frequently asked by Infosys.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3797": {
+    "content": "<h2>Design Spreadsheet</h2>\n<p>This problem is frequently asked by Rippling.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3811": {
+    "content": "<h2>Reverse Degree of a String</h2>\n<p>This problem is frequently asked by Capgemini.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3827": {
+    "content": "<h2>Implement Router</h2>\n<p>This problem is frequently asked by Cisco.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3829": {
+    "content": "<h2>Shortest Path in a Weighted Tree</h2>\n<p>This problem is frequently asked by Juspay.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3831": {
+    "content": "<h2>Find X Value of Array I</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3839": {
+    "content": "<h2>Maximize Score After Pair Deletions</h2>\n<p>This problem is frequently asked by DRW.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3840": {
+    "content": "<h2>Find X Value of Array II</h2>\n<p>This problem is frequently asked by Rubrik.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "3855": {
+    "content": "<h2>Make a Positive Array</h2>\n<p>This problem is frequently asked by UKG.</p>\n<p><strong>Example:</strong><br/>Input: ...<br/>Output: ...</p>",
+    "testcase": "Testcase 1\nTestcase 2"
+  },
+  "4001": {
+    "content": "<p>Given two integers, <code>hour</code> and <code>minute</code>, return the smaller angle (in degrees) formed between the hour and the minute hand.</p><p>Returns the angle as a double/float.</p>",
+    "testcase": "12\n30"
+  },
+  "4002": {
+    "content": "<p>Person A can complete a task in <code>a</code> days, and Person B can complete it in <code>b</code> days. Return the number of days it will take for them to complete the task working together.</p><p>Return the exact float/double value.</p>",
+    "testcase": "10\n15"
+  },
+  "4003": {
+    "content": "<p>Given an array of integers representing a series with a constant first or second difference, return the next number in the series.</p><p>The sequence will always have a recognizable polynomial pattern (degree 1 or 2).</p>",
+    "testcase": "[2, 6, 12, 20, 30]"
+  },
+  "4004": {
+    "content": "<p>Two trains are <code>distance</code> km apart and start moving towards each other at the exact same time. The first train travels at <code>speed1</code> km/h and the second train travels at <code>speed2</code> km/h. Return the time in hours it will take for them to meet.</p>",
+    "testcase": "300\n60\n40"
+  },
+  "4005": {
+    "content": "<p>Given an integer <code>n</code>, return the number of trailing zeroes in <code>n!</code>.</p>",
+    "testcase": "100"
+  },
+  "4006": {
+    "content": "<h2>Train Speed & Length</h2><p>A train 150m long passes a pole in 15 seconds. What is the speed of the train in km/hr?</p>",
+    "testcase": "Input: length=150, time=15\nOutput: 36"
+  },
+  "4007": {
+    "content": "<h2>Simple Interest</h2><p>Find the simple interest on $5000 at 10% per annum for 3 years.</p>",
+    "testcase": "Input: P=5000, R=10, T=3\nOutput: 1500"
+  },
+  "4008": {
+    "content": "<h2>Compound Interest</h2><p>Calculate the compound interest on $2000 at 5% per annum for 2 years, compounded annually.</p>",
+    "testcase": "Input: P=2000, R=5, T=2\nOutput: 205"
+  },
+  "4009": {
+    "content": "<h2>Probability - Coin Toss</h2><p>What is the probability of getting exactly 2 heads when 3 fair coins are tossed?</p>",
+    "testcase": "Input: n=3, k=2\nOutput: 0.375"
+  },
+  "4010": {
+    "content": "<h2>Ratio and Proportion</h2><p>In a mixture of 60 liters, the ratio of milk and water is 2:1. If this ratio is to be 1:2, then the quantity of water to be further added is?</p>",
+    "testcase": "Input: total=60, r1=2, r2=1, target_r1=1, target_r2=2\nOutput: 60"
+  },
+  "4011": {
+    "content": "<h2>Ages</h2><p>A father is 30 years older than his son. In 5 years, he will be three times as old as his son. Find their present ages.</p>",
+    "testcase": "Input: diff=30, multiplier=3, years=5\nOutput: [10, 40]"
+  },
+  "4012": {
+    "content": "<h2>Pipes and Cisterns</h2><p>Pipe A can fill a tank in 10 hours and Pipe B can empty it in 15 hours. If both are opened together, in how many hours will the tank be full?</p>",
+    "testcase": "Input: fill=10, empty=15\nOutput: 30"
+  },
+  "4013": {
+    "content": "<h2>Boats and Streams</h2><p>A man can row upstream at 10 km/hr and downstream at 18 km/hr. Find the speed of the man in still water.</p>",
+    "testcase": "Input: upstream=10, downstream=18\nOutput: 14"
+  },
+  "4014": {
+    "content": "<h2>Calendar</h2><p>What was the day of the week on 15th August 1947?</p>",
+    "testcase": "Input: day=15, month=8, year=1947\nOutput: Friday"
+  },
+  "4015": {
+    "content": "<h2>Syllogism</h2><p>Statements: All dogs are cats. All cats are lions. Conclusion: All dogs are lions. (True/False)</p>",
+    "testcase": "Input: statements=['All dogs are cats', 'All cats are lions'], conclusion='All dogs are lions'\nOutput: True"
+  },
+  "4016": {
+    "content": "What is 20% of 25% of 400?",
+    "testcase": "400\n25\n20"
+  },
+  "4017": {
+    "content": "A shopkeeper sells an item at 20% profit. If he had sold it for $20 more, he would have gained 25%. Find the cost price.",
+    "testcase": "20\n20\n25"
+  },
+  "4018": {
+    "content": "The average of 5 numbers is 20. If one number is removed, the average becomes 18. Find the removed number.",
+    "testcase": "5\n20\n18"
+  },
+  "4019": {
+    "content": "The HCF of two numbers is 12 and their LCM is 72. If one number is 24, find the other.",
+    "testcase": "12\n72\n24"
+  },
+  "4020": {
+    "content": "In how many ways can the letters of the word 'APPLE' be arranged?",
+    "testcase": "'APPLE'"
+  },
+  "4021": {
+    "content": "Find the next number in the series: 1, 4, 9, 16, 25, ?",
+    "testcase": "[1, 4, 9, 16, 25]"
+  },
+  "4022": {
+    "content": "A man walks 3km North, then 4km East. How far is he from the starting point?",
+    "testcase": "3\n4"
+  },
+  "4023": {
+    "content": "Pointing to a photograph, a man said, 'I have no brother or sister but that man's father is my father's son.' Whose photograph was it?",
+    "testcase": ""
+  },
+  "4024": {
+    "content": "If 'CAT' is coded as 24, how is 'DOG' coded?",
+    "testcase": "'DOG'"
+  },
+  "4025": {
+    "content": "Find the sum of the first 20 natural numbers.",
+    "testcase": "20"
   }
 };
 

@@ -10,12 +10,14 @@ const LANG_TABS = [
     { key: 'python', label: '🐍  Python', monaco: 'python' },
     { key: 'java', label: '☕  Java', monaco: 'java' },
     { key: 'cpp', label: '⚡  C++', monaco: 'cpp' },
+    { key: 'javascript', label: '🟨  JavaScript', monaco: 'javascript' },
 ];
 
 const LANG_MAP = {
     python: { lang: 'python', version: '3.10.0', default: '# Write your Python code here\n# Use print() to output results\n' },
     java: { lang: 'java', version: '15.0.2', default: '// Write your Java code here\nclass Main {\n    public static void main(String[] args) {\n        // System.out.println("Result");\n    }\n}' },
-    cpp: { lang: 'cpp', version: '10.2.0', default: '// Write your C++ code here\n#include <iostream>\nusing namespace std;\n\nint main() {\n    // cout << "Result" << endl;\n    return 0;\n}' }
+    cpp: { lang: 'cpp', version: '10.2.0', default: '// Write your C++ code here\n#include <iostream>\nusing namespace std;\n\nint main() {\n    // cout << "Result" << endl;\n    return 0;\n}' },
+    javascript: { lang: 'javascript', version: '20.17.0', default: '// Write your JavaScript code here\n// Use console.log() to output results\n\nconsole.log("Result");\n' }
 };
 
 export default function ProblemDetail() {
@@ -33,7 +35,8 @@ export default function ProblemDetail() {
     const [userCode, setUserCode] = useState({
         python: LANG_MAP.python.default,
         java: LANG_MAP.java.default,
-        cpp: LANG_MAP.cpp.default
+        cpp: LANG_MAP.cpp.default,
+        javascript: LANG_MAP.javascript.default
     });
     const [customInput, setCustomInput] = useState('');
     const [runOutput, setRunOutput] = useState('');
@@ -46,10 +49,16 @@ export default function ProblemDetail() {
             .then(r => {
                 setData(r.data);
                 if (solved[id]) setShow(true);
-                if (r.data.testcases) {
-                    setCustomInput(r.data.testcases);
-                } else if (r.data.examples && r.data.examples.length > 0) {
-                    setCustomInput(r.data.examples[0].input);
+                const isApt = r.data.topics && (r.data.topics.toLowerCase().includes('aptitude') || r.data.topics.toLowerCase().includes('reasoning') || r.data.companies?.includes('General Aptitude') || r.data.companies?.includes('Reasoning Tests'));
+                
+                if (!isApt) {
+                    if (r.data.testcases) {
+                        setCustomInput(r.data.testcases);
+                    } else if (r.data.examples && r.data.examples.length > 0) {
+                        setCustomInput(r.data.examples[0].input);
+                    }
+                } else {
+                    setCustomInput('');
                 }
             })
             .catch(() => navigate('/problems'))
@@ -120,6 +129,7 @@ export default function ProblemDetail() {
     if (!data) return null;
 
     const isSolved = solved[id];
+    const isAptitude = data.topics && (data.topics.toLowerCase().includes('aptitude') || data.topics.toLowerCase().includes('reasoning') || data.companies?.includes('General Aptitude') || data.companies?.includes('Reasoning Tests'));
 
     return (
         <div className="page" style={{ padding: '88px 24px 60px' }}>
@@ -226,149 +236,241 @@ export default function ProblemDetail() {
                             )}
                         </div>
 
-                        {/* Solution Section */}
-                        <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden' }}>
-                            <div style={{
-                                padding: '18px 28px', borderBottom: '1px solid var(--border)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12,
-                            }}>
-                                <h2 style={{ fontSize: 18, fontWeight: 700, margin: 0 }}>Optimal Solution</h2>
-                                {isSolved && (
-                                    <button
-                                        onClick={() => setShow(!showSolution)}
-                                        className={`btn ${showSolution ? 'btn-ghost' : 'btn-primary'} btn-sm`}
-                                    >{showSolution ? '🙈 Hide Solution' : '👁 Show Solution'}</button>
-                                )}
-                            </div>
+                        {/* Solution Section (Coding Only) */}
+                        {!isAptitude && (
+                            <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden' }}>
+                                <div style={{
+                                    padding: '18px 28px', borderBottom: '1px solid var(--border)',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12,
+                                }}>
+                                    <h2 style={{ fontSize: 18, fontWeight: 700, margin: 0 }}>Optimal Solution</h2>
+                                    {isSolved && (
+                                        <button
+                                            onClick={() => setShow(!showSolution)}
+                                            className={`btn ${showSolution ? 'btn-ghost' : 'btn-primary'} btn-sm`}
+                                        >{showSolution ? '🙈 Hide Solution' : '👁 Show Solution'}</button>
+                                    )}
+                                </div>
 
-                            {showSolution && isSolved ? (
-                                <>
-                                    <div style={{ padding: '20px 28px', borderBottom: '1px solid var(--border)', background: 'rgba(99,102,241,0.05)' }}>
-                                        <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 10 }}>
-                                            Explanation
+                                {showSolution && isSolved ? (
+                                    <>
+                                        <div style={{ padding: '20px 28px', borderBottom: '1px solid var(--border)', background: 'rgba(99,102,241,0.05)' }}>
+                                            <div style={{ fontSize: 12, color: 'var(--accent)', fontWeight: 600, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 10 }}>
+                                                Explanation
+                                            </div>
+                                            <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.8 }}>
+                                                {data.solution?.explanation || 'See approach description above.'}
+                                            </p>
                                         </div>
-                                        <p style={{ fontSize: 14, color: 'var(--muted)', lineHeight: 1.8 }}>
-                                            {data.solution?.explanation || 'See approach description above.'}
+                                        <div style={{ borderBottom: '1px solid var(--border)', display: 'flex' }}>
+                                            {LANG_TABS.map(({ key, label }) => (
+                                                <button
+                                                    key={key}
+                                                    onClick={() => setLang(key)}
+                                                    style={{
+                                                        padding: '12px 22px', border: 'none', background: 'transparent',
+                                                        cursor: 'pointer', fontFamily: 'inherit', fontSize: 13, fontWeight: 500,
+                                                        color: lang === key ? 'var(--text)' : 'var(--muted)',
+                                                        borderBottom: lang === key ? '2px solid var(--accent)' : '2px solid transparent',
+                                                        transition: 'all 0.2s',
+                                                    }}
+                                                >{label}</button>
+                                            ))}
+                                            <div style={{ flex: 1 }} />
+                                            <button
+                                                onClick={copyCode}
+                                                className="btn btn-ghost btn-sm"
+                                                style={{ margin: '8px 16px' }}
+                                            >{copied ? '✓ Copied!' : '📋 Copy'}</button>
+                                        </div>
+                                        <div style={{ position: 'relative' }}>
+                                            <pre className="code-block" style={{ borderRadius: 0, border: 'none', margin: 0, minHeight: 200, fontSize: 13 }}>
+                                                <code>{data.solution?.[lang] || '// Not available for this language'}</code>
+                                            </pre>
+                                        </div>
+                                    </>
+                                ) : (
+                                    <div style={{ padding: '48px', textAlign: 'center', color: 'var(--muted)' }}>
+                                        <div style={{ fontSize: 40, marginBottom: 16 }}>🔒</div>
+                                        <div style={{ fontSize: 15, marginBottom: 8, fontWeight: 500 }}>Solution hidden</div>
+                                        <p style={{ fontSize: 13, color: 'var(--faint)', maxWidth: 320, margin: '0 auto 20px' }}>
+                                            You must solve the problem first by writing code and submitting it successfully to unlock the optimal solution.
                                         </p>
                                     </div>
-                                    <div style={{ borderBottom: '1px solid var(--border)', display: 'flex' }}>
+                                )}
+                            </div>
+                        )}
+                    </div>
+
+                    {/* Right Column: Code Editor or Answer Box */}
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 24, height: 'calc(100vh - 180px)', position: 'sticky', top: 100 }}>
+                        {isAptitude ? (
+                            <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 16, padding: 32, flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 30px rgba(0,0,0,0.2)' }}>
+                                <div style={{ fontSize: 48, marginBottom: 20 }}>{isSolved ? '✅' : '🧠'}</div>
+                                <h3 style={{ fontSize: 24, fontWeight: 700, marginBottom: 12 }}>{isSolved ? 'Solution Unlocked' : 'Aptitude Answer'}</h3>
+                                
+                                {isSolved ? (
+                                    <div style={{ textAlign: 'center', marginTop: 16, width: '100%' }}>
+                                        <div style={{ fontSize: 13, color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 12 }}>Correct Answer</div>
+                                        <div style={{ fontSize: 40, fontWeight: 800, color: 'var(--easy)', padding: '16px 40px', background: 'rgba(34,197,94,0.1)', borderRadius: 16, border: '1px solid rgba(34,197,94,0.3)', marginBottom: 24, display: 'inline-block' }}>
+                                            {data.examples?.[0]?.output || 'Check description'}
+                                        </div>
+                                        
+                                        <div style={{ textAlign: 'left', background: 'rgba(99,102,241,0.05)', padding: '24px', borderRadius: 12, border: '1px solid var(--border)' }}>
+                                            <div style={{ fontSize: 13, color: 'var(--accent)', fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', marginBottom: 12 }}>
+                                                Explanation & Solution
+                                            </div>
+                                            <p style={{ fontSize: 15, color: 'var(--text)', lineHeight: 1.6, margin: 0 }}>
+                                                {data.solution?.explanation || data.approach || 'See approach description above.'}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <>
+                                        <p style={{ color: 'var(--muted)', marginBottom: 32, textAlign: 'center', fontSize: 14 }}>
+                                            Solve the problem and type your final answer below. No code needed.
+                                        </p>
+                                        <input 
+                                            type="text" 
+                                            className="input" 
+                                            placeholder="Enter your answer..." 
+                                            style={{ width: '100%', maxWidth: 300, marginBottom: 20, textAlign: 'center', fontSize: 16, padding: '12px' }}
+                                            value={customInput}
+                                            onChange={e => setCustomInput(e.target.value)}
+                                            onKeyDown={e => {
+                                                if (e.key === 'Enter') {
+                                                    const expected = data.examples?.[0]?.output?.trim()?.toLowerCase() || '';
+                                                    const userAns = customInput.trim().toLowerCase();
+                                                    if (!expected || userAns === expected || (expected.includes('.') && parseFloat(userAns) === parseFloat(expected))) {
+                                                        const next = { ...solved, [id]: true };
+                                                        setSolved(next);
+                                                        localStorage.setItem('solved', JSON.stringify(next));
+                                                        setShow(true);
+                                                    } else {
+                                                        setRunOutput('❌ Incorrect answer. Please try again.');
+                                                    }
+                                                }
+                                            }}
+                                        />
+                                        <button 
+                                            className="btn btn-primary" 
+                                            style={{ background: 'var(--easy)', color: '#fff', padding: '12px 32px', fontSize: 15, border: 'none' }}
+                                            onClick={() => {
+                                                const expected = data.examples?.[0]?.output?.trim()?.toLowerCase() || '';
+                                                const userAns = customInput.trim().toLowerCase();
+                                                if (!expected || userAns === expected || (expected.includes('.') && parseFloat(userAns) === parseFloat(expected))) {
+                                                    const next = { ...solved, [id]: true };
+                                                    setSolved(next);
+                                                    localStorage.setItem('solved', JSON.stringify(next));
+                                                    setShow(true);
+                                                } else {
+                                                    setRunOutput('❌ Incorrect answer. Please try again.');
+                                                }
+                                            }}
+                                        >
+                                            Check Answer
+                                        </button>
+                                        
+                                        {runOutput && !isSolved && (
+                                            <div style={{ marginTop: 24, fontSize: 14, color: 'var(--hard)', fontWeight: 500, padding: '12px 20px', background: 'var(--bg)', borderRadius: 8, border: '1px solid var(--border)' }}>
+                                                {runOutput}
+                                            </div>
+                                        )}
+
+                                        <button 
+                                            className="btn btn-ghost btn-sm" 
+                                            style={{ marginTop: 32, color: 'var(--faint)' }}
+                                            onClick={() => {
+                                                const next = { ...solved, [id]: true };
+                                                setSolved(next);
+                                                localStorage.setItem('solved', JSON.stringify(next));
+                                                setShow(true);
+                                            }}
+                                        >
+                                            Reveal Solution
+                                        </button>
+                                    </>
+                                )}
+                            </div>
+                        ) : (
+                            <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column', flex: 1, boxShadow: '0 8px 30px rgba(0,0,0,0.2)' }}>
+                                {/* Editor Header */}
+                                <div style={{
+                                    padding: '10px 20px', borderBottom: '1px solid var(--border)',
+                                    display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--bg3)'
+                                }}>
+                                    <div style={{ display: 'flex', gap: 10 }}>
                                         {LANG_TABS.map(({ key, label }) => (
                                             <button
                                                 key={key}
                                                 onClick={() => setLang(key)}
-                                                style={{
-                                                    padding: '12px 22px', border: 'none', background: 'transparent',
-                                                    cursor: 'pointer', fontFamily: 'inherit', fontSize: 13, fontWeight: 500,
-                                                    color: lang === key ? 'var(--text)' : 'var(--muted)',
-                                                    borderBottom: lang === key ? '2px solid var(--accent)' : '2px solid transparent',
-                                                    transition: 'all 0.2s',
-                                                }}
+                                                className={`btn btn-sm ${lang === key ? 'btn-primary' : 'btn-ghost'}`}
+                                                style={{ padding: '6px 12px', fontSize: 12 }}
                                             >{label}</button>
                                         ))}
-                                        <div style={{ flex: 1 }} />
-                                        <button
-                                            onClick={copyCode}
+                                    </div>
+                                    <div style={{ display: 'flex', gap: 10 }}>
+                                        <button 
+                                            onClick={() => handleRunCode(false)} 
                                             className="btn btn-ghost btn-sm"
-                                            style={{ margin: '8px 16px' }}
-                                        >{copied ? '✓ Copied!' : '📋 Copy'}</button>
+                                            disabled={isRunning}
+                                        >
+                                            ▶ Run Code
+                                        </button>
+                                        <button 
+                                            onClick={() => handleRunCode(true)} 
+                                            className="btn btn-primary btn-sm"
+                                            disabled={isRunning}
+                                            style={{ background: 'var(--easy)', color: '#fff', border: 'none', padding: '6px 16px' }}
+                                        >
+                                            {isRunning ? '⏳ Running...' : '↑ Submit'}
+                                        </button>
                                     </div>
-                                    <div style={{ position: 'relative' }}>
-                                        <pre className="code-block" style={{ borderRadius: 0, border: 'none', margin: 0, minHeight: 200, fontSize: 13 }}>
-                                            <code>{data.solution?.[lang] || '// Not available for this language'}</code>
-                                        </pre>
-                                    </div>
-                                </>
-                            ) : (
-                                <div style={{ padding: '48px', textAlign: 'center', color: 'var(--muted)' }}>
-                                    <div style={{ fontSize: 40, marginBottom: 16 }}>🔒</div>
-                                    <div style={{ fontSize: 15, marginBottom: 8, fontWeight: 500 }}>Solution hidden</div>
-                                    <p style={{ fontSize: 13, color: 'var(--faint)', maxWidth: 320, margin: '0 auto 20px' }}>
-                                        You must solve the problem first by writing code and submitting it successfully to unlock the optimal solution.
-                                    </p>
                                 </div>
-                            )}
-                        </div>
-                    </div>
 
-                    {/* Right Column: Code Editor */}
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 24, height: 'calc(100vh - 180px)', position: 'sticky', top: 100 }}>
-                        <div style={{ background: 'var(--bg2)', border: '1px solid var(--border)', borderRadius: 16, overflow: 'hidden', display: 'flex', flexDirection: 'column', flex: 1, boxShadow: '0 8px 30px rgba(0,0,0,0.2)' }}>
-                            {/* Editor Header */}
-                            <div style={{
-                                padding: '10px 20px', borderBottom: '1px solid var(--border)',
-                                display: 'flex', alignItems: 'center', justifyContent: 'space-between', background: 'var(--bg3)'
-                            }}>
-                                <div style={{ display: 'flex', gap: 10 }}>
-                                    {LANG_TABS.map(({ key, label }) => (
-                                        <button
-                                            key={key}
-                                            onClick={() => setLang(key)}
-                                            className={`btn btn-sm ${lang === key ? 'btn-primary' : 'btn-ghost'}`}
-                                            style={{ padding: '6px 12px', fontSize: 12 }}
-                                        >{label}</button>
-                                    ))}
-                                </div>
-                                <div style={{ display: 'flex', gap: 10 }}>
-                                    <button 
-                                        onClick={() => handleRunCode(false)} 
-                                        className="btn btn-ghost btn-sm"
-                                        disabled={isRunning}
-                                    >
-                                        ▶ Run Code
-                                    </button>
-                                    <button 
-                                        onClick={() => handleRunCode(true)} 
-                                        className="btn btn-primary btn-sm"
-                                        disabled={isRunning}
-                                        style={{ background: 'var(--easy)', color: '#fff', border: 'none', padding: '6px 16px' }}
-                                    >
-                                        {isRunning ? '⏳ Running...' : '↑ Submit'}
-                                    </button>
-                                </div>
-                            </div>
-
-                            {/* Monaco Editor */}
-                            <div style={{ flex: 1, position: 'relative', background: '#1e1e1e' }}>
-                                <Editor
-                                    height="100%"
-                                    language={LANG_TABS.find(t => t.key === lang)?.monaco}
-                                    theme="vs-dark"
-                                    value={userCode[lang]}
-                                    onChange={handleCodeChange}
-                                    options={{
-                                        minimap: { enabled: false },
-                                        fontSize: 14,
-                                        fontFamily: 'JetBrains Mono, monospace',
-                                        padding: { top: 16 },
-                                        scrollBeyondLastLine: false,
-                                        roundedSelection: false,
-                                    }}
-                                />
-                            </div>
-
-                            {/* Test Cases & Output */}
-                            <div style={{ height: '35%', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', background: 'var(--bg3)' }}>
-                                <div style={{ padding: '10px 16px', borderBottom: '1px solid var(--border)', fontSize: 12, fontWeight: 600, color: 'var(--muted)', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
-                                    <span>Test Cases (stdin)</span>
-                                    <span>Console Output</span>
-                                </div>
-                                <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
-                                    <textarea
-                                        value={customInput}
-                                        onChange={e => setCustomInput(e.target.value)}
-                                        placeholder="Enter custom input for your program here..."
-                                        style={{
-                                            flex: 1, background: 'var(--bg2)', border: 'none', borderRight: '1px solid var(--border)',
-                                            padding: 16, color: 'var(--text)', fontFamily: 'JetBrains Mono, monospace', fontSize: 13,
-                                            resize: 'none', outline: 'none'
+                                {/* Monaco Editor */}
+                                <div style={{ flex: 1, position: 'relative', background: '#1e1e1e' }}>
+                                    <Editor
+                                        height="100%"
+                                        language={LANG_TABS.find(t => t.key === lang)?.monaco}
+                                        theme="vs-dark"
+                                        value={userCode[lang]}
+                                        onChange={handleCodeChange}
+                                        options={{
+                                            minimap: { enabled: false },
+                                            fontSize: 14,
+                                            fontFamily: 'JetBrains Mono, monospace',
+                                            padding: { top: 16 },
+                                            scrollBeyondLastLine: false,
+                                            roundedSelection: false,
                                         }}
                                     />
-                                    <div style={{ flex: 1, padding: 16, overflowY: 'auto', background: 'rgba(0,0,0,0.2)', fontFamily: 'JetBrains Mono, monospace', fontSize: 13, color: runOutput.includes('Error') ? 'var(--hard)' : 'var(--easy)', whiteSpace: 'pre-wrap' }}>
-                                        {runOutput || <span style={{ color: 'var(--faint)' }}>Output will appear here after running...</span>}
+                                </div>
+
+                                {/* Test Cases & Output */}
+                                <div style={{ height: '35%', borderTop: '1px solid var(--border)', display: 'flex', flexDirection: 'column', background: 'var(--bg3)' }}>
+                                    <div style={{ padding: '10px 16px', borderBottom: '1px solid var(--border)', fontSize: 12, fontWeight: 600, color: 'var(--muted)', display: 'grid', gridTemplateColumns: '1fr 1fr' }}>
+                                        <span>Test Cases (stdin)</span>
+                                        <span>Console Output</span>
+                                    </div>
+                                    <div style={{ display: 'flex', flex: 1, minHeight: 0 }}>
+                                        <textarea
+                                            value={customInput}
+                                            onChange={e => setCustomInput(e.target.value)}
+                                            placeholder="Enter custom input for your program here..."
+                                            style={{
+                                                flex: 1, background: 'var(--bg2)', border: 'none', borderRight: '1px solid var(--border)',
+                                                padding: 16, color: 'var(--text)', fontFamily: 'JetBrains Mono, monospace', fontSize: 13,
+                                                resize: 'none', outline: 'none'
+                                            }}
+                                        />
+                                        <div style={{ flex: 1, padding: 16, overflowY: 'auto', background: 'rgba(0,0,0,0.2)', fontFamily: 'JetBrains Mono, monospace', fontSize: 13, color: runOutput.includes('Error') ? 'var(--hard)' : 'var(--easy)', whiteSpace: 'pre-wrap' }}>
+                                            {runOutput || <span style={{ color: 'var(--faint)' }}>Output will appear here after running...</span>}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
 

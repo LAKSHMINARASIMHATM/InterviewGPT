@@ -5,6 +5,7 @@ import Companies from './pages/Companies';
 import CompanyDetail from './pages/CompanyDetail';
 import Problems from './pages/Problems';
 import ProblemDetail from './pages/ProblemDetail';
+import Aptitude from './pages/Aptitude';
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/companies/:slug" element={<CompanyDetail />} />
         <Route path="/problems" element={<Problems />} />
         <Route path="/problems/:id" element={<ProblemDetail />} />
+        <Route path="/aptitude" element={<Aptitude />} />
       </Routes>
     </BrowserRouter>
   );
