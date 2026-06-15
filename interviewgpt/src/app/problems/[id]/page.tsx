@@ -145,12 +145,67 @@ export default function ProblemDetailPage({ params }: { params: Promise<{ id: st
   const [note, setNote] = useState("");
   const [revealedHints, setRevealedHints] = useState<number[]>([]);
 
+  // AI-generated problem statement state
+  const [problemDetails, setProblemDetails] = useState<{
+    description: string;
+    examples: Array<{ input: string; output: string; explanation?: string }>;
+    constraints: string[];
+  } | null>(null);
+  const [isDetailsLoading, setIsDetailsLoading] = useState(false);
+
   // AI Chat state
   const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
   const [chatInput, setChatInput] = useState("");
   const [isAiLoading, setIsAiLoading] = useState(false);
   const [aiPanelOpen, setAiPanelOpen] = useState(false);
   const chatEndRef = useRef<HTMLDivElement>(null);
+
+  // Fetch and cache problem details on mount/problem change
+  useEffect(() => {
+    if (!problem) return;
+    const cacheKey = `problem-details-${problem.id}`;
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      try {
+        setProblemDetails(JSON.parse(cached));
+        return;
+      } catch (e) {
+        // ignore and refetch
+      }
+    }
+
+    const fetchDetails = async () => {
+      setIsDetailsLoading(true);
+      try {
+        const res = await fetch("/api/ai", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            action: "generate_problem_details",
+            problemContext: {
+              title: problem.title,
+              difficulty: problem.difficulty,
+              topics: problem.topics,
+              approach: problem.approach,
+              time: problem.time,
+              space: problem.space,
+            }
+          })
+        });
+        if (res.ok) {
+          const data = await res.json();
+          setProblemDetails(data);
+          localStorage.setItem(cacheKey, JSON.stringify(data));
+        }
+      } catch (error) {
+        console.error("Failed to fetch problem details", error);
+      } finally {
+        setIsDetailsLoading(false);
+      }
+    };
+
+    fetchDetails();
+  }, [problem]);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -163,13 +218,67 @@ export default function ProblemDetailPage({ params }: { params: Promise<{ id: st
   };
 
   const handleRun = async () => {
+    if (!problem) return;
     setIsRunning(true);
     setRunOutput(null);
-    // Simulate code execution (no real runner — display intent output)
-    await new Promise((r) => setTimeout(r, 1200));
-    const lang = LANGUAGES.find((l) => l.id === selectedLang)?.label || "Python";
-    setRunOutput(`[${lang} Runner]\n\n> Running your code...\n> Compiled successfully ✓\n\n# Output:\n[2, 7]\n\n# All test cases passed ✓\n  Test 1: [2,7,11,15], target=9   → [0,1]  ✓\n  Test 2: [3,2,4],    target=6   → [1,2]  ✓\n  Test 3: [3,3],      target=6   → [0,1]  ✓\n\nTime: 52ms  |  Memory: 14.2MB`);
-    setIsRunning(false);
+    try {
+      const res = await fetch("/api/ai", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "compile_and_run",
+          code,
+          language: selectedLang,
+          problemContext: {
+            id: problem.id,
+            problemId: problem.id,
+            title: problem.title,
+            difficulty: problem.difficulty,
+            topics: problem.topics,
+            approach: problem.approach,
+          }
+        })
+      });
+      if (res.ok) {
+        const data = await res.json();
+        const langLabel = LANGUAGES.find((l) => l.id === selectedLang)?.label || "Python";
+        
+        let outputStr = `[${langLabel} Runner]\n\n> Running your code...\n`;
+        if (data.compileError) {
+          outputStr += `❌ Compilation Error:\n${data.compileError}`;
+        } else if (data.runtimeError) {
+          outputStr += `❌ Runtime Error:\n${data.runtimeError}`;
+        } else {
+          outputStr += `✓ Compiled successfully\n\n`;
+          if (data.stdout) {
+            outputStr += `# Standard Output:\n${data.stdout}\n`;
+          }
+          
+          outputStr += `# Test Cases:\n`;
+          data.testCases.forEach((tc: any) => {
+            const statusSymbol = tc.status === "Pass" ? "✓" : "❌";
+            outputStr += `  Test ${tc.id}: Input: ${tc.input}\n`;
+            outputStr += `          Expected: ${tc.expected}\n`;
+            outputStr += `          Actual:   ${tc.actual}   ${statusSymbol} ${tc.status}\n\n`;
+          });
+          
+          if (data.success) {
+            outputStr += `🎉 All test cases passed successfully!\n`;
+          } else {
+            outputStr += `⚠️ Some test cases failed. Review your logic.\n`;
+          }
+          outputStr += `\nExecution Time: ${data.executionTime}  |  Memory: ${data.memoryUsage}`;
+          outputStr += `\nComplexity: Time: ${data.timeComplexity} | Space: ${data.spaceComplexity}`;
+        }
+        setRunOutput(outputStr);
+      } else {
+        setRunOutput("Error: Failed to connect to code execution service.");
+      }
+    } catch (error) {
+      setRunOutput("Error: Code execution timed out or failed to parse.");
+    } finally {
+      setIsRunning(false);
+    }
   };
 
   const handleSendAiMessage = useCallback(async () => {
@@ -365,32 +474,93 @@ export default function ProblemDetailPage({ params }: { params: Promise<{ id: st
                   {/* Problem tab */}
                   {activeTab === "problem" && (
                     <div className="tab-prose">
-                      <h3 className="tab-prose-heading">Description</h3>
-                      <p className="tab-prose-p">
-                        Implement the algorithm for <strong>{problem.title}</strong>.
-                        This problem is a classic <em>{problem.approach}</em> pattern.
-                      </p>
-                      <p className="tab-prose-p muted">
-                        Frequently asked at: <strong className="text-white">{problem.companies.slice(0, 5).join(", ")}</strong>
-                        {problem.companies.length > 5 && ` and ${problem.companies.length - 5} more`}.
-                      </p>
-                      <div className="approach-block">
-                        <div className="approach-label">
-                          <Wand2 className="w-3.5 h-3.5 text-purple-400" />
-                          Optimal Approach
+                      {isDetailsLoading ? (
+                        <div className="py-12 flex flex-col items-center justify-center text-center space-y-4">
+                          <Loader2 className="w-8 h-8 animate-spin text-emerald-400" />
+                          <p className="text-xs text-gray-400 animate-pulse">Generating detailed problem statement & constraints with Llama...</p>
                         </div>
-                        <p className="approach-text">{problem.approach}</p>
-                      </div>
-                      <div className="complexity-grid">
-                        <div className="complexity-box">
-                          <span className="complexity-label">⏱ Time</span>
-                          <span className="complexity-val time">{problem.time}</span>
-                        </div>
-                        <div className="complexity-box">
-                          <span className="complexity-label">📦 Space</span>
-                          <span className="complexity-val space">{problem.space}</span>
-                        </div>
-                      </div>
+                      ) : problemDetails ? (
+                        <>
+                          <h3 className="tab-prose-heading">Description</h3>
+                          <div className="markdown-lite">
+                            <ReactMarkdownLite content={problemDetails.description} />
+                          </div>
+
+                          {problemDetails.examples && problemDetails.examples.length > 0 && (
+                            <div className="mt-6 space-y-4">
+                              <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Examples</h4>
+                              {problemDetails.examples.map((eg, idx) => (
+                                <div key={idx} className="bg-white/[0.02] border border-white/5 rounded-xl p-4 space-y-2 font-mono text-xs">
+                                  <div className="text-emerald-400 font-semibold">Example {idx + 1}:</div>
+                                  <div><span className="text-gray-400">Input:</span> <span className="text-white">{eg.input}</span></div>
+                                  <div><span className="text-gray-400">Output:</span> <span className="text-white">{eg.output}</span></div>
+                                  {eg.explanation && (
+                                    <div><span className="text-gray-400">Explanation:</span> <span className="text-gray-300">{eg.explanation}</span></div>
+                                  )}
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {problemDetails.constraints && problemDetails.constraints.length > 0 && (
+                            <div className="mt-6 space-y-2">
+                              <h4 className="text-xs font-bold text-gray-400 uppercase tracking-wider">Constraints</h4>
+                              <ul className="list-disc list-inside space-y-1.5 text-xs text-gray-300">
+                                {problemDetails.constraints.map((c, idx) => (
+                                  <li key={idx} className="font-mono bg-white/[0.01] px-2.5 py-1 rounded border border-white/[0.02]">{c}</li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
+
+                          <div className="approach-block mt-8">
+                            <div className="approach-label">
+                              <Wand2 className="w-3.5 h-3.5 text-purple-400" />
+                              Optimal Approach
+                            </div>
+                            <p className="approach-text">{problem.approach}</p>
+                          </div>
+                          <div className="complexity-grid">
+                            <div className="complexity-box">
+                              <span className="complexity-label">⏱ Time</span>
+                              <span className="complexity-val time">{problem.time}</span>
+                            </div>
+                            <div className="complexity-box">
+                              <span className="complexity-label">📦 Space</span>
+                              <span className="complexity-val space">{problem.space}</span>
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          <h3 className="tab-prose-heading">Description</h3>
+                          <p className="tab-prose-p">
+                            Implement the algorithm for <strong>{problem.title}</strong>.
+                            This problem is a classic <em>{problem.approach}</em> pattern.
+                          </p>
+                          <p className="tab-prose-p muted">
+                            Frequently asked at: <strong className="text-white">{problem.companies.slice(0, 5).join(", ")}</strong>
+                            {problem.companies.length > 5 && ` and ${problem.companies.length - 5} more`}.
+                          </p>
+                          <div className="approach-block">
+                            <div className="approach-label">
+                              <Wand2 className="w-3.5 h-3.5 text-purple-400" />
+                              Optimal Approach
+                            </div>
+                            <p className="approach-text">{problem.approach}</p>
+                          </div>
+                          <div className="complexity-grid">
+                            <div className="complexity-box">
+                              <span className="complexity-label">⏱ Time</span>
+                              <span className="complexity-val time">{problem.time}</span>
+                            </div>
+                            <div className="complexity-box">
+                              <span className="complexity-label">📦 Space</span>
+                              <span className="complexity-val space">{problem.space}</span>
+                            </div>
+                          </div>
+                        </>
+                      )}
                     </div>
                   )}
 

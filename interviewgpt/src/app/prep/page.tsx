@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
+
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -8,6 +9,7 @@ import {
   ChevronRight, Terminal, Sparkles, Code2, Cpu, Check,
   HelpCircle, ChevronDown, MessageSquare, ListTodo, Edit3, Send
 } from "lucide-react";
+import "./prep.css";
 
 interface QuestionItem {
   title: string;
@@ -457,71 +459,66 @@ Please write the optimal solution in clean, well-formatted markdown.`
   };
 
   return (
-    <div className="min-h-screen bg-[#040706] pb-32 relative overflow-hidden">
-      {/* Premium ambient light glows */}
-      <div className="absolute top-0 left-1/4 w-[600px] h-[600px] rounded-full blur-[150px] opacity-10 pointer-events-none bg-emerald-500/20" />
-      <div className="absolute bottom-10 right-1/4 w-[500px] h-[500px] rounded-full blur-[150px] opacity-5 pointer-events-none bg-white/10" />
+    <div className="prep-page">
+      <div className="prep-glow-1" />
+      <div className="prep-glow-2" />
 
-      <div className="w-full px-6 md:px-12 lg:px-16 pt-10 pb-12 relative z-10">
+      <div className="prep-container">
 
         {/* Navigation Breadcrumb */}
-        <div className="flex items-center justify-between mb-8">
+        <div className="prep-top-bar">
           <Link
             href="/companies"
-            className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+            className="prep-back-link"
           >
             <ArrowLeft className="w-4 h-4" /> Back to Companies
           </Link>
 
-          <span className="text-xs text-gray-400 bg-white/5 px-4.5 py-2 rounded-2xl border border-white/5 font-semibold flex items-center gap-2 shadow-inner">
-            <Award className="w-4 h-4 text-emerald-400" /> Prep Readiness: <strong className="text-emerald-300 font-extrabold ml-1">{prepPercentage}%</strong>
+          <span className="prep-readiness-badge">
+            <Award className="w-4 h-4 text-emerald-400" /> Prep Readiness: <strong className="prep-readiness-value">{prepPercentage}%</strong>
           </span>
         </div>
 
         {/* Hero Header Card */}
-        <div className="glass-card p-10 mb-12 relative overflow-hidden border-emerald-500/10">
-          <div className="absolute top-0 right-0 w-[450px] h-[450px] rounded-full blur-3xl opacity-10 pointer-events-none bg-gradient-to-br from-emerald-500 to-teal-500" />
-
-          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-8 relative z-10">
-            <div className="flex items-center gap-6">
-              <div className="w-20 h-20 rounded-2xl flex items-center justify-center shadow-lg border border-white/10 bg-gradient-to-br from-emerald-600/20 to-teal-600/5">
-                <Award className="w-9 h-9 text-emerald-400" />
+        <div className="prep-hero">
+          <div className="prep-hero-content">
+            <div className="prep-hero-info">
+              <div className="prep-hero-icon-container">
+                <Award className="w-9 h-9" />
               </div>
-              <div>
-                <h1 className="text-4xl font-extrabold tracking-tight text-white flex items-center gap-3">
-                  Ultimate Interview Preparation Guide
-                </h1>
-                <p className="text-gray-400 text-base mt-2 max-w-2xl leading-relaxed">
+              <div className="prep-hero-text">
+                <h1>Ultimate Interview Preparation Guide</h1>
+                <p>
                   A standardized 5-round syllabus covering aptitude, core algorithms, system design, and behavioral interviews modeled after FAANG standards.
                 </p>
               </div>
             </div>
 
             {/* Overall Preparation Progress Bar */}
-            <div className="w-full xl:w-96 p-6 bg-white/[0.02] border border-white/5 rounded-2xl flex flex-col gap-3.5 shadow-inner">
-              <div className="flex justify-between items-center text-xs font-bold uppercase tracking-wider text-gray-400">
+            <div className="prep-progress-panel">
+              <div className="prep-progress-header">
                 <span>Overall Readiness</span>
-                <span className="text-emerald-400">{prepPercentage}%</span>
+                <span className="prep-progress-label-active">{prepPercentage}%</span>
               </div>
-              <div className="h-3 rounded-full bg-white/5 overflow-hidden p-0.5 border border-white/5">
+              <div className="prep-progress-bar-container">
                 <div
-                  className="h-full transition-all duration-700 rounded-full bg-gradient-to-r from-emerald-600 to-teal-500 shadow-lg"
+                  className="prep-progress-bar-fill"
                   style={{ width: `${prepPercentage}%` }}
                 />
               </div>
-              <div className="text-[10px] text-gray-500 leading-normal flex justify-between">
+              <div className="prep-progress-footer">
                 <span>{completedRoundsCount} of {totalRounds} steps completed</span>
-                <span className="font-semibold uppercase text-emerald-400/80">FAANG Standard Syllabus</span>
+                <span className="prep-progress-footer-badge">FAANG Standard Syllabus</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* Dashboard Workspace */}
-        <div className="flex flex-col md:flex-row gap-8 items-start">
+        <div className="prep-workspace">
 
           {/* Left Column: Syllabus Roadmap Timeline (Avatar Bar) */}
-          <div className="flex flex-row md:flex-col gap-3.5 items-center flex-shrink-0 w-full md:w-auto bg-white/[0.01] border border-white/5 p-3.5 rounded-2xl md:py-6 md:px-3 relative z-20">
+          <div className="prep-sidebar">
             {GENERAL_PREP_ROUNDS.map((r, idx) => {
               const isSelected = selectedRoundIdx === idx;
               const isCompleted = !!completedRounds[idx];
@@ -532,28 +529,21 @@ Please write the optimal solution in clean, well-formatted markdown.`
                     setSelectedRoundIdx(idx);
                     setExpandedQuestionIdx(null);
                   }}
-                  title={r.name}
-                  className={`w-12 h-12 rounded-xl border flex items-center justify-center text-xl transition-all duration-300 cursor-pointer relative group ${isSelected
-                      ? "bg-emerald-500/20 border-emerald-500 shadow-lg shadow-emerald-500/10 scale-105"
-                      : "bg-white/[0.01] border-white/10 hover:bg-white/[0.04] hover:border-white/20 hover:scale-105"
-                    }`}
+                  className={`prep-step-btn ${isSelected ? "active" : ""}`}
                 >
-                  {/* Active selection accent line */}
                   {isSelected && (
-                    <div className="absolute -left-1.5 top-1/2 -translate-y-1/2 w-1 h-5 bg-emerald-500 rounded-full hidden md:block" />
+                    <div className="prep-step-btn-indicator" />
                   )}
 
                   <span>{r.icon}</span>
 
-                  {/* Completed overlay status badge */}
                   {isCompleted && (
-                    <div className="absolute -top-1 -right-1 w-4.5 h-4.5 bg-emerald-500 rounded flex items-center justify-center border-2 border-[#07080c] shadow-md shadow-emerald-500/20">
+                    <div className="prep-step-completed-badge">
                       <Check className="w-2.5 h-2.5 text-white stroke-[3.5px]" />
                     </div>
                   )}
 
-                  {/* Premium floating tooltip */}
-                  <div className="absolute left-full ml-3 hidden md:block opacity-0 translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 pointer-events-none transition-all duration-200 bg-[#07080c] border border-white/10 text-[10px] font-extrabold text-gray-200 px-3 py-1.5 rounded-xl whitespace-nowrap shadow-2xl z-50">
+                  <div className="prep-step-tooltip">
                     <span className="text-emerald-400 font-mono mr-1">Step {idx + 1}:</span>
                     {r.name.split(": ")[1]}
                   </div>
@@ -571,23 +561,23 @@ Please write the optimal solution in clean, well-formatted markdown.`
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -15 }}
                 transition={{ duration: 0.2 }}
-                className="glass-card p-10 flex flex-col gap-8 shadow-2xl relative border border-white/10 min-h-[650px]"
+                className="prep-content-card"
               >
                 {/* Header info */}
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-white/5 pb-6">
+                <div className="prep-card-header">
                   <div>
-                    <span className="text-xs font-bold text-emerald-400 uppercase tracking-widest block mb-1">
+                    <span className="prep-step-meta">
                       Step {selectedRoundIdx + 1} workspace
                     </span>
-                    <h2 className="text-2xl font-extrabold text-white tracking-tight flex items-center gap-3">
-                      <span>{currentRound.icon}</span> {currentRound.name}
+                    <h2 className="prep-step-title">
+                      {currentRound.name}
                     </h2>
                   </div>
-                  <div className="flex gap-2.5 flex-wrap">
-                    <span className="text-xs font-semibold bg-white/5 text-gray-300 px-3.5 py-1.5 rounded-full border border-white/10 flex items-center gap-1.5">
+                  <div className="prep-badges-row">
+                    <span className="prep-badge prep-badge-gray">
                       <Clock className="w-4 h-4 text-gray-400" /> {currentRound.duration}
                     </span>
-                    <span className="text-xs font-semibold bg-emerald-500/10 text-emerald-300 px-3.5 py-1.5 rounded-full border border-emerald-500/20 flex items-center gap-1.5">
+                    <span className="prep-badge prep-badge-emerald">
                       <Shield className="w-4 h-4 text-emerald-400" /> {currentRound.type}
                     </span>
                   </div>
@@ -595,41 +585,26 @@ Please write the optimal solution in clean, well-formatted markdown.`
 
                 {/* Overview Description */}
                 <div>
-                  <h3 className="text-xs font-extrabold text-gray-500 uppercase tracking-widest mb-3">
+                  <h3 className="prep-section-title">
                     Round Goal
                   </h3>
-                  <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                  <p className="prep-section-desc">
                     {currentRound.desc}
                   </p>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-8 items-stretch mt-6 flex-grow">
+                <div className="prep-split-layout">
                   {/* Left Column: Vertical Navigation Tabs (Avatars) */}
-                  <div className="flex lg:flex-col justify-start items-center gap-6 lg:border-r lg:border-white/5 lg:pr-8 flex-shrink-0 w-full lg:w-auto">
+                  <div className="prep-tabs-nav">
                     {/* Strategy Avatar */}
                     <button
                       onClick={() => setActiveTab("strategy")}
-                      className="flex flex-col items-center gap-2 group cursor-pointer"
+                      className={`prep-tab-btn ${activeTab === "strategy" ? "active" : ""}`}
                     >
-                      <div 
-                        className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                          activeTab === "strategy" 
-                            ? "shadow-[0_0_15px_rgba(16,185,129,0.1)] scale-110" 
-                            : "border-white/10 bg-white/5 opacity-50 group-hover:opacity-80 group-hover:scale-105"
-                        }`}
-                        style={{ 
-                          borderColor: activeTab === "strategy" ? "#10b981" : "transparent",
-                          backgroundColor: activeTab === "strategy" ? "rgba(16,185,129,0.15)" : "",
-                          color: activeTab === "strategy" ? "#10b981" : "#9ca3af"
-                        }}
-                      >
+                      <div className="prep-tab-avatar">
                         <Sparkles className="w-5 h-5" />
                       </div>
-                      <span 
-                        className={`text-[10px] font-bold tracking-tight text-center max-w-[80px] transition-all duration-300 ${
-                          activeTab === "strategy" ? "text-white" : "text-gray-500 group-hover:text-gray-300"
-                        }`}
-                      >
+                      <span className="prep-tab-label">
                         Strategy &amp; Focus
                       </span>
                     </button>
@@ -637,27 +612,12 @@ Please write the optimal solution in clean, well-formatted markdown.`
                     {/* Practice Avatar */}
                     <button
                       onClick={() => setActiveTab("practice")}
-                      className="flex flex-col items-center gap-2 group cursor-pointer"
+                      className={`prep-tab-btn ${activeTab === "practice" ? "active" : ""}`}
                     >
-                      <div 
-                        className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                          activeTab === "practice" 
-                            ? "shadow-[0_0_15px_rgba(16,185,129,0.1)] scale-110" 
-                            : "border-white/10 bg-white/5 opacity-50 group-hover:opacity-80 group-hover:scale-105"
-                        }`}
-                        style={{ 
-                          borderColor: activeTab === "practice" ? "#10b981" : "transparent",
-                          backgroundColor: activeTab === "practice" ? "rgba(16,185,129,0.15)" : "",
-                          color: activeTab === "practice" ? "#10b981" : "#9ca3af"
-                        }}
-                      >
+                      <div className="prep-tab-avatar">
                         <Code2 className="w-5 h-5" />
                       </div>
-                      <span 
-                        className={`text-[10px] font-bold tracking-tight text-center max-w-[80px] transition-all duration-300 ${
-                          activeTab === "practice" ? "text-white" : "text-gray-500 group-hover:text-gray-300"
-                        }`}
-                      >
+                      <span className="prep-tab-label">
                         Practice Scenarios
                       </span>
                     </button>
@@ -665,34 +625,19 @@ Please write the optimal solution in clean, well-formatted markdown.`
                     {/* Sandbox Avatar */}
                     <button
                       onClick={() => setActiveTab("sandbox")}
-                      className="flex flex-col items-center gap-2 group cursor-pointer"
+                      className={`prep-tab-btn ${activeTab === "sandbox" ? "active" : ""}`}
                     >
-                      <div 
-                        className={`w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-300 ${
-                          activeTab === "sandbox" 
-                            ? "shadow-[0_0_15px_rgba(16,185,129,0.1)] scale-110" 
-                            : "border-white/10 bg-white/5 opacity-50 group-hover:opacity-80 group-hover:scale-105"
-                        }`}
-                        style={{ 
-                          borderColor: activeTab === "sandbox" ? "#10b981" : "transparent",
-                          backgroundColor: activeTab === "sandbox" ? "rgba(16,185,129,0.15)" : "",
-                          color: activeTab === "sandbox" ? "#10b981" : "#9ca3af"
-                        }}
-                      >
+                      <div className="prep-tab-avatar">
                         <Edit3 className="w-5 h-5" />
                       </div>
-                      <span 
-                        className={`text-[10px] font-bold tracking-tight text-center max-w-[80px] transition-all duration-300 ${
-                          activeTab === "sandbox" ? "text-white" : "text-gray-500 group-hover:text-gray-300"
-                        }`}
-                      >
+                      <span className="prep-tab-label">
                         Answer Sandbox
                       </span>
                     </button>
                   </div>
 
                   {/* Right Column: Active Section Content Area */}
-                  <div className="flex-1 min-w-0 w-full relative">
+                  <div className="prep-tab-content">
                     <AnimatePresence mode="wait">
                       {activeTab === "strategy" && (
                         <motion.div
@@ -701,62 +646,55 @@ Please write the optimal solution in clean, well-formatted markdown.`
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="space-y-6"
                         >
-                          <div className="space-y-6">
-                            <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-2xl p-6">
-                              <h4 className="text-xs font-extrabold text-emerald-300 uppercase tracking-wider flex items-center gap-2 mb-3">
+                          <div>
+                            <div className="prep-coach-panel">
+                              <h4 className="prep-coach-header">
                                 <Terminal className="w-4 h-4" /> AI Coaching Advice
                               </h4>
-                              <p className="text-sm text-gray-300 leading-relaxed">{currentRound.guidance}</p>
+                              <p className="prep-coach-text">{currentRound.guidance}</p>
                             </div>
                             
                             {currentRound.concepts && currentRound.concepts.length > 0 && (
-                              <div className="bg-white/[0.01] border border-white/5 rounded-2xl p-6">
-                                <h4 className="text-xs font-extrabold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                              <div className="prep-info-block">
+                                <h4 className="prep-info-block-header">
                                   <Terminal className="w-4 h-4 text-emerald-400" /> Core Concepts
                                 </h4>
-                                <div className="flex flex-wrap gap-2">
+                                <div className="prep-concepts-row">
                                   {currentRound.concepts.map((c, i) => (
-                                    <span key={i} className="px-3 py-1.5 bg-amber-500/5 border border-amber-500/10 text-amber-300 rounded-xl text-xs font-bold">{c}</span>
+                                    <span key={i} className="prep-concept-pill">{c}</span>
                                   ))}
                                 </div>
                               </div>
                             )}
 
-                            <div className="bg-white/[0.01] border border-white/5 rounded-2xl p-6">
-                              <h4 className="text-xs font-extrabold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                            <div className="prep-info-block">
+                              <h4 className="prep-info-block-header">
                                 <ListTodo className="w-4 h-4 text-emerald-400" /> Evaluation Criteria
                               </h4>
-                              <div className="space-y-3">
+                              <div className="prep-checklist">
                                 {currentRound.expectations.map((exp, idx) => {
                                   const expKey = `general-${selectedRoundIdx}-${idx}`;
                                   const isTicked = !!completedExpectations[expKey];
                                   return (
-                                    <button key={idx} onClick={() => toggleExpectation(expKey)} className="w-full flex items-start gap-3 text-left text-xs text-gray-400 hover:text-white transition-colors cursor-pointer group">
-                                      <div className="mt-0.5 flex-shrink-0">
-                                        {isTicked ? (
-                                          <div className="w-4 h-4 bg-emerald-500/10 border border-emerald-500 rounded flex items-center justify-center">
-                                            <Check className="w-2.5 h-2.5 text-emerald-400 stroke-[3px]" />
-                                          </div>
-                                        ) : (
-                                          <div className="w-4 h-4 rounded border border-white/20 group-hover:border-emerald-500/40 transition-colors" />
-                                        )}
+                                    <button key={idx} onClick={() => toggleExpectation(expKey)} className="prep-checklist-item">
+                                      <div className={`prep-checkbox-box ${isTicked ? "checked" : ""}`}>
+                                        {isTicked && <Check className="w-2.5 h-2.5 text-emerald-400 stroke-[3px]" />}
                                       </div>
-                                      <span className={isTicked ? "line-through text-gray-600" : ""}>{exp}</span>
+                                      <span className={`prep-checklist-label ${isTicked ? "line-through" : ""}`}>{exp}</span>
                                     </button>
                                   );
                                 })}
                               </div>
                             </div>
 
-                            <div className="bg-white/[0.01] border border-white/5 rounded-2xl p-6">
-                              <h4 className="text-xs font-extrabold text-gray-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+                            <div className="prep-info-block">
+                              <h4 className="prep-info-block-header">
                                 <Sparkles className="w-4 h-4 text-emerald-400" /> Core Topics
                               </h4>
-                              <div className="flex flex-wrap gap-2">
+                              <div className="prep-topics-row">
                                 {currentRound.topics.map((t, i) => (
-                                  <span key={i} className="px-3 py-1.5 bg-emerald-500/5 border border-emerald-500/10 text-emerald-300 rounded-xl text-xs font-semibold">{t}</span>
+                                  <span key={i} className="prep-topic-pill">{t}</span>
                                 ))}
                               </div>
                             </div>
@@ -773,87 +711,86 @@ Please write the optimal solution in clean, well-formatted markdown.`
                           transition={{ duration: 0.2 }}
                           className="space-y-6"
                         >
-                          <div className="bg-gradient-to-br from-emerald-950/20 to-teal-950/10 border border-emerald-500/20 rounded-2xl p-5 flex flex-col gap-4 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
-                            <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative z-10">
+                          <div className="prep-ai-generator-panel">
+                            <div className="prep-ai-generator-header">
                               <div>
-                                <h4 className="text-sm font-extrabold text-emerald-300 flex items-center gap-2">
+                                <h4 className="prep-ai-generator-title">
                                   <Sparkles className="w-4 h-4 text-emerald-400" /> AI Practice Scenario Generator
                                 </h4>
-                                <p className="text-xs text-gray-400 mt-1">Generate a FAANG-style question, solve it manually, then get the AI reference solution.</p>
+                                <p className="prep-ai-generator-desc">Generate a FAANG-style question, solve it manually, then get the AI reference solution.</p>
                               </div>
                               <button
                                 onClick={() => { handleGenerateAiQuestion(selectedRoundIdx); setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: false })); }}
                                 disabled={generatingQuestion}
-                                className="px-4 py-2.5 bg-emerald-600 border border-emerald-500 rounded-xl text-xs font-bold text-white hover:bg-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center gap-1.5 cursor-pointer flex-shrink-0"
+                                className="prep-ai-btn"
                               >
                                 {generatingQuestion ? <><Cpu className="w-3.5 h-3.5 animate-spin" /> Generating...</> : <><Sparkles className="w-3.5 h-3.5" /> Generate Question</>}
                               </button>
                             </div>
                             {generatedQuestions[selectedRoundIdx] && (
-                              <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="mt-2 pt-4 border-t border-white/5 space-y-4">
-                                <div className="bg-white/[0.02] border border-white/5 rounded-xl p-5 space-y-4">
-                                  <div className="flex justify-between items-center">
-                                    <span className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest bg-emerald-500/10 border border-emerald-500/20 px-2 py-0.5 rounded-md">Live AI Question</span>
-                                    <button onClick={() => { setGeneratedQuestions(prev => { const n = { ...prev }; delete n[selectedRoundIdx]; return n; }); setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: false })); setAiQuestionDrafts(prev => ({ ...prev, [selectedRoundIdx]: "" })); }} className="text-[10px] text-gray-500 hover:text-white transition-colors">Reset</button>
-                                  </div>
-                                  <h5 className="text-base font-extrabold text-white flex items-center gap-2">
-                                    <HelpCircle className="w-4 h-4 text-emerald-400 inline" /> {generatedQuestions[selectedRoundIdx].title}
-                                  </h5>
-                                  <div className="text-sm text-gray-300 leading-relaxed bg-white/[0.01] border border-white/10 p-4 rounded-xl whitespace-pre-wrap">{generatedQuestions[selectedRoundIdx].desc}</div>
-                                  <div className="space-y-2">
-                                    <label className="text-xs font-bold text-gray-400 flex items-center gap-1.5"><Edit3 className="w-3.5 h-3.5 text-emerald-400" /> Your answer:</label>
-                                    <textarea value={aiQuestionDrafts[selectedRoundIdx] || ""} onChange={(e) => setAiQuestionDrafts(prev => ({ ...prev, [selectedRoundIdx]: e.target.value }))} placeholder="Type your approach here..." rows={6} className="w-full bg-[#07080c] border border-white/10 rounded-xl p-4 text-xs font-mono text-gray-300 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition-all placeholder:text-gray-600 resize-none leading-relaxed" />
-                                  </div>
-                                  <div className="flex justify-between items-center gap-3">
-                                    <span className="text-[10px] text-gray-500 font-mono">{(aiQuestionDrafts[selectedRoundIdx] || "").length} chars</span>
-                                    <button onClick={() => { if (revealSolutionIdx[selectedRoundIdx]) { setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: false })); } else { aiSolutions[selectedRoundIdx] ? setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: true })) : handleFetchSolution(selectedRoundIdx); } }} disabled={fetchingSolution || !(aiQuestionDrafts[selectedRoundIdx] || "").trim()} className="px-4 py-2.5 bg-emerald-600 hover:bg-emerald-500 disabled:opacity-40 border border-emerald-500 rounded-xl text-xs font-bold text-white transition-all flex items-center gap-1.5 cursor-pointer">
-                                      {fetchingSolution ? <><Cpu className="w-3.5 h-3.5 animate-spin" /> Fetching...</> : <><Sparkles className="w-3.5 h-3.5" /> {revealSolutionIdx[selectedRoundIdx] ? "Hide Solution" : "Get AI Solution"}</>}
-                                    </button>
-                                  </div>
-                                  <AnimatePresence>
-                                    {revealSolutionIdx[selectedRoundIdx] && aiSolutions[selectedRoundIdx] && (
-                                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
-                                        <div className="bg-[#07080c] rounded-xl p-5 border border-emerald-500/20 space-y-2">
-                                          <strong className="text-emerald-400 uppercase text-[10px] tracking-wider flex items-center gap-1.5"><Sparkles className="w-3 h-3" /> AI Optimal Solution</strong>
-                                          <p className="text-sm font-mono text-gray-300 whitespace-pre-wrap leading-relaxed">{aiSolutions[selectedRoundIdx]}</p>
-                                        </div>
-                                      </motion.div>
-                                    )}
-                                  </AnimatePresence>
+                              <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="prep-live-question-card">
+                                <div className="prep-live-question-top">
+                                  <span className="prep-live-question-badge">Live AI Question</span>
+                                  <button onClick={() => { setGeneratedQuestions(prev => { const n = { ...prev }; delete n[selectedRoundIdx]; return n; }); setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: false })); setAiQuestionDrafts(prev => ({ ...prev, [selectedRoundIdx]: "" })); }} className="prep-live-question-reset">Reset</button>
                                 </div>
+                                <h5 className="prep-live-question-title">
+                                  <HelpCircle className="w-4 h-4 text-emerald-400 inline" /> {generatedQuestions[selectedRoundIdx].title}
+                                </h5>
+                                <div className="prep-live-question-desc">{generatedQuestions[selectedRoundIdx].desc}</div>
+                                <div className="prep-textarea-wrapper">
+                                  <label className="prep-textarea-label"><Edit3 className="w-3.5 h-3.5 text-emerald-400" /> Your answer:</label>
+                                  <textarea value={aiQuestionDrafts[selectedRoundIdx] || ""} onChange={(e) => setAiQuestionDrafts(prev => ({ ...prev, [selectedRoundIdx]: e.target.value }))} placeholder="Type your approach here..." rows={6} className="prep-textarea" />
+                                </div>
+                                <div className="prep-textarea-footer">
+                                  <span className="prep-char-counter">{(aiQuestionDrafts[selectedRoundIdx] || "").length} chars</span>
+                                  <button onClick={() => { if (revealSolutionIdx[selectedRoundIdx]) { setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: false })); } else { aiSolutions[selectedRoundIdx] ? setRevealSolutionIdx(prev => ({ ...prev, [selectedRoundIdx]: true })) : handleFetchSolution(selectedRoundIdx); } }} disabled={fetchingSolution || !(aiQuestionDrafts[selectedRoundIdx] || "").trim()} className="prep-ai-btn">
+                                    {fetchingSolution ? <><Cpu className="w-3.5 h-3.5 animate-spin" /> Fetching...</> : <><Sparkles className="w-3.5 h-3.5" /> {revealSolutionIdx[selectedRoundIdx] ? "Hide Solution" : "Get AI Solution"}</>}
+                                  </button>
+                                </div>
+                                <AnimatePresence>
+                                  {revealSolutionIdx[selectedRoundIdx] && aiSolutions[selectedRoundIdx] && (
+                                    <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+                                      <div className="prep-solution-card">
+                                        <strong className="prep-solution-header"><Sparkles className="w-3 h-3" /> AI Optimal Solution</strong>
+                                        <p className="prep-solution-text">{aiSolutions[selectedRoundIdx]}</p>
+                                      </div>
+                                    </motion.div>
+                                  )}
+                                </AnimatePresence>
                               </motion.div>
                             )}
                           </div>
-                          <h4 className="text-xs font-extrabold text-gray-500 uppercase tracking-widest pl-1">Common Patterned Questions</h4>
-                          <div className="space-y-3">
+                          <h4 className="prep-pattern-questions-header">Common Patterned Questions</h4>
+                          <div className="prep-accordion-list">
                             {currentRound.questions.map((q, idx) => {
                               const isExp = expandedQuestionIdx === idx;
                               return (
-                                <div key={idx} className={`border rounded-2xl overflow-hidden transition-all ${isExp ? "border-emerald-500/30 bg-white/[0.02]" : "border-white/5 bg-white/[0.01] hover:border-white/10"}`}>
-                                  <button onClick={() => setExpandedQuestionIdx(isExp ? null : idx)} className="w-full p-5 flex justify-between items-center text-left cursor-pointer">
-                                    <span className="text-sm font-bold text-gray-200">{q.title}</span>
-                                    <span className="text-xs text-emerald-400 bg-emerald-500/5 border border-emerald-500/10 px-3 py-1 rounded-xl flex items-center gap-1.5 font-semibold">
+                                <div key={idx} className={`prep-accordion-item ${isExp ? "expanded" : ""}`}>
+                                  <button onClick={() => setExpandedQuestionIdx(isExp ? null : idx)} className="prep-accordion-trigger">
+                                    <span className="prep-accordion-title">{q.title}</span>
+                                    <span className="prep-accordion-badge">
                                       Hint <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isExp ? "rotate-180" : ""}`} />
                                     </span>
                                   </button>
                                   <AnimatePresence>
                                     {isExp && (
-                                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden border-t border-white/5 bg-white/[0.01] px-5 pb-5 pt-4 space-y-4 text-xs text-gray-300">
-                                        <div>
-                                          <strong className="text-emerald-300 uppercase text-[10px] tracking-wider flex items-center gap-1.5 mb-1"><Sparkles className="w-3.5 h-3.5 text-emerald-400" /> Hint</strong>
-                                          <p className="leading-relaxed">{q.hint}</p>
-                                        </div>
-                                        <div className="border-t border-white/5 pt-3">
-                                          <strong className="text-emerald-300 uppercase text-[10px] tracking-wider flex items-center gap-1.5 mb-2"><Cpu className="w-3.5 h-3.5 text-emerald-400" /> Blueprint</strong>
-                                          <ol className="space-y-2">
-                                            {q.blueprint.map((step, sIdx) => (
-                                              <li key={sIdx} className="flex gap-2 items-start">
-                                                <span className="w-5 h-5 rounded bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-bold flex items-center justify-center flex-shrink-0 mt-0.5">{sIdx + 1}</span>
-                                                <span className="leading-relaxed">{step}</span>
-                                              </li>
-                                            ))}
-                                          </ol>
+                                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden">
+                                        <div className="prep-accordion-body">
+                                          <div>
+                                            <strong className="prep-hint-title"><Sparkles className="w-3.5 h-3.5 text-emerald-400" /> Hint</strong>
+                                            <p className="prep-hint-desc">{q.hint}</p>
+                                          </div>
+                                          <div>
+                                            <strong className="prep-blueprint-title"><Cpu className="w-3.5 h-3.5 text-emerald-400" /> Blueprint</strong>
+                                            <div className="prep-blueprint-list">
+                                              {q.blueprint.map((step, sIdx) => (
+                                                <div key={sIdx} className="prep-blueprint-item">
+                                                  <span className="prep-blueprint-step-num">{sIdx + 1}</span>
+                                                  <span className="prep-blueprint-text">{step}</span>
+                                                </div>
+                                              ))}
+                                            </div>
+                                          </div>
                                         </div>
                                       </motion.div>
                                     )}
@@ -872,33 +809,33 @@ Please write the optimal solution in clean, well-formatted markdown.`
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: -10 }}
                           transition={{ duration: 0.2 }}
-                          className="space-y-4"
+                          className="space-y-6"
                         >
-                          <p className="text-xs text-gray-500">Draft your response outline, design contracts, or STAR points. Submit to get AI evaluation.</p>
+                          <p className="text-xs text-gray-500 leading-relaxed">Draft your response outline, design contracts, or STAR points. Submit to get AI evaluation.</p>
                           <textarea
                             value={sandboxDrafts[selectedRoundIdx] || ""}
                             onChange={(e) => setSandboxDrafts(prev => ({ ...prev, [selectedRoundIdx]: e.target.value }))}
                             placeholder={`Draft your answer for ${currentRound.name}...\nCoding: Algorithmic approach + complexity.\nSystem Design: Schema, scaling, APIs.\nBehavioral: Situation → Task → Action → Result`}
-                            rows={8}
-                            className="w-full bg-[#07080c] border border-white/10 rounded-xl p-5 text-xs font-mono text-gray-300 focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/20 transition-all placeholder:text-gray-600 resize-none leading-relaxed"
+                            rows={9}
+                            className="prep-textarea"
                           />
-                          <div className="flex justify-between items-center gap-4">
-                            <span className="text-[10px] text-gray-500 font-mono">{(sandboxDrafts[selectedRoundIdx] || "").length} characters</span>
+                          <div className="prep-textarea-footer">
+                            <span className="prep-char-counter">{(sandboxDrafts[selectedRoundIdx] || "").length} characters</span>
                             <button
                               onClick={() => handleSandboxSubmit(selectedRoundIdx)}
                               disabled={submittingSandbox || !(sandboxDrafts[selectedRoundIdx] || "").trim()}
-                              className="px-5 py-2.5 bg-emerald-600 border border-emerald-500 rounded-xl text-xs font-bold text-white hover:bg-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed transition-all flex items-center gap-1.5 cursor-pointer"
+                              className="prep-ai-btn"
                             >
                               {submittingSandbox ? <><Cpu className="w-3.5 h-3.5 animate-spin" /> Evaluating...</> : <><Send className="w-3.5 h-3.5" /> Submit for Evaluation</>}
                             </button>
                           </div>
                           <AnimatePresence>
                             {sandboxFeedback[selectedRoundIdx] && (
-                              <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="bg-white/[0.02] border border-white/5 rounded-2xl p-5 flex items-start gap-4 text-xs text-gray-300">
-                                <Cpu className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                              <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="prep-feedback-card">
+                                <Cpu className="prep-feedback-icon" />
                                 <div>
-                                  <strong className="text-emerald-300 uppercase text-[10px] tracking-wider block mb-1">AI Feedback</strong>
-                                  <p className="leading-relaxed font-medium">{sandboxFeedback[selectedRoundIdx]}</p>
+                                  <strong className="prep-feedback-title">AI Feedback</strong>
+                                  <p className="prep-feedback-desc">{sandboxFeedback[selectedRoundIdx]}</p>
                                 </div>
                               </motion.div>
                             )}
@@ -911,26 +848,23 @@ Please write the optimal solution in clean, well-formatted markdown.`
 
 
                 {/* Dashboard Action Footer */}
-                <div className="border-t border-white/5 pt-8 mt-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div className="prep-card-footer">
                   <button
                     onClick={() => toggleRoundCompletion(selectedRoundIdx)}
-                    className={`w-full sm:w-auto px-6 py-3.5 rounded-xl text-sm font-bold border transition-all cursor-pointer flex items-center justify-center gap-2 ${completedRounds[selectedRoundIdx]
-                        ? "bg-emerald-500/10 border-emerald-500/30 text-emerald-400 shadow-sm"
-                        : "bg-white/5 border-white/10 text-gray-400 hover:text-white hover:bg-white/10"
-                      }`}
+                    className={`prep-footer-main-btn ${completedRounds[selectedRoundIdx] ? "completed" : "todo"}`}
                   >
                     <CheckCircle2 className="w-4 h-4" />
                     {completedRounds[selectedRoundIdx] ? "Round Prepared" : "Mark Step as Completed"}
                   </button>
 
-                  <div className="flex w-full sm:w-auto gap-3">
+                  <div className="prep-footer-nav-group">
                     <button
                       onClick={() => {
                         setSelectedRoundIdx(prev => Math.max(prev - 1, 0));
                         setExpandedQuestionIdx(null);
                       }}
                       disabled={selectedRoundIdx === 0}
-                      className="flex-1 sm:flex-initial px-5 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-gray-400 hover:text-white disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
+                      className="prep-footer-nav-btn"
                     >
                       Previous
                     </button>
@@ -940,7 +874,7 @@ Please write the optimal solution in clean, well-formatted markdown.`
                         setExpandedQuestionIdx(null);
                       }}
                       disabled={selectedRoundIdx === GENERAL_PREP_ROUNDS.length - 1}
-                      className="flex-1 sm:flex-initial px-5 py-3 bg-emerald-600 border border-emerald-500 rounded-xl text-sm font-bold text-white hover:bg-emerald-500 disabled:opacity-40 disabled:cursor-not-allowed transition-all cursor-pointer"
+                      className="prep-footer-nav-btn prep-footer-nav-btn-primary"
                     >
                       Next Step
                     </button>

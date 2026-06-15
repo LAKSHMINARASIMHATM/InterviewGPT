@@ -1,7 +1,7 @@
 "use client";
 import "./roadmap.css";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Map, Sparkles, CheckCircle2, Circle } from "lucide-react";
 import { featuredCompanies, problems } from "@/lib/data";
@@ -118,6 +118,41 @@ export default function RoadmapPage() {
     },
   ]);
 
+  const syncRoadmapWithDb = async (dailyPlanItems: DailyPlanItem[]) => {
+    try {
+      const res = await fetch("/api/analytics");
+      if (res.ok) {
+        const data = await res.json();
+        const solvedIds = data.solvedProblemIds || [];
+        return dailyPlanItems.map(day => {
+          const updatedProblems = day.problems.map(prob => {
+            const normalized = prob.title.trim().toLowerCase();
+            const match = problems.find(p => 
+              p.title.toLowerCase() === normalized || 
+              normalized.includes(p.title.toLowerCase()) || 
+              p.title.toLowerCase().includes(normalized)
+            );
+            const isSolved = match ? solvedIds.includes(match.id) : false;
+            return { ...prob, completed: isSolved };
+          });
+          const allCompleted = updatedProblems.every(p => p.completed);
+          return {
+            ...day,
+            problems: updatedProblems,
+            done: allCompleted
+          };
+        });
+      }
+    } catch (err) {
+      console.error("Failed to sync progress with DB:", err);
+    }
+    return dailyPlanItems;
+  };
+
+  useEffect(() => {
+    syncRoadmapWithDb(daily).then(synced => setDaily(synced));
+  }, []);
+
   const handleGenerateRoadmap = async () => {
     setLoading(true);
     setActiveWeek("Week 1");
@@ -136,7 +171,10 @@ export default function RoadmapPage() {
       if (data.response) {
         const parsed = JSON.parse(data.response);
         if (parsed.roadmapItems) setItems(parsed.roadmapItems);
-        if (parsed.dailyPlan) setDaily(parsed.dailyPlan);
+        if (parsed.dailyPlan) {
+          const synced = await syncRoadmapWithDb(parsed.dailyPlan);
+          setDaily(synced);
+        }
       }
     } catch (err) {
       console.error("Failed to generate roadmap:", err);
@@ -146,6 +184,28 @@ export default function RoadmapPage() {
   };
 
   const toggleProblemCompletion = (dayName: string, problemTitle: string) => {
+    const normalized = problemTitle.trim().toLowerCase();
+    const match = problems.find(p => 
+      p.title.toLowerCase() === normalized || 
+      normalized.includes(p.title.toLowerCase()) || 
+      p.title.toLowerCase().includes(normalized)
+    );
+
+    if (match) {
+      const targetDay = daily.find(d => dayName === d.day || (!d.week && activeWeek === "Week 1"));
+      const targetProb = targetDay?.problems.find(p => p.title === problemTitle);
+      const newCompletedState = !targetProb?.completed;
+
+      fetch("/api/analytics", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          problemId: match.id,
+          completed: newCompletedState
+        })
+      }).catch(err => console.error("Failed to update database progress:", err));
+    }
+
     setDaily(prevDaily => {
       const updated = prevDaily.map(day => {
         if (day.day !== dayName) return day;

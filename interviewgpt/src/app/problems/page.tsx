@@ -1,8 +1,9 @@
 "use client";
 import "./problems.css";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Search, ChevronLeft, ChevronRight, ExternalLink, ArrowUpDown, Code2 } from "lucide-react";
 import { problems, topics } from "@/lib/data";
@@ -13,10 +14,30 @@ const ITEMS_PER_PAGE = 30;
 export default function ProblemsPage() {
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState("All");
-  const [selectedTopic, setSelectedTopic] = useState("All");
+  const searchParams = useSearchParams();
+  const initialTopic = searchParams ? (searchParams.get("topic") || "All") : "All";
+  const [selectedTopic, setSelectedTopic] = useState(initialTopic);
   const [page, setPage] = useState(1);
   const [sortField, setSortField] = useState<"id" | "title" | "difficulty">("id");
   const [sortDir, setSortDir] = useState<"asc" | "desc">("asc");
+  const [solvedIds, setSolvedIds] = useState<number[]>([]);
+
+  useEffect(() => {
+    async function loadSolved() {
+      try {
+        const res = await fetch("/api/analytics");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.solvedProblemIds) {
+            setSolvedIds(data.solvedProblemIds);
+          }
+        }
+      } catch (err) {
+        console.error("Failed to load solved problems:", err);
+      }
+    }
+    loadSolved();
+  }, []);
 
   const codingProblems = useMemo(() =>
     problems.filter(p =>
@@ -158,7 +179,12 @@ export default function ProblemsPage() {
               <motion.div key={problem.id} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: i * 0.015 }}>
                 <Link href={`/problems/${problem.id}`} className="pr-row" data-testid={`problem-row-${problem.id}`}>
                   <span className="pr-row-id">{problem.id}</span>
-                  <span className="pr-row-title">{problem.title}</span>
+                  <span className="pr-row-title" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                    {problem.title}
+                    {solvedIds.includes(problem.id) && (
+                      <span style={{ color: "var(--pr-success)", fontSize: "14px", fontWeight: "bold" }} title="Solved">✓</span>
+                    )}
+                  </span>
                   <span className={diffBadgeClass(problem.difficulty)}>{problem.difficulty}</span>
                   <div className="pr-tags">
                     {problem.topics.split(", ").slice(0, 3).map(t => (

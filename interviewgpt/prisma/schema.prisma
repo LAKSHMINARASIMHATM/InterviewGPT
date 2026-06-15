@@ -41,6 +41,8 @@ model Progress {
   userId    String   @db.ObjectId
   problemId String   @db.ObjectId
   status    String   @default("To Do") // To Do, Attempted, Solved
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
   
   user      User     @relation(fields: [userId], references: [id])
   problem   Problem  @relation(fields: [problemId], references: [id])

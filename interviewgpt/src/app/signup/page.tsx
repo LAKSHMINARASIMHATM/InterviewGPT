@@ -12,10 +12,27 @@ export default function SignupPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
 
-  const handleSignup = (e: React.FormEvent) => {
+  const [error, setError] = useState<string | null>(null);
+
+  const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
-    localStorage.setItem("isLoggedIn", "true");
-    router.push("/dashboard");
+    setError(null);
+    try {
+      const res = await fetch("/api/auth", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "signup", name, email, password })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        localStorage.setItem("isLoggedIn", "true");
+        router.push("/dashboard");
+      } else {
+        setError(data.error || "Signup failed");
+      }
+    } catch (err) {
+      setError("An error occurred during registration.");
+    }
   };
 
   return (
@@ -79,6 +96,11 @@ export default function SignupPage() {
           </div>
 
           <form onSubmit={handleSignup}>
+            {error && (
+              <div className="mb-4 p-3 bg-red-950/20 border border-red-500/30 text-rose-400 text-sm rounded-lg" style={{ marginBottom: "16px", padding: "12px", border: "1px solid rgba(239, 68, 68, 0.3)", borderRadius: "8px", color: "#f43f5e", fontSize: "14px", backgroundColor: "rgba(254, 226, 226, 0.05)" }}>
+                {error}
+              </div>
+            )}
             <div className="auth-form-group">
               <label className="auth-label">Full Name</label>
               <div className="auth-input-wrapper">

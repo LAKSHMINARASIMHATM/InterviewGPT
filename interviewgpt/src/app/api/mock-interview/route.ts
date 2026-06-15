@@ -105,6 +105,68 @@ export async function POST(req: NextRequest) {
 
     const topicTitle = topic === "custom" ? customTopic : (HR_TOPICS.find(t => t.id === topic)?.title || "General HR");
 
+    // ── NEW: AI Question Bank Generation ──────────────────────────
+    if (phase === "generate_questions") {
+      const systemPrompt = `You are an expert interview coach specializing in ${topicTitle} interviews.
+${resumeText ? `The candidate has this background: "${resumeText}"\n` : ""}
+Generate exactly 9 unique, high-quality interview questions for the topic: "${topicTitle}".
+Structure them in 3 difficulty tiers — 3 Basic, 3 Intermediate, 3 Advanced.
+
+- Basic: Foundational, experience-based questions a junior candidate should answer comfortably.
+- Intermediate: Situational/behavioral questions requiring real examples and structured thinking.
+- Advanced: Complex, scenario-driven, high-stakes questions targeting senior-bar candidates.
+${resumeText ? "Tailor some questions to reference skills or projects from the candidate's background." : ""}
+
+Return ONLY a raw JSON array (no markdown, no explanation) in exactly this format:
+[
+  { "level": "Basic", "q": "..." },
+  { "level": "Basic", "q": "..." },
+  { "level": "Basic", "q": "..." },
+  { "level": "Intermediate", "q": "..." },
+  { "level": "Intermediate", "q": "..." },
+  { "level": "Intermediate", "q": "..." },
+  { "level": "Advanced", "q": "..." },
+  { "level": "Advanced", "q": "..." },
+  { "level": "Advanced", "q": "..." }
+]`;
+
+      let aiResult = "";
+      if (GROQ_API_KEY) {
+        aiResult = await callGroq([{ role: "system", content: systemPrompt }]) || "";
+      }
+      if (!aiResult) {
+        aiResult = await callOllama([{ role: "system", content: systemPrompt }]) || "";
+      }
+
+      if (aiResult) {
+        try {
+          const cleaned = aiResult.replace(/```json/g, "").replace(/```/g, "").trim();
+          const parsed = JSON.parse(cleaned);
+          if (Array.isArray(parsed)) {
+            return NextResponse.json({ questions: parsed, source: "ai" });
+          }
+        } catch (e) {
+          // fall through to topic-based fallback
+        }
+      }
+
+      // Fallback: return the static questions from the topic
+      const topicData = HR_TOPICS.find(t => t.id === topic);
+      const fallback = topicData?.sampleQuestions || [
+        { level: "Basic", q: `Tell me about a recent project or experience related to ${topicTitle}.` },
+        { level: "Basic", q: `What foundational skills do you bring to ${topicTitle}?` },
+        { level: "Basic", q: `Describe your day-to-day experience with ${topicTitle}.` },
+        { level: "Intermediate", q: `Give me an example of a challenge you solved related to ${topicTitle}.` },
+        { level: "Intermediate", q: `How do you handle competing priorities in the context of ${topicTitle}?` },
+        { level: "Intermediate", q: `Describe a time you had to collaborate with others on a ${topicTitle} scenario.` },
+        { level: "Advanced", q: `Walk me through the most complex ${topicTitle} challenge you have faced.` },
+        { level: "Advanced", q: `How would you handle a high-stakes failure in a ${topicTitle} context?` },
+        { level: "Advanced", q: `Design a system or strategy to systematically improve outcomes in ${topicTitle}.` },
+      ];
+      return NextResponse.json({ questions: fallback, source: "fallback" });
+    }
+    // ──────────────────────────────────────────────────────────────
+
     if (phase === "optimize_draft") {
       const userDraft = messages[messages.length - 1]?.content || "";
       const assistantMessages = messages.filter((m: any) => m.role === "assistant");
@@ -215,10 +277,17 @@ async function callGroq(messages: Array<{ role: string; content: string }>) {
       headers: { "Content-Type": "application/json", Authorization: `Bearer ${GROQ_API_KEY}` },
       body: JSON.stringify({ model: GROQ_MODEL, messages, temperature: 0.6, max_tokens: 1500 }),
     });
-    if (!res.ok) return null;
+    if (!res.ok) {
+      const errText = await res.text();
+      console.error(`[GROQ ERROR] Status: ${res.status} ${res.statusText}. Body: ${errText}`);
+      return null;
+    }
     const data = await res.json();
     return data.choices?.[0]?.message?.content ?? null;
-  } catch { return null; }
+  } catch (err) {
+    console.error("[GROQ FETCH EXCEPTION]:", err);
+    return null;
+  }
 }
 
 async function callOllama(messages: Array<{ role: string; content: string }>) {
@@ -247,11 +316,21 @@ Current Phase: ${phase} ("intro", "interviewing", "feedback")`;
 
   promptText += `\n\nYour Persona:
 - Professional, empathetic, and highly perceptive.
-- In the "intro" phase: Welcome the candidate. Then, generate a unique, realistic, real-world workplace scenario question for the topic "${topicTitle}" (e.g. involving production bugs, stakeholder conflicts, system failures, prioritization constraints). Ask the candidate how they would respond or handle it, prompting them to use the STAR method.
-- In the "interviewing" phase: You ask one behavioral follow-up or clarifying question at a time. Do not ask multiple questions at once. Probe for specifics using the STAR method (Situation, Task, Action, Result). If the candidate gives a vague answer, ask them to elaborate on what actions THEY personally took and what the outcome was.
-- In the "feedback" phase: Provide a comprehensive performance report. You MUST include a dedicated section titled "### 🔍 Knowledge Gaps & Areas Lacking Improvement" detailing exactly which technical or behavioral concepts the candidate was lacking or weak in based on their responses. Then, provide strategic recommendations and scorecard.
+- You must structure the interview sequence systematically, progressing from basic to advanced levels:
+  1. Introduction: Always start the interview in the "intro" phase by asking the candidate to introduce themselves: "Tell me about yourself, your background, and why you are interested in this role/topic." Do not skip this step or ask other situational questions yet.
+  2. Basic/Core situational questions: Probe their day-to-day experience, project workflows, or simple situational alignment.
+  3. Mid-level behavioral scenarios: Ask about team collaboration, conflict resolution, or handling moderate challenges.
+  4. Advanced/Complex problem-solving: Pose complex scenarios involving system failures, deep ambiguity, high-stakes trade-offs, or leadership under pressure.
+- In the "intro" phase: Welcome the candidate warmly. Start the interview by asking: "Tell me about yourself, your background, and why you are interested in this role/topic."
+- In the "interviewing" phase: Review the candidate's previous answers in the chat history. Determine which step of the sequence you are currently on. Ask exactly one question at a time to move systematically to the next level (Basic -> Mid -> Advanced). Do not ask multiple questions at once. Probe for details using the STAR method (Situation, Task, Action, Result).
+- In the "feedback" phase: Perform a deep, critical analysis of all the candidate's answers in the chat history. Provide a comprehensive performance report with the following structure:
+  1. A section titled "### 📊 Performance Scorecard" containing a Markdown table with columns: | Category | Score (out of 10) | Notes |. You must dynamically evaluate their performance and assign realistic scores and notes based on their actual answers.
+  2. A section titled "### 🔍 Weaknesses & Knowledge Gaps" detailing exactly which technical, communication, or behavioral concepts the candidate was lacking or weak in.
+  3. A section titled "### 🛑 Senior Recruiter's Honest Critique & Rejection Analysis" explaining the deep underlying causes of why a panel or senior recruiter would reject the candidate based on these answers (e.g., lack of ownership, poor technical depth, failure to demonstrate impact, communication gaps, or avoiding direct questions). Be authentic, high-bar, and direct.
+  4. A section titled "### ✅ Key Strengths" highlighting their best answers.
+  5. A section titled "### 🔧 Strategic Recommendations" with clear steps for improvement.
 
-Keep responses concise and under 200 words. Use markdown.`;
+Keep responses concise and under 300 words for chat, but the feedback report can be detailed (up to 600 words). Use markdown.`;
 
   return promptText;
 }
@@ -277,20 +356,9 @@ function mockHRResponse(
   }
 
   if (phase === "intro") {
-    let scenario = `Imagine you are leading a critical API integration project. Two days before the release, the third-party API provider makes an unannounced change that breaks your payment flow. How would you handle this situation, and what actions would you take to ensure the launch remains on track?`;
-    
-    if (isComp) {
-      if (resumeText && resumeText.trim().length > 5) {
-        scenario = `Welcome to the panel. I see on your resume that you have experience with "${skillsContext}" and worked on "${projectContext}". Let's start with your self-introduction: Tell me about yourself, your background, and why you are interested in this role.`;
-      } else {
-        scenario = `Tell me about yourself, your background, and why you are interested in this role.`;
-      }
-    } else if (topicTitle.toLowerCase().includes("conflict") || topicTitle.toLowerCase().includes("leadership")) {
-      scenario = `Imagine you are a Technical Lead on a new cloud migration. Your senior backend developer strongly disagrees with your database technology selection and threatens to refuse to work on the migration. How would you handle this disagreement and guide the team forward?`;
-    } else if (topicTitle.toLowerCase().includes("career") || topicTitle.toLowerCase().includes("alignment")) {
-      scenario = `Imagine a hiring manager asks: "Why do you want to join our team specifically, when there are several other companies offering similar compensation, and how does this role fit your 5-year growth trajectory?"`;
-    } else if (topicTitle.toLowerCase().includes("adaptability") || topicTitle.toLowerCase().includes("ambiguity")) {
-      scenario = `Imagine you are assigned to take over a legacy service that has no documentation, frequent memory leaks, and the original developer has left the company. You have a customer launch in one week. How would you prioritize your tasks and navigate this ambiguity?`;
+    let scenario = `Tell me about yourself, your background, and why you are interested in this role/topic.`;
+    if (resumeText && resumeText.trim().length > 5) {
+      scenario = `Welcome to the panel. I see on your resume that you have experience with "${skillsContext}" and worked on "${projectContext}". Let's start with your self-introduction: Tell me about yourself, your background, and why you are interested in this role.`;
     }
 
     return `Welcome to your **${topicTitle}** mock interview. I'll be acting as your HR & Technical Panel.
@@ -335,106 +403,208 @@ Take your time. When you are ready, type your response below.`;
       return `We have completed all technical and behavioral rounds of this panel. Please click the 'Finish & Get Performance Scorecard' button to get your comprehensive performance evaluation!`;
     }
 
+    // Progression for other behavioral topics
     if (userMessagesCount === 1) {
-      return `Thank you for sharing that experience. It gives me a good start. 
+      let nextPrompt = `Let's start with a core behavioral scenario: **Describe a challenging project or team situation you faced recently. What was the situation and what was your specific responsibility?**`;
+      if (topicTitle.toLowerCase().includes("conflict") || topicTitle.toLowerCase().includes("leadership")) {
+        nextPrompt = `Let's discuss leadership and conflict resolution. **Can you share a basic example of a time when you disagreed with a coworker or manager on a project requirement, and how you communicated that difference of opinion?**`;
+      } else if (topicTitle.toLowerCase().includes("career") || topicTitle.toLowerCase().includes("alignment")) {
+        nextPrompt = `Let's dive into your career alignment. **Why do you want to work for our company specifically, and what unique value do you bring to this role?**`;
+      } else if (topicTitle.toLowerCase().includes("adaptability") || topicTitle.toLowerCase().includes("ambiguity")) {
+        nextPrompt = `Let's explore your problem-solving process. **Can you describe a basic technical or logical problem you had to solve recently? Walk me through how you diagnosed the issue.**`;
+      } else if (topicTitle !== "General HR") {
+        nextPrompt = `Let's start with a core question about your custom topic. **Could you describe a basic challenge or project you worked on recently that relates to your custom topic: ${topicTitle}? What was your main responsibility?**`;
+      }
+      return `Thank you for the introduction. Let's progress to the first core interview round.
 
-To help me understand your role better, could you elaborate on the **specific actions you personally took**? Sometimes it's easy to describe what 'the team' did, but I want to hear about:
-1. Your individual contribution and decisions.
-2. The key trade-offs you had to consider.
-3. How you communicated these decisions to stakeholders.
-
-Could you share more detail on those actions?`;
+${nextPrompt}`;
     }
+
     if (userMessagesCount === 2) {
-      return `Excellent detail. That really highlights your hands-on involvement. 
+      let nextPrompt = `Thank you. Let's dig deeper into the actions you took: **Elaborate on the specific actions YOU personally took to address that challenge, the key technical decisions you made, and what trade-offs you had to consider.**`;
+      if (topicTitle.toLowerCase().includes("conflict") || topicTitle.toLowerCase().includes("leadership")) {
+        nextPrompt = `Understood. Let's move to a mid-level leadership scenario: **Tell me about a time you took the lead on a project or initiative without being explicitly asked to, and how you kept the team aligned and motivated.**`;
+      } else if (topicTitle.toLowerCase().includes("career") || topicTitle.toLowerCase().includes("alignment")) {
+        nextPrompt = `Thank you. Let's step up the depth: **Where do you see yourself in five years? How does this role align with your long-term career aspirations, and how do you intend to scale your skills?**`;
+      } else if (topicTitle.toLowerCase().includes("adaptability") || topicTitle.toLowerCase().includes("ambiguity")) {
+        nextPrompt = `Great details. Let's look at mid-level complexity: **Describe a time when project requirements changed mid-way through a release. How did you adapt your plan, and how did you manage stakeholder expectations?**`;
+      } else if (topicTitle !== "General HR") {
+        nextPrompt = `Great. Let's look at a mid-level challenge for **${topicTitle}**: **What specific actions did you take to resolve it, and how did you collaborate with others?**`;
+      }
+      return `Thank you for sharing those core details. Let's move to the next level.
 
-Let's talk about the **Results**. How did you measure success in this situation? 
-- Did you achieve a specific metric, speedup, or savings?
-- What was the long-term impact on the team or project?
-- If you had to do it all over again, what is one thing you would do differently?`;
+${nextPrompt}`;
     }
+
     if (userMessagesCount === 3) {
-      return `Thank you for the detailed breakdown. We have thoroughly evaluated the Situation, Task, Action, and Results. Do you have any final questions for me about the team or the company before we conclude?`;
+      let nextPrompt = `Excellent. Let's look at the final piece: **What was the quantifiable outcome or result of your actions (e.g. time saved, metrics improved, scale handled)? If you could do it all over again, what would you do differently?**`;
+      if (topicTitle.toLowerCase().includes("conflict") || topicTitle.toLowerCase().includes("leadership")) {
+        nextPrompt = `Excellent. Now, let's look at a complex scenario: **Imagine you are Lead on a major release. A senior developer strongly disagrees with your system design decisions and refuses to collaborate, threatening the timeline. How do you resolve this conflict and ensure a successful release?**`;
+      } else if (topicTitle.toLowerCase().includes("career") || topicTitle.toLowerCase().includes("alignment")) {
+        nextPrompt = `Excellent. Let's test your alignment under high stakes: **If a hiring manager asks you: 'Why should we choose you over other candidates who have more experience in this exact domain?' How do you pitch your unique value proposition?**`;
+      } else if (topicTitle.toLowerCase().includes("adaptability") || topicTitle.toLowerCase().includes("ambiguity")) {
+        nextPrompt = `Excellent diagnostics. Let's look at an advanced, ambiguous scenario: **Imagine you take over a legacy backend service with zero documentation, frequent memory leaks, and the original developer has left. You have a customer release in one week. How would you prioritize your work and mitigate risks?**`;
+      } else if (topicTitle !== "General HR") {
+        nextPrompt = `Excellent. Finally, let's explore an advanced scenario for **${topicTitle}**: **Imagine a critical bottleneck or stakeholder pushback threatens your progress under a tight deadline. How do you handle it?**`;
+      }
+      return `Understood. Let's progress to the advanced phase of this simulation.
+
+${nextPrompt}`;
     }
+
+    if (userMessagesCount === 4) {
+      return `Thank you for the detailed breakdown. We have gone through the systematic introduction, core, mid-level, and advanced questions. Do you have any final questions for the interview panel before we conclude?`;
+    }
+
     return `We have completed all phases of the mock interview simulation. Please click the 'Finish & Get Performance Scorecard' button to view your comprehensive assessment scorecard!`;
   }
 
   if (phase === "feedback") {
-    if (isComp) {
-      const answers = messages.filter(m => m.role === "user").map(m => m.content.toLowerCase());
-      const lacking = [];
-      
-      if (!answers[0] || answers[0].length < 30) lacking.push("- **Introduction Hook**: Your self-introduction was too brief. Add a strong 'Present-Past-Future' hook highlighting core expertise.");
-      if (!answers[1] || !answers[1].match(/(years|trajectory|goal|lead|senior)/)) lacking.push("- **5-Year Trajectory**: Missing clear articulation of technical leadership goals or domain specialization plans.");
-      if (!answers[2] || (!answers[2].includes("mro") && !answers[2].includes("diamond"))) lacking.push("- **OOP & Multiple Inheritance**: Lacking description of Method Resolution Order (MRO) in Python or Diamond Problem resolution.");
-      if (!answers[3] || !answers[3].match(/(gil|jvm|memory|garbage|gc)/)) lacking.push("- **Language Internals (Java/Python)**: Missing details on execution environments (JVM vs Python VM), Memory Allocation, GIL (Global Interpreter Lock), or Garbage Collection mechanisms.");
-      if (!answers[4] || !answers[4].match(/(acid|index|nosql|schema|b-tree)/)) lacking.push("- **DBMS & Storage**: Lacking deep explanations of B-Tree indexing mechanisms, ACID isolation levels, or SQL vs NoSQL schema design trade-offs.");
-      if (!answers[5] || !answers[5].match(/(solid|single|open|factory|singleton|pattern)/)) lacking.push("- **Software Architecture**: Lacking details on SOLID implementation or design patterns (like Factory, Singleton) to prevent code regression.");
-
-      if (resumeText && resumeText.trim().length > 5) {
-        const firstWord = projectContext.split(" ")[0].toLowerCase();
-        const hasProjectMention = answers.some(ans => ans.includes(firstWord));
-        if (!hasProjectMention) {
-          lacking.push(`- **Resume Integration**: You did not explicitly reference your experience with **${projectContext}** when answering the technical rounds. Connecting core OOP and system concepts directly to your projects listed on your resume is vital for high-level technical panels.`);
-        }
-      }
-
-      if (lacking.length === 0) {
-        lacking.push("- **Minor Edge Cases**: Technical fundamentals are outstanding. Focus next on high-level system design constraints (e.g. database sharding, caching strategies).");
-      }
-
-      return `## 📊 FAANG End-to-End Panel Scorecard
-
-### Performance Metrics
-| Category | Score | Notes |
-|---|---|---|
-| Behavioral & Culture Fit | 8.5/10 | Natural delivery, aligned with corporate values. |
-| OOP & Lang Fundamentals | 7.5/10 | Good core concepts, could expand on VM internals. |
-| DBMS & System Storage | 8.0/10 | Solid transaction knowledge, needs more index details. |
-| Software Architecture | 7.5/10 | Clear understanding of SOLID, could show more pattern experience. |
-
-### 🔍 Knowledge Gaps & Areas Lacking Improvement (AI Critique)
-${lacking.join("\n")}
-
-### ✅ Key Strengths
-- **Clear Structuring**: Answers are compartmentalized, making it easy for the panel to follow.
-- **Pragmatic Choices**: Showing strong technical pragmatism when choosing between SQL and NoSQL.
-- **Clean Code Mindset**: Evident alignment with decoupled architectures and SOLID principles.
-
-### 🔧 Strategic Recommendations
-- **Deepen VM Understanding**: Brush up on JVM garbage collection states (Eden, Survivor, Tenured) and Python's garbage collector reference counting.
-- **Illustrate with Real Projects**: Rather than definitions, explain abstract classes/SOLID using code snippets or legacy project refactors you've handled.
-
-**Overall Result: Recommend (Strong Hire path). You demonstrate excellent technical foundations and career motivation! 🚀**`;
+    const userMsgs = messages.filter(m => m.role === "user");
+    const allUserText = userMsgs.map(m => m.content).join(" ").toLowerCase();
+    
+    const intro = userMsgs[0]?.content || "";
+    const core = userMsgs[1]?.content || "";
+    const mid = userMsgs[2]?.content || "";
+    const adv = userMsgs[3]?.content || "";
+    
+    const wordCount = allUserText.split(/\s+/).filter(Boolean).length;
+    const hasNumbers = /\b\d+(\.\d+)?(%)?\b/.test(allUserText);
+    
+    // Compute metrics dynamically based on actual user answers
+    let starScore = 5.0;
+    let depthScore = 4.5;
+    let ownershipScore = 5.0;
+    let impactScore = 4.0;
+    
+    // 1. STAR Method Evaluation
+    const starIndicators = ["situation", "task", "action", "result", "because", "so", "achieved", "consequently", "solved", "outage", "production", "index"];
+    let starHits = 0;
+    starIndicators.forEach(word => {
+      if (allUserText.includes(word)) starHits++;
+    });
+    starScore = Math.min(10, 4.0 + (starHits / starIndicators.length) * 6.0);
+    if (userMsgs.length < 3) starScore = Math.max(3.0, starScore - 2.0); // Penalty for incomplete interview
+    
+    // 2. Depth of Explanation (Average word count per answer)
+    const avgWords = userMsgs.length > 0 ? wordCount / userMsgs.length : 0;
+    if (avgWords > 85) depthScore = 9.0;
+    else if (avgWords > 45) depthScore = 7.5;
+    else if (avgWords > 20) depthScore = 6.0;
+    else depthScore = 3.5;
+    
+    // 3. Ownership score (I vs We count)
+    const weCount = (allUserText.match(/\b(we|our|us|team)\b/g) || []).length;
+    const iCount = (allUserText.match(/\b(i|my|me|mine|myself)\b/g) || []).length;
+    if (iCount > weCount * 1.5) ownershipScore = 8.5;
+    else if (iCount > weCount) ownershipScore = 7.0;
+    else if (weCount > 0) ownershipScore = 4.5; // High team phrasing penalty
+    else ownershipScore = 6.0;
+    
+    // 4. Quantifiable Impact Score
+    if (hasNumbers) {
+      const numPercentSigns = (allUserText.match(/%/g) || []).length;
+      if (numPercentSigns > 0) impactScore = 8.5;
+      else impactScore = 7.5;
+    } else {
+      impactScore = 3.0; // Penalty for missing numbers
     }
-
-    return `## 📊 HR Interview Scorecard
-
+    
+    // Construct dynamic critique notes based strictly on their scores
+    const starNotes = starScore >= 7.5 
+      ? "Successfully structured responses using situation context and clear outcomes."
+      : "Jumped directly to technical solution without describing the situation context.";
+      
+    const depthNotes = depthScore >= 7.5
+      ? "Excellent technical and contextual depth in answers."
+      : "Answers are too brief; lacks detailed architectural/behavioral explanations.";
+      
+    const ownershipNotes = ownershipScore >= 7.0
+      ? "Demonstrated clear personal agency and specified individual contributions."
+      : "Overused team-centric 'we' phrasing; hid individual actions and decision trade-offs.";
+      
+    const impactNotes = impactScore >= 7.5
+      ? "Strong integration of metrics and business impact parameters."
+      : "Outcomes are purely qualitative; failed to include any percentages, latencies, or numbers.";
+      
+    // Dynamic weaknesses referencing actual answers
+    const weaknesses = [];
+    if (intro.length > 0) {
+      if (intro.length < 50) {
+        weaknesses.push(`- **Brief Self-Introduction**: Your opening pitch was only ${intro.length} characters: *"${intro}"*. A premium candidate needs a structured 'Present-Past-Future' summary highlighting core competencies.`);
+      } else {
+        weaknesses.push(`- **Intro Alignment**: In your intro *"${intro.substring(0, 50)}..."*, make sure to explicitly connect your accomplishments to the role requirements.`);
+      }
+    }
+    
+    if (core.length > 0) {
+      if (!core.match(/(years|scale|user|client|customer|volume)/i)) {
+        weaknesses.push(`- **Missing Project Scale**: In your response to the core scenario *"${core.substring(0, 60)}..."*, you didn't explain the scale of your system or team size.`);
+      }
+    }
+    
+    if (mid.length > 0) {
+      const midWe = (mid.toLowerCase().match(/\bwe\b/g) || []).length;
+      if (midWe > 2) {
+        weaknesses.push(`- **Team Phrasing Dilution**: In your collaboration scenario response *"${mid.substring(0, 60)}..."*, you used 'we' multiple times. Recruiter critique: Specify exactly what *you* designed vs what the team did.`);
+      }
+    }
+    
+    if (adv.length > 0) {
+      const hasNum = /\b\d+\b/.test(adv);
+      if (!hasNum) {
+        weaknesses.push(`- **Missing Success Metrics**: In your advanced resolution response *"${adv.substring(0, 60)}..."*, the outcome was not quantified. Always anchor results with numbers (e.g. reduced load by 30%).`);
+      }
+    }
+  
+    if (weaknesses.length === 0) {
+      weaknesses.push("- **Minor Edge Cases**: Overall excellent answers, but could expand on high-availability design tradeoffs.");
+    }
+    
+    // Rejection analysis warnings
+    const rejectionPoints = [];
+    if (ownershipScore < 6.0) {
+      rejectionPoints.push(`- **High Risk of Rejection due to Ownership Gaps**: The panel will assume you were a passenger rather than the driver because your answers (e.g., *"${mid.substring(0, 50)}..."*) focus on what the team accomplished rather than your specific choices.`);
+    }
+    if (impactScore < 6.0) {
+      rejectionPoints.push(`- **Rejection Risk on Business Alignment**: A senior recruiter will reject you because none of your responses quantified the outcome. Statements like *"${adv.substring(0, 50)}..."* lack validation without numbers (e.g., % improvement, dollar savings).`);
+    }
+    if (depthScore < 6.0) {
+      rejectionPoints.push(`- **Technical/Depth Warning**: Your answers average only ${Math.round(avgWords)} words. A senior bar raiser will fail you for lack of domain depth and superficial explanations.`);
+    }
+    if (rejectionPoints.length === 0) {
+      rejectionPoints.push("- **Low Rejection Risk**: Your delivery and ownership indicators are strong. Focus next on polish and advanced system tradeoffs.");
+    }
+    
+    const totalScore = ((starScore + depthScore + ownershipScore + impactScore) / 4);
+    const resultStatus = totalScore >= 7.5 ? "Recommend (Strong Hire path) 🎉" : "Hold / Reject (Needs Improvement) 🛑";
+    
+    return `## 📊 FAANG Recruiter Critique & Performance Scorecard
+  
 ### Performance Metrics
 | Category | Score | Notes |
 |---|---|---|
-| STAR Method Structure | 8/10 | Excellent situation context; could emphasize Action phase more. |
-| Communication Clarity | 9/10 | Very natural delivery, professional tone, and structured layout. |
-| Emotional Intelligence (EQ) | 8/10 | Shows high self-awareness, empathy, and strong conflict resolution skills. |
-| Quantifiable Impact | 7/10 | Good mention of results; try to highlight more direct metrics (e.g. % or time saved). |
-
-### 🔍 Knowledge Gaps & Areas Lacking Improvement (AI Critique)
-- **Quantifiable Results**: Your answers lacked explicit percentages, dollar values, or duration reductions to measure outcomes.
-- **Action Phase Ownership**: Too many references to 'we' (the team) instead of detailing your personal decisions, trade-offs, and communication strategies.
-
+| STAR Method Structure | ${starScore.toFixed(1)}/10 | ${starNotes} |
+| Technical/Contextual Depth | ${depthScore.toFixed(1)}/10 | ${depthNotes} |
+| Individual Ownership | ${ownershipScore.toFixed(1)}/10 | ${ownershipNotes} |
+| Quantifiable Impact | ${impactScore.toFixed(1)}/10 | ${impactNotes} |
+  
+### 🔍 Weaknesses & Knowledge Gaps (Based on Your Answers)
+${weaknesses.join("\n")}
+  
+### 🛑 Senior Recruiter's Honest Critique & Rejection Analysis
+${rejectionPoints.join("\n")}
+  
 ### ✅ Key Strengths
-- **Structured Framework**: You set the context very well, making it easy to follow.
-- **Ownership Mentality**: You clearly detailed your personal decisions and actions.
-- **Reflective Thinker**: You showed a clear ability to learn from challenges.
-
+- **Clear Structuring**: Your answers are compartmentalized, making it easy to follow.
+- **Problem Ownership**: You showed high responsibility and alignment when resolving roadblocks.
+- **Communication Flow**: Polished delivery with a professional tone.
+  
 ### 🔧 Strategic Recommendations
-- **Lead with Actions**: Spend 50% of your time explaining the exact actions YOU took, using strong action verbs (e.g., 'orchestrated', 'streamlined', 'resolved').
-- **Anchor with Metrics**: Always conclude with a measurable result. Instead of 'we finished it on time', say 'we delivered the project 4 days ahead of schedule, reducing operational friction by 15%'.
-
-### 💡 Example Model Answer Pitch
-*"In my previous role, we were hit with a sudden shift in APIs just 2 weeks before launch (Situation). As lead engineer, it was my task to migrate the data pipeline without delaying the release (Task). I immediately convened a stand-up, isolated the impacted models, and split the work into three parallel sprints while setting up fallback logs (Action). As a result, we successfully shipped on the original date, maintained 100% data integrity, and our migration minimized future API update times by 30% (Result)."*
-
-**Overall Result: Highly Recommend. You demonstrate strong leadership potential and communication skills! 🎉**`;
+- **Adopt the 'I' Framework**: Rephrase your scenarios to highlight your personal engineering decisions and compromises.
+- **Quantify Everything**: Never mention a project result without associating it with a performance percentage or delivery speed improvement.
+  
+**Overall Panel Assessment: ${resultStatus} (Average Score: ${totalScore.toFixed(1)}/10)**`;
   }
 
   return `Thank you. Could you share what you learned from this experience and how you've applied that learning in your work since then?`;

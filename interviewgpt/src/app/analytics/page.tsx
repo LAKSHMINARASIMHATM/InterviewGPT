@@ -3,57 +3,71 @@ import "./analytics.css";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import {
   BarChart3, Trophy, Target, Flame,
   Calendar, Code2, Building2, BookOpen,
   Zap, Award, Star, CheckCircle2, Clock,
+  Loader2, AlertCircle
 } from "lucide-react";
-import { getStats, topics } from "@/lib/data";
+import { getStats } from "@/lib/data";
 
 const stats = getStats();
-const topTopics = topics
-  .filter((t) => !t.name.includes("Aptitude"))
-  .sort((a, b) => b.count - a.count)
-  .slice(0, 8);
-
-// ── Dashboard data ────────────────────────────────────────────────────────────
-const readinessCards = [
-  { name: "Google",    logo: "G",  score: 85, color: "#4285F4" },
-  { name: "Meta",      logo: "M",  score: 62, color: "#0668E1" },
-  { name: "Amazon",    logo: "A",  score: 40, color: "#FF9900" },
-  { name: "Apple",     logo: "🍎", score: 90, color: "#A2AAAD" },
-];
-
-const recentActivity = [
-  { id: 1, type: "solve", title: "Solved 'Two Sum' optimally in Python",    time: "2 hours ago" },
-  { id: 2, type: "badge", title: "Unlocked 'Array Master' badge",            time: "5 hours ago" },
-  { id: 3, type: "solve", title: "Completed 'Valid Palindrome' in C++",      time: "1 day ago"   },
-  { id: 4, type: "solve", title: "Attempted 'LRU Cache' (Medium)",           time: "2 days ago"  },
-];
 
 export default function AnalyticsPage() {
-  const userStats = {
-    solved: 47, streak: 12, xp: 2340, level: 7,
-    easy: 22, medium: 18, hard: 7,
-    weeklyGoal: 15, weeklyDone: 9,
-  };
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  const readiness = [
-    { company: "Amazon",    score: 34, color: "an-prog-orange", problems: 156 },
-    { company: "Google",    score: 28, color: "an-prog-blue",   problems: 142 },
-    { company: "Microsoft", score: 42, color: "an-prog-blue",   problems: 128 },
-    { company: "Meta",      score: 22, color: "an-prog-blue",   problems: 98  },
-    { company: "Apple",     score: 18, color: "an-prog-green",  problems: 76  },
-  ];
+  useEffect(() => {
+    async function fetchAnalytics() {
+      try {
+        const response = await fetch("/api/analytics");
+        if (!response.ok) {
+          throw new Error("Failed to load analytics data");
+        }
+        const json = await response.json();
+        setData(json);
+      } catch (err: any) {
+        console.error("Error fetching analytics:", err);
+        setError(err.message || "An unexpected error occurred");
+      } finally {
+        setLoading(false);
+      }
+    }
+    fetchAnalytics();
+  }, []);
 
-  const achievements = [
-    { name: "First Blood",    desc: "Solve your first problem",    icon: "⚔️", unlocked: true  },
-    { name: "Streak Master",  desc: "7-day streak",               icon: "🔥", unlocked: true  },
-    { name: "Array Warrior",  desc: "Solve 10 array problems",    icon: "📊", unlocked: true  },
-    { name: "DP Apprentice",  desc: "Solve 5 DP problems",        icon: "💎", unlocked: false },
-    { name: "Graph Explorer", desc: "Solve 5 graph problems",     icon: "🕸️", unlocked: false },
-    { name: "Speed Demon",    desc: "Solve 3 problems in one day",icon: "⚡", unlocked: false },
-  ];
+  if (loading) {
+    return (
+      <div className="an-page flex items-center justify-center min-h-[80vh]">
+        <div className="text-center flex flex-col items-center gap-3">
+          <Loader2 className="w-10 h-10 text-emerald-400 animate-spin" />
+          <p className="text-gray-400 text-sm">Loading performance metrics from MongoDB...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error || !data) {
+    return (
+      <div className="an-page flex items-center justify-center min-h-[80vh]">
+        <div className="text-center flex flex-col items-center gap-3 max-w-md p-6 bg-red-950/20 border border-red-500/20 rounded-2xl">
+          <AlertCircle className="w-10 h-10 text-rose-500" />
+          <h2 className="text-lg font-semibold text-white">Database Error</h2>
+          <p className="text-gray-400 text-sm">{error || "Failed to load real-time analytics data."}</p>
+          <button 
+            onClick={() => { setLoading(true); setError(null); window.location.reload(); }}
+            className="mt-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-black font-semibold rounded-lg text-xs transition"
+          >
+            Retry Connection
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  const { userStats, readiness, topicMastery, achievements, recentActivity } = data;
 
   const topStatCards = [
     { icon: Code2, label: "Problems Solved", value: userStats.solved,                iconClass: "an-ico-blue"   },
@@ -69,9 +83,34 @@ export default function AnalyticsPage() {
   ];
 
   const circumference = 2 * Math.PI * 15;
-  const easyArc   = (userStats.easy   / userStats.solved) * circumference;
-  const mediumArc = (userStats.medium / userStats.solved) * circumference;
-  const hardArc   = (userStats.hard   / userStats.solved) * circumference;
+  const totalSolvedForArc = userStats.solved || 1;
+  const easyArc   = (userStats.easy   / totalSolvedForArc) * circumference;
+  const mediumArc = (userStats.medium / totalSolvedForArc) * circumference;
+  const hardArc   = (userStats.hard   / totalSolvedForArc) * circumference;
+
+  // Map backend readiness to the company readiness cards style
+  const readinessCards = readiness.map((r: any) => {
+    let logo = "🏢";
+    if (r.company === "Google") logo = "G";
+    else if (r.company === "Meta") logo = "M";
+    else if (r.company === "Amazon") logo = "A";
+    else if (r.company === "Apple") logo = "🍎";
+    else if (r.company === "Microsoft") logo = "MS";
+
+    let color = "#4285F4";
+    if (r.company === "Google") color = "#4285F4";
+    else if (r.company === "Meta") color = "#0668E1";
+    else if (r.company === "Amazon") color = "#FF9900";
+    else if (r.company === "Apple") color = "#A2AAAD";
+    else if (r.company === "Microsoft") color = "#00A4EF";
+
+    return {
+      name: r.company,
+      logo,
+      score: r.score,
+      color
+    };
+  });
 
   return (
     <div className="an-page">
@@ -83,7 +122,7 @@ export default function AnalyticsPage() {
             <BarChart3 width={28} height={28} aria-hidden />
             Analytics &amp; Dashboard
           </h1>
-          <p className="an-page-sub">Track your progress, readiness, and interview performance</p>
+          <p className="an-page-sub">Track your progress, readiness, and interview performance from MongoDB</p>
         </div>
 
         {/* ── Stats row ── */}
@@ -162,7 +201,7 @@ export default function AnalyticsPage() {
               Company Readiness
             </div>
             <div className="an-prog-list">
-              {readiness.map((r) => (
+              {readiness.map((r: any) => (
                 <div key={r.company} className="an-prog-row">
                   <div className="an-prog-top">
                     <span className="an-prog-name">{r.company}</span>
@@ -189,19 +228,18 @@ export default function AnalyticsPage() {
               Topic Mastery
             </div>
             <div className="an-prog-list">
-              {topTopics.map((topic, i) => {
-                const mastery = Math.max(5, (i % 3 === 0 ? 55 : i % 3 === 1 ? 38 : 22) - i * 2);
+              {topicMastery.map((topic: any, i: number) => {
                 return (
                   <div key={topic.name} className="an-prog-row">
                     <div className="an-prog-top">
                       <span className="an-prog-name">{topic.name}</span>
-                      <span className="an-prog-val">{mastery}%</span>
+                      <span className="an-prog-val">{topic.mastery}%</span>
                     </div>
                     <div className="an-prog-track">
                       <motion.div
                         className="an-prog-fill an-prog-blue"
                         initial={{ width: 0 }}
-                        animate={{ width: `${mastery}%` }}
+                        animate={{ width: `${topic.mastery}%` }}
                         transition={{ duration: 0.9, delay: i * 0.05 }}
                         style={{ background: `hsl(${200 + i * 12}, 70%, 50%)` }}
                       />
@@ -220,7 +258,7 @@ export default function AnalyticsPage() {
             Achievements
           </div>
           <div className="an-ach-grid">
-            {achievements.map((badge, i) => (
+            {achievements.map((badge: any, i: number) => (
               <motion.div
                 key={badge.name}
                 className={`an-badge ${badge.unlocked ? "an-badge-unlocked" : "an-badge-locked"}`}
@@ -249,10 +287,9 @@ export default function AnalyticsPage() {
               Weekly Activity
             </div>
             <div className="an-heatmap" aria-label="Activity heatmap">
-              {Array.from({ length: 52 * 7 }, (_, i) => {
-                const r = Math.random();
-                const cls = r > 0.7 ? "an-hm-3" : r > 0.4 ? "an-hm-2" : r > 0.15 ? "an-hm-1" : "an-hm-0";
-                return <div key={i} className={`an-hm-cell ${cls}`} />;
+              {(data.activity || Array(52 * 7).fill(0)).map((val: number, i: number) => {
+                const cls = val >= 3 ? "an-hm-3" : val === 2 ? "an-hm-2" : val === 1 ? "an-hm-1" : "an-hm-0";
+                return <div key={i} className={`an-hm-cell ${cls}`} title={`${val} problems solved`} />;
               })}
             </div>
             <div className="an-heatmap-legend">
@@ -287,7 +324,7 @@ export default function AnalyticsPage() {
                 Company Readiness Overview
               </div>
               <div className="an-readiness-grid">
-                {readinessCards.map((company, i) => (
+                {readinessCards.map((company: any, i: number) => (
                   <motion.div
                     key={company.name}
                     initial={{ opacity: 0, y: 10 }}
@@ -322,7 +359,7 @@ export default function AnalyticsPage() {
                 Recent Activity
               </div>
               <div className="an-activity-list">
-                {recentActivity.map((item, i) => (
+                {recentActivity.map((item: any, i: number) => (
                   <motion.div
                     key={item.id}
                     className="an-activity-item"
