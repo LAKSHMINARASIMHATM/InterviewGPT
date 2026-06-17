@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",
+    "@pinecone-database/pinecone": "^7.2.0",
     "@prisma/client": "^5.22.0",
     "@types/prismjs": "^1.26.6",
     "axios": "^1.17.0",

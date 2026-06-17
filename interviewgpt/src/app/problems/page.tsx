@@ -1,7 +1,7 @@
 "use client";
 import "./problems.css";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, Suspense } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
@@ -11,7 +11,7 @@ import type { Problem } from "@/lib/types";
 
 const ITEMS_PER_PAGE = 30;
 
-export default function ProblemsPage() {
+function ProblemsListContent() {
   const [search, setSearch] = useState("");
   const [difficulty, setDifficulty] = useState("All");
   const searchParams = useSearchParams();
@@ -239,5 +239,17 @@ export default function ProblemsPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function ProblemsPage() {
+  return (
+    <Suspense fallback={
+      <div className="pr-page" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh', color: 'var(--pr-n500)' }}>
+        <div className="pr-subtitle">Loading problems...</div>
+      </div>
+    }>
+      <ProblemsListContent />
+    </Suspense>
   );
 }
